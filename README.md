@@ -1,19 +1,6 @@
-# Astro Starter Kit: Blog
+# Stefen Phelps Astro Build
 
-```
-npm init astro -- --template blog
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/snowpackjs/astro/tree/latest/examples/blog)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-Features:
-
-- ✅ SEO-friendly setup with canonical URLs and OpenGraph data
-- ✅ Full Markdown support
-- ✅ RSS 2.0 generation
-- ✅ Sitemap.xml generation
+Work in progress. Testing out migrating from WordPress to Astro.
 
 ## 🚀 Project Structure
 
@@ -47,7 +34,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm install`   | Installs dependencies                       |
 | `npm run dev`   | Starts local dev server at `localhost:3000` |
 | `npm run build` | Build your production site to `./dist/`     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/snowpackjs/astro) or jump into our [Discord server](https://astro.build/chat).
