@@ -11,5 +11,8 @@
   "devDependencies": {
     "@astrojs/renderer-preact": "^0.2.2",
     "astro": "^0.20.12"
+  },
+  "dependencies": {
+    "wordpress-export-to-markdown": "^2.2.2"
   }
 }
