@@ -9,11 +9,15 @@ interface MarkdownFrontmatter {
 }
 
 // Component Script:
-let title =  'About Me';
-let description = "Here's a brief summary of myself.";
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let title =  'Blog';
+let description = 'This is where I write my thoughts about tech and sometimes other things.';
 let permalink = 'https://stefenphelps.com/';
 
 // Data Fetching: List all Markdown posts in the repo.
+
 let allPosts = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
 
@@ -76,6 +80,9 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
         <section class="intro">
           <h1 class="latest">{title}</h1>
           <p>{description}</p>
+        </section>
+        <section>
+          {allPosts.map(p => <BlogPostPreview post={p} />)}
         </section>
       </article>
     </div>

@@ -13,7 +13,7 @@ interface MarkdownFrontmatter {
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
 let title =  'Web Developer, Dad, Husband, Nerd. Based in Brooksville, Florida.';
-let description = 'This is where I write my thoughts about tech and sometimes other things.';
+let description = 'Hey there! Thanks for stopping by, how can I help ya today?';
 let permalink = 'https://stefenphelps.com/';
 
 // Data Fetching: List all Markdown posts in the repo.
@@ -80,9 +80,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
         <section class="intro">
           <h1 class="latest">{title}</h1>
           <p>{description}</p>
-        </section>
-        <section>
-          {allPosts.map(p => <BlogPostPreview post={p} />)}
         </section>
       </article>
     </div>
