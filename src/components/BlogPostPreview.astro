@@ -11,11 +11,17 @@ let dateLabel = date.toLocaleDateString("en-US");
 ---
 <article class="post-preview">
   <h2><a href={post.url}>{post.title}</a></h2>
-  <time datetime={date}>{dateLabel}</time>
   <p>{post.description}</p>
   <a href={post.url}>Read more</a>
 </article>
 
 <style>
-  
+  .post-preview {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255,255,255,.25)
+  }
+  .post-preview h2 {
+    margin-top: 0;
+  }
 </style>
