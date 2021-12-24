@@ -2,11 +2,12 @@
 // Component Imports
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 // Component Script:
 let title =  'About Me';
-let description = "Here's a brief summary of myself.";
-let permalink = 'https://stefenphelps.com/';
+let description = "About Stefen Phelps and his skills, interests, etc.";
+let permalink = 'https://stefenphelps.com/about';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -14,14 +15,101 @@ let permalink = 'https://stefenphelps.com/';
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} permalink={permalink} />
+      <style>
+        .grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+        }
+        .grid-item {
+          flex: 1 1 200px;
+        }
+        label {
+          display: block;
+        }
+        ol {
+          list-style: none;
+          margin: 0 0 0 4ch;
+          padding: 0 0 0 4ch;
+        }
+        ol li {
+          text-indent: -4ch;
+          line-height: 1.2;
+          margin-bottom: 1rem;
+        }
+        ol time {
+          font-size: 2rem;
+          font-family: var(--mono-font);
+          display: inline-block;
+          margin-right: .5rem;
+          font-weight: 200;
+        }
+      </style>
   </head>
   <body>
     <Header />
-    <article class="content">
-      <section class="intro">
-        <h1 class="latest">{title}</h1>
-        <p>{description}</p>
-      </section>
-    </article>
+    <main>
+      <article>
+        <h1>{title}</h1>
+        <h2>Skillset</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <h3>Base</h3>
+            <label for="html">HTML</label>
+            <progress id="html" value="99" max="100"></progress>
+            <label for="css">CSS / Sass</label>
+            <progress id="css" value="95" max="100"></progress>
+            <label for="js">JS</label>
+            <progress id="js" value="90" max="100"></progress>
+            <label for="php">PHP / Twig</label>
+            <progress id="php" value="84" max="100"></progress>
+            <label for="hubl">HubL</label>
+            <progress id="hubl" value="95" max="100"></progress>
+          </div>
+          <div class="grid-item">
+            <h3>Tools</h3>
+            <label for="wordpress">WordPress</label>
+            <progress id="wordpress" value="97" max="100"></progress>
+            <label for="hubspot">HubSpot</label>
+            <progress id="hubspot" value="99" max="100"></progress>
+            <label for="firebase">Firebase</label>
+            <progress id="firebase" value="73" max="100"></progress>
+            <label for="netlify">Netlify</label>
+            <progress id="netlify" value="77" max="100"></progress>
+            <label for="adobe">NPM / Composer</label>
+            <progress id="adobe" value="85" max="100"></progress>
+          </div>
+          <div class="grid-item">
+            <h3>Libraries</h3>
+            <label for="react">React / Preact / Next.js</label>
+            <progress id="react" value="65" max="100"></progress>
+            <label for="vue">Vue / Nuxt.js</label>
+            <progress id="vue" value="72" max="100"></progress>
+            <label for="angular">Angular</label>
+            <progress id="angular" value="55" max="100"></progress>
+            <label for="jquery">jQuery</label>
+            <progress id="jquery" value="88" max="100"></progress>
+            <label for="timber">Timber</label>
+            <progress id="timber" value="98" max="100"></progress>
+          </div>
+        </div>
+        <h2>Career History</h2>
+        <ol>
+          <li><time>2009</time> First (paid) website gig</li>
+          <li><time>2011</time> Started Stefen Phelps Web Design and doing freelance work on a frequent basis</li>
+          <li><time>2012</time> First full-time position as a Junior Web Designer in Tampa, FL</li>
+          <li><time>2013</time> Promoted to Web Designer Team Lead</li>
+          <li><time>2014</time> Started working for Inbound Marketing Agency Bluleadz in Tampa, FL</li>
+          <li><time>2015</time> Help grow Bluleadz from 7 employees to 17+ employees</li>
+          <li><time>2016</time> Started working for Marketing Agency SMS in Brooksville, FL</li>
+          <li><time>2017</time> Created and launched Spinstak's custom eCommerce platform first responsive designs</li>
+          <li><time>2018</time> Started creative agency Kelp and working for myself full time</li>
+          <li><time>2019</time> Helped grow Kelp to 5 people</li>
+          <li><time>2020</time> Started StonkLights</li>
+          <li><time>2021</time> Another year of 20% growth at Kelp!</li>
+        </ol>
+      </article>
+    </main>
+    <Footer />
   </body>
 </html>

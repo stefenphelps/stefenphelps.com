@@ -27,8 +27,8 @@ Dr. Redrick offers three primary services, each with their own visual identity. 
 
 One of the cool things you can do with a vector logo (you have a vector logo, right?!) is add a subtle animation to it on your website. It's a great way to delight your users and really make for a memorable experience. I'm a huge fan of subtle animations, they just make you feel good! Twitter's "heart" animation when you like a tweet for example:
 
-\[video width="936" height="580" mp4="https://stefenphelps.com/wp-content/uploads/2017/11/heart-animation.mp4" loop="true" autoplay="true" preload="auto"\]\[/video\]
+![heart svg animation](/blog/heart-animation.mp4)
 
 These types of animations can be done in a variety of ways. The most performant way is almost always going to be using JS or CSS in tandem with an inline SVG which requires having an extremely clean vector file. Here is what Citrus Medical's logo animations look like:
 
-\[video width="1008" height="394" mp4="https://stefenphelps.com/wp-content/uploads/2017/11/svg-logo-animation.mp4" loop="true" autoplay="true" preload="auto"\]\[/video\]
+![logo svg animation](/blog/svg-logo-animation.mp4)

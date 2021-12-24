@@ -2,6 +2,7 @@
 // Component Imports
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
 
 interface MarkdownFrontmatter {
@@ -10,8 +11,8 @@ interface MarkdownFrontmatter {
 
 // Component Script:
 let title =  'Blog';
-let description = 'This is where I write my thoughts about tech and sometimes other things.';
-let permalink = 'https://stefenphelps.com/';
+let description = 'My thoughts on web development and sometimes other things.';
+let permalink = 'https://stefenphelps.com/blog';
 
 // Data Fetching: List all Markdown posts in the repo.
 let allPosts = Astro.fetchContent<MarkdownFrontmatter>('./blog/*.md');
@@ -27,14 +28,17 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 
   <body>
     <Header />
-    <article class="content">
-      <section class="intro">
-        <h1 class="latest">{title}</h1>
-        <p>{description}</p>
-      </section>
-      <section>
-        {allPosts.map(p => <BlogPostPreview post={p} />)}
-      </section>
-    </article>
+    <main>
+      <article class="content">
+        <section class="intro">
+          <h1 class="latest">{title}</h1>
+          <p>{description}</p>
+        </section>
+        <section>
+          {allPosts.map(p => <BlogPostPreview post={p} />)}
+        </section>
+      </article>
+    </main>
+    <Footer />
   </body>
 </html>

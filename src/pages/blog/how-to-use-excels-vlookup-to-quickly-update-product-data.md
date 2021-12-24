@@ -6,6 +6,7 @@ categories:
   - 'how-to'
 heroImage: '/blog/step-3-1.gif'
 author: Stefen Phelps
+layout: '../../layouts/BlogPost.astro'
 ---
 
 It happens all the time. You get a CSV file full of products with new pricing and you're tasked with updating the products on the website with this new data. I think we can all agree that updating product data can be a huge pain in the butt and a major time suck—especially if you're doing it one-by-one. Well, I'm here to let you in on a little Excel secret called a VLOOKUP that's going to make your life a whole lot easier. It sounds complicated but don't worry, I'll walk you through **step-by-step how to perform a VLOOKUP in Excel**. **You'll thank me later**.
@@ -22,13 +23,13 @@ Before we get started, you're going to need a CSV product export from your webs
 
 In your product database export or the "outdated.csv" in our sample files, create a new column. We're going to be updating the cost in our example so we'll name this column "Updated Cost".
 
-![](https://i2.wp.com/stefenphelps.com/wp-content/uploads/2017/06/step-1-column.png?fit=728%2C412&ssl=1)
+![step 1](/blog/step-1-column.png)
 
 ## Step 2: **Perform The VLOOKUP**
 
 Under the title of the new column, select the cell, click on "Insert Function" and choose VLOOKUP (the search box is your friend).
 
-![](/blog/step-1.5.png)
+![step 2](/blog/step-1.5.png)
 
 You should now see a window called "Function Arguments" that has a few empty fields. The first field titled "**Lookup_value**" is going to be the common attribute that is shared between the *old data* and the *new data*.  In our example, we'll use the SKU, cell A2. Got it? Good.
 
@@ -44,12 +45,12 @@ The last field "**Range_lookup**" is there to specify whether you want the close
 
 If you followed the instructions in the sample files, your function arguments should now look like this:
 
-![](/blog/step-2.png)
+![step 2](/blog/step-2.png)
 
 ## Step 3: **Check The Data**
 
 Hit OK in the "Function Arguments" window and it should return the updated cost.  This is where the real magic happens.  Double click (or drag) the black square in the corner of the cell and the rest of the costs will populate automatically. Yes, that just happened. Yes, I just saved you hours worth of work. You're welcome and **[I told you so](#thank-you-stefen)**.
 
-![](/blog/step-3-1.gif)
+![step 3](/blog/step-3-1.gif)
 
 At this point, you can move the updated cost into the existing cost column, save and import this sheet back into the product database.
