@@ -1,7 +1,12 @@
 ---
-title: "Branding Refresh with Animations in Mind"
-date: "2017-11-06"
-coverImage: "Citrus-Medical-Weight-Loss-V3.jpg"
+title: 'Branding Refresh with Animations in Mind'
+description: 'One of the hardest parts of designing for the web is the lack of limitation. There is no artificial limit to the amount of space you have to work with, no limit to how something could be animated or function'
+publishDate: '2017-11-06'
+categories:
+  - 'project'
+heroImage: '/blog/Citrus-Medical-Weight-Loss-V3.jpg'
+author: 'Stefen Phelps'
+layout: '../../layouts/BlogPost.astro'
 ---
 
 One of the hardest parts of designing for the web is the lack of limitation. There is no artificial limit to the amount of space you have to work with, no limit to how something could be animated or function, no limit to how deep an integration can go, etc., etc... However, we can create artificial limits to specific things to keep some level of consistency. I'm talking about branding guidelines.

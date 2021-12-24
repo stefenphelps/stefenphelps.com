@@ -1,9 +1,10 @@
 ---
-title: "Wordpress - Much More Than Just a Blogging Tool"
-publishDate: "2012-04-04"
-categories: 
-  - "cms"
-  - "wordpress"
+title: 'Wordpress - Much More Than Just a Blogging Tool'
+description: 'How and why WordPress should be used for more than just a blog'
+publishDate: '2012-04-04'
+categories:
+  - 'cms'
+  - 'wordpress'
 author: Stefen Phelps
 layout: '../../layouts/BlogPost.astro'
 ---

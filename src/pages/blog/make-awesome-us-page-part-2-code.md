@@ -1,11 +1,12 @@
 ---
-title: "How To Make an Awesome About Us Page | Part 2: The Code"
-publishDate: "2016-10-18"
+title: 'How To Make an Awesome About Us Page | Part 2: The Code'
+description: "In part 2 (this post!), I'll be discussing the technical aspects of making the team member photos/videos come alive on the web, some issues we faced and how we solved them"
+publishDate: '2016-10-18'
 categories:
-  - "how-to"
-heroImage: "/blog/behind-the-team-member-photos.jpg"
+  - 'how-to'
+heroImage: '/blog/behind-the-team-member-photos.jpg'
 author: Stefen Phelps
-layout: "../../layouts/BlogPost.astro"
+layout: '../../layouts/BlogPost.astro'
 ---
 
 [Lief discussed the planning and production stages of our about page overhaul in part 1](https://www.growwithsms.com/blog/behind-the-scenes-on-our-new-meet-the-team-photos-part-1). In part 2 (this post!), I'll be discussing the technical aspects of making the team member photos/videos come alive on the web, some issues we faced and how we solved them. If you haven't seen it yet, be sure to **[check out our awesome about page](https://www.growwithsms.com/about) before you do anything else!**

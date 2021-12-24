@@ -1,9 +1,10 @@
 ---
 title: "How To Use Excel's VLOOKUP to Quickly Update Product Data"
-publishDate: "2016-08-08"
+description: "It happens all the time. You get a CSV file full of products with new pricing and you're tasked with updating the products on the website with this new data. I think we can all agree that updating product data can be a huge pain in the butt and a major"
+publishDate: '2016-08-08'
 categories:
-  - "how-to"
-heroImage: "/blog/step-3-1.gif"
+  - 'how-to'
+heroImage: '/blog/step-3-1.gif'
 author: Stefen Phelps
 ---
 

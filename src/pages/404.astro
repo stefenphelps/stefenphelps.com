@@ -1,0 +1,26 @@
+---
+// Component Imports
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+
+// Component Script:
+let title =  'Error 404';
+let description = "Sorry, this page doesn't exist.";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body>
+		<Header />
+		<article class="content">
+			<section class="intro">
+				<h1 class="latest">{title}</h1>
+				<p>{description}</p>
+			</section>
+		</article>
+	</body>
+</html>

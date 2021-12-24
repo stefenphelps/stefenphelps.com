@@ -1,9 +1,10 @@
 ---
-title: "On-Page SEO: 2016 Best Practices for an eCommerce Website"
-publishDate: "2016-08-16"
-categories: 
-  - "seo"
-heroImage: "/blog/meta-title-description-seo.jpg"
+title: 'On-Page SEO: 2016 Best Practices for an eCommerce Website'
+description: "Your website has been designed and coded, the products loaded, a payment gateway linked and you're ready to start taking orders. If you build it, they will come... right? Unfortunately, it's not always that easy"
+publishDate: '2016-08-16'
+categories:
+  - 'seo'
+heroImage: '/blog/meta-title-description-seo.jpg'
 author: Stefen Phelps
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -19,7 +20,7 @@ There are 4 basics of on-page SEO that you should know if you have an eCommerce 
 - **[URL](#url)**
 - **[Meta Description](#meta-description)**
 
-![Monkey at a keyboard](/blog/5Zesu5VPNGJlm.gif "Monkey at a keyboard")
+![Monkey at a keyboard](/blog/5Zesu5VPNGJlm.gif 'Monkey at a keyboard')
 
 Let's dive into these 4 principles so you can spend less time feeling like a monkey at a keyboard and start developing an SEO strategy for your website.
 

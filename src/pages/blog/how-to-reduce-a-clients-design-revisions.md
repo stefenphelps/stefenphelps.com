@@ -1,11 +1,12 @@
 ---
 title: "How to Reduce a Client's Design Revisions"
-publishDate: "2015-01-22"
+description: 'Imagine this -- You’re in the final stretch of launching your client’s website (this could be any type of design project really, but we’ll use a website in our example).  You’ve finalized the design, coded everything, and squashed all the bugs only to hear back from the client, “It looks great'
+publishDate: '2015-01-22'
 categories:
-  - "design"
-heroImage: "/blog/phelps_revisions.jpg"
+  - 'design'
+heroImage: '/blog/phelps_revisions.jpg'
 author: Stefen Phelps
-layout: "../../layouts/BlogPost.astro"
+layout: '../../layouts/BlogPost.astro'
 ---
 
 Imagine this -- You’re in the final stretch of launching your client’s website (this could be any type of design project really, but we’ll use a website in our example).  You’ve finalized the design, coded everything, and squashed all the bugs only to hear back from the client, “It looks great, but it needs some tweaking…” This “tweaking” ends up consisting of basically redesigning the entire website over a period of time that ends up taking twice as long as expected.  The sad thing is, this happens all too often in our industry.  At [Bluleadz](http://www.bluleadz.com/), we have learned of 3 basic ways to prevent these types of situations as well as lowering the overall number of client design revisions in general over the years.

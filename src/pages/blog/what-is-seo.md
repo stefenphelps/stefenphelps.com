@@ -1,8 +1,9 @@
 ---
-title: "What is SEO and how can I use it?"
-publishDate: "2012-03-22"
-categories: 
-  - "seo"
+title: 'What is SEO and how can I use it?'
+description: "SEO stands for Search Engine Optimization, which means getting your website near the top of Google's search results page for any given search.  There isn't one magic thing you can do to make your website appear"
+publishDate: '2012-03-22'
+categories:
+  - 'seo'
 author: Stefen Phelps
 layout: '../../layouts/BlogPost.astro'
 ---

@@ -1,10 +1,11 @@
 ---
-title: "3 Tips for Being a Better Web Designer"
-publishDate: "2018-02-28"
-categories: 
-  - "design"
-heroImage: "/blog/gle-careers-scout-466403-edited.jpg"
-author: Stefen Phelps
+title: '3 Tips for Being a Better Web Designer'
+description: "I've been making websites for close to 10 years now. I've made my fair share of 💩 websites—in addition to some amazing websites. What I have realized in reflecting on my website project experiences is that there is a simple formula"
+publishDate: '2018-02-28'
+categories:
+  - 'design'
+heroImage: '/blog/gle-careers-scout-466403-edited.jpg'
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

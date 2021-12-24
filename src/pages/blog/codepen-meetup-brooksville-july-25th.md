@@ -1,11 +1,12 @@
 ---
-title: "CodePen Meetup coming to Brooksville July 25th!"
-publishDate: "2017-07-08"
+title: 'CodePen Meetup coming to Brooksville July 25th!'
+description: "Over the years of doing freelance work for local businesses and organizations, I've met quite a few people that are interested in 'coding'. Whether that means a specific programming language, responsive design, or just web design in general. They all had the same question... where do I start?"
+publishDate: '2017-07-08'
 categories:
-  - "codepen-meetup"
-heroImage: "/blog/Black-Large.png"
+  - 'codepen-meetup'
+heroImage: '/blog/Black-Large.png'
 author: Stefen Phelps
-layout: "../../layouts/BlogPost.astro"
+layout: '../../layouts/BlogPost.astro'
 ---
 
 Over the years of doing freelance work for local businesses and organizations, I've met quite a few people that are interested in "coding". Whether that means a specific programming language, responsive design, or just web design in general. They all had the same question... "where do I start?"
@@ -19,7 +20,5 @@ So when I learned about [CodePen Meetups](https://blog.codepen.io/meetups/) I w
 ### So what are you waiting for?!
 
 [RSVP to the Meetup!](https://nvite.com/BrooksvilleCode/qlgnr8)
-
-
 
 A big thanks to my friends at [Mountaineer Coffee](https://www.mountaineercoffee.com/) for letting us use their building after hours and [Media Temple](https://mediatemple.net/?utm_source=CodePen&utm_medium=email&utm_campaign=meetup) for sponsoring the event. And, of course, [CodePen](https://codepen.io) for the free swag creating a culture of sharing *(and the free swag)*!

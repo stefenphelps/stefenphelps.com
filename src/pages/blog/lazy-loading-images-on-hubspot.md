@@ -1,12 +1,13 @@
 ---
-title: "Lazy Loading Images on HubSpot"
-publishDate: "2018-02-07"
+title: 'Lazy Loading Images on HubSpot'
+description: 'Images are almost always the #1 reason for a slow website. Even if all of your images are optimized and sized correctly, they can still cause performance issues'
+publishDate: '2018-02-07'
 categories:
-  - "how-to"
-  - "hubspot"
-heroImage: "/blog/lazy-loading-images-hubspot-blog-2.png"
+  - 'how-to'
+  - 'hubspot'
+heroImage: '/blog/lazy-loading-images-hubspot-blog-2.png'
 author: Stefen Phelps
-layout: "../../layouts/BlogPost.astro"
+layout: '../../layouts/BlogPost.astro'
 ---
 
 Images are almost always the #1 reason for a slow website. Even if all of your [images are optimized](/blog/how-to-increase-your-pagespeed-insights-score-on-your-hubspot-website) and sized correctly, they can still cause performance issues, especially on longer pages that have lots of images—a pillar page or even a blog page, for example. This is where the "Lazy Loading" technique comes in to save the day.

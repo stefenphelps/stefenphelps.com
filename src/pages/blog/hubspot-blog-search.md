@@ -1,18 +1,19 @@
 ---
-title: "How to Build a HubSpot Blog Search"
-publishDate: "2017-05-16"
-categories: 
-  - "hubspot"
-heroImage: "/blog/search-hubspot-blog.gif"
+title: 'How to Build a HubSpot Blog Search'
+description: "Have you ever wished your HubSpot blog had a search feature that didn't take you off your website — _looking at you, google search module_ ? — and that it would search only for blog posts? Here is how I recently accomplished this task"
+publishDate: '2017-05-16'
+categories:
+  - 'hubspot'
+heroImage: '/blog/search-hubspot-blog.gif'
 author: Stefen Phelps
 layout: '../../layouts/BlogPost.astro'
 ---
 
 **2019 Update — [HubSpot now offers a site search API](https://developers.hubspot.com/docs/methods/content/search-for-content). I highly recommend using the search API going forward. This guide was written before the API existed but I'll leave it up as a reference.**
 
-* * *
+---
 
-Have you ever wished your HubSpot blog had a search feature that didn't take you off your website — _looking at you, google search module_ ? — and that it would search only for blog posts? Here is how I recently accomplished this task for [Quad City Safety](https://www.quadcitysafety.com/) and if you follow along, it's really not all that hard to implement yourself.
+Have you ever wished your HubSpot blog had a search feature that didn't take you off your website — *looking at you, google search module* ? — and that it would search only for blog posts? Here is how I recently accomplished this task for [Quad City Safety](https://www.quadcitysafety.com/) and if you follow along, it's really not all that hard to implement yourself.
 
 Before we dive in, let's break down what a HubSpot Blog Search consists of into its simplest form. It comes down to these three basic elements:
 
@@ -26,7 +27,7 @@ The first step to creating your blog search is to add an HTML module to your blo
 
 ```
 <form action="/blog/search">
-    <input name="query" type="text" placeholder="Search the blog..." /> 
+    <input name="query" type="text" placeholder="Search the blog..." />
     <button type="submit">Search</button>
 </form>
 ```
@@ -35,7 +36,7 @@ The two important attributes to make note of for later are the form's action and
 
 ## 2\. The Search Results Page
 
-Before you can get search results, you need a place to display those search results. Create a new site page (or landing page if you don't have the Website Add-On) using whichever basic template you prefer (we'll be modifying this template in step 3). The important thing is that you create the page with the URL you used in the value of the form's _action_ attribute. Using our example above we'll create this page with "/blog/search" as the URL.
+Before you can get search results, you need a place to display those search results. Create a new site page (or landing page if you don't have the Website Add-On) using whichever basic template you prefer (we'll be modifying this template in step 3). The important thing is that you create the page with the URL you used in the value of the form's *action* attribute. Using our example above we'll create this page with "/blog/search" as the URL.
 
 Once you've published this page, go ahead and test your search form now. I'll wait.
 
@@ -69,7 +70,7 @@ Did the form take you to the search results page? Did you see the query paramete
 
 To populate the search results page with actual results, we'll need to use HubL (HubSpot's server side programming language) to loop through and display the blog posts that contain our search query.
 
-Go ahead and edit the search results page's template (or clone it if you want to be safe) and add a HubL module where you want the search results to display on the page. In your HubL module we are going to be doing two primary things. First, we're going to use the **_[blog\_recent\_posts](https://designers.hubspot.com/en/docs/hubl/hubl-supported-functions#blog-recent-posts)_** function to pull in your most recent posts. Then, we'll filter those posts by their titles using the **_request.query\_dict_** [HTTP request variable](https://designers.hubspot.com/docs/hubl/hubl-supported-variables#http-request-variables) to get the search query parameter from the URL. Here's the code:
+Go ahead and edit the search results page's template (or clone it if you want to be safe) and add a HubL module where you want the search results to display on the page. In your HubL module we are going to be doing two primary things. First, we're going to use the **_[blog_recent_posts](https://designers.hubspot.com/en/docs/hubl/hubl-supported-functions#blog-recent-posts)_** function to pull in your most recent posts. Then, we'll filter those posts by their titles using the **_request.query_dict_** [HTTP request variable](https://designers.hubspot.com/docs/hubl/hubl-supported-variables#http-request-variables) to get the search query parameter from the URL. Here's the code:
 
 ```
 {% set recent_posts = blog_recent_posts('default', 200) %}

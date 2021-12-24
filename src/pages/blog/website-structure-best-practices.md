@@ -1,11 +1,12 @@
 ---
-title: "Website Structure Best Practices"
-publishDate: "2016-08-02"
+title: 'Website Structure Best Practices'
+description: "Having a good site structure that's easy to navigate and has a clear goal or purpose is imperative to keeping bounce rates low and visitors happy. A website's structure not only affects user experience"
+publishDate: '2016-08-02'
 categories:
-  - "seo"
-heroImage: "/blog/sitemap.png"
+  - 'seo'
+heroImage: '/blog/sitemap.png'
 author: Stefen Phelps
-layout: "../../layouts/BlogPost.astro"
+layout: '../../layouts/BlogPost.astro'
 ---
 
 Having a good site structure that's easy to navigate and has a clear goal or purpose is imperative to keeping bounce rates low and visitors happy. A website's structure not only affects user experience, but it will also affect the way search engines see a site. In this article, I will explain how to create a site structure that users (and search engines) will love.

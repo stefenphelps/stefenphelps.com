@@ -1,7 +1,12 @@
 ---
-title: "Rebranding and Redesigning NatureCoaster.com"
-date: "2018-02-11"
-coverImage: "Nature-Coaster-Brand-Guidelines_Page_2.png"
+title: 'Rebranding and Redesigning NatureCoaster.com'
+description: 'The process behind the new brand and website made for NatureCoaster.com'
+categories:
+  - 'wordpress'
+publishDate: '2018-02-11'
+heroImage: '/blog/Nature-Coaster-Brand-Guidelines_Page_2.png'
+author: 'Stefen Phelps'
+layout: '../../layouts/BlogPost.astro'
 ---
 
 Diane Bedard, the owner of [NatureCoaster.com](https://www.naturecoaster.com/), originally came to me for help with speeding up her WordPress site's page load time. I was able to help by moving the site to a new hosting environment, but it eventually led to a discussion about the amount of plugins and additional files being loaded by the theme (and it's child theme). I explained that a large portion of the plugins could be built directly into the theme itself as custom post types, which could be coded in a way that uses less resources, and be easier to maintain/edit. This would result in being a better experience for both the user and the editor, with the added benefit of being better for SEO due to better performance.
@@ -24,10 +29,6 @@ And finally, the before and after of the website:
 
 ![](/blog/new-naturecoaster-website-design-1.png)
 
-
-
 ---
-
-
 
 Looking for some help with a website design or company branding? [Let's talk!](https://stefenphelps.com/hire-me/)

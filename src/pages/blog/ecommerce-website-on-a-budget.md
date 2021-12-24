@@ -1,10 +1,13 @@
 ---
-title: "eCommerce Website on a Budget"
-date: "2015-06-05"
-coverImage: "pearlporch.com_.png"
+title: 'eCommerce Website on a Budget'
+description: 'The most bang for your buck when it comes to eCommerce platforms'
+categories: 
+	- 'project'
+author: "Stefen Phelps"
+publishDate: '2015-06-05'
+heroImage: '/blog/pearlporch.com_.png'
+layout: '../../layouts/BlogPost.astro'
 ---
-
-![](/blog/pearlporch.com_.png)
 
 ## WooCommerce + WordPress = _(mostly)_ Free eCommerce Site
 

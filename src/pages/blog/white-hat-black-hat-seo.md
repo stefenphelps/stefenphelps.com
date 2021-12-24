@@ -1,8 +1,9 @@
 ---
-title: "Proper SEO and \"Black Hat\" SEO"
-publishDate: "2013-06-04"
-categories: 
-  - "seo"
+title: 'Proper SEO and "Black Hat" SEO'
+description: "Ever since the early 2000's, the early days of search engines, Google (among others) gave pagerank to a website based on the amount of links from other sites that were linking to it.  This simple premise"
+publishDate: '2013-06-04'
+categories:
+  - 'seo'
 author: Stefen Phelps
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -15,4 +16,4 @@ As [Matt Cutts](https://plus.google.com/+MattCutts/posts) once said, "The best S
 
 The proper way to do SEO can be summed up with this statement: create a great website with great design, great content, and a great user experience.  The better the experience, the more people will want to share the site on social networks and come back. I only create websites with the best SEO practices in mind.  I use Google's Webmaster Tools to fine tune and make sure the website is performing it's best and make sure each page has unique meta descriptions, page title's, proper use of meta keywords, and I even check page load times.
 
-Not sure what this post is about? Still wondering what SEO stands for? Check out my [previous post](/blog/what-is-seo/ "What is SEO and how can I use it?") and get educated!
+Not sure what this post is about? Still wondering what SEO stands for? Check out my [previous post](/blog/what-is-seo/ 'What is SEO and how can I use it?') and get educated!

@@ -1,20 +1,19 @@
 ---
-title: "The Pros and Cons of Using WordPress Page Builders"
-publishDate: "2017-10-31"
-categories: 
-  - "wordpress"
-heroImage: "/blog/basic-vs-complex-layout.png"
+title: 'The Pros and Cons of Using WordPress Page Builders'
+description: "A common issue people run into when using WordPress is it's extremely basic page editor. The lack of ability to make complex pages, basically anything more than the typical 'title' and 'body' format, is restrictive."
+publishDate: '2017-10-31'
+categories:
+  - 'wordpress'
+heroImage: '/blog/basic-vs-complex-layout.png'
 author: Stefen Phelps
 layout: '../../layouts/BlogPost.astro'
 ---
 
-A common issue people run into when using WordPress is it's extremely basic page editor. The lack of ability to make complex pages, basically anything more than the typical "title" and "body" format, is restrictive. This format is great for simple blog posts, but _not-so-great_ when you need a multi-column layout or multiple full-width sections or pretty much any other complex design.
+A common issue people run into when using WordPress is it's extremely basic page editor. The lack of ability to make complex pages, basically anything more than the typical "title" and "body" format, is restrictive. This format is great for simple blog posts, but *not-so-great* when you need a multi-column layout or multiple full-width sections or pretty much any other complex design.
 
 This problem created an ecosystem of **WordPress Page Builder** plugins that come in a variety of [free](https://www.layerswp.com/) and [paid](https://www.wpbeaverbuilder.com/) versions that will either go as far as replacing the [WordPress page editor entirely](https://www.elegantthemes.com/gallery/divi/), or be as minimal as [adding extra custom fields to the page editor screen](https://wordpress.org/plugins/siteorigin-panels/). There are a variety of options, but let's take a step back and review the pros and cons of page builders in general and then answer the question "should I use a WordPress page builder?".
 
 ![](https://i1.wp.com/stefenphelps.com/wp-content/uploads/2017/10/basic-vs-complex-layout.png?fit=845%2C730&ssl=1)
-
- 
 
 ## The Benefits of Using a Page Builder
 
@@ -32,8 +31,6 @@ The problems page builders solve are clear: they give the user extra ability to 
 
 ....so, what's the catch?
 
- 
-
 ## The Down Sides to Using WordPress Page Builders
 
 ### With Great Power Comes Great Responsibility
@@ -42,7 +39,7 @@ When a web developer creates a theme or a template with a specific layout, you c
 
 ### Extra Bloat
 
-The majority of WordPress Page Builder plugins are pretty mature by now. However, due to the nature of what they are, they are _always_ going to be slower than a page coded for a specific layout and purpose. This is due to the fact that page builders have to accommodate for every single type of layout possible.
+The majority of WordPress Page Builder plugins are pretty mature by now. However, due to the nature of what they are, they are *always* going to be slower than a page coded for a specific layout and purpose. This is due to the fact that page builders have to accommodate for every single type of layout possible.
 
 A little extra bloat when browsing on a high-powered desktop connected to a fast internet connection doesn't make a huge difference. BUT, things get noticeably worse on a phone and a slow network. A little bloat is the difference between a user abandoning your site because it took too long to load and a user making a buying decision.
 
@@ -51,12 +48,10 @@ A little extra bloat when browsing on a high-powered desktop connected to a fast
 Having a simple and consistent interface is great for getting the main purpose of the task complete in the quickest time possible and provides a smaller barrier to entry for beginners. When adding a layer of complexity, which all page builders do, it increases the barrier for entry and overall cognitive load which can result in decreased productivity.
 
 > "The best user experience is the one the user doesn’t notice. It appears smooth and simple on the surface, but hundreds of crucial design decisions have been made to guide, entertain and prevent trouble."
-> 
+>
 > \- an excerpt from Smashing Magazine's [Reducing Cognitive Overload for A Better User Experience](https://www.smashingmagazine.com/2016/09/reducing-cognitive-overload-for-a-better-user-experience/) by [Danny Halarewich](https://twitter.com/halarewich)
 
 If you are needing to focus solely on creating content, it can help to have a distraction free content editor. When you put a design tool into the content creation process it can hinder the progress made on writing the content and the quality of the content because you're focused on what looks good rather than the information itself.
-
- 
 
 ## The Takeaway
 

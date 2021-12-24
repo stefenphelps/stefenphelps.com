@@ -1,12 +1,13 @@
 ---
-title: "How to Add Animations to Your Static Designs Using Adobe XD and CodePen"
-publishDate: "2017-11-21"
+title: 'How to Add Animations to Your Static Designs Using Adobe XD and CodePen'
+description: "Designers creating new website mockups will generally use Photoshop then save those mockups as a JPG or PNG for the client to review. The problem with static images is they don't tell the whole story of what the website could be. Hover state, the way the page loads, or even the way the page transitions to a new view—these"
+publishDate: '2017-11-21'
 categories:
-  - "design"
-  - "how-to"
-heroImage: "/blog/adobe-xd.png"
+  - 'design'
+  - 'how-to'
+heroImage: '/blog/adobe-xd.png'
 author: Stefen Phelps
-layout: "../../layouts/BlogPost.astro"
+layout: '../../layouts/BlogPost.astro'
 ---
 
 Designers creating new website mockups will generally use Photoshop then save those mockups as a JPG or PNG for the client to review. The problem with static images is they don't tell the whole story of what the website could be. Hover state, the way the page loads, or even the way the page transitions to a new view—these are all elements that are usually not given any thought and are left up to the developer to make assumptions, or worse, not implement anything at all. What you're left with is a website that feels janky.

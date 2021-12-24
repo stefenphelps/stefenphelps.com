@@ -1,23 +1,24 @@
 ---
-title: "Progressively Load Background Images on HubSpot"
-publishDate: "2016-11-01"
-categories: 
-  - "design"
-  - "hubspot"
-heroImage: "/blog/progressive-loading-hubspot-image.gif"
+title: 'Progressively Load Background Images on HubSpot'
+description: "I am a big fan of the way Instagram's mobile app and Medium's website load images. If you don't know what I'm talking about, it's when an extremely small image is scaled up, blurred out and is loaded before the full image... eventually fading into the full image once it has loaded."
+publishDate: '2016-11-01'
+categories:
+  - 'design'
+  - 'hubspot'
+heroImage: '/blog/progressive-loading-hubspot-image.gif'
 author: Stefen Phelps
 layout: '../../layouts/BlogPost.astro'
 ---
 
 I am a big fan of the way Instagram's mobile app and [Medium](https://jmperezperez.com/medium-image-progressive-loading-placeholder/)'s website load images. If you don't know what I'm talking about, it's when an extremely small image is scaled up, blurred out and is loaded before the full image... eventually fading into the full image once it has loaded. Like so:
 
-![Progressive Loading Image on Medium](/blog/3oz8xQJy64awXLEqyc.gif "Progressive Loading Image on Medium")
+![Progressive Loading Image on Medium](/blog/3oz8xQJy64awXLEqyc.gif 'Progressive Loading Image on Medium')
 
 Providing visual feedback to end users — **especially users with slower connections** — that something is happening is a great way to improve UX. Thanks to HubSpot's [automatic image resizing](https://knowledge.hubspot.com/articles/kcs_article/cos-general/what-is-automatic-image-resizing) and a nifty little script by David Desandro (the man behind [metafizzy](http://metafizzy.co/)) it's pretty easy to achieve the same effect on your HubSpot website:
 
-![Progressive Loading Background Image on HubSpot](/blog/3oz8xPBjyHeOct6jNS.gif "Progressive Loading Background Image on HubSpot")
+![Progressive Loading Background Image on HubSpot](/blog/3oz8xPBjyHeOct6jNS.gif 'Progressive Loading Background Image on HubSpot')
 
-* * *
+---
 
 ## How To Create Progressive Loading Images in HubSpot
 
@@ -33,11 +34,11 @@ If you haven't noticed, full-width image backgrounds are all the rage in [web de
 </div>
 ```
 
-As usual, we use an inline style for the image so it can be unique on each page. The real magic happens in the child div "bg-section-header\_placholder". We use the same code to display the same image, but appending the src with "?width=20". Doing this tells HubSpot's servers to resize the image to 20px using their image resizing magic.
+As usual, we use an inline style for the image so it can be unique on each page. The real magic happens in the child div "bg-section-header_placholder". We use the same code to display the same image, but appending the src with "?width=20". Doing this tells HubSpot's servers to resize the image to 20px using their image resizing magic.
 
 One thing to note, HubSpot uses two different URLs for loading images. One for images that are compressed/resized and one for images that are not compressed/resized:
 
-- Doesn't resize: __example.com/**hubfs**/image.jpg__
+- Doesn't resize: **example.com/**hubfs**/image.jpg**
 - Does resize: _example.com/**hs-fs/hubfs**/image.jpg_
 
 By default, the custom module will use the URL that doesn't resize the image. To get around this you can use the "replace" HubL filter to replace the default URL like so:
