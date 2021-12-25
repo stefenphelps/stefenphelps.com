@@ -13,7 +13,7 @@ let date = new Date(publishDate);
 let dateLabel = date.toLocaleDateString("en-US");
 ---
 
-<article class="content">
+<article>
   {heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
   <h1 class="title">{title}</h1>
   <p>Written by <a href="ttps://twitter.com/stefen">Stefen</a> on <time>{dateLabel}</time></p>

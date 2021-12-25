@@ -15,13 +15,42 @@ let permalink = 'https://stefenphelps.com/';
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} permalink={permalink} />
+    <style>
+      body {
+        max-width: 80rem;
+      }
+      .home {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        margin-top: 4rem;
+      }
+      .home-image {
+        flex: 1 1 230px;
+      }
+      @media (prefers-color-scheme: dark) {
+        .home-image {
+          filter: sepia(100) brightness(.5);
+        }
+      }
+      .home-text {
+        flex: 1 1 400px;
+      }
+    </style>
   </head>
   <body>
     <Header />
     <main>
-      <article class="content">
-        <h1 class="latest">{title}</h1>
-        <p>I'm a web developer, dad, husband, and overall well-rounded nerd based in Brooksville, Florida 🌴. I work for myself with some of the best people in the world over at <a href="https://www.kelp.agency">Kelp Creative Agency</a>.</p>
+      <article class="home">
+        <div class="home-text">
+          <h1>Hello, my name is Stefen.</h1>
+          <p>I'm a web developer, dad, husband, and overall well-rounded nerd based in Brooksville, Florida 🌴. I work for myself with some of the best people in the world over at <a href="https://www.kelp.agency">Kelp Creative Agency</a>.</p>
+        </div>
+        <picture class="home-image">
+          <source loading="lazy" type="image/webp" srcset="mustache-face.webp" width="600" height="751" >
+          <img loading="lazy" width="600" height="751" src="mustache-face.png" alt="Stefen's Mustache Face">
+        </picture>
       </article>
     </main>
     <Footer />

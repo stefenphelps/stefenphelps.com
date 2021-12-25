@@ -15,13 +15,40 @@ let permalink = 'https://stefenphelps.com/contact';
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} permalink={permalink} />
+    <style>
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      form > * {
+        flex: 1 1 300px;
+      }
+      input, textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+      }
+      button {
+        margin-top: 1rem;
+      }
+      </style>
   </head>
   <body>
     <Header />
     <main>
       <article>
         <h1>{title}</h1>
-        <p>You can connect with me on <a href="https://twitter.com/stefen">Twitter</a> or <a href="https://www.linkedin.com/in/stefenphelps/">LinkedIn</a>.</p>
+        <p>You can connect with me on <a href="https://twitter.com/stefen">Twitter</a> or <a href="https://www.linkedin.com/in/stefenphelps/">LinkedIn</a>. Otherwise, use the form below.</p>
+        <form name="contact" netlify>
+          <label>Name <input type="text" name="name" required /></label>
+          <label>Email <input type="email" name="email" required /></label>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required /></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
       </article>
     </main>
     <Footer />
