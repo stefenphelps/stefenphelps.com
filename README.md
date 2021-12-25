@@ -1,3 +1,3 @@
-# Stefen Phelps Website
+# Stefen Phelps' Personal Website
 
 WIP
