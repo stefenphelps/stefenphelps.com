@@ -29,10 +29,11 @@ let permalink = 'https://stefenphelps.com/contact';
         width: 100%;
         margin-bottom: 0;
       }
-      button {
+      form > button {
         margin-top: 1rem;
+        flex-basis: 100%;
       }
-      </style>
+    </style>
   </head>
   <body>
     <Header />
@@ -40,12 +41,18 @@ let permalink = 'https://stefenphelps.com/contact';
       <article>
         <h1>{title}</h1>
         <p>You can connect with me on <a href="https://twitter.com/stefen">Twitter</a> or <a href="https://www.linkedin.com/in/stefenphelps/">LinkedIn</a>. Otherwise, use the form below.</p>
-        <form name="contact" netlify>
-          <label>Name <input type="text" name="name" required /></label>
-          <label>Email <input type="email" name="email" required /></label>
+        <form name="contact" data-netlify="true">
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
           <div>
             <label for="message">Message</label>
-            <textarea id="message" name="message" required /></textarea>
+            <textarea id="message" name="message" required></textarea>
           </div>
           <button type="submit">Send Message</button>
         </form>
