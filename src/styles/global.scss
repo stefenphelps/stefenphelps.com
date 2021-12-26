@@ -180,10 +180,12 @@ h6 {
 a,
 a:visited {
 	color: var(--accent);
+	text-decoration-thickness: 2px;
+	text-decoration-skip-ink: auto;
 }
 
 a:hover {
-	text-decoration: none;
+	text-decoration-style: dotted;
 }
 
 a button,
