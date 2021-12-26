@@ -16,11 +16,11 @@
 	--line-height: 1.618;
 
 	/* Default (light) theme */
-	--bg: #fff;
-	--accent-bg: #f5f7ff;
+	--bg: #fef7ed;
+	--accent-bg: #fef7ed;
 	--text: #212121;
 	--text-light: #585858;
-	--border: #d8dae1;
+	--border: #c8b495;
 	--accent: #0d47a1;
 	--accent-light: #90caf9;
 	--code: #d81b60;
@@ -198,7 +198,7 @@ input[type='button'] {
 	border-radius: 5px;
 	background: var(--accent);
 	font-size: 1rem;
-	color: var(--text);
+	color: white;
 	padding: 0.7rem 0.9rem;
 	margin: 0.5rem 0;
 	transition: 0.4s;
