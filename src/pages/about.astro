@@ -15,81 +15,81 @@ let permalink = 'https://stefenphelps.com/about';
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} permalink={permalink} />
-      <style>
-        .grid {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 2rem;
-        }
-        .grid-item {
-          flex: 1 1 200px;
-        }
-        label {
-          display: block;
-        }
-        ol {
-          list-style: none;
-          margin: 0 0 0 4ch;
-          padding: 0 0 0 4ch;
-        }
-        ol li {
-          text-indent: -4ch;
-          line-height: 1.2;
-          margin-bottom: 1rem;
-        }
-        ol time {
-          font-size: 2rem;
-          font-family: var(--mono-font);
-          display: inline-block;
-          margin-right: .5rem;
-          font-weight: 200;
-        }
-        progress {
-          width: 100%;
-        }
-        form {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          gap: .5rem;
-          background: var(--accent);
-          padding: .5rem 1rem;
-          border-radius: .5rem;
-          color: var(--bg);
-        }
-        form h2 {
-          font-size: 1.25rem;
-          margin: 0;
-        }
-        form div {
-          display: flex;
-          align-items: center;
-          gap: .25rem;
-        }
-        form input {
-          margin: 0;
-        }
-        .professional-content,
-        .personal-content {
-          display: none;
-          flex: 1 1 100%;
-        }
-        .professional-content.active,
-        .personal-content.active {
-          display: block;
-        }
-        article {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          align-items: center;
-          gap: 1.5rem;
-          margin-top: 3rem;
-        }
-        h1 {
-          margin: 0;
-        }
-      </style>
+    <style>
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+      .grid-item {
+        flex: 1 1 200px;
+      }
+      label {
+        display: block;
+      }
+      ol {
+        list-style: none;
+        margin: 0 0 0 2.1em;
+        padding: 0 0 0 2.1em;
+      }
+      ol li {
+        text-indent: -2.1em;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+      ol time {
+        font-size: var(--size-3);
+        font-family: var(--mono-font);
+        display: inline-block;
+        margin-right: .5rem;
+        font-weight: 200;
+      }
+      progress {
+        width: 100%;
+      }
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: .5rem;
+        background: var(--accent);
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+        color: var(--bg);
+      }
+      form h2 {
+        font-size: 1.25rem;
+        margin: 0;
+      }
+      form div {
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+      }
+      form input {
+        margin: 0;
+      }
+      .professional-content,
+      .personal-content {
+        display: none;
+        flex: 1 1 100%;
+      }
+      .professional-content.active,
+      .personal-content.active {
+        display: block;
+      }
+      article {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+      h1 {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <Header />
@@ -109,10 +109,10 @@ let permalink = 'https://stefenphelps.com/about';
         </form>
         <div class="professional-content active">
           <p>Here is a summary of my web development skill&thinsp;/&thinsp;experience and my professional work history.</p>
-          <h2 style="margin-bottom: 0;">Skillset</h2>
+          <h2 class="h3" style="margin-bottom: 0;">Skillset</h2>
           <div class="grid">
             <div class="grid-item">
-              <h3>Base</h3>
+              <h3 class="h5">Base</h3>
               <label for="html">HTML</label>
               <progress id="html" value="99" max="100"></progress>
               <label for="css">CSS / Sass</label>
@@ -125,7 +125,7 @@ let permalink = 'https://stefenphelps.com/about';
               <progress id="hubl" value="95" max="100"></progress>
             </div>
             <div class="grid-item">
-              <h3>Tools</h3>
+              <h3 class="h5">Tools</h3>
               <label for="wordpress">WordPress</label>
               <progress id="wordpress" value="97" max="100"></progress>
               <label for="hubspot">HubSpot</label>
@@ -138,8 +138,8 @@ let permalink = 'https://stefenphelps.com/about';
               <progress id="adobe" value="85" max="100"></progress>
             </div>
             <div class="grid-item">
-              <h3>Libraries</h3>
-              <label for="react">React / Preact / Next.js</label>
+              <h3 class="h5">Libraries</h3>
+              <label for="react">(p)React / Next.js</label>
               <progress id="react" value="65" max="100"></progress>
               <label for="vue">Vue / Nuxt.js</label>
               <progress id="vue" value="72" max="100"></progress>
@@ -151,7 +151,7 @@ let permalink = 'https://stefenphelps.com/about';
               <progress id="timber" value="98" max="100"></progress>
             </div>
           </div>
-          <h2>Career History</h2>
+          <h2 class="h3">Career History</h2>
           <ol>
             <li><time>2009</time> First (paid) website gig</li>
             <li><time>2011</time> Started Stefen Phelps Web Design and doing freelance work on a frequent basis</li>
@@ -169,10 +169,10 @@ let permalink = 'https://stefenphelps.com/about';
         </div>
         <div class="personal-content">
           <p>Here's some random things I enjoy and some major events in my life.</p>
-          <h2 style="margin-bottom: 0;">Skillset</h2>
+          <h2 class="h3" style="margin-bottom: 0;">Skillset</h2>
           <div class="grid">
             <div class="grid-item">
-              <h3>Activites</h3>
+              <h3 class="h5">Activites</h3>
               <label for="golf">🥏 Disc Golf</label>
               <progress id="golf" value="90" max="100"></progress>
               <label for="racquetball">🏸 Racquetball</label>
@@ -183,7 +183,7 @@ let permalink = 'https://stefenphelps.com/about';
               <progress id="fish" value="65" max="100"></progress>
             </div>
             <div class="grid-item">
-              <h3>Foods I like</h3>
+              <h3 class="h5">Foods I like</h3>
               <label for="tacos">🌮 Tacos</label>
               <progress id="tacos" value="97" max="100"></progress>
               <label for="sushi">🍣 Sushi</label>
@@ -194,7 +194,7 @@ let permalink = 'https://stefenphelps.com/about';
               <progress id="gyros" value="85" max="100"></progress>
             </div>
             <div class="grid-item">
-              <h3>Places&thinsp;/&thinsp;Times</h3>
+              <h3 class="h5">Places&thinsp;/&thinsp;Times</h3>
               <label for="beaches">🏖 Beaches</label>
               <progress id="beaches" value="45" max="100"></progress>
               <label for="mountains">🏔 Mountains</label>
@@ -205,7 +205,7 @@ let permalink = 'https://stefenphelps.com/about';
               <progress id="spring" value="70" max="100"></progress>
             </div>
           </div>
-          <h2>Personal Milestones</h2>
+          <h2 class="h3">Personal Milestones</h2>
           <ol>
             <li><time>2006</time> Graduated high school.</li>
             <li><time>2008</time> Associates degree.</li>
