@@ -3,7 +3,7 @@
     <ul class="header-nav-menu">
       <li class="logo">
         <a href="/">
-          Stefen Phelps
+          Stefen <span>Phelps</span>
         </a>
       </li>
       <li>
@@ -49,5 +49,17 @@
 }
 .logo {
   margin-right: auto;
+}
+@media (max-width: 500px) {
+  .header-nav-menu {
+    gap: .5rem;
+  }
+  .header-nav-menu li a {
+    font-size: 14px;
+    padding: .125rem .5rem;
+  }
+  .header-nav-menu li a span {
+    display: none;
+  }
 }
 </style>
