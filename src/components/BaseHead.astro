@@ -10,13 +10,13 @@ const { title, description, permalink } = Astro.props;
 <!-- Global Metadata / Icons -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
+<meta name="msapplication-TileColor" content="#a27f52">
+<meta name="theme-color" content="#a27f52">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a27f52">
-<meta name="msapplication-TileColor" content="#a27f52">
-<meta name="theme-color" content="#a27f52">
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -38,4 +38,7 @@ const { title, description, permalink } = Astro.props;
 <meta property="twitter:image" content="/social.jpg" />
 
 <!-- Global Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com" /> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" />
 <link rel="stylesheet" href={Astro.resolve('../styles/global.scss')} />
