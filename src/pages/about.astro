@@ -55,12 +55,11 @@ let permalink = 'https://stefenphelps.com/about';
           background: var(--accent);
           padding: .5rem 1rem;
           border-radius: .5rem;
-          color: white;
+          color: var(--bg);
         }
         form h2 {
           font-size: 1.25rem;
           margin: 0;
-          opacity: .9;
         }
         form div {
           display: flex;
@@ -70,16 +69,25 @@ let permalink = 'https://stefenphelps.com/about';
         form input {
           margin: 0;
         }
-        form label {
-          opacity: .75;
-        }
         .professional-content,
         .personal-content {
           display: none;
+          flex: 1 1 100%;
         }
         .professional-content.active,
         .personal-content.active {
           display: block;
+        }
+        article {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1.5rem;
+          margin-top: 3rem;
+        }
+        h1 {
+          margin: 0;
         }
       </style>
   </head>
@@ -191,10 +199,10 @@ let permalink = 'https://stefenphelps.com/about';
               <progress id="beaches" value="45" max="100"></progress>
               <label for="mountains">🏔 Mountains</label>
               <progress id="mountains" value="92" max="100"></progress>
-              <label for="angular">🍁 Fall</label>
-              <progress id="angular" value="85" max="100"></progress>
-              <label for="jquery">🌼 Spring</label>
-              <progress id="jquery" value="70" max="100"></progress>
+              <label for="fall">🍁 Fall</label>
+              <progress id="fall" value="85" max="100"></progress>
+              <label for="spring">🌼 Spring</label>
+              <progress id="spring" value="70" max="100"></progress>
             </div>
           </div>
           <h2>Personal Milestones</h2>
