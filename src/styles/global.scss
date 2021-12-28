@@ -70,6 +70,8 @@ body {
 	overflow-x: hidden;
 	word-break: break-word;
 	overflow-wrap: break-word;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Make the header bg full width, but the content inline with body */
