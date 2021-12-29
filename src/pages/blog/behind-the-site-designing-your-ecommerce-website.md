@@ -27,7 +27,7 @@ _**Your website needs to be like water!**_
 
 **To get more technical:** we design responsive sites using a [12 column grid system](http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp) which makes coding the design a much easier task. This is one of the primary reasons why it's so hard to take an existing design and "make it responsive". It really needs to be thought through in the design phase and not be a tacked-on (buggy) feature after the fact.
 
-![](/blog/issc-website-redesign-desktop-phone.jpg)
+![issc website redesign](/blog/issc-website-redesign-desktop-phone.jpg)
 
 _An example of responsive design (desktop and phone)._
 

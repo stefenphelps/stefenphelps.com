@@ -15,19 +15,17 @@ Diane Bedard, the owner of [NatureCoaster.com](https://www.naturecoaster.com/), 
 
 Before redesigning the website, we needed to get some solid branding to build our foundation on. Without a brand to build on, there's not much of a reason to not use any of the off-the-shelf prebuilt themes out there. However, when you have a solid brand and a style guide, this is when your website can really shine and bring a lasting, memorable experience to your visitors. Not only does it help give a solid footing to your website, but it also brings a unified look and feel to all of your marketing efforts whether that's print or digital, and everything in-between.
 
-Thanks to the amazing work by my good friend, [Luke Kenney](https://www.linkedin.com/in/luke-kenney-970473105/), we were able to create a refreshed brand and style guide that exceeded expectations. Here's a look at the branding before and after:
+Thanks to the amazing work by my good friend, [Luke Kenney](https://www.linkedin.com/in/luke-kenney-970473105/), we were able to create a refreshed brand and style guide that exceeded expectations. Here's a look at the new brand style guide:
 
-\[gallery type="thumbnails" columns="2" link="none" size="medium" ids="851,850"\]
-
-And here's the new style guide:
-
-![](/blog/Nature-Coaster-Brand-Guidelines_Page_1-832x468.png) ![](/blog/Nature-Coaster-Brand-Guidelines_Page_2-832x468.png) ![](/blog/Nature-Coaster-Brand-Guidelines_Page_3-832x468.png) ![](/blog/Nature-Coaster-Brand-Guidelines_Page_4-832x468.png)
+![brand guidelines page 1](/blog/Nature-Coaster-Brand-Guidelines_Page_1-832x468.png) ![brand guidelines page 2](/blog/Nature-Coaster-Brand-Guidelines_Page_2-832x468.png) ![brand guidelines page 3](/blog/Nature-Coaster-Brand-Guidelines_Page_3-832x468.png) ![brand guidelines page 4](/blog/Nature-Coaster-Brand-Guidelines_Page_4-832x468.png)
 
 And finally, the before and after of the website:
 
-![](/blog/old-naturecoaster-website-design.png) Old website design (wayback machine was missing some images...)\[/caption\]
+![old website](/blog/old-naturecoaster-website-design.png)
 
-![](/blog/new-naturecoaster-website-design-1.png)
+_Old website design (wayback machine was missing some images..._
+
+![new website](/blog/new-naturecoaster-website-design-1.png)
 
 ---
 

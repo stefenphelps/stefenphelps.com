@@ -25,4 +25,4 @@ When a client wants a website, they usually have a specific look in mind and it 
 
 WordPress is by far the easiest to use for clients that have no experience with a CMS.  All they have to do is login and they can make as many changes as they want without ever incurring an hourly charge from their a web design company.
 
-Hopefully I've helped you understand what WordPress is and what it's capable of. If you need any more evidence of why Wordpress is a great all-in-one website solution, take a look at our [portfolio page!](http://www.stefenphelpswebdesign.com/category/portfolio/)
+Hopefully I've helped you understand what WordPress is and what it's capable of.

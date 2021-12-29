@@ -30,7 +30,7 @@ If you have to have transparency in your image, you'll want to use a PNG. Trans
 
 ## **2.** Design a Compelling CTA (getting more leads)
 
-![](/blog/macbook-and-glasses.jpg)
+![macbook](/blog/macbook-and-glasses.jpg)
 
 The first step for a successful call-to-action is a great offer. If the offer itself is sucky, it's going to be pretty hard to get any clicks. Once you have a compelling offer, then you just need to make sure you're communicating that offer in your banner ad as best as possible. Here are some general tips to keep in mind when designing a CTA:
 

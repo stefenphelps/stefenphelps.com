@@ -12,6 +12,6 @@ SEO stands for Search Engine Optimization, which means getting your website near
 
 Here is a great video about SEO and the basics on how to optimize your website to increase it's pagerank:
 
-http://www.youtube.com/embed/hF515-0Tduk
+[![SEO basics](https://img.youtube.com/vi/hF515-0Tduk/0.jpg)](https://www.youtube.com/watch?v=hF515-0Tduk)
 
 If you would like to learn more on how you can increase traffic to your website through SEO I highly recommend checking out [Search Engine Land](http://searchengineland.com/). They have loads of information on good practices for optimizing your website.
