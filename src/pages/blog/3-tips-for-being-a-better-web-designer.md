@@ -36,7 +36,7 @@ If you're designing for an executive or corporate audience, then you'll probably
 
 In the technology industry, if you're not constantly learning, you're falling behind.
 
-https://twitter.com/slava\_pestov/status/966050893161361408
+https://twitter.com/slava_pestov/status/966050893161361408
 
 This is a joke, obviously, but it's funny because it rings true in many ways.
 
