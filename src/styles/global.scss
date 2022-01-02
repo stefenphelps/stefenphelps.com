@@ -134,6 +134,9 @@ h5,
 h6 {
 	margin-top: 1em;
 	font-family: 'Quicksand', var(--sans-font);
+	a {
+		text-decoration-thickness: 4px;
+	}
 }
 h1,
 .h1 {
