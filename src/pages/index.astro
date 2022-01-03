@@ -30,12 +30,6 @@ let permalink = 'https://stefenphelps.com/';
         flex: 1 1 230px;
         position: relative;
       }
-      .home-image svg {
-        position: absolute;
-        top: 55%;
-        z-index: 1;
-        opacity: .5;
-      }
       @media (prefers-color-scheme: dark) {
         .home-image {
           filter: sepia(100) brightness(.5);
@@ -55,52 +49,13 @@ let permalink = 'https://stefenphelps.com/';
           <p>I'm a web developer, dad, husband, and overall well-rounded nerd based in Brooksville, Florida 🌴. I work for myself with some of the best people in the world at <a href="https://www.kelp.agency">Kelp Creative Agency</a>.</p>
         </div>
         <div class="home-image">
-          <!--<svg class="canvas" viewBox="0 0 200 200" width="200" height="200"></svg>-->
           <picture>
             <source type="image/svg+xml" srcset="mustache-face.svg" width="600" height="751" >
             <source type="image/webp" srcset="mustache-face.webp" width="600" height="751" >
             <img width="600" height="751" src="mustache-face.png" alt="Stefen's Mustache Face">
           </picture>
-          <!--<button>Generate new 'stache</button>-->
         </div>
       </article>
-      <!--<script type="module">
-        import { SVG } from "https://cdn.skypack.dev/@svgdotjs/svg.js";
-        import {
-          spline,
-          random
-        } from "https://cdn.skypack.dev/@georgedoescode/generative-utils@1.0.0";
-        
-        const svg = SVG(".canvas");
-        const { width } = svg.viewbox();
-        const numSteps = 10;
-        const stepSize = width / numSteps;
-        const btn = document.querySelector("button");
-        const hairs = 10;
-        
-        function generate() {
-          svg.clear();
-          
-          for (let grow = 0; grow <= hairs; grow += 1) {
-            const points = [];
-            for (let x = 0; x <= width; x += stepSize) {
-              const y = random(80, 120);
-              points.push({
-                x,
-                y
-              });
-            }
-            const pathData = spline(points, 1, false);
-            svg.path(pathData).stroke("#111").fill("none");
-          }
-        }
-        
-        generate();
-        
-        btn.addEventListener("click", () => {
-          generate();
-        });
-      </script>-->
     </main>
     <Footer />
   </body>
