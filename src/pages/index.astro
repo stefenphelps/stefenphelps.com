@@ -29,6 +29,16 @@ let permalink = 'https://stefenphelps.com/';
       .home-image {
         flex: 1 1 230px;
         position: relative;
+        text-align: center;
+      }
+      .home-image-stache {
+        position: absolute;
+        top: 52%;
+        left: 48%;
+        transform: translate(-50%, 0);
+        width: 50%;
+        display: none;
+        pointer-events: none;
       }
       @media (prefers-color-scheme: dark) {
         .home-image {
@@ -49,14 +59,26 @@ let permalink = 'https://stefenphelps.com/';
           <p>I'm a web developer, dad, husband, and overall well-rounded nerd based in Brooksville, Florida 🌴. I work for myself with some of the best people in the world at <a href="https://www.kelp.agency">Kelp Creative Agency</a>.</p>
         </div>
         <div class="home-image">
+          <img class="home-image-stache" src="/mustaches/1.svg" alt="" width="700" height="700" />
           <picture>
             <source type="image/svg+xml" srcset="mustache-face.svg" width="600" height="751" >
             <source type="image/webp" srcset="mustache-face.webp" width="600" height="751" >
             <img width="600" height="751" src="mustache-face.png" alt="Stefen's Mustache Face">
           </picture>
+          <button>Generate Mustache</button>
         </div>
       </article>
     </main>
     <Footer />
+    <script>
+      const button = document.querySelector('button');
+      const mustacheImg = document.querySelector('.home-image-stache');
+      const mustaches = Array.from(Array(60).keys());
+      button.addEventListener('click', function(event) {
+        mustacheImg.style.display = "block";
+        let randomStache = mustaches[Math.floor(Math.random()*mustaches.length)] + 1;
+        mustacheImg.src = "/mustaches/" + randomStache + ".svg";
+      });
+    </script> 
   </body>
 </html>
