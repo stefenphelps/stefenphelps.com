@@ -81,8 +81,8 @@ let permalink = 'https://stefenphelps.com/';
       const mustaches = [ ...Array(60).keys() ];
       button?.addEventListener('click', () => {
         const randomStache = mustaches[ Math.floor(Math.random() * mustaches.length) ] + 1;
-        mustacheImg?.style.display = 'block';
-        mustacheImg?.src = `/mustaches/${randomStache}.svg`;
+        mustacheImg.style.display = 'block';
+        mustacheImg.src = `/mustaches/${randomStache}.svg`;
       });
     </script> 
   </body>
