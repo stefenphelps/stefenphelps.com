@@ -23,10 +23,12 @@
 package = "netlify-plugin-csp-generator"
 
 	[plugins.inputs]
-	buildDir = "./dist"
+	buildDir = "dist"
 
 	[plugins.inputs.policies]
 		defaultSrc = "'self'"
+		styleSrc = "'fonts.googleapis.com' 'self'"
+		fontSrc = "'fonts.gstatic.com' 'self'"
 
 [[redirects]]
 	from = "/hire-me"
