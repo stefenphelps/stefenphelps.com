@@ -1,0 +1,43 @@
+[build]
+	base = "./"
+	publish = "./dist"
+	command = "npm run build"
+
+[[plugins]]
+	# Installs the Lighthouse Build Plugin for all deploy contexts
+	package = "@netlify/plugin-lighthouse"
+	
+	# optional, fails build when a category is below a threshold
+	[plugins.inputs.thresholds]
+		performance = 0.9
+		accessibility = 0.9
+		best-practices = 0.9
+		seo = 0.9
+		pwa = 0.9
+	
+	# optional, deploy the lighthouse report to a path under your site
+	[plugins.inputs]
+		output_path = "./dist/lighthouse.html"
+		
+[[plugins]]
+package = "netlify-plugin-csp-generator"
+
+	[plugins.inputs]
+	buildDir = "./dist"
+
+	[plugins.inputs.policies]
+		defaultSrc = "'self'"
+
+[[redirects]]
+	from = "/hire-me"
+	to = "/contact"
+	from = "/how-to-use-excels-vlookup-to-quickly-update-product-data"
+	to = "/blog/how-to-use-excels-vlookup-to-quickly-update-product-data"
+	from = "/pros-cons-using-wordpress-page-builders/basic-vs-complex-layout"
+	to = "/blog/pros-cons-using-wordpress-page-builders/basic-vs-complex-layout"
+	from = "/progressive-image-loading-with-hubspot"
+	to = "/blog/progressive-image-loading-with-hubspot"
+	from = "/lazy-loading-images-on-hubspot"
+	to = "/blog/lazy-loading-images-on-hubspot"
+	from = "/hubspot-blog-search"
+	to = "/blog/hubspot-blog-search"
