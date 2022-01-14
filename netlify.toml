@@ -31,13 +31,23 @@ package = "netlify-plugin-csp-generator"
 [[redirects]]
 	from = "/hire-me"
 	to = "/contact"
+	
+[[redirects]]	
 	from = "/how-to-use-excels-vlookup-to-quickly-update-product-data"
 	to = "/blog/how-to-use-excels-vlookup-to-quickly-update-product-data"
+	
+[[redirects]]	
 	from = "/pros-cons-using-wordpress-page-builders/basic-vs-complex-layout"
 	to = "/blog/pros-cons-using-wordpress-page-builders/basic-vs-complex-layout"
+	
+[[redirects]]	
 	from = "/progressive-image-loading-with-hubspot"
 	to = "/blog/progressive-image-loading-with-hubspot"
+	
+[[redirects]]	
 	from = "/lazy-loading-images-on-hubspot"
 	to = "/blog/lazy-loading-images-on-hubspot"
+	
+[[redirects]]	
 	from = "/hubspot-blog-search"
 	to = "/blog/hubspot-blog-search"
