@@ -1,7 +1,7 @@
 [build]
 	base = "./"
 	publish = "dist"
-	command = "CI='' npm run build"
+	command = "npm run build"
 
 [[plugins]]
 	# Installs the Lighthouse Build Plugin for all deploy contexts
