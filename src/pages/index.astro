@@ -15,7 +15,7 @@ let permalink = 'https://stefenphelps.com/';
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} permalink={permalink} />
-    <style>
+    <style lang="scss">
       body {
         max-width: 90rem;
       }
@@ -25,33 +25,30 @@ let permalink = 'https://stefenphelps.com/';
         gap: 2rem;
         align-items: center;
         margin-top: 4rem;
-      }
-      .home-image {
+      &-image {
         flex: 1 1 230px;
         position: relative;
         text-align: center;
-      }
-      .home-text {
-        flex: 1 1 400px;
-      }
-      .home-image-stache {
-        position: absolute;
-        top: 52%;
-        left: 48%;
-        transform: translate(-50%, 0);
-        width: 50%;
-        display: none;
-        pointer-events: none;
-      }
-      @media (prefers-color-scheme: dark) {
-        .home-image {
+        @media (prefers-color-scheme: dark) {
           filter: sepia(100) brightness(.5);
         }
-      }
-      @media (prefers-color-scheme: light) {
-        .home-image-picture {
-          opacity: .75;
+        &-picture {
+          @media (prefers-color-scheme: light) {
+            opacity: .75;
+          }
         }
+        &-stache {
+          position: absolute;
+          top: 52%;
+          left: 48%;
+          transform: translate(-50%, 0);
+          width: 50%;
+          display: none;
+          pointer-events: none;
+        }
+      }
+      &-text {
+        flex: 1 1 400px;
       }
     </style>
   </head>
@@ -79,7 +76,7 @@ let permalink = 'https://stefenphelps.com/';
       const button = document.querySelector('button');
       const mustacheImg = document.querySelector('.home-image-stache');
       const mustaches = Array.from(Array(60).keys());
-      button.addEventListener('click', () => {
+      button.addEventListener('click', function () {
         const randomStache =
           mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
         mustacheImg.style.display = 'block';
