@@ -7,28 +7,25 @@
 	# Installs the Lighthouse Build Plugin for all deploy contexts
 	package = "@netlify/plugin-lighthouse"
 	
+	# optional, deploy the lighthouse report to a path under your site
+	[plugins.inputs]
+		output_path = "./lighthouse.html"
+	
 	# optional, fails build when a category is below a threshold
 	[plugins.inputs.thresholds]
 		performance = 0.9
 		accessibility = 0.9
 		best-practices = 0.9
 		seo = 0.9
-		pwa = 0.7
-	
-	# optional, deploy the lighthouse report to a path under your site
-	[plugins.inputs]
-		output_path = "./lighthouse.html"
+		pwa = 0.8
 		
-[[plugins]]
-package = "netlify-plugin-csp-generator"
-
-	[plugins.inputs]
-	buildDir = "dist"
-
-	[plugins.inputs.policies]
-		defaultSrc = "'self'"
-		styleSrc = "'fonts.googleapis.com' 'self'"
-		fontSrc = "'fonts.gstatic.com' 'self'"
+[[headers]]
+	for = "/*"
+	
+	[headers.values]
+		X-Frame-Options = "DENY"
+		X-XSS-Protection = "1; mode=block"
+		Content-Security-Policy = "default-src 'self'; script-src 'self'; font-src 'unsafe-inline' gstatic.com *.gstatic.com; style-src 'unsafe-inline' googleapis.com *.googleapis.com;"
 
 [[redirects]]
 	from = "/hire-me"
