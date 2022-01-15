@@ -78,11 +78,12 @@ let permalink = 'https://stefenphelps.com/';
     <script>
       const button = document.querySelector('button');
       const mustacheImg = document.querySelector('.home-image-stache');
-      const mustaches = [ ...Array(60).keys() ];
-      button?.addEventListener('click', () => {
-        const randomStache = mustaches[ Math.floor(Math.random() * mustaches.length) ] + 1;
+      const mustaches = [...Array(60).keys()];
+      button.addEventListener('click', () => {
+        const randomStache =
+          mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
         mustacheImg.style.display = 'block';
-        mustacheImg.src = `/mustaches/${randomStache}.svg`;
+        mustacheImg.src = '/mustaches/' + randomStache + '.svg';
       });
     </script> 
   </body>
