@@ -11,9 +11,6 @@
 	},
 	"devDependencies": {
 		"@astrojs/renderer-preact": "^0.4.0",
-		"astro": "^0.22.10"
-	},
-	"dependencies": {
-		"netlify-plugin-csp-generator": "^1.5.0"
+		"astro": "^0.22.13"
 	}
 }
