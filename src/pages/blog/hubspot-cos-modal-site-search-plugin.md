@@ -23,7 +23,7 @@ We like it because it provides a visually pleasing design, a great user experien
 
 ## How It Works
 
-The plugin uses the website's [sitemap.xml](https://www.growwithsms.com/sitemap.xml) to get an index of all the website's public pages, formats the URL into a title, and then filters those results with [List.js](http://listjs.com/) as you type.
+The plugin uses the website's sitemap.xml file to get an index of all the website's public pages, formats the URL into a title, and then filters those results with [List.js](http://listjs.com/) as you type.
 
 Feel free to dig into the finer details on the [GitHub repo](https://github.com/growwithsms/HubSpot-COS-Site-Search) and fix any bugs you find while you're in there! ?
 

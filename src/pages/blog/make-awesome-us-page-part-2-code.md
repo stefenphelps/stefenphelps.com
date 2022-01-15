@@ -9,15 +9,15 @@ author: Stefen Phelps
 layout: '../../layouts/BlogPost.astro'
 ---
 
-[Lief discussed the planning and production stages of our about page overhaul in part 1](https://www.growwithsms.com/blog/behind-the-scenes-on-our-new-meet-the-team-photos-part-1). In part 2 (this post!), I'll be discussing the technical aspects of making the team member photos/videos come alive on the web, some issues we faced and how we solved them. If you haven't seen it yet, be sure to **[check out our awesome about page](https://www.growwithsms.com/about) before you do anything else!**
+Lief discussed the planning and production stages of our about page overhaul in part 1. In part 2 (this post!), I'll be discussing the technical aspects of making the team member photos/videos come alive on the web, some issues we faced and how we solved them. If you haven't seen it yet, be sure to **[check out our awesome about page](https://www.growwithsms.com/about) before you do anything else!**
 
 ## How We Created Our Team Member "Moving Photos"
 
 The key to creating photos that come to life — the Harry Potter effect if you will — was to use native HTML5 video elements, hiding the video controls and using the first frame of the video as the video thumbnail (aka the "poster"). For example, the basic HTML for Matt's video looks like this:
 
 ```
-<video id="video" poster="//offer.growwithsms.com/hs-fs/hubfs/Website_Images/team_members/videos/Matt-Johnson.jpg">
-    <source src="//offer.growwithsms.com/hubfs/Website_Images/team_members/videos/Matt.mp4?t=1476477533981" type="video/mp4">
+<video id="video" poster="/videos/Matt-Johnson.jpg">
+    <source src="/videos/Matt.mp4" type="video/mp4">
 </video>
 ```
 

@@ -9,7 +9,7 @@ author: Stefen Phelps
 layout: '../../layouts/BlogPost.astro'
 ---
 
-Behind every [**good eCommerce website**](https://www.growwithsms.com/web/website-design) is a **good strategy**. Who is this site being made for? How does that person prefer to shop online? Do they prefer to have a phone number to call or a form to fill out? What devices will he/she be using to browse the site? These are some of the critical questions that need to be answered before the site gets even close to being mocked up in Photoshop. Answering these questions will give us a clear picture of who to design for and what devices it should be optimized for.
+Behind every **good eCommerce website** is a **good strategy**. Who is this site being made for? How does that person prefer to shop online? Do they prefer to have a phone number to call or a form to fill out? What devices will he/she be using to browse the site? These are some of the critical questions that need to be answered before the site gets even close to being mocked up in Photoshop. Answering these questions will give us a clear picture of who to design for and what devices it should be optimized for.
 
 **PROTIP:** If you find it hard to answer these questions... don't fret! Some of these questions can be answered from data we can gather from your existing website thanks to tools such as [Google Analytics](https://analytics.google.com/) or [Hotjar](https://www.hotjar.com/).
 
@@ -33,7 +33,7 @@ _An example of responsive design (desktop and phone)._
 
 ## The Critical Pages
 
-The critical pages on an [eCommerce website](https://www.growwithsms.com/ultimate-ecommerce-playbook-for-industrial-distributors) include not only the home page, but the product page and the entire checkout process.  These pages need a special attention to detail in order to create the absolute best user-experience for your new *and* returning customers.
+The critical pages on an eCommerce website include not only the home page, but the product page and the entire checkout process.  These pages need a special attention to detail in order to create the absolute best user-experience for your new *and* returning customers.
 
 One common bad practice on eCommerce websites is requiring a customer to create an account before checking out. This is an unneeded obstacle for people that don't want another username and password to have to remember. Having a "checkout as guest" feature can sometimes be the difference between making or losing that sale.
 

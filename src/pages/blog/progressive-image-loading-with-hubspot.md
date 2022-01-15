@@ -24,7 +24,7 @@ Providing visual feedback to end users — **especially users with slower connec
 
 ### Step 1: The HubL
 
-If you haven't noticed, full-width image backgrounds are all the rage in [web design](https://www.growwithsms.com/web/website-design) these days. Because they are so large, they are the perfect candidate for this image loading technique. In HubSpot you'll need to either use a custom module or a HubL module so you can manipulate the image's _src_ attribute. We are using a custom module for our headers like so:
+If you haven't noticed, full-width image backgrounds are all the rage in web design these days. Because they are so large, they are the perfect candidate for this image loading technique. In HubSpot you'll need to either use a custom module or a HubL module so you can manipulate the image's _src_ attribute. We are using a custom module for our headers like so:
 
 ```
 <div class="bg-section-header"{% if widget.background_image.src %} style="background-image:url({{ widget.background_image.src }});"{% endif %}>

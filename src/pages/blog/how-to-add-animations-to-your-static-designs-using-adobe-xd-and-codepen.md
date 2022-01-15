@@ -34,7 +34,7 @@ For more complex animations and/or animating specific elements on the page, Code
 
 ### Create a Pen
 
-Head on over to [codepen.io](https://www.bluleadz.com/blog/scrum-explained-growth-for-your-business) and get comfy. You may want to start off by searching for a specific animation that you're looking for. However, if you know HTML and CSS you can create a new pen from scratch. Once you've got your pen created, save it and keep the URL handy for when you're reviewing that design with the client or developer.
+Head on over to [codepen.io](https://codepen.io) and get comfy. You may want to start off by searching for a specific animation that you're looking for. However, if you know HTML and CSS you can create a new pen from scratch. Once you've got your pen created, save it and keep the URL handy for when you're reviewing that design with the client or developer.
 
 Here's a recent example of a simple hover animation we created for a custom home page module:
 
