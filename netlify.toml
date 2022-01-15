@@ -1,3 +1,8 @@
+[build]
+	base = "./"
+	publish = "dist"
+	command = "CI='' npm run build"
+
 [[plugins]]
 	# Installs the Lighthouse Build Plugin for all deploy contexts
 	package = "@netlify/plugin-lighthouse"
