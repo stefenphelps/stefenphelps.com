@@ -6,8 +6,8 @@ import Footer from '../components/Footer.astro';
 
 // Component Script:
 let title =  "Hi there, I'm Stefen 😃";
-let description = 'Hey there! Thanks for stopping by, how can I help ya today?';
-let permalink = 'https://stefenphelps.com/';
+let description = "Hey there! Thanks for stopping by, how can I help ya today?";
+let permalink = "https://stefenphelps.com/";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -72,16 +72,16 @@ let permalink = 'https://stefenphelps.com/';
         </div>
       </article>
     </main>
-    <Footer />
     <script>
-      const button = document.querySelector('button');
-      const mustacheImg = document.querySelector('.home-image-stache');
-      const mustaches = Array.from(Array(60).keys());
+      var button = document.querySelector('button');
+      var mustacheImg = document.querySelector('.home-image-stache');
+      var mustaches = Array.from(Array(60).keys());
       button.addEventListener('click', function () {
-        const randomStache = mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
+        var randomStache = mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
         mustacheImg.style.display = 'block';
         mustacheImg.src = '/mustaches/' + randomStache + '.svg';
       });
     </script> 
+    <Footer />
   </body>
 </html>
