@@ -1,0 +1,42 @@
+---
+export interface Props {
+	prevUrl: string;
+	nextUrl: string;
+	pageStart: number;
+	pageEnd: number;
+	totalPosts: number;
+}
+
+const { prevUrl, nextUrl, pageStart, pageEnd, totalPosts } = Astro.props;
+
+const currentPage = pageEnd / 5;
+const totalPages = Math.ceil(totalPosts / 5);
+
+---
+
+<div class="wrapper">
+	<nav class="nav">
+		<a class="prev" href={prevUrl || '#'} aria-label="Previous Page">Previous</a>
+		<small>Page {currentPage} of {totalPages}</small>
+		<a class="next" href={nextUrl || '#'} aria-label="Next Page">Next</a>
+	</nav>
+</div>
+
+<style lang="scss">
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		padding-top: 4rem;
+	}
+	.prev,
+	.next {
+		display: block;
+		text-transform: uppercase;
+		margin: 0;
+		&[href='#'] {
+			display: none;
+		}
+	}
+</style>
