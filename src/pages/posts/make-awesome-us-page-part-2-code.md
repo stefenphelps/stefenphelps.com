@@ -15,9 +15,9 @@ Lief discussed the planning and production stages of our about page overhaul in 
 
 The key to creating photos that come to life — the Harry Potter effect if you will — was to use native HTML5 video elements, hiding the video controls and using the first frame of the video as the video thumbnail (aka the "poster"). For example, the basic HTML for Matt's video looks like this:
 
-```
+```html
 <video id="video" poster="/videos/Matt-Johnson.jpg">
-    <source src="/videos/Matt.mp4" type="video/mp4">
+	<source src="/videos/Matt.mp4" type="video/mp4" />
 </video>
 ```
 
@@ -25,25 +25,25 @@ NOTE: the controls attribute is completely omitted from the video element purpo
 
 At this point we have what is essentially just a still photo. Now we need an *event* to trigger the video to play. We'll use javascript to manipulate the [HTMLMediaElement API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement) to play the video on hover. We chose to use the *on hover event* so users could unknowingly trigger it as they browse the page*.* Th*e* javascript looks like this:
 
-```
-var teamMember = $("#video").hover( hoverVideo );
+```javascript
+var teamMember = $('#video').hover(hoverVideo);
 function hoverVideo(e) {
-    e.preventDefault();
-    $(this).get(0).play();
+	e.preventDefault();
+	$(this).get(0).play();
 }
 ```
 
 The default behavior after a web video ends is to pause on the last frame. This resulted in a funky looking Team Photos page after the videos were all played. So we needed to adjust our script to show the poster/thumbnail image once the video ended. Thankfully, the HTMLMediaElement API has a "currentTime" property and an "ended" property so we were able to change the play position back to the beginning after the video has finished loading (this worked for us because our thumbnail image was actually just the first frame). Now the script looks like this:
 
-```
-var teamMember = $("#video").hover( hoverVideo );
+```javascript
+var teamMember = $('#video').hover(hoverVideo);
 function hoverVideo(e) {
-    e.preventDefault();
-    $(this).get(0).play();
-    $(this).on('ended', function(){
-        this.currentTime = 0;
-        this.pause();
-    });
+	e.preventDefault();
+	$(this).get(0).play();
+	$(this).on('ended', function () {
+		this.currentTime = 0;
+		this.pause();
+	});
 }
 ```
 

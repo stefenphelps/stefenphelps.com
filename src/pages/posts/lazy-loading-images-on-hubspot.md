@@ -40,7 +40,7 @@ Pretty sweet, right?! Here's how to make it happen...
 
 Fire up your design manager, edit the "Listing Template," and add this script to the template:
 
-```
+```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.6.0/lazyload.min.js"></script>
 ```
 
@@ -52,13 +52,13 @@ There are a few different plugins out there, but I tend to prefer [this one](htt
 
 Find your blog post's featured image—it will look something like this:
 
-```
+```twig
 <img src="{{ content.post_list_summary_featured_image }}" alt="{{ content.featured_image_alt_text }}" class="hs-featured-image">
 ```
 
 Now update it to this:
 
-```
+```twig
 <img src="{{ content.post_list_summary_featured_image }}" alt="{{ content.featured_image_alt_text }}" class="hs-featured-image" width="12" style="width: 100%;" data-src="{{ content.post_list_summary_featured_image|replace('/hubfs/' + hub_id, '/hub/' + hub_id + '/hubfs') }}?width=600" data-srcset="{{ content.post_list_summary_featured_image|replace('/hubfs/' + hub_id, '/hub/' + hub_id + '/hubfs') }}?width=600 600w">
 ```
 
