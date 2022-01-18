@@ -25,10 +25,10 @@ Before we dive in, let's break down what a HubSpot Blog Search consists of into 
 
 The first step to creating your blog search is to add an HTML module to your blog template and create a form with a single text input and a submit button like so:
 
-```
+```html
 <form action="/blog/search">
-    <input name="query" type="text" placeholder="Search the blog..." />
-    <button type="submit">Search</button>
+	<input name="query" type="text" placeholder="Search the blog..." />
+	<button type="submit">Search</button>
 </form>
 ```
 
@@ -72,7 +72,7 @@ To populate the search results page with actual results, we'll need to use HubL 
 
 Go ahead and edit the search results page's template (or clone it if you want to be safe) and add a HubL module where you want the search results to display on the page. In your HubL module we are going to be doing two primary things. First, we're going to use the **_[blog_recent_posts](https://designers.hubspot.com/en/docs/hubl/hubl-supported-functions#blog-recent-posts)_** function to pull in your most recent posts. Then, we'll filter those posts by their titles using the **_request.query_dict_** [HTTP request variable](https://designers.hubspot.com/docs/hubl/hubl-supported-variables#http-request-variables) to get the search query parameter from the URL. Here's the code:
 
-```
+```twig
 {% set recent_posts = blog_recent_posts('default', 200) %}
 {% set searchQuery = request.query_dict['query'] %}
 

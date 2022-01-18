@@ -30,8 +30,11 @@ Good content is unique, specific and can be linked to easily. It is **the most i
 
 _In HTML, page content looks like:_
 
-```
-<h1></h1> <h2></h2> <p></p> <img> <video></video>
+```html
+<h1></h1>
+<h2></h2>
+<p></p>
+<img /> <video></video>
 ```
 
 Let's say, for example, we have a category page for "Hard Hats". Ask yourself, if someone is looking for hard hats, what information would they want to know and what is their intent? If I were searching for hard hats, I would want to read about the different types available, reviews of the best hard hats, price range and pros and cons to each type.
@@ -48,7 +51,7 @@ A page title is what is displayed at the top of the browser window and it is the
 
 _In HTML, the page title looks like:_
 
-```
+```html
 <title>I'm the page title!</title>
 ```
 
@@ -58,13 +61,13 @@ It may sound obvious but an optimized page title should reflect what the page is
 
 The page URL should be easy to read as well as structural in regards to it's [categorical relation to the rest of the website](/blog/website-structure-best-practices). Here is an example of an optimized URL:
 
-```
+```html
 https://example.com/ppe/hard-hats
 ```
 
 And here is an example of a bad URL:
 
-```
+```html
 http://example.com/store.html?page-id=78922048
 ```
 
@@ -76,8 +79,8 @@ The meta description is what shows up under the page title in search engines and
 
 _In HTML the meta description looks like this:_
 
-```
-<meta name="description" content="I'm the meta description!">
+```html
+<meta name="description" content="I'm the meta description!" />
 ```
 
 An optimized meta description should describe what the page is about. Meta descriptions are [not an important factor for ranking in search engines](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html), however, they are an important factor in getting the user to click on your link. Knowing this, you should think of your description as more an ad for your page rather than as another place to put your keywords.

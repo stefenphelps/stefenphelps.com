@@ -7,6 +7,7 @@ import BlogPost from '../components/BlogPost.astro';
 
 const {content} = Astro.props;
 const {title, description, publishDate, author, heroImage, permalink, alt} = content;
+
 ---
 <html lang={ content.lang || 'en' }>
   <head>

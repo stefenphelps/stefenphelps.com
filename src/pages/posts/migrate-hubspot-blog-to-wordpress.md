@@ -17,7 +17,7 @@ HubSpot makes it extremely difficult to export your blog posts in a usable form.
 
 In your design manager, create a new coded blog template. Then replace all of the code with this:
 
-```
+```twig
 {% if is_listing_view %}"post_name","post_date","post_title","post_content","featured_image","post_author","post_tags",{% for content in contents %}
 "{{ content.absolute_url|forceescape|replace('
 ','') }}","{{ content.publish_date_localized }}","{{ content.name|forceescape|replace('

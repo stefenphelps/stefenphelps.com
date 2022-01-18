@@ -32,7 +32,7 @@ Go into your design manager and click on "Create New Custom Module". Call this 
 
 Now, you'll need to create a _rich text field_ called "**Modal Popup**" and a _text field_ called "**Modal Button**".  Once that is done, copy the following snippet of code and paste it into the text area.
 
-```markup
+```html
 <!-- The button -->
 <a href="#{{ widget.modal_button|replace('&','and')|replace(' ','-')|replace('(','-')|replace(')','-')|replace('?','')|replace('"','')|replace("'","")|replace(".","")|replace(":","")|replace(",","") }}" class="open-popup-link">{{ widget.modal_button }}</a>
 
