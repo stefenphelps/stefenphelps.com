@@ -51,3 +51,11 @@
 [[redirects]]	
 	from = "/hubspot-blog-search"
 	to = "/blog/hubspot-blog-search"
+	
+[[redirects]]	
+	from = "/rss"
+	to = "/rss.xml"
+
+[[redirects]]	
+	from = "/feed"
+	to = "/rss.xml"
