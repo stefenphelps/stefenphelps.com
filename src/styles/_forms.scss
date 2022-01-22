@@ -1,0 +1,167 @@
+a button,
+button,
+[role='button'],
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+	border: none;
+	border-radius: 5px;
+	background: var(--accent);
+	font-size: 1rem;
+	color: var(--bg);
+	font-weight: bold;
+	padding: 0.7rem 0.9rem;
+	margin: 0.5rem 0;
+	transition: 0.4s;
+}
+
+a button[disabled],
+button[disabled],
+[role='button'][aria-disabled='true'],
+input[type='submit'][disabled],
+input[type='reset'][disabled],
+input[type='button'][disabled],
+input[type='checkbox'][disabled],
+input[type='radio'][disabled],
+select[disabled] {
+	cursor: default;
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+	cursor: not-allowed;
+	background-color: var(--disabled);
+}
+
+input[type='range'] {
+	padding: 0;
+}
+
+button:focus,
+button:enabled:hover,
+[role='button']:focus,
+[role='button']:not([aria-disabled='true']):hover,
+input[type='submit']:focus,
+input[type='submit']:enabled:hover,
+input[type='reset']:focus,
+input[type='reset']:enabled:hover,
+input[type='button']:focus,
+input[type='button']:enabled:hover,
+input[type='checkbox']:focus,
+input[type='checkbox']:enabled:hover,
+input[type='radio']:focus,
+input[type='radio']:enabled:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+/* Format forms */
+textarea,
+select,
+input {
+	font-size: inherit;
+	font-family: inherit;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	color: var(--text);
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: 5px;
+	box-shadow: none;
+	box-sizing: border-box;
+	width: 60%;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+/* Add arrow to  */
+select {
+	background-image: linear-gradient(45deg, transparent 49%, var(--text) 51%),
+		linear-gradient(135deg, var(--text) 51%, transparent 49%);
+	background-position: calc(100% - 20px), calc(100% - 15px);
+	background-size: 5px 5px, 5px 5px;
+	background-repeat: no-repeat;
+}
+
+select[multiple] {
+	background-image: none !important;
+}
+
+/* checkbox and radio button style */
+input[type='checkbox'],
+input[type='radio'] {
+	vertical-align: bottom;
+	position: relative;
+}
+input[type='radio'] {
+	border-radius: 100%;
+}
+
+input[type='checkbox']:checked,
+input[type='radio']:checked {
+	background: var(--accent);
+}
+
+input[type='checkbox']:checked::after {
+	/* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
+	content: ' ';
+	width: 0.1em;
+	height: 0.25em;
+	border-radius: 0;
+	position: absolute;
+	top: 0.05em;
+	left: 0.18em;
+	background: transparent;
+	border-right: solid var(--bg) 0.08em;
+	border-bottom: solid var(--bg) 0.08em;
+	font-size: 1.8em;
+	transform: rotate(45deg);
+}
+input[type='radio']:checked::after {
+	/* creates a colored circle for the checked radio button  */
+	content: ' ';
+	width: 0.25em;
+	height: 0.25em;
+	border-radius: 100%;
+	position: absolute;
+	top: 0.125em;
+	background: var(--bg);
+	left: 0.125em;
+	font-size: 32px;
+}
+
+/* Make the textarea wider than other inputs */
+textarea {
+	width: 80%;
+}
+
+/* Makes input fields wider on smaller screens */
+@media only screen and (max-width: 720px) {
+	textarea,
+	select,
+	input {
+		width: 100%;
+	}
+}
+
+/* Ensures the checkbox and radio inputs do not have a set width like other input fields */
+input[type='checkbox'],
+input[type='radio'] {
+	width: auto;
+}
+
+/* do not show border around file selector button */
+input[type='file'] {
+	border: 0;
+}
+
+/* Without this any HTML using <fieldset> shows ugly borders and has additional padding/margin. (Issue #3) */
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
