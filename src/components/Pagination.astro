@@ -15,28 +15,28 @@ const totalPages = Math.ceil(totalPosts / 5);
 ---
 
 <div class="wrapper">
-	<nav class="nav">
-		<a class="prev" href={prevUrl || '#'} aria-label="Previous Page">Previous</a>
+	<nav class="pagination">
+		<a class="pagination-prev" href={prevUrl || '#'} aria-label="Previous Page">Previous</a>
 		<small>Page {currentPage} of {totalPages}</small>
-		<a class="next" href={nextUrl || '#'} aria-label="Next Page">Next</a>
+		<a class="pagination-next" href={nextUrl || '#'} aria-label="Next Page">Next</a>
 	</nav>
 </div>
 
 <style lang="scss">
-	.nav {
+	.pagination {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 1rem;
 		padding-top: 4rem;
-	}
-	.prev,
-	.next {
-		display: block;
-		text-transform: uppercase;
-		margin: 0;
-		&[href='#'] {
-			display: none;
+		&-prev,
+		&-next {
+			display: block;
+			text-transform: uppercase;
+			margin: 0;
+			&[href='#'] {
+				display: none;
+			}
 		}
 	}
 </style>

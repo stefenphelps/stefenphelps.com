@@ -26,74 +26,74 @@
 </header>
 
 <style lang="scss">
-.header {
-  background: var(--accent-bg);
-  border-bottom: 1px solid var(--border);
-  text-align: center;
-  width: 100vw;
-  position: relative;
-  box-sizing: border-box;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 1rem;
-  &-nav {
-    width: 100%;
-    display: block;
-    padding: 0;
-    font-size: 1rem;
-    line-height: 2;
-    padding: 1rem 0;
-    &-menu {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: flex-end;
-      list-style: none;
-      margin: 0;
+  .header {
+    background: var(--accent-bg);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    width: 100vw;
+    position: relative;
+    box-sizing: border-box;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 1rem;
+    &-nav {
+      width: 100%;
+      display: block;
       padding: 0;
-      gap: 1rem;
-      a {
+      font-size: 1rem;
+      line-height: 2;
+      padding: 1rem 0;
+      &-menu {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        list-style: none;
         margin: 0;
-        border: 1px solid var(--border);
-        border-radius: 5px;
-        color: var(--text) !important;
-        display: inline-block;
-        padding: 0.1rem 1rem;
-        text-decoration: none;
-        transition: 0.4s;
-        &:hover {
-          color: var(--accent) !important;
-          border-color: var(--accent);
-        }
-        &.current:hover {
-          text-decoration: none;
-        }
-      }
-      .logo {
-        margin-right: auto;
+        padding: 0;
+        gap: 1rem;
         a {
-          padding: 0;
-          border: 0 none;
-          font-family: 'STIX Two Text', serif;
-          font-weight: 300;
-          font-size: 2rem;
+          margin: 0;
+          border: 1px solid var(--border);
+          border-radius: 5px;
+          color: var(--text) !important;
+          display: inline-block;
+          padding: 0.1rem 1rem;
+          text-decoration: none;
+          transition: 0.4s;
+          &:hover {
+            color: var(--accent) !important;
+            border-color: var(--accent);
+          }
+          &.current:hover {
+            text-decoration: none;
+          }
+        }
+        .logo {
+          margin-right: auto;
+          a {
+            padding: 0;
+            border: 0 none;
+            font-family: "STIX Two Text", serif;
+            font-weight: 300;
+            font-size: 2rem;
+          }
         }
       }
     }
   }
-}
-@media (max-width: 500px) {
-  .header-nav-menu {
-    gap: .5rem;
-    a {
-      font-size: 14px;
-      padding: .125rem .5rem;
-      span {
-        display: none;
+  @media (max-width: 500px) {
+    .header-nav-menu {
+      gap: 0.5rem;
+      a {
+        font-size: 14px;
+        padding: 0.125rem 0.5rem;
+        span {
+          display: none;
+        }
       }
     }
   }
-}
 </style>
