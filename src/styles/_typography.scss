@@ -30,7 +30,7 @@ h6 {
 	font-family: 'STIX Two Text', serif;
 	font-weight: 600;
 	a {
-		text-decoration-thickness: 4px;
+		text-decoration-thickness: 3px;
 	}
 }
 h1,
@@ -68,8 +68,7 @@ h6,
 a,
 a:visited {
 	color: var(--accent);
-	text-decoration-thickness: 1px;
-	text-decoration-skip-ink: auto;
+	text-decoration-thickness: 2px;
 }
 
 a:hover {
