@@ -7,15 +7,6 @@ body {
 	background: var(--bg);
 	font-size: var(--size-1);
 	line-height: 1.618;
-	display: flex;
-	flex-direction: column;
-	flex: 1;
-	margin: 0 auto;
-	max-width: 49rem;
-	padding: 0 1rem;
-	overflow-x: hidden;
-	word-break: break-word;
-	overflow-wrap: break-word;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
