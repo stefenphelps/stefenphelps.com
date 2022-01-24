@@ -15,23 +15,23 @@ let permalink = 'https://stefenphelps.com/contact';
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} permalink={permalink} />
-    <style>
+    <style lang="scss">
       form {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
-      }
-      form > * {
-        flex: 1 1 300px;
-      }
-      input, textarea {
-        display: block;
-        width: 100%;
-        margin-bottom: 0;
-      }
-      form > button {
-        margin-top: 1rem;
-        flex-basis: 100%;
+        > * {
+          flex: 1 1 300px;
+        }
+        input, textarea {
+          display: block;
+          width: 100%;
+          margin-bottom: 0;
+        }
+        > button {
+          margin-top: 1rem;
+          flex-basis: 100%;
+        }
       }
     </style>
   </head>
@@ -41,7 +41,7 @@ let permalink = 'https://stefenphelps.com/contact';
       <article>
         <h1>{title}</h1>
         <p>You can connect with me on <a href="https://twitter.com/stefen">Twitter</a> or <a href="https://www.linkedin.com/in/stefenphelps/">LinkedIn</a>. Otherwise, use the form below.</p>
-        <form name="contact" data-netlify="true">
+        <form name="contact" action="/success" method="POST" data-netlify="true">
           <label>
             Name
             <input type="text" name="name" required />
