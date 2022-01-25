@@ -4,7 +4,7 @@ description: "Ever since the early 2000's, the early days of search engines, Goo
 publishDate: '2013-06-04'
 categories:
   - 'seo'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

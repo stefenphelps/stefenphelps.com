@@ -4,7 +4,7 @@ description: "SEO stands for Search Engine Optimization, which means getting you
 publishDate: '2012-03-22'
 categories:
   - 'seo'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

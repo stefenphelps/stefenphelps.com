@@ -5,7 +5,7 @@ publishDate: '2015-01-22'
 categories:
   - 'design'
 heroImage: '/blog/phelps_revisions.jpg'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

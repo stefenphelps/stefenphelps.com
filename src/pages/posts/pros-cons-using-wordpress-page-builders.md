@@ -5,7 +5,7 @@ publishDate: '2017-10-31'
 categories:
   - 'wordpress'
 heroImage: '/blog/basic-vs-complex-layout.png'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

@@ -5,7 +5,7 @@ publishDate: '2016-04-20'
 categories:
   - 'hubspot'
 heroImage: '/blog/bluleadz-launchpad-website.jpg'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

@@ -5,7 +5,7 @@ publishDate: '2016-12-08'
 categories:
   - 'hubspot'
 heroImage: '/blog/cos-modal-site-search.gif'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

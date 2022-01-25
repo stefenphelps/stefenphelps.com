@@ -5,7 +5,7 @@ publishDate: '2016-08-16'
 categories:
   - 'seo'
 heroImage: '/blog/meta-title-description-seo.jpg'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

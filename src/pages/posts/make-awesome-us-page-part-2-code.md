@@ -5,7 +5,7 @@ publishDate: '2016-10-18'
 categories:
   - 'how-to'
 heroImage: '/blog/behind-the-team-member-photos.jpg'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

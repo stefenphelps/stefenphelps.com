@@ -5,7 +5,7 @@ publishDate: '2012-04-04'
 categories:
   - 'cms'
   - 'wordpress'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

@@ -4,7 +4,7 @@ description: "A majority of people these days look online to research a product 
 publishDate: '2015-03-26'
 categories:
   - 'seo'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

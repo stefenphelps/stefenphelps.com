@@ -7,7 +7,7 @@ categories:
   - 'hubspot'
   - 'wordpress'
 heroImage: '/blog/hubspot-to-wordpress.png'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

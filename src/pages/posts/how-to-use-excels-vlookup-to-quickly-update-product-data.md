@@ -5,7 +5,7 @@ publishDate: '2016-08-08'
 categories:
   - 'how-to'
 heroImage: '/blog/step-3-1.gif'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

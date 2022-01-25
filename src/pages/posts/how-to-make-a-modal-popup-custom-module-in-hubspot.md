@@ -6,7 +6,7 @@ categories:
   - 'how-to'
   - 'hubspot'
 heroImage: '/blog/modal-popup-module-2.png'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

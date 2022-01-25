@@ -5,7 +5,7 @@ publishDate: '2017-07-08'
 categories:
   - 'codepen-meetup'
 heroImage: '/blog/Black-Large.png'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

@@ -6,7 +6,7 @@ categories:
   - 'how-to'
   - 'hubspot'
 heroImage: '/blog/lazy-loading-images-hubspot-blog-2.png'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

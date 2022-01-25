@@ -5,7 +5,7 @@ publishDate: '2016-07-11'
 categories:
   - 'design'
 heroImage: '/blog/issc-website-redesign-desktop-phone.jpg'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

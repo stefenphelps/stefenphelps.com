@@ -5,7 +5,7 @@ publishDate: '2017-05-16'
 categories:
   - 'hubspot'
 heroImage: '/blog/search-hubspot-blog.gif'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

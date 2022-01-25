@@ -5,7 +5,7 @@ publishDate: '2016-08-02'
 categories:
   - 'seo'
 heroImage: '/blog/sitemap.png'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

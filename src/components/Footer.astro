@@ -26,6 +26,7 @@ let year = new Date().getFullYear();
 	</ul>
 	<p><small>© {year} Stefen Phelps — <a href="/thanks/">Thanks</a></small></p>
 </footer>
+
 <style>
 	footer {
 		margin-top: 4rem;
@@ -46,3 +47,5 @@ let year = new Date().getFullYear();
 		justify-content: center;
 	}
 </style>
+
+<script src={Astro.resolve("../scripts/global.js")} type="module" hoist></script>

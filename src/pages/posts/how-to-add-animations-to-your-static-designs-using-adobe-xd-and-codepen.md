@@ -6,7 +6,7 @@ categories:
   - 'design'
   - 'how-to'
 heroImage: '/blog/adobe-xd.png'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 

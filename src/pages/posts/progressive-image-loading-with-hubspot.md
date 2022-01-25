@@ -6,7 +6,7 @@ categories:
   - 'design'
   - 'hubspot'
 heroImage: '/blog/progressive-loading-hubspot-image.gif'
-author: Stefen Phelps
+author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 
