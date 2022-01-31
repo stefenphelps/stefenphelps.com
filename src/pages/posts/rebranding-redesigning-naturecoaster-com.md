@@ -23,7 +23,7 @@ And finally, the before and after of the website:
 
 ![old website](/blog/old-naturecoaster-website-design.png)
 
-_Old website design (wayback machine was missing some images..._
+_Old website design (wayback machine was missing some images...)_
 
 ![new website](/blog/new-naturecoaster-website-design-1.png)
 

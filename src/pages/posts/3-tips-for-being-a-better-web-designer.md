@@ -36,7 +36,7 @@ If you're designing for an executive or corporate audience, then you'll probably
 
 In the technology industry, if you're not constantly learning, you're falling behind.
 
-https://twitter.com/slava_pestov/status/966050893161361408
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A senior programmer is merely a junior programmer who has given up</p>&mdash; Slava Pestov (@slava_pestov) <a href="https://twitter.com/slava_pestov/status/966050893161361408?ref_src=twsrc%5Etfw">February 20, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 This is a joke, obviously, but it's funny because it rings true in many ways.
 

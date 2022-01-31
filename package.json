@@ -6,10 +6,11 @@
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro build",
-		"preview": "astro preview"
+		"preview": "astro preview",
+		"deploy": "netlify deploy --prod"
 	},
 	"devDependencies": {
-		"astro": "^0.22.18",
+		"astro": "^0.22.20",
 		"autoprefixer": "^10.4.2",
 		"sass": "^1.49.0"
 	}
