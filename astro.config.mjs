@@ -20,7 +20,7 @@ export default {
 				includeAssets: [
 					'/favicon.ico',
 					'/robots.txt',
-					'/apple-touch-icon.png',
+					'/*.png',
 					'/mustaches/*.svg'
 				],
 				manifest: {
@@ -28,7 +28,7 @@ export default {
 					short_name: 'Stefen',
 					description:
 						"Stefen's Personal website where he writes about web development and sometimes other things.",
-					start_url: '/',
+					start_url: 'https://stefenphelps.com',
 					theme_color: '#473b2c',
 					background_color: '#473b2c',
 					display: 'standalone',
