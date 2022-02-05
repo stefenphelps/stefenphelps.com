@@ -15,34 +15,34 @@ let permalink = 'https://stefenphelps.com/about';
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} permalink={permalink} />
-    <style>
+    <style lang="scss">
       .grid {
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
-      }
-      .grid-item {
-        flex: 1 1 200px;
+        &-item {
+          flex: 1 1 200px;
+        }
       }
       label {
         display: block;
       }
       ol {
-        list-style: none;
-        margin: 0 0 0 2.1em;
-        padding: 0 0 0 2.1em;
-      }
-      ol li {
-        text-indent: -2.1em;
-        line-height: 1.2;
-        margin-bottom: 1rem;
-      }
-      ol time {
-        font-size: var(--size-3);
-        font-family: var(--mono-font);
-        display: inline-block;
-        margin-right: .5rem;
-        font-weight: 200;
+          list-style: none;
+          margin: 0 0 0 2.1em;
+          padding: 0 0 0 2.1em;
+        li {
+          text-indent: -2.1em;
+          line-height: 1.2;
+          margin-bottom: 1rem;
+        }
+        time {
+          font-size: var(--size-3);
+          font-family: var(--mono-font);
+          display: inline-block;
+          margin-right: .5rem;
+          font-weight: 200;
+        }
       }
       progress {
         width: 100%;
@@ -56,22 +56,22 @@ let permalink = 'https://stefenphelps.com/about';
         padding: .5rem 1rem;
         border-radius: .5rem;
         color: var(--bg);
-      }
-      form h2 {
-        font-size: var(--size-1);
-        margin: 0;
-        white-space: nowrap;
-      }
-      form div {
-        display: flex;
-        align-items: center;
-        gap: .25rem;
-      }
-      form label {
-        font-size: var(--size-0);
-      }
-      form input {
-        margin: 0;
+        h2 {
+          font-size: var(--size-1);
+          margin: 0;
+          white-space: nowrap;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          gap: .25rem;
+        }
+        label {
+          font-size: var(--size-0);
+        }
+        input {
+          margin: 0;
+        }
       }
       .professional-content,
       .personal-content {
@@ -117,29 +117,29 @@ let permalink = 'https://stefenphelps.com/about';
           <div class="grid">
             <div class="grid-item">
               <h3 class="h5">Base</h3>
-              <label for="html">HTML</label>
+              <label for="html">HTML / HTTP</label>
               <progress id="html" value="99" max="100"></progress>
               <label for="css">CSS / Sass</label>
               <progress id="css" value="95" max="100"></progress>
-              <label for="js">JS</label>
+              <label for="js">JS / TS</label>
               <progress id="js" value="90" max="100"></progress>
-              <label for="php">PHP / Twig</label>
+              <label for="php">PHP</label>
               <progress id="php" value="84" max="100"></progress>
-              <label for="hubl">HubL</label>
+              <label for="hubl">HubL / Twig</label>
               <progress id="hubl" value="95" max="100"></progress>
             </div>
             <div class="grid-item">
               <h3 class="h5">Tools</h3>
-              <label for="wordpress">WordPress</label>
-              <progress id="wordpress" value="97" max="100"></progress>
+              <label for="adobe">NPM / Composer</label>
+              <progress id="adobe" value="95" max="100"></progress>
               <label for="hubspot">HubSpot</label>
               <progress id="hubspot" value="99" max="100"></progress>
               <label for="firebase">Firebase</label>
               <progress id="firebase" value="73" max="100"></progress>
+              <label for="wordpress">WordPress</label>
+              <progress id="wordpress" value="97" max="100"></progress>
               <label for="netlify">Netlify</label>
               <progress id="netlify" value="77" max="100"></progress>
-              <label for="adobe">NPM / Composer</label>
-              <progress id="adobe" value="85" max="100"></progress>
             </div>
             <div class="grid-item">
               <h3 class="h5">Libraries</h3>
@@ -192,8 +192,8 @@ let permalink = 'https://stefenphelps.com/about';
               <progress id="tacos" value="97" max="100"></progress>
               <label for="sushi">🍣 Sushi</label>
               <progress id="sushi" value="74" max="100"></progress>
-              <label for="steak">🥒 Cucumbers</label>
-              <progress id="steak" value="16" max="100"></progress>              
+              <label for="cucs">🥒 Cucumbers</label>
+              <progress id="cucs" value="16" max="100"></progress>              
               <label for="gyros">🥙 Gyros</label>
               <progress id="gyros" value="85" max="100"></progress>
             </div>
