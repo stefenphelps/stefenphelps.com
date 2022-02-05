@@ -17,12 +17,7 @@ export default {
 	vite: {
 		plugins: [
 			VitePWA({
-				includeAssets: [
-					'/favicon.ico',
-					'/robots.txt',
-					'/*.png',
-					'/mustaches/*.svg'
-				],
+				includeAssets: ['/mustaches/*.svg'],
 				manifest: {
 					name: 'Stefen Phelps',
 					short_name: 'Stefen',
