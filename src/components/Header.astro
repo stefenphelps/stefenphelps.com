@@ -1,94 +1,101 @@
 <header class="header">
-  <nav class="header-nav">
-    <ul class="header-nav-menu">
-      <li class="logo">
-        <a href="/">
-          Stefen <span>Phelps</span>
-        </a>
-      </li>
-      <li>
-        <a href="/about/">
-          About
-        </a>
-      </li>
-      <li>
-        <a href="/blog/">
-          Blog
-        </a>
-      </li>
-      <li>
-        <a href="/contact/">
-          Contact
-        </a>
-      </li>
-    </ul>
-  </nav>
+	<nav class="header-nav">
+		<ul class="header-nav-menu">
+			<li class="logo">
+				<a href="/">
+					Stefen <span>Phelps</span>
+				</a>
+			</li>
+			<li>
+				<a
+					href="/about/"
+					class={Astro.request.url.pathname === '/about/' ? 'active' : null}
+				>
+					About
+				</a>
+			</li>
+			<li>
+				<a
+					href="/blog/"
+					class={Astro.request.url.pathname === '/blog/' ? 'active' : null}
+				>
+					Blog
+				</a>
+			</li>
+			<li>
+				<a
+					href="/contact/"
+					class={Astro.request.url.pathname === '/contact/' ? 'active' : null}
+				>
+					Contact
+				</a>
+			</li>
+		</ul>
+	</nav>
 </header>
 
 <style lang="scss">
-  .header {
-    background: var(--accent-bg);
-    border-bottom: 1px solid var(--border);
-    text-align: center;
-    position: relative;
-    padding: 1rem;
-    grid-column: 1 / -1;
-    &-nav {
-      width: 100%;
-      display: block;
-      padding: 0;
-      font-size: 1rem;
-      line-height: 2;
-      &-menu {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-end;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        gap: 1rem;
-        a {
-          margin: 0;
-          border: 1px solid var(--border);
-          border-radius: 5px;
-          color: var(--text) !important;
-          display: inline-block;
-          padding: 0.1rem 1rem;
-          text-decoration: none;
-          transition: 0.4s;
-          &:hover {
-            color: var(--accent) !important;
-            border-color: var(--accent);
-          }
-          &.current:hover {
-            text-decoration: none;
-          }
-        }
-        .logo {
-          margin-right: auto;
-          line-height: 1;
-          a {
-            padding: 0;
-            border: 0 none;
-            font-family: "STIX Two Text", serif;
-            font-weight: 300;
-            font-size: 2rem;
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: 500px) {
-    .header-nav-menu {
-      gap: 0.5rem;
-      a {
-        font-size: 14px;
-        padding: 0.125rem 0.5rem;
-        span {
-          display: none;
-        }
-      }
-    }
-  }
+	.header {
+		background: var(--accent-bg);
+		border-bottom: 1px solid var(--border);
+		text-align: center;
+		position: relative;
+		padding: 1rem;
+		grid-column: 1 / -1;
+		&-nav {
+			width: 100%;
+			display: block;
+			padding: 0;
+			font-size: 1rem;
+			line-height: 2;
+			&-menu {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: flex-end;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				gap: 1rem;
+				a {
+					margin: 0;
+					border: 1px solid var(--border);
+					border-radius: 5px;
+					color: var(--text) !important;
+					display: inline-block;
+					padding: 0.1rem 1rem;
+					text-decoration: none;
+					transition: 0.4s;
+					&:hover,
+					&.active {
+						color: var(--accent) !important;
+						border-color: var(--accent);
+					}
+				}
+				.logo {
+					margin-right: auto;
+					line-height: 1;
+					a {
+						padding: 0;
+						border: 0 none;
+						font-family: 'STIX Two Text', serif;
+						font-weight: 300;
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 500px) {
+		.header-nav-menu {
+			gap: 0.5rem;
+			a {
+				font-size: 14px;
+				padding: 0.125rem 0.5rem;
+				span {
+					display: none;
+				}
+			}
+		}
+	}
 </style>

@@ -1,8 +1,8 @@
 ---
 export interface Props {
-  title: string;
-  description: string;
-  permalink: string;
+	title: string;
+	description: string;
+	permalink: string;
 }
 const { title, description, permalink } = Astro.props;
 ---
@@ -38,10 +38,13 @@ const { title, description, permalink } = Astro.props;
 <meta property="twitter:image" content="/social.jpg" />
 
 <!-- Global Styles -->
-<link rel="preconnect" href="https://fonts.googleapis.com" /> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@600&display=swap" />
-<link rel="stylesheet" href={Astro.resolve("../styles/global.scss")} />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@600&display=swap"
+/>
+<link rel="stylesheet" href={Astro.resolve('../styles/global.scss')} />
 
 <!-- Service worker and whatnot -->
-<script src={Astro.resolve("../scripts/main.js")} async type="module"></script>
+<script src={Astro.resolve('../scripts/main.js')} async type="module"></script>

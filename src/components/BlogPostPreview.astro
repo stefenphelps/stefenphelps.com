@@ -1,40 +1,45 @@
 ---
 const { post } = Astro.props;
 let date = new Date(post.publishDate);
-let dateLabel = date.toLocaleDateString("en-US");
-let postUrlTrailingSlashLol = post.url + "/";
+let dateLabel = date.toLocaleDateString('en-US');
+let postUrlTrailingSlashLol = post.url + '/';
 ---
+
 <article class="post-preview">
-  {post.heroImage && <div class="post-preview-image"><img loading="lazy" src={post.heroImage} alt={post.alt} /></div>}
-  <div class="post-preview-text">
-    <h2 class="h4"><a href={postUrlTrailingSlashLol}>{post.title}</a></h2>
-    <p>{post.description} …</p>
-  </div>
+	{post.heroImage && (
+		<div class="post-preview-image">
+			<img loading="lazy" src={post.heroImage} alt={post.alt} />
+		</div>
+	)}
+	<div class="post-preview-text">
+		<h2 class="h4"><a href={postUrlTrailingSlashLol}>{post.title}</a></h2>
+		<p>{post.description} …</p>
+	</div>
 </article>
 
 <style lang="scss">
-  .post-preview {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 3rem;
-    padding-top: 3rem;
-    border-top: 1px solid var(--border);
-    &-image {
-      flex: 1 1 200px;
-      img {
-        position: sticky;
-        top: 1rem;
-      }
-    }
-    &-text {
-      flex: 1 1 300px;
-    }
-    h2 {
-      margin-top: 0;
-    }
-    p {
-      margin-bottom: 0;
-    }
-  }
+	.post-preview {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+		margin-top: 3rem;
+		padding-top: 3rem;
+		border-top: 1px solid var(--border);
+		&-image {
+			flex: 1 1 200px;
+			img {
+				position: sticky;
+				top: 1rem;
+			}
+		}
+		&-text {
+			flex: 1 1 300px;
+		}
+		h2 {
+			margin-top: 0;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
 </style>

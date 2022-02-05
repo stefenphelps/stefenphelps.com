@@ -1,21 +1,33 @@
 ---
 export interface Props {
-  title: string;
-  author: string;
-  publishDate: string;
-  heroImage: string;
-  alt: string;
+	title: string;
+	author: string;
+	publishDate: string;
+	heroImage: string;
+	alt: string;
 }
 
 const { title, author, publishDate, heroImage, alt } = Astro.props;
 
 let date = new Date(publishDate);
-let dateLabel = date.toLocaleDateString("en-US");
+let dateLabel = date.toLocaleDateString('en-US');
 ---
 
 <article>
-  {heroImage && <img width="784" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
-  <h1 class="title">{title}</h1>
-  <p>Written by <a href="ttps://twitter.com/stefen">Stefen</a> on <time>{dateLabel}</time></p>
-  <slot />
+	{heroImage && (
+		<img
+			width="784"
+			height="420"
+			class="hero-image"
+			loading="lazy"
+			src={heroImage}
+			alt={alt}
+		/>
+	)}
+	<h1 class="title">{title}</h1>
+	<p>
+		Written by <a href="ttps://twitter.com/stefen">Stefen</a> on <time
+			>{dateLabel}</time>
+	</p>
+	<slot />
 </article>

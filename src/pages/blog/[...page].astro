@@ -11,41 +11,56 @@ interface MarkdownFrontmatter {
 
 export async function getStaticPaths({ paginate, rss }) {
 	const allPosts = Astro.fetchContent<MarkdownFrontmatter>('../blog/*.md');
-	const sortedPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+	const sortedPosts = allPosts.sort(
+		(a, b) =>
+			new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+	);
 
 	// Generate an RSS feed from this collection of posts.
 	rss({
 		title: 'Stefen’s Blog',
 		description: 'My thoughts on web development and sometimes other things.',
-	  customData: `<language>en-us</language>`,
-	  items: sortedPosts.map(item => ({
+		customData: `<language>en-us</language>`,
+		items: sortedPosts.map((item) => ({
 			title: item.title,
 			description: item.description,
 			link: item.url,
-			pubDate: item.publishDate,
-		})),
+			pubDate: item.publishDate
+		}))
 	});
 
 	// Return a paginated collection of paths for all posts
 	return paginate(sortedPosts, { pageSize: 5 });
 }
 
-let title =  'Blog';
+let title = 'Blog';
 let description = 'My thoughts on web development and sometimes other things.';
 let permalink = 'https://stefenphelps.com/blog/';
 const { page } = Astro.props;
 ---
+
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} permalink={permalink} />
+		<BaseHead {title} {description} {permalink} />
 	</head>
 	<body>
 		<Header />
 		<main>
 			<h1 class="latest">{title}</h1>
-			<p>My thoughts on web development and sometimes other things. I don't write here too often as of late (I know, I know). You might want to check the <a href="https://www.kelp.agency/blog">Kelp Current</a> for some of my other writings.</p>
+			<p>
+				My thoughts on web development and sometimes other things. I don't write
+				here too often as of late (I know, I know). You might want to check the <a
+					href="https://www.kelp.agency/blog">Kelp Current</a
+				> for some of my other writings.
+			</p>
 			{page.data.map((post) => <BlogPostPreview post={post} />)}
-			<Pagination prevUrl={page.url.prev} nextUrl={page.url.next} totalPosts={page.total} pageStart={page.start + 1} pageEnd={page.end + 1} />
+			<Pagination
+				prevUrl={page.url.prev}
+				nextUrl={page.url.next}
+				totalPosts={page.total}
+				pageStart={page.start + 1}
+				pageEnd={page.end + 1}
+			/>
 		</main>
 		<Footer />
 	</body>

@@ -5,78 +5,111 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 // Component Script:
-let title =  "Hi there, I'm Stefen 😃";
-let description = "Hey there! Thanks for stopping by, how can I help ya today?";
-let permalink = "https://stefenphelps.com/";
+let title = "Hi there, I'm Stefen 😃";
+let description = 'Hey there! Thanks for stopping by, how can I help ya today?';
+let permalink = 'https://stefenphelps.com/';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
+
 <html lang="en">
-  <head>
-    <BaseHead title={title} description={description} permalink={permalink} />
-    <style lang="scss">
-      body {
-        grid-template-columns: 1fr min(70rem, 90%) 1fr;
-      }
-      .home {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        align-items: center;
-        margin-top: 4rem;
-        &-image {
-          flex: 1 1 230px;
-          position: relative;
-          text-align: center;
-          &-picture {
-            opacity: .7;
-          }
-          &-stache {
-            position: absolute;
-            top: 52%;
-            left: 48%;
-            transform: translate(-50%, 0);
-            width: 50%;
-            display: none;
-            pointer-events: none;
-          }
-        }
-        &-text {
-          flex: 1 1 400px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <Header />
-    <main>
-      <article class="home">
-        <div class="home-text">
-          <h1 class="h2">I'm Stefen, lead developer at <a href="https://www.kelp.agency">Kelp</a>, Florida man, and ardent techno geek.</h1>
-          <p>I had a majestic mustache for a hot minute... but had to shave it off for the sake of my marriage. Now, I enjoy having lots of different mustaches in the metaverse instead.</p>
-        </div>
-        <div class="home-image">
-          <img class="home-image-stache" src="/mustaches/1.svg" alt="Generated mustache" width="700" height="700" />
-          <picture class="home-image-picture">
-            <source type="image/svg+xml" srcset="/mustache-face.svg" alt="Stefen's Mustache Face" width="600" height="751" />
-            <source type="image/webp" srcset="/mustache-face.webp" alt="Stefen's Mustache Face" width="600" height="751" />
-            <img width="600" height="751" src="/mustache-face.png" alt="Stefen's Mustache Face" />
-          </picture>
-          <button>Generate Mustache</button>
-        </div>
-      </article>
-    </main>
-    <script>
-      var button = document.querySelector('button');
-      var mustacheImg = document.querySelector('.home-image-stache');
-      var mustaches = Array.from(Array(60).keys());
-      button.addEventListener('click', function () {
-        var randomStache = mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
-        mustacheImg.style.display = 'block';
-        mustacheImg.src = '/mustaches/' + randomStache + '.svg';
-      });
-    </script> 
-    <Footer />
-  </body>
+	<head>
+		<BaseHead {title} {description} {permalink} />
+		<style lang="scss">
+			body {
+				grid-template-columns: 1fr min(70rem, 90%) 1fr;
+			}
+			.home {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+				align-items: center;
+				margin-top: 4rem;
+				&-image {
+					flex: 1 1 230px;
+					position: relative;
+					text-align: center;
+					&-picture {
+						opacity: 0.7;
+					}
+					&-stache {
+						position: absolute;
+						top: 52%;
+						left: 48%;
+						transform: translate(-50%, 0);
+						width: 50%;
+						display: none;
+						pointer-events: none;
+					}
+				}
+				&-text {
+					flex: 1 1 400px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article class="home">
+				<div class="home-text">
+					<h1 class="h2">
+						I'm Stefen, lead developer at <a href="https://www.kelp.agency"
+							>Kelp</a
+						>, Florida man, and ardent techno geek.
+					</h1>
+					<p>
+						I had a majestic mustache for a hot minute... but had to shave it
+						off for the sake of my marriage. Now, I enjoy having lots of
+						different mustaches in the metaverse instead.
+					</p>
+				</div>
+				<div class="home-image">
+					<img
+						class="home-image-stache"
+						src="/mustaches/1.svg"
+						alt="Generated mustache"
+						width="700"
+						height="700"
+					/>
+					<picture class="home-image-picture">
+						<source
+							type="image/svg+xml"
+							srcset="/mustache-face.svg"
+							alt="Stefen's Mustache Face"
+							width="600"
+							height="751"
+						/>
+						<source
+							type="image/webp"
+							srcset="/mustache-face.webp"
+							alt="Stefen's Mustache Face"
+							width="600"
+							height="751"
+						/>
+						<img
+							width="600"
+							height="751"
+							src="/mustache-face.png"
+							alt="Stefen's Mustache Face"
+						/>
+					</picture>
+					<button>Generate Mustache</button>
+				</div>
+			</article>
+		</main>
+		<script>
+			var button = document.querySelector('button');
+			var mustacheImg = document.querySelector('.home-image-stache');
+			var mustaches = Array.from(Array(60).keys());
+			button.addEventListener('click', function () {
+				var randomStache =
+					mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
+				mustacheImg.style.display = 'block';
+				mustacheImg.src = '/mustaches/' + randomStache + '.svg';
+			});
+		</script>
+		<Footer />
+	</body>
 </html>

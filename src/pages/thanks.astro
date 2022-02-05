@@ -5,28 +5,46 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 // Component Script:
-let title =  'Thank You';
-let description = "Credits and thanks to all the people that make me better!";
-let permalink = "https://stefenphelps.com/thanks"
+let title = 'Thank You';
+let description = 'Credits and thanks to all the people that make me better!';
+let permalink = 'https://stefenphelps.com/thanks';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
+
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} permalink={permalink} />
+		<BaseHead {title} {description} {permalink} />
 	</head>
 	<body>
 		<Header />
 		<main>
 			<article>
 				<h1>{title}</h1>
-				<p>Just a quick thank you to the people that make my life easier building websites:</p>
+				<p>
+					Just a quick thank you to the people that make my life easier building
+					websites:
+				</p>
 				<ul>
-					<li><a href="http://astro.build">Astro</a> for making a killer static site generator</li>
-					<li>The Noun Project and <a href="https://thenounproject.com/vectorsmarket/">Vectors Market</a> in particular for the great 'stache vectors</li>
-					<li><a href="https://simplecss.org">Simple.css</a> for the super quick and simple stylesheet that makes any semantic site look great!</li>
-					<li><a href="http://netlify.com">Netlify</a> for making developing a way better experience <small>(well... most of the time when my builds aren't failing...)</small></li>
+					<li>
+						<a href="http://astro.build">Astro</a> for making a killer static site
+						generator
+					</li>
+					<li>
+						The Noun Project and <a
+							href="https://thenounproject.com/vectorsmarket/">Vectors Market</a
+						> in particular for the great 'stache vectors
+					</li>
+					<li>
+						<a href="https://simplecss.org">Simple.css</a> for the super quick and
+						simple stylesheet that makes any semantic site look great!
+					</li>
+					<li>
+						<a href="http://netlify.com">Netlify</a> for making developing a way
+						better experience <small
+							>(well... most of the time when my builds aren't failing...)</small>
+					</li>
 				</ul>
 			</article>
 		</main>
