@@ -43,6 +43,8 @@ const { title, description, permalink } = Astro.props;
 <link
 	rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@600&display=swap"
+	media="print"
+	onload="this.media='all'"
 />
 <link rel="stylesheet" href={Astro.resolve('../styles/global.scss')} />
 
