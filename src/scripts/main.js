@@ -6,16 +6,16 @@ const updateSW = registerSW({
 		Snackbar.show({
 			text: 'Update available.',
 			actionText: 'Update',
-			actionTextColor: '#eda500',
+			actionTextColor: 'var(--accent)',
 			onActionClick: function () {
 				updateSW();
-			},
+			}
 		});
 	},
 	onOfflineReady() {
 		Snackbar.show({
-			actionTextColor: '#eda500',
-			text: 'Offline ready.',
+			actionTextColor: 'var(--accent)',
+			text: 'Offline ready.'
 		});
-	},
+	}
 });

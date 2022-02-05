@@ -6,22 +6,22 @@ export default {
 	dist: './dist', // When running `astro build`, path to final static output
 	public: './public', // A folder of static files Astro will copy to the root. Useful for favicons, images, and other files that don’t need processing.
 	buildOptions: {
-		site: 'https://stefenphelps.com',
-		sitemap: true,
+		site: 'https://stefenphelps.com/',
+		sitemap: true
 	},
 	devOptions: {
-		hostname: 'localhost', // The hostname to run the dev server on.
-		port: 3000, // The port to run the dev server on.
+		hostname: 'localhost',
+		port: 3000,
+		trailingSlash: 'always'
 	},
 	vite: {
 		plugins: [
 			VitePWA({
 				includeAssets: [
-					'favicon.ico',
-					'robots.txt',
-					'apple-touch-icon.png',
-					'/images/*.png',
-					'images/*.svg',
+					'/favicon.ico',
+					'/robots.txt',
+					'/apple-touch-icon.png',
+					'/mustaches/*.svg'
 				],
 				manifest: {
 					name: 'Stefen Phelps',
@@ -34,24 +34,24 @@ export default {
 					display: 'standalone',
 					icons: [
 						{
-							src: '/android-chrome-192x192.png',
+							src: '/pwa-192x192.png',
 							sizes: '192x192',
-							type: 'image/png',
+							type: 'image/png'
 						},
 						{
-							src: '/android-chrome-512x512.png',
+							src: '/pwa-512x512.png',
 							sizes: '512x512',
-							type: 'image/png',
+							type: 'image/png'
 						},
 						{
-							src: '/android-chrome-512x512.png',
+							src: '/pwa-512x512.png',
 							sizes: '512x512',
 							type: 'image/png',
-							purpose: 'any maskable',
-						},
-					],
-				},
-			}),
-		],
-	},
+							purpose: 'any maskable'
+						}
+					]
+				}
+			})
+		]
+	}
 };

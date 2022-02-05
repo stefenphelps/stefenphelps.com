@@ -1,7 +1,4 @@
 :root {
-	/* site supports light and dark schemes */
-	color-scheme: dark light;
-
 	/* Set sans-serif & mono fonts */
 	--sans-font: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir,
 		'Nimbus Sans L', Roboto, Noto, 'Segoe UI', Arial, Helvetica,
@@ -25,11 +22,14 @@
 	--text-light: #585858;
 	--border: #c8b495;
 	--accent: #0d47a1;
-	--accent-light: #90caf9;
-	--code: #d81b60;
-	--preformatted: #444;
+	--accent-darker: #00368a;
 	--marked: #ffdd33;
-	--disabled: #efefef;
+
+	/* styles inputs */
+	accent-color: var(--accent);
+
+	/* site supports light and dark schemes */
+	color-scheme: dark light;
 }
 
 /* Dark theme */
@@ -41,9 +41,6 @@
 		--text-light: #cdcdcd;
 		--border: #6a5b48;
 		--accent: #eda500;
-		--accent-light: #ffecb3;
-		--code: #f06292;
-		--preformatted: #ccc;
-		--disabled: #111;
+		--accent-darker: #d59913;
 	}
 }

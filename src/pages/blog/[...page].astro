@@ -10,7 +10,7 @@ interface MarkdownFrontmatter {
 }
 
 export async function getStaticPaths({ paginate, rss }) {
-	const allPosts = Astro.fetchContent<MarkdownFrontmatter>('../posts/*.md');
+	const allPosts = Astro.fetchContent<MarkdownFrontmatter>('../blog/*.md');
 	const sortedPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
 
 	// Generate an RSS feed from this collection of posts.
@@ -32,7 +32,7 @@ export async function getStaticPaths({ paginate, rss }) {
 
 let title =  'Blog';
 let description = 'My thoughts on web development and sometimes other things.';
-let permalink = 'https://stefenphelps.com/blog';
+let permalink = 'https://stefenphelps.com/blog/';
 const { page } = Astro.props;
 ---
 <html lang="en">
