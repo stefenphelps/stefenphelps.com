@@ -118,3 +118,11 @@ cite {
 	color: var(--text-light);
 	font-style: normal;
 }
+
+code {
+	background: rgb(0 0 0 / 15%);
+	border: 1px solid rgb(0 0 0 / 25%);
+	border-radius: 3px;
+	padding: 0.125rem 0.25rem;
+	line-height: 1;
+}
