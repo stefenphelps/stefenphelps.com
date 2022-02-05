@@ -42,3 +42,6 @@ const { title, description, permalink } = Astro.props;
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@600&display=swap" />
 <link rel="stylesheet" href={Astro.resolve("../styles/global.scss")} />
+
+<!-- Service worker and whatnot -->
+<script src={Astro.resolve("../scripts/main.js")} async type="module"></script>
