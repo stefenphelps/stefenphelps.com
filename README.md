@@ -18,4 +18,4 @@ Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page
 
 `src/components/` is where I put anything that I want to re-use inside pages. All client side JS is put into the `scripts` folder.
 
-All global styles are in `styles`. Individual page or component are in each page or component file.
+All global styles are in `styles`. Individual page or component styles are in each page or component file inside `<style>` tags.
