@@ -24,10 +24,12 @@ let dateLabel = date.toLocaleDateString('en-US');
 			alt={alt}
 		/>
 	)}
-	<h1 class="title">{title}</h1>
-	<p>
+	<h1 style="margin: 2rem 0 1rem;">{title}</h1>
+	<p style="font-size: 14px; margin-bottom: 2rem;">
 		Written by <a href="ttps://twitter.com/stefen">Stefen</a> on <time
-			>{dateLabel}</time>
+			>{dateLabel}</time
+		>
 	</p>
+	<hr />
 	<slot />
 </article>

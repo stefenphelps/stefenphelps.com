@@ -17,7 +17,7 @@ Before redesigning the website, we needed to get some solid branding to build ou
 
 Thanks to the amazing work by my good friend, [Luke Kenney](https://www.linkedin.com/in/luke-kenney-970473105/), we were able to create a refreshed brand and style guide that exceeded expectations. Here's a look at the new brand style guide:
 
-![brand guidelines page 1](/blog/Nature-Coaster-Brand-Guidelines_Page_1-832x468.png) ![brand guidelines page 2](/blog/Nature-Coaster-Brand-Guidelines_Page_2-832x468.png) ![brand guidelines page 3](/blog/Nature-Coaster-Brand-Guidelines_Page_3-832x468.png) ![brand guidelines page 4](/blog/Nature-Coaster-Brand-Guidelines_Page_4-832x468.png)
+![brand guidelines page 1](/blog/Nature-Coaster-Brand-Guidelines_Page_1.png) ![brand guidelines page 2](/blog/Nature-Coaster-Brand-Guidelines_Page_2.png) ![brand guidelines page 3](/blog/Nature-Coaster-Brand-Guidelines_Page_3.png) ![brand guidelines page 4](/blog/Nature-Coaster-Brand-Guidelines_Page_4.png)
 
 And finally, the before and after of the website:
 
@@ -29,4 +29,4 @@ _Old website design (wayback machine was missing some images...)_
 
 ---
 
-Looking for some help with a website design or company branding? [Let's talk!](https://stefenphelps.com/hire-me/)
+Looking for some help with a website design or company branding? [Let's talk!](https://stefenphelps.com/contact/)
