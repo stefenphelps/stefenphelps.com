@@ -76,8 +76,8 @@ ul {
 }
 
 hr {
-	color: var(--border);
-	border-top: 1px;
+	border: none;
+	border-bottom: 1px solid var(--border);
 	margin: 1rem auto;
 }
 
