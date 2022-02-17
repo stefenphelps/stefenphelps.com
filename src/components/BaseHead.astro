@@ -24,24 +24,24 @@ const { title, description, permalink } = Astro.props;
 	href="https://stefenphelps.com/rss.xml"
 />
 
-<!-- Primary Meta Tags -->
+<!-- Primary Metadata -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
-<!-- Open Graph / Facebook -->
+<!-- Open Graph / Social -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={permalink} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content="/social.jpg" />
-
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={permalink} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content="/social.jpg" />
+<meta name="twitter:site" content="@stefen" />
+<meta name="twitter:creator" content="@stefen" />
 
 <!-- Global Styles -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
