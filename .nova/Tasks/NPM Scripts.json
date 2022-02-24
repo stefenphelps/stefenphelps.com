@@ -1,0 +1,18 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "npm run build"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "npm run clean"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "npm run preview"
+    }
+  },
+  "buildBeforeRunning" : true,
+  "identifier" : "19B9FD5F-5FAD-4392-A03F-118F867C93EE"
+}

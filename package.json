@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
+		"clean": "rm -r ./dist",
 		"build": "astro build",
 		"preview": "astro preview",
 		"deploy": "netlify deploy --prod"
