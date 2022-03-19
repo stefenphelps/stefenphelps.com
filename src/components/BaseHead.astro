@@ -1,4 +1,6 @@
 ---
+import '../styles/global.scss';
+
 export interface Props {
 	title: string;
 	description: string;
@@ -52,7 +54,5 @@ const { title, description, permalink } = Astro.props;
 	media="print"
 	onload="this.media='all'"
 />
-<link rel="stylesheet" href={Astro.resolve('../styles/global.scss')} />
 
-<!-- Service worker and whatnot -->
-<script src={Astro.resolve('../scripts/main.js')} async type="module"></script>
+<script hoist> import '../scripts/main.js'; </script>

@@ -11,12 +11,12 @@
 		"deploy": "netlify deploy --prod"
 	},
 	"devDependencies": {
-		"astro": "^0.23.0-next.1",
-		"autoprefixer": "^10.4.2",
+		"astro": "^0.24.3",
+		"autoprefixer": "^10.4.4",
 		"node-snackbar": "^0.1.16",
-		"prettier": "2.5.1",
+		"prettier": "2.6.0",
 		"prettier-plugin-astro": "^0.0.12",
-		"sass": "^1.49.7",
+		"sass": "^1.49.9",
 		"vite-plugin-pwa": "0.11.5"
 	}
 }
