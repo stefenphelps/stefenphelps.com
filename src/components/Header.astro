@@ -9,7 +9,6 @@
 			<li>
 				<a
 					href="/about/"
-					class={Astro.request.url.pathname === '/about/' ? 'active' : ''}
 				>
 					About
 				</a>
@@ -17,7 +16,6 @@
 			<li>
 				<a
 					href="/blog/"
-					class={Astro.request.url.pathname === '/blog/' ? 'active' : ''}
 				>
 					Blog
 				</a>
@@ -25,7 +23,6 @@
 			<li>
 				<a
 					href="/contact/"
-					class={Astro.request.url.pathname === '/contact/' ? 'active' : ''}
 				>
 					Contact
 				</a>
@@ -33,7 +30,6 @@
 		</ul>
 	</nav>
 </header>
-
 <style lang="scss">
 	.header {
 		background: var(--accent-bg);

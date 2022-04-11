@@ -1,19 +1,22 @@
 ---
-const { post } = Astro.props;
+const { post, author } = Astro.props;
+const { frontmatter } = post;
 let date = new Date(post.publishDate);
 let dateLabel = date.toLocaleDateString('en-US');
 let postUrlTrailingSlashLol = post.url + '/';
 ---
 
 <article class="post-preview">
-	{post.heroImage && (
+	{frontmatter.heroImage && (
 		<div class="post-preview-image">
-			<img loading="lazy" src={post.heroImage} alt={post.alt} />
+			<img loading="lazy" src={frontmatter.heroImage} alt={frontmatter.alt} />
 		</div>
 	)}
 	<div class="post-preview-text">
-		<h2 class="h4"><a href={postUrlTrailingSlashLol}>{post.title}</a></h2>
-		<p>{post.description} …</p>
+		<h2 class="h4">
+			<a href={postUrlTrailingSlashLol}>{frontmatter.title}</a>
+		</h2>
+		<p>{frontmatter.description} …</p>
 	</div>
 </article>
 

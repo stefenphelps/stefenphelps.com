@@ -19,3 +19,15 @@ const updateSW = registerSW({
 		});
 	}
 });
+
+const mainNav = document.querySelector('.header-nav-menu')
+const setActiveMenuItem = _ => {
+	const menuItems = [...mainNav.querySelectorAll('a')]
+	menuItems.forEach(menuItem => {
+		if (menuItem.pathname === window.location.pathname) {
+			menuItem.classList.add('active')
+			menuItem.setAttribute('aria-current', 'page')
+		}
+	})
+}
+setActiveMenuItem();

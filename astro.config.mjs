@@ -1,18 +1,10 @@
 import { VitePWA } from 'vite-plugin-pwa';
+import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
-export default {
-	projectRoot: '.', // Where to resolve all URLs relative to. Useful if you have a monorepo project.
-	dist: './dist', // When running `astro build`, path to final static output
-	public: './public', // A folder of static files Astro will copy to the root. Useful for favicons, images, and other files that don’t need processing.
-	buildOptions: {
-		site: 'https://stefenphelps.com/',
-		sitemap: true
-	},
-	devOptions: {
-		hostname: 'localhost',
-		port: 3000,
-		trailingSlash: 'always'
-	},
+// https://astro.build/config
+export default defineConfig({
+	site: 'https://stefenphelps.com/',
 	vite: {
 		plugins: [
 			VitePWA({
@@ -50,5 +42,9 @@ export default {
 				}
 			})
 		]
-	}
-};
+	},
+	markdown: {
+		syntaxHighlight: 'prism'
+	},
+	integrations: [sitemap()]
+});

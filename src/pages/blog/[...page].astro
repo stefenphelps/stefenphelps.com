@@ -5,15 +5,12 @@ import Footer from '../../components/Footer.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 import Pagination from '../../components/Pagination.astro';
 
-interface MarkdownFrontmatter {
-	publishDate: number;
-}
-
 export async function getStaticPaths({ paginate, rss }) {
-	const allPosts = Astro.fetchContent<MarkdownFrontmatter>('../blog/*.md');
+	const allPosts = await Astro.glob('../blog/*.md');
 	const sortedPosts = allPosts.sort(
 		(a, b) =>
-			new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+			new Date(b.frontmatter.publishDate).valueOf() -
+			new Date(a.frontmatter.publishDate).valueOf()
 	);
 
 	// Generate an RSS feed from this collection of posts.
@@ -22,10 +19,10 @@ export async function getStaticPaths({ paginate, rss }) {
 		description: 'My thoughts on web development and sometimes other things.',
 		customData: `<language>en-us</language>`,
 		items: sortedPosts.map((item) => ({
-			title: item.title,
-			description: item.description,
+			title: item.frontmatter.title,
+			description: item.frontmatter.description,
 			link: item.url,
-			pubDate: item.publishDate
+			pubDate: item.frontmatter.publishDate
 		}))
 	});
 
