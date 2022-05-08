@@ -24,7 +24,7 @@ const mainNav = document.querySelector('.header-nav-menu')
 const setActiveMenuItem = _ => {
 	const menuItems = [...mainNav.querySelectorAll('a')]
 	menuItems.forEach(menuItem => {
-		if (menuItem.pathname === window.location.pathname) {
+		if (window.location.pathname.includes(menuItem.pathname) && menuItem.pathname != "/") {
 			menuItem.classList.add('active')
 			menuItem.setAttribute('aria-current', 'page')
 		}
