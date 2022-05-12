@@ -26,7 +26,7 @@
 		X-Frame-Options = "DENY"
 		X-Content-Type-Options = "nosniff"
 		X-XSS-Protection = "1; mode=block"
-		Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' *.codepen.io *.twitter.com; font-src 'self' 'unsafe-inline' gstatic.com *.gstatic.com; style-src 'self' 'unsafe-inline' googleapis.com *.googleapis.com; media-src 'self' https://www.bluleadz.com; frame-src 'self' *.codepen.io *.twitter.com"
+		Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' *.codepen.io *.twitter.com; font-src 'self' 'unsafe-inline' gstatic.com *.gstatic.com; style-src 'self' 'unsafe-inline' googleapis.com *.googleapis.com; media-src 'self' https://www.bluleadz.com; img-src 'self' *.twitter.com; frame-src 'self' *.codepen.io *.twitter.com"
 
 [[redirects]]
 	from = "/hire-me"

@@ -1,6 +1,8 @@
 import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import turbolinks from '@astrojs/turbolinks';
+import critters from 'astro-critters';
 
 // https://astro.build/config
 export default defineConfig({
@@ -46,5 +48,5 @@ export default defineConfig({
 	markdown: {
 		syntaxHighlight: 'prism'
 	},
-	integrations: [sitemap()]
+	integrations: [sitemap(), critters()]
 });
