@@ -1,7 +1,6 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import Layout from '../../layouts/BaseLayout.astro';
+
 import BlogPostPreview from '../../components/BlogPostPreview.astro';
 import Pagination from '../../components/Pagination.astro';
 
@@ -35,30 +34,20 @@ let description = 'My thoughts on web development and sometimes other things.';
 let permalink = 'https://stefenphelps.com/blog/';
 const { page } = Astro.props;
 ---
-
-<html lang="en-us">
-	<head>
-		<BaseHead {title} {description} {permalink} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1 class="latest">{title}</h1>
-			<p>
-				My thoughts on web development and sometimes other things. I don't write
-				here too often as of late (I know, I know). You might want to check the <a
-					href="https://www.kelp.agency/blog">Kelp Current</a
-				> for some of my other writings.
-			</p>
-			{page.data.map((post) => <BlogPostPreview post={post} />)}
-			<Pagination
-				prevUrl={page.url.prev}
-				nextUrl={page.url.next}
-				totalPosts={page.total}
-				pageStart={page.start + 1}
-				pageEnd={page.end + 1}
-			/>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout {title} {description} {permalink}>
+	<h1 class="latest">{title}</h1>
+	<p>
+		My thoughts on web development and sometimes other things. I don't write
+		here too often as of late (I know, I know). You might want to check the <a
+			href="https://www.kelp.agency/blog">Kelp Current</a
+		> for some of my other writings.
+	</p>
+	{page.data.map((post) => <BlogPostPreview post={post} />)}
+	<Pagination
+		prevUrl={page.url.prev}
+		nextUrl={page.url.next}
+		totalPosts={page.total}
+		pageStart={page.start + 1}
+		pageEnd={page.end + 1}
+	/>
+</Layout>

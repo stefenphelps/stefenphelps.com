@@ -1,12 +1,12 @@
 ---
 import '../styles/global.scss';
 
-export interface Props {
-	title: string;
-	description: string;
-	permalink: string;
-}
-const { title, description, permalink } = Astro.props;
+// assign defaults
+const {
+	title = 'Stefen Phelps',
+	description = 'Lead developer at Kelp, Brooksville Native, Dad.',
+	permalink = Astro.request.url
+} = Astro.props;
 ---
 
 <!-- Global Metadata / Icons -->

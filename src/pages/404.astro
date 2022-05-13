@@ -1,29 +1,10 @@
 ---
-// Component Imports
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-
-// Component Script:
-let title = 'Error 404';
-let description = "Sorry, this page doesn't exist.";
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+import Layout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en-us">
-	<head>
-		<BaseHead {title} {description} permalink="" />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<article class="content">
-				<h1 class="latest">{title}</h1>
-				<p>{description}</p>
-			</article>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout title="404 Not Found" description="Sorry, this page doesn't exist.">
+	<article class="content">
+		<h1 class="latest">Error 404</h1>
+		<p>Sorry, this page doesn't exist.</p>
+	</article>
+</Layout>

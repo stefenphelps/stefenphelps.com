@@ -1,7 +1,6 @@
 import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import turbolinks from '@astrojs/turbolinks';
 import critters from 'astro-critters';
 
 // https://astro.build/config

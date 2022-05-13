@@ -1,12 +1,4 @@
 ---
-export interface Props {
-	title: string;
-	author: string;
-	publishDate: string;
-	heroImage: string;
-	alt: string;
-}
-
 const { title, author, publishDate, heroImage, alt } = Astro.props;
 
 let date = new Date(publishDate);
