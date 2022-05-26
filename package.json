@@ -12,12 +12,12 @@
 	},
 	"devDependencies": {
 		"@astrojs/sitemap": "^0.1.0",
-		"astro": "^1.0.0-beta.28",
+		"astro": "^1.0.0-beta.31",
 		"autoprefixer": "^10.4.7",
 		"node-snackbar": "^0.1.16",
 		"prettier": "2.6.2",
 		"prettier-plugin-astro": "^0.0.12",
-		"sass": "^1.51.0",
+		"sass": "^1.52.1",
 		"vite-plugin-pwa": "0.11.11"
 	},
 	"dependencies": {
