@@ -4,7 +4,7 @@ description: "Having a good site structure that's easy to navigate and has a cle
 publishDate: '2016-08-02'
 categories:
   - 'seo'
-heroImage: '/blog/sitemap.webp'
+heroImage: '/blog/sitemap.png'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -15,7 +15,7 @@ Having a good site structure that's easy to navigate and has a clear goal or pu
 
 A good structure can be defined as *organized with a purpose*. How that structure actually looks can be defined differently depending on who you ask. Your website should be created for your target audience, not yourself. So, to know the best way to structure the site, you need to know **who** will be your "_user_" and how **they** prefer content to be organized. If you haven't defined who your target audience is, now would be a great time to do that. You can even take it a step further and define your primary [persona](<https://en.wikipedia.org/wiki/Persona_(user_experience)>) to really narrow things down.
 
-![site structure](/blog/sms-site-structure.webp)
+![site structure](/blog/sms-site-structure.png)
 
 By far the most common way to structure pages is in a tree-like hierarchy with everything stemming from a single point-of-origin. This single point-of-origin on a website will be your **home page**. Your home page should be the "Your Company in 30 seconds" introduction that's quick, to the point and the most general. From there, you should be able to categorize your types of content to drill down and get more specific the further down the tree/hierarchy the user goes. **This is where things can get tricky.**
 

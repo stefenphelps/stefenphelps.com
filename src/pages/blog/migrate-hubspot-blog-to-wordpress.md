@@ -6,7 +6,7 @@ categories:
   - 'how-to'
   - 'hubspot'
   - 'wordpress'
-heroImage: '/blog/hubspot-to-wordpress.webp'
+heroImage: '/blog/hubspot-to-wordpress.png'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---

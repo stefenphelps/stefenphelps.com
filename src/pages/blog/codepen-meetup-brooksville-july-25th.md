@@ -4,7 +4,7 @@ description: "Over the years of doing freelance work for local businesses and or
 publishDate: '2017-07-08'
 categories:
   - 'codepen-meetup'
-heroImage: '/blog/Black-Large.webp'
+heroImage: '/blog/Black-Large.png'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -15,7 +15,7 @@ I usually just tell them to follow one of the beginner tutorials on [Codeacademy
 
 So when I learned about [CodePen Meetups](https://blog.codepen.io/meetups/) I was super excited! It was the perfect happenstance of wanting to do something for people who want to learn, while also giving me an opportunity to grow from other developers in the Hernando and Greater Tampa Bay area. Believe it or not, there are quite a few of them!
 
-![codepen logo](/blog/Button-Black-Large.webp)
+![codepen logo](/blog/Button-Black-Large.png)
 
 ### So what are you waiting for?!
 
