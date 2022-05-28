@@ -34,11 +34,14 @@ const totalPages = Math.ceil(totalPosts / 5);
 		padding-top: 4rem;
 		&-prev,
 		&-next {
-			display: block;
+			flex: 0 0 90px;
+			text-align: center;
 			margin: 0;
 			font-family: var(--heading-font);
 			&[href='#'] {
-				display: none;
+				cursor: not-allowed;
+				opacity: 0.4;
+				color: #777;
 			}
 		}
 	}
