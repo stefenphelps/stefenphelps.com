@@ -1,4 +1,5 @@
 ---
+import { Picture } from 'astro-imagetools/components';
 const { post, author } = Astro.props;
 const { frontmatter } = post;
 let date = new Date(post.publishDate);
@@ -9,7 +10,7 @@ let postUrlTrailingSlashLol = post.url + '/';
 <article class="post-preview">
 	{frontmatter.heroImage && (
 		<div class="post-preview-image">
-			<img loading="lazy" src={frontmatter.heroImage} alt={frontmatter.alt} />
+			<Picture src={frontmatter.heroImage} alt={frontmatter.title} />
 		</div>
 	)}
 	<div class="post-preview-text">
