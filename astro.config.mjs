@@ -2,6 +2,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import critters from 'astro-critters';
+import { astroImageTools } from 'astro-imagetools';
 
 // https://astro.build/config
 export default defineConfig({
@@ -47,5 +48,5 @@ export default defineConfig({
 	markdown: {
 		syntaxHighlight: 'prism'
 	},
-	integrations: [sitemap(), critters()]
+	integrations: [sitemap(), critters(), astroImageTools]
 });
