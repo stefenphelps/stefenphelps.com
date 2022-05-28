@@ -32,9 +32,7 @@ The primary problem with lazy loading is the fact that there are no images until
 
 The trick to getting around this issue is using a small (in terms of file size) placeholder image that is the same height/width as the full size image. HubSpot has a nice little feature that allows for automatic image resizing. This means we can generate the placeholder images automatically and use CSS to force the image to its full size to minimize page reflow. 🔥🔥🔥
 
-<video width="788" height="718" autoplay="autoplay" loop="loop" muted="" playsinline="playsinline">
-<source src="https://www.bluleadz.com/hubfs/Videos-16/lazy-loading-images-with-blurred-placeholder.mp4" type="video/mp4">
-<source src="https://www.bluleadz.com/hubfs/Videos-16/lazy-loading-images-with-blurred-placeholder.webm" type="video/webm"></video>
+<video width="788" height="718" autoplay="autoplay" loop="loop" muted="" playsinline="playsinline" src="https://www.bluleadz.com/hubfs/Videos-16/lazy-loading-images-with-blurred-placeholder.webm"></video>
 
 ☝️*an example of lazy loading images on a slow internet connection*
 
