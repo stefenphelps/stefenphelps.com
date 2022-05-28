@@ -4,7 +4,7 @@ description: "In part 2 (this post!), I'll be discussing the technical aspects o
 publishDate: '2016-10-18'
 categories:
   - 'how-to'
-heroImage: '/blog/behind-the-team-member-photos.jpg'
+heroImage: '/blog/behind-the-team-member-photos.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -16,7 +16,7 @@ Lief discussed the planning and production stages of our about page overhaul in 
 The key to creating photos that come to life — the Harry Potter effect if you will — was to use native HTML5 video elements, hiding the video controls and using the first frame of the video as the video thumbnail (aka the "poster"). For example, the basic HTML for Matt's video looks like this:
 
 ```html
-<video id="video" poster="/videos/Matt-Johnson.jpg">
+<video id="video" poster="/videos/Matt-Johnson.webp">
 	<source src="/videos/Matt.mp4" type="video/mp4" />
 </video>
 ```

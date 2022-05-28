@@ -4,7 +4,7 @@ description: 'A quick and easy way to provide a nice search experience on your H
 publishDate: '2016-12-08'
 categories:
   - 'hubspot'
-heroImage: '/blog/cos-modal-site-search.gif'
+heroImage: '/blog/cos-modal-site-search.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -17,7 +17,7 @@ I created this plugin because it was something I needed myself and something I k
 
 [HubSpot's own website](https://www.hubspot.com/) has a really nice modal search that displays it's results in an overlay:
 
-![hubspot modal site search](/blog/HubSpot-Modal-Search.gif)
+![hubspot modal site search](/blog/HubSpot-Modal-Search.webp)
 
 We like it because it provides a visually pleasing design, a great user experience by not taking you off the page or causing a page refresh, and because it provides real time results as you type your query. That's the kind of experience we wanted and that's what we set out to build!
 

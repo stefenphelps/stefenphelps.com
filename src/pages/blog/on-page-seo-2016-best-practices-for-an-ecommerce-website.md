@@ -4,7 +4,7 @@ description: "Your website has been designed and coded, the products loaded, a p
 publishDate: '2016-08-16'
 categories:
   - 'seo'
-heroImage: '/blog/meta-title-description-seo.jpg'
+heroImage: '/blog/meta-title-description-seo.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -20,7 +20,7 @@ There are 4 basics of on-page SEO that you should know if you have an eCommerce 
 - **[URL](#url)**
 - **[Meta Description](#meta-description)**
 
-![Monkey at a keyboard](/blog/5Zesu5VPNGJlm.gif 'Monkey at a keyboard')
+![Monkey at a keyboard](/blog/5Zesu5VPNGJlm.webp 'Monkey at a keyboard')
 
 Let's dive into these 4 principles so you can spend less time feeling like a monkey at a keyboard and start developing an SEO strategy for your website.
 

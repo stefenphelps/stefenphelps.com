@@ -4,7 +4,7 @@ description: 'The process behind the new brand and website made for NatureCoaste
 categories:
   - 'wordpress'
 publishDate: '2018-02-11'
-heroImage: '/blog/Nature-Coaster-Brand-Guidelines_Page_2.png'
+heroImage: '/blog/Nature-Coaster-Brand-Guidelines_Page_2.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -17,15 +17,15 @@ Before redesigning the website, we needed to get some solid branding to build ou
 
 Thanks to the amazing work by my good friend, [Luke Kenney](https://www.linkedin.com/in/luke-kenney-970473105/), we were able to create a refreshed brand and style guide that exceeded expectations. Here's a look at the new brand style guide:
 
-![brand guidelines page 1](/blog/Nature-Coaster-Brand-Guidelines_Page_1.png) ![brand guidelines page 2](/blog/Nature-Coaster-Brand-Guidelines_Page_2.png) ![brand guidelines page 3](/blog/Nature-Coaster-Brand-Guidelines_Page_3.png) ![brand guidelines page 4](/blog/Nature-Coaster-Brand-Guidelines_Page_4.png)
+![brand guidelines page 1](/blog/Nature-Coaster-Brand-Guidelines_Page_1.webp) ![brand guidelines page 2](/blog/Nature-Coaster-Brand-Guidelines_Page_2.webp) ![brand guidelines page 3](/blog/Nature-Coaster-Brand-Guidelines_Page_3.webp) ![brand guidelines page 4](/blog/Nature-Coaster-Brand-Guidelines_Page_4.webp)
 
 And finally, the before and after of the website:
 
-![old website](/blog/old-naturecoaster-website-design.png)
+![old website](/blog/old-naturecoaster-website-design.webp)
 
 _Old website design (wayback machine was missing some images...)_
 
-![new website](/blog/new-naturecoaster-website-design-1.png)
+![new website](/blog/new-naturecoaster-website-design-1.webp)
 
 ---
 

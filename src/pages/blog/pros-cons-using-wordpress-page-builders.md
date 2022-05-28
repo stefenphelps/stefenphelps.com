@@ -4,7 +4,7 @@ description: "A common issue people run into when using WordPress is it's extrem
 publishDate: '2017-10-31'
 categories:
   - 'wordpress'
-heroImage: '/blog/basic-vs-complex-layout.png'
+heroImage: '/blog/basic-vs-complex-layout.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -13,7 +13,7 @@ A common issue people run into when using WordPress is it's extremely basic page
 
 This problem created an ecosystem of **WordPress Page Builder** plugins that come in a variety of [free](https://www.layerswp.com/) and [paid](https://www.wpbeaverbuilder.com/) versions that will either go as far as replacing the [WordPress page editor entirely](https://www.elegantthemes.com/gallery/divi/), or be as minimal as [adding extra custom fields to the page editor screen](https://wordpress.org/plugins/siteorigin-panels/). There are a variety of options, but let's take a step back and review the pros and cons of page builders in general and then answer the question "should I use a WordPress page builder?".
 
-![basic layout vs complex layout](/blog/basic-vs-complex-layout.png)
+![basic layout vs complex layout](/blog/basic-vs-complex-layout.webp)
 
 ## The Benefits of Using a Page Builder
 

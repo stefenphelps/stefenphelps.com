@@ -4,7 +4,7 @@ description: 'Imagine this -- You’re in the final stretch of launching your cl
 publishDate: '2015-01-22'
 categories:
   - 'design'
-heroImage: '/blog/phelps_revisions.jpg'
+heroImage: '/blog/phelps_revisions.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---

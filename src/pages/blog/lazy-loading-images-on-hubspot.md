@@ -5,7 +5,7 @@ publishDate: '2018-02-07'
 categories:
   - 'how-to'
   - 'hubspot'
-heroImage: '/blog/lazy-loading-images-hubspot-blog-2.png'
+heroImage: '/blog/lazy-loading-images-hubspot-blog-2.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -18,13 +18,13 @@ Images are almost always the #1 reason for a slow website. Even if all of your [
 
 The default browser behavior will automatically load all the images on a page when the page initially loads. If the page has 100 images, it's going to try and load all 100 images and not stop until they're all loaded (slow website alert!). Lazy Loading is a technique that forces the browser to only load the images that are currently in-view and will load the rest as you scroll to them.
 
-![lazy-loading-images-hubspot-blog-1](/blog/lazy-loading-images-hubspot-blog-1.png)
+![lazy-loading-images-hubspot-blog-1](/blog/lazy-loading-images-hubspot-blog-1.webp)
 
 ### Lazy Loading Sounds Awesome! So, What's the Catch?
 
 The primary problem with lazy loading is the fact that there are no images until you scroll down the page. This causes page reflow as you scroll, which will hinder a good user experience—you're essentially taking one step forward and two steps back.
 
-![lazy-loaded-image-reflow](/blog/lazy-loaded-image-reflow.gif)
+![lazy-loaded-image-reflow](/blog/lazy-loaded-image-reflow.webp)
 
 ☝️*page reflow caused by images loading. Say no to the reflow, kids.*
 
@@ -48,7 +48,7 @@ Fire up your design manager, edit the "Listing Template," and add this script to
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.6.0/lazyload.min.js"></script>
 ```
 
-![design-manager-blog-script](/blog/design-manager-blog-script.png)
+![design-manager-blog-script](/blog/design-manager-blog-script.webp)
 
 There are a few different plugins out there, but I tend to prefer [this one](http://www.andreaverlicchi.eu/lazyload/).
 
@@ -86,11 +86,11 @@ Let's review each new attribute added and explain what each one is doing.
 
 We recently added lazy loaded images to our blog and saw an improvement of close to 50% in initial page load times. Here are the before-and-after stats from webpagetest.org:
 
-[![Before Lazy Loading - Performance Metrics](/blog/before-lazy-loading-metrics.png)](http://www.webpagetest.org/result/180201_79_f9735b4b0cd5e9237e3c76b24a9ffc14/)
+[![Before Lazy Loading - Performance Metrics](/blog/before-lazy-loading-metrics.webp)](http://www.webpagetest.org/result/180201_79_f9735b4b0cd5e9237e3c76b24a9ffc14/)
 
 _☝️ Before Lazy Loading_
 
-[![After Lazy Loading - Performance Metrics](/blog/after-lazy-loading-metrics.png)](http://www.webpagetest.org/result/180201_1X_4724c585e24bf4e45e7e81559319ffdc/)
+[![After Lazy Loading - Performance Metrics](/blog/after-lazy-loading-metrics.webp)](http://www.webpagetest.org/result/180201_1X_4724c585e24bf4e45e7e81559319ffdc/)
 
 _☝️ After Lazy Loading_
 
