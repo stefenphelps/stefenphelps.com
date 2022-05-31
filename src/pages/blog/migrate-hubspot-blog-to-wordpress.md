@@ -11,6 +11,8 @@ author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 
+**\*HubSpot supports a blog export tool making this blog post obsolete 💨**
+
 HubSpot makes it extremely difficult to export your blog posts in a usable form. It's built-in export tool only exports the page title and URLs. The website export tool exports all the static HTML files. Neither of these are useful when you need to import your data into a WordPress Database. Here's the solution I came up with that's fairly simple and will hopefully save some people a lot of time.
 
 ## Create a Coded Blog Template
