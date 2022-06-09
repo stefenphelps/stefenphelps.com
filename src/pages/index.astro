@@ -10,12 +10,13 @@ let permalink = 'https://stefenphelps.com/';
 	<article class="home">
 		<div class="home-text">
 			<h1 class="h2">
-				I'm Stefen, lead engineer at <a href="https://www.kelp.agency">Kelp</a>, Florida man, and
-				ardent techno geek.
+				I'm Stefen, lead engineer at <a href="https://www.kelp.agency">Kelp</a>,
+				Florida man, and ardent techno geek.
 			</h1>
 			<p>
-				I had a majestic mustache for a hot minute... but had to shave it off for the sake of my
-				marriage. Now, I enjoy having lots of different mustaches in the metaverse instead.
+				I had a majestic mustache for a hot minute... but had to shave it off
+				for the sake of my marriage. Now, I enjoy having lots of different
+				mustaches in the metaverse instead.
 			</p>
 		</div>
 		<div class="home-image">
@@ -31,17 +32,22 @@ let permalink = 'https://stefenphelps.com/';
 					type="image/svg+xml"
 					srcset="/mustache-face.svg"
 					alt="Stefen's Mustache Face"
-					width="600"
-					height="751"
+					width="700"
+					height="700"
 				/>
 				<source
 					type="image/webp"
 					srcset="/mustache-face.webp"
 					alt="Stefen's Mustache Face"
-					width="600"
-					height="751"
+					width="700"
+					height="700"
 				/>
-				<img width="600" height="751" src="/mustache-face.png" alt="Stefen's Mustache Face" />
+				<img
+					width="700"
+					height="700"
+					src="/mustache-face.png"
+					alt="Stefen's Mustache Face"
+				/>
 			</picture>
 			<button class="button">Generate Mustache</button>
 		</div>
@@ -51,7 +57,8 @@ let permalink = 'https://stefenphelps.com/';
 		var mustacheImg = document.querySelector('.home-image-stache');
 		var mustaches = Array.from(Array(60).keys());
 		button.addEventListener('click', function () {
-			var randomStache = mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
+			var randomStache =
+				mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
 			mustacheImg.style.display = 'block';
 			mustacheImg.src = '/mustaches/' + randomStache + '.svg';
 		});
@@ -72,8 +79,13 @@ let permalink = 'https://stefenphelps.com/';
 			flex: 1 1 230px;
 			position: relative;
 			text-align: center;
+			aspect-ratio: 1 / 1;
 			&-picture {
 				opacity: 0.7;
+				aspect-ratio: 1 / 1;
+				img {
+					aspect-ratio: 1 / 1;
+				}
 			}
 			&-stache {
 				position: absolute;

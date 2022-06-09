@@ -11,19 +11,6 @@ export async function getStaticPaths({ paginate, rss }) {
 			new Date(a.frontmatter.publishDate).valueOf()
 	);
 
-	// Generate an RSS feed from this collection of posts.
-	rss({
-		title: 'Stefen’s Blog',
-		description: 'My thoughts on web development and sometimes other things.',
-		customData: `<language>en-us</language>`,
-		items: sortedPosts.map((item) => ({
-			title: item.frontmatter.title,
-			description: item.frontmatter.description,
-			link: item.url,
-			pubDate: item.frontmatter.publishDate
-		}))
-	});
-
 	// Return a paginated collection of paths for all posts
 	return paginate(sortedPosts, { pageSize: 5 });
 }
