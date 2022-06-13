@@ -10,9 +10,6 @@ export default defineConfig({
 	vite: {
 		plugins: [
 			VitePWA({
-				workbox: {
-					sourcemap: true
-				},
 				includeAssets: ['/mustaches/*.svg'],
 				manifest: {
 					name: 'Stefen Phelps',
