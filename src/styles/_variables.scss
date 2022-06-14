@@ -18,6 +18,7 @@
 	/* Default (light) theme */
 	--bg: #fef7ed;
 	--accent-bg: #fef7ed;
+	--transparent-bg: rgba(254, 247, 237, 0.85);
 	--text: #212121;
 	--text-light: #585858;
 	--border: #c8b495;
@@ -37,6 +38,7 @@
 	:root {
 		--bg: #473b2c;
 		--accent-bg: #504535;
+		--transparent-bg: rgba(80, 69, 53, 0.85);
 		--text: #f5f5f5;
 		--text-light: #cdcdcd;
 		--border: #6a5b48;
