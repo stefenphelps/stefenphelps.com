@@ -8,6 +8,7 @@ import compress from 'astro-compress';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://stefenphelps.com/',
+	trailingSlash: 'always',
 	vite: {
 		plugins: [
 			VitePWA({
