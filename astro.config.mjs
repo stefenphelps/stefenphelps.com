@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import critters from 'astro-critters';
 import { astroImageTools } from 'astro-imagetools';
+import NetlifyCMS from 'astro-netlify-cms';
 
 // https://astro.build/config
 export default defineConfig({
@@ -45,5 +46,30 @@ export default defineConfig({
 	markdown: {
 		syntaxHighlight: 'prism'
 	},
-	integrations: [sitemap(), critters(), astroImageTools]
+	integrations: [
+		sitemap(),
+		critters(),
+		astroImageTools,
+		NetlifyCMS({
+			config: {
+				backend: {
+					name: 'git-gateway',
+					branch: 'main'
+				},
+				collections: [
+					{
+						name: 'posts',
+						label: 'Blog Posts',
+						folder: 'src/pages/blog',
+						create: true,
+						delete: true,
+						fields: [
+							{ name: 'title', widget: 'string', label: 'Post Title' },
+							{ name: 'body', widget: 'markdown', label: 'Post Body' }
+						]
+					}
+				]
+			}
+		})
+	]
 });
