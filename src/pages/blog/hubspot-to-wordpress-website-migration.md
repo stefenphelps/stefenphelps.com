@@ -39,4 +39,4 @@ After
 
 ---
 
-Need help with a HubSpot to WordPress migration? [Let's talk](https://stefenphelps.com/hire-me/).
+Need help with a HubSpot to WordPress migration? [Let's talk](https://stefenphelps.com/contact/).

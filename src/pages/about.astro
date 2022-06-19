@@ -8,22 +8,29 @@ let permalink = 'https://stefenphelps.com/about';
 
 <Layout {title} {description} {permalink}>
 	<article>
-		<h1>{title}</h1>
+		<h1 style="margin: 0;">{title}</h1>
 		<form>
 			<h2>Type of info:</h2>
 			<div>
-				<input type="radio" name="type-of-about" id="professional" value="professional" checked />
+				<input
+					type="radio"
+					name="type-of-about"
+					id="professional"
+					value="professional"
+					checked
+				/>
 				<label for="professional">Professional</label>
 			</div>
 			<div>
-				<input type="radio" name="type-of-about" id="personal" value="personal" />
+				<input type="radio" name="type-of-about" id="personal" value="personal"
+				/>
 				<label for="personal">Personal</label>
 			</div>
 		</form>
 		<div class="professional-content active">
 			<p>
-				Here is a summary of my web development skill&thinsp;/&thinsp;experience and my professional
-				work history.
+				Here is a summary of my web development skill&thinsp;/&thinsp;experience
+				and my professional work history.
 			</p>
 			<h2 class="h3" style="margin-bottom: 0;">Skillset</h2>
 			<div class="grid">
@@ -71,41 +78,47 @@ let permalink = 'https://stefenphelps.com/about';
 			<ol>
 				<li><time>2021</time> 40% growth at Kelp!</li>
 				<li>
-					<time>2020</time> Started <a href="https://twitter.com/stefen/status/1300455802147409920"
+					<time>2020</time> Started <a
+						href="https://twitter.com/stefen/status/1300455802147409920"
 						>StonkLights</a
 					>.
 				</li>
 				<li><time>2019</time> Helped grow Kelp to 5 people.</li>
 				<li>
-					<time>2018</time> Started creative agency Kelp and working for myself full time.
+					<time>2018</time> Started creative agency Kelp and working for myself full
+					time.
 				</li>
 				<li>
-					<time>2017</time> Created and launched Spinstak's custom eCommerce platform first responsive
-					designs.
+					<time>2017</time> Created and launched Spinstak's custom eCommerce platform
+					first responsive designs.
 				</li>
 				<li>
-					<time>2016</time> Started working for Marketing Agency SMS in Brooksville, FL.
+					<time>2016</time> Started working for Marketing Agency SMS in Brooksville,
+					FL.
 				</li>
 				<li>
 					<time>2015</time> Help grow Bluleadz from 7 employees to 17+ employees.
 				</li>
 				<li>
-					<time>2014</time> Started working for Inbound Marketing Agency Bluleadz in Tampa, FL.
+					<time>2014</time> Started working for Inbound Marketing Agency Bluleadz
+					in Tampa, FL.
 				</li>
 				<li><time>2013</time> Promoted to Web Designer Team Lead</li>
 				<li>
-					<time>2012</time> First full-time position as a Junior Web Designer in Tampa, FL.
+					<time>2012</time> First full-time position as a Junior Web Designer in
+					Tampa, FL.
 				</li>
 				<li>
-					<time>2011</time> Started Stefen Phelps Web Design and doing freelance work on a frequent basis.
+					<time>2011</time> Started Stefen Phelps Web Design and doing freelance
+					work on a frequent basis.
 				</li>
 				<li><time>2009</time> First (paid) website gig.</li>
 			</ol>
 		</div>
 		<div class="personal-content">
 			<p>
-				Here's some random things, foods, and places I enjoy along with some major events in my
-				life.
+				Here's some random things, foods, and places I enjoy along with some
+				major events in my life.
 			</p>
 			<h2 class="h3" style="margin-bottom: 0;">Random things</h2>
 			<div class="grid">
@@ -298,8 +311,5 @@ let permalink = 'https://stefenphelps.com/about';
 		align-items: center;
 		gap: 1.5rem;
 		margin-top: 3rem;
-	}
-	h1 {
-		margin: 0;
 	}
 </style>

@@ -4,7 +4,6 @@ const { post, author } = Astro.props;
 const { frontmatter } = post;
 let date = new Date(post.publishDate);
 let dateLabel = date.toLocaleDateString('en-US');
-let postUrlTrailingSlashLol = post.url + '/';
 ---
 
 <article class="post-preview">
@@ -15,7 +14,7 @@ let postUrlTrailingSlashLol = post.url + '/';
 	)}
 	<div class="post-preview-text">
 		<h2 class="h4">
-			<a href={postUrlTrailingSlashLol}>{frontmatter.title}</a>
+			<a href={post.url}>{frontmatter.title}</a>
 		</h2>
 		<p>{frontmatter.description} …</p>
 	</div>
