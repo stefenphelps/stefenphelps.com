@@ -15,5 +15,16 @@ export default defineConfig({
 	markdown: {
 		syntaxHighlight: 'prism'
 	},
-	integrations: [sitemap(), critters(), astroImageTools, compress()]
+	integrations: [
+		sitemap(),
+		critters(),
+		astroImageTools,
+		compress({
+			css: true,
+			html: false,
+			js: true,
+			img: true,
+			svg: true
+		})
+	]
 });
