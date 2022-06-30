@@ -17,7 +17,7 @@
 		accessibility = 0.9
 		best-practices = 0.9
 		seo = 0.9
-		pwa = 0.5
+		pwa = 0.9
 		
 [[headers]]
 	for = "/*"
