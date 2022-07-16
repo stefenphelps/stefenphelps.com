@@ -20,13 +20,15 @@ let description = 'My thoughts on web development and sometimes other things.';
 let permalink = 'https://stefenphelps.com/blog/';
 const { page } = Astro.props;
 ---
+
 <Layout {title} {description} {permalink}>
-	<h1 class="latest">{title}</h1>
+	<h1 class='latest'>{title}</h1>
 	<p>
 		My thoughts on web development and sometimes other things. I don't write
 		here too often as of late (I know, I know). You might want to check the <a
-			href="https://www.kelp.agency/blog">Kelp Current</a
-		> for some of my other writings.
+			href='https://www.kelp.agency/blog'
+			>Kelp Current
+		</a> for some of my other writings.
 	</p>
 	{page.data.map((post) => <BlogPostPreview post={post} />)}
 	<Pagination

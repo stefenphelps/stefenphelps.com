@@ -14,8 +14,9 @@ let permalink = 'https://stefenphelps.com/';
 				<a href='https://www.kelp.agency'>Kelp</a>, Florida man, and ☕️ snob.
 			</h1>
 			<p>
-				I had a majestic mustache for a hot minute... but had to shave it off for the sake of my
-				marriage. Now, I enjoy having lots of different mustaches in the metaverse instead.
+				I had a majestic mustache for a hot minute... but had to shave it off
+				for the sake of my marriage. Now, I enjoy having lots of different
+				mustaches in the metaverse instead.
 			</p>
 		</div>
 		<div class='home-image'>
@@ -47,7 +48,15 @@ let permalink = 'https://stefenphelps.com/';
 					width='700'
 					height='700'
 				/>
-				<img width='700' height='700' src='/mustache-face.png' alt='Stefen' s Mustache Face' />
+				<img
+					width='700'
+					height='700'
+					src='/mustache-face.png'
+					alt='Stefen'
+					s
+					Mustache
+					Face'
+				/>
 			</picture>
 			<button class='button'>Generate Mustache</button>
 		</div>
@@ -57,7 +66,8 @@ let permalink = 'https://stefenphelps.com/';
 		var mustacheImg = document.querySelector('.home-image-stache');
 		var mustaches = Array.from(Array(60).keys());
 		button.addEventListener('click', function () {
-			var randomStache = mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
+			var randomStache =
+				mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
 			mustacheImg.style.display = 'block';
 			mustacheImg.src = '/mustaches/' + randomStache + '.svg';
 		});

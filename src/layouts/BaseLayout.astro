@@ -7,14 +7,14 @@ const { title, description, permalink } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang='en-US'>
 	<head>
 		<BaseHead {title} {description} {permalink} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<slot />
+			<slot></slot>
 		</main>
 		<Footer />
 	</body>
