@@ -52,10 +52,10 @@ export default defineConfig({
 		astroImageTools,
 		compress({
 			css: true,
-			html: false,
+			html: true,
 			js: true,
 			img: true,
-			svg: true
+			svg: false
 		})
 	]
 });
