@@ -5,74 +5,57 @@ import '../styles/global.scss';
 const {
 	title = 'Stefen Phelps',
 	description = 'Lead developer at Kelp, Brooksville Native, Dad.',
-	permalink = Astro.request.url
+	permalink = Astro.request.url,
+	heroImage = './social.png'
 } = Astro.props;
 ---
 
 <!-- Global Metadata / Icons -->
-<meta charset='utf-8' />
-<meta name='viewport' content='width=device-width' />
-<meta name='msapplication-TileColor' content='#a27f52' />
-<meta name='theme-color' content='#a27f52' />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="msapplication-TileColor" content="#a27f52" />
+<meta name="theme-color" content="#a27f52" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://stefenphelps.com/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://stefenphelps.com/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://stefenphelps.com/favicon-16x16.png" />
+<link rel="manifest" href="https://stefenphelps.com/manifest.webmanifest" />
+<link rel="mask-icon" href="https://stefenphelps.com/safari-pinned-tab.svg" color="#a27f52" />
 <link
-	rel='apple-touch-icon'
-	sizes='180x180'
-	href='https://stefenphelps.com/apple-touch-icon.png'
-/>
-<link
-	rel='icon'
-	type='image/png'
-	sizes='32x32'
-	href='https://stefenphelps.com/favicon-32x32.png'
-/>
-<link
-	rel='icon'
-	type='image/png'
-	sizes='16x16'
-	href='https://stefenphelps.com/favicon-16x16.png'
-/>
-<link rel='manifest' href='https://stefenphelps.com/manifest.webmanifest' />
-<link
-	rel='mask-icon'
-	href='https://stefenphelps.com/safari-pinned-tab.svg'
-	color='#a27f52'
-/>
-<link
-	rel='alternate'
-	type='application/rss+xml'
-	title='RSS Feed for stefenphelps.com'
-	href='https://stefenphelps.com/rss.xml'
+	rel="alternate"
+	type="application/rss+xml"
+	title="RSS Feed for stefenphelps.com"
+	href="https://stefenphelps.com/rss.xml"
 />
 
 <!-- Primary Metadata -->
 <title>{title}</title>
-<meta name='title' content={title} />
-<meta name='description' content={description} />
+<meta name="title" content={title} />
+<meta name="description" content={description} />
 
 <!-- Open Graph / Social -->
-<meta property='og:type' content='website' />
-<meta property='og:url' content={permalink} />
-<meta property='og:title' content={title} />
-<meta property='og:description' content={description} />
-<meta property='og:image' content='https://stefenphelps.com/social.jpg' />
-<meta property='twitter:card' content='summary_large_image' />
-<meta property='twitter:url' content={permalink} />
-<meta property='twitter:title' content={title} />
-<meta property='twitter:description' content={description} />
-<meta property='twitter:image' content='https://stefenphelps.com/social.jpg' />
-<meta name='twitter:site' content='@stefen' />
-<meta name='twitter:creator' content='@stefen' />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={permalink} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={heroImage} />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={permalink} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={heroImage} />
+<meta name="twitter:site" content="@stefen" />
+<meta name="twitter:creator" content="@stefen" />
 
 <!-- Global Styles -->
-<link rel='preconnect' href='https://fonts.googleapis.com' />
-<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-	rel='stylesheet'
-	href='https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@600&display=swap'
-	media='print'
-	onload='this.media="all"'
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@600&display=swap"
+	media="print"
+	onload="this.media='all'"
 />
 
-<script src='/src/scripts/main.js'>
+<script src="/src/scripts/main.js">
 
 </script>

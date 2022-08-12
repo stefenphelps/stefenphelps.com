@@ -6,21 +6,21 @@ let date = new Date(post.publishDate);
 let dateLabel = date.toLocaleDateString('en-US');
 ---
 
-<article class='post-preview'>
+<article class="post-preview">
 	{frontmatter.heroImage && (
 		<div class="post-preview-image">
 			<Picture src={frontmatter.heroImage} alt={frontmatter.title} />
 		</div>
 	)}
-	<div class='post-preview-text'>
-		<h2 class='h4'>
+	<div class="post-preview-text">
+		<h2 class="h4">
 			<a href={post.url}>{frontmatter.title}</a>
 		</h2>
 		<p>{frontmatter.description} …</p>
 	</div>
 </article>
 
-<style lang='scss'>
+<style lang="scss">
 	.post-preview {
 		display: flex;
 		flex-wrap: wrap;

@@ -3,18 +3,18 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const { title, description, permalink } = Astro.props;
+const { title, description, permalink, heroImage } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang='en-US'>
+<html lang="en-US">
 	<head>
-		<BaseHead {title} {description} {permalink} />
+		<BaseHead {title} {description} {permalink} {heroImage} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<slot></slot>
+			<slot />
 		</main>
 		<Footer />
 	</body>

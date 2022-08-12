@@ -1,18 +1,16 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
-import { Markdown } from 'astro/components';
 import BlogPost from '../components/BlogPost.astro';
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt } =
-	content;
+const { title, description, publishDate, author, heroImage, permalink = Astro.url, alt } = content;
 ---
 
-<Layout {title} {description} {permalink}>
+<Layout {title} {description} {permalink} {heroImage}>
 	<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
-		<slot></slot>
+		<slot />
 	</BlogPost>
-	<p style='margin-top: 3rem; text-align: center;'>
-		<a href='/blog/'>Read more posts</a>
+	<p style="margin-top: 3rem; text-align: center;">
+		<a href="/blog/">Read more posts</a>
 	</p>
 </Layout>
