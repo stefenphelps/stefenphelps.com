@@ -26,6 +26,7 @@
 		"@astrojs/turbolinks": "^0.1.4",
 		"astro-critters": "^0.0.11",
 		"astro-imagetools": "^0.6.10",
-		"astro-netlify-cms": "^0.1.0"
+		"astro-netlify-cms": "^0.1.0",
+		"javascript-time-ago": "^2.5.7"
 	}
 }

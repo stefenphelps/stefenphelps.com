@@ -1,9 +1,17 @@
 ---
+import TimeAgo from 'javascript-time-ago';
+import en from 'javascript-time-ago/locale/en' assert { type: 'json' };
 import { Picture } from 'astro-imagetools/components';
+
 const { post, author } = Astro.props;
 const { frontmatter } = post;
-let date = new Date(post.publishDate);
+
+let date = new Date(frontmatter.publishDate);
 let dateLabel = date.toLocaleDateString('en-US');
+
+TimeAgo.addDefaultLocale(en);
+const timeAgo = new TimeAgo('en-US');
+const timeAgoLabel = timeAgo.format(date);
 ---
 
 <article class="post-preview">
@@ -15,9 +23,10 @@ let dateLabel = date.toLocaleDateString('en-US');
 		)
 	}
 	<div class="post-preview-text">
-		<h2 class="h4">
+		<h2 class="h5">
 			<a href={post.url}>{frontmatter.title}</a>
 		</h2>
+		<time>{timeAgoLabel}</time>
 		<p>{frontmatter.description} …</p>
 	</div>
 </article>
@@ -41,10 +50,16 @@ let dateLabel = date.toLocaleDateString('en-US');
 			flex: 1 1 300px;
 		}
 		h2 {
-			margin-top: 0;
+			margin: 0;
+		}
+		time {
+			display: block;
+			margin: 0.5rem 0;
+			font-size: var(--size-0);
+			opacity: 0.7;
 		}
 		p {
-			margin-bottom: 0;
+			margin: 0;
 		}
 	}
 </style>
