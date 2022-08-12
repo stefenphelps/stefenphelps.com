@@ -7,11 +7,13 @@ let dateLabel = date.toLocaleDateString('en-US');
 ---
 
 <article class="post-preview">
-	{frontmatter.heroImage && (
-		<div class="post-preview-image">
-			<Picture src={frontmatter.heroImage} alt={frontmatter.title} />
-		</div>
-	)}
+	{
+		frontmatter.heroImage && (
+			<div class="post-preview-image">
+				<Picture src={frontmatter.heroImage} alt={frontmatter.title} />
+			</div>
+		)
+	}
 	<div class="post-preview-text">
 		<h2 class="h4">
 			<a href={post.url}>{frontmatter.title}</a>

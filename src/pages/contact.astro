@@ -10,30 +10,30 @@ let permalink = 'https://stefenphelps.com/contact';
 	<article>
 		<h1>{title}</h1>
 		<p>
-			You can connect with me on <a href='https://twitter.com/stefen'
-				>Twitter
-			</a> or <a href='https://www.linkedin.com/in/stefenphelps/'>LinkedIn</a>.
-			Otherwise, use the form below.
+			You can connect with me on <a href="https://twitter.com/stefen">Twitter</a> or <a
+				href="https://www.linkedin.com/in/stefenphelps/"
+				>LinkedIn
+			</a>. Otherwise, use the form below.
 		</p>
-		<form name='contact' action='/success' method='POST' data-netlify='true'>
+		<form name="contact" action="/success" method="POST" data-netlify="true">
 			<label>
 				Name
-				<input type='text' name='name' required />
+				<input type="text" name="name" required />
 			</label>
 			<label>
 				Email
-				<input type='email' name='email' required />
+				<input type="email" name="email" required />
 			</label>
 			<div>
-				<label for='message'>Message</label>
-				<textarea id='message' name='message' required></textarea>
+				<label for="message">Message</label>
+				<textarea id="message" name="message" required></textarea>
 			</div>
-			<button type='submit'>Send Message</button>
+			<button type="submit">Send Message</button>
 		</form>
 	</article>
 </Layout>
 
-<style lang='scss'>
+<style lang="scss">
 	form {
 		display: flex;
 		flex-wrap: wrap;

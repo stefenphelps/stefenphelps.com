@@ -33,4 +33,4 @@ That’s it.  By including the client as early as possible (making sure “the 
 
 ---
 
-Originally posted on [HubSpot's Design Blog](http://designers.hubspot.com/blog/reduce-client-revisions)
+Originally posted on [HubSpot's Design Blog](https://designers.hubspot.com/blog/reduce-client-revisions)

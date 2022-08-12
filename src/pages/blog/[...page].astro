@@ -6,9 +6,7 @@ import Pagination from '../../components/Pagination.astro';
 export async function getStaticPaths({ paginate, rss }) {
 	const allPosts = await Astro.glob('../blog/*.md');
 	const sortedPosts = allPosts.sort(
-		(a, b) =>
-			new Date(b.frontmatter.publishDate).valueOf() -
-			new Date(a.frontmatter.publishDate).valueOf()
+		(a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
 	);
 
 	// Return a paginated collection of paths for all posts
@@ -24,10 +22,9 @@ const { page } = Astro.props;
 <Layout {title} {description} {permalink}>
 	<h1 class="latest">{title}</h1>
 	<p>
-		My thoughts on web development and sometimes other things. I don't write
-		here too often as of late (I know, I know). You might want to check the
-		<a href="https://www.kelp.agency/blog">Kelp Current</a> for some of my other
-		writings.
+		My thoughts on web development and sometimes other things. I don't write here too often as of late (I know, I know).
+		You might want to check the
+		<a href="https://www.kelp.agency/blog">Kelp Current</a> for some of my other writings.
 	</p>
 	{page.data.map((post) => <BlogPostPreview post={post} />)}
 	<Pagination
