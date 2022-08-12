@@ -12,6 +12,11 @@ export default defineConfig({
 	vite: {
 		plugins: [
 			VitePWA({
+				strategies: 'generateSW',
+				workbox: {
+					globPatterns: ['**/*.{js,css}'],
+					navigateFallback: null
+				},
 				manifest: {
 					name: 'Stefen Phelps',
 					short_name: 'Stefen',
