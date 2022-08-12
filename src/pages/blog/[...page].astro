@@ -10,7 +10,7 @@ export async function getStaticPaths({ paginate, rss }) {
 	);
 
 	// Return a paginated collection of paths for all posts
-	return paginate(sortedPosts, { pageSize: 5 });
+	return paginate(sortedPosts, { pageSize: 10 });
 }
 
 let title = 'Blog';

@@ -9,8 +9,8 @@ export interface Props {
 
 const { prevUrl, nextUrl, pageStart, pageEnd, totalPosts } = Astro.props;
 
-const currentPage = pageEnd / 5;
-const totalPages = Math.ceil(totalPosts / 5);
+const currentPage = Math.ceil(pageEnd / 10);
+const totalPages = Math.ceil(totalPosts / 10);
 ---
 
 <div class="wrapper">

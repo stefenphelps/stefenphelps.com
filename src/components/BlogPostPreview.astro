@@ -31,7 +31,7 @@ const timeAgoLabel = timeAgo.format(date);
 	</div>
 </article>
 
-<style lang="scss">
+<style lang="scss" is:global>
 	.post-preview {
 		display: flex;
 		flex-wrap: wrap;
@@ -41,9 +41,9 @@ const timeAgoLabel = timeAgo.format(date);
 		border-top: 1px solid var(--border);
 		&-image {
 			flex: 1 1 200px;
-			img {
-				position: sticky;
-				top: 1rem;
+			picture {
+				position: sticky !important;
+				top: 6rem;
 			}
 		}
 		&-text {
