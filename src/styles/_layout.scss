@@ -1,12 +1,17 @@
 body {
-	display: grid;
-	grid-template-columns: 1fr min(50rem, 90%) 1fr;
 	margin: 0;
-	> * {
-		grid-column: 2;
-	}
 }
 
 main {
 	padding-top: 1.5rem;
+}
+
+.wrapper {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 49rem;
+	&--wide {
+		max-width: 65rem;
+	}
 }

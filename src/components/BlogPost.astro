@@ -7,11 +7,15 @@ let dateLabel = date.toLocaleDateString('en-US');
 ---
 
 <article>
-	{heroImage && <Picture src={heroImage} alt={title} />}
-	<h1 style="margin: 2rem 0 1rem;">{title}</h1>
-	<p style="font-size: 14px; margin-bottom: 2rem;">
-		Written by <a href="https://twitter.com/stefen">Stefen</a> on <time>{dateLabel}</time>
-	</p>
-	<hr />
+	<div class="wrapper wrapper--wide" style="text-align: center;">
+		{heroImage && <Picture src={heroImage} alt={title} />}
+	</div>
+	<div class="wrapper">
+		<h1 style="margin: 2rem 0 1rem;">{title}</h1>
+		<p style="font-size: 14px; margin-bottom: 2rem;">
+			Written by <a href="https://twitter.com/stefen">Stefen</a> on <time>{dateLabel}</time>
+		</p>
+		<hr />
+	</div>
 	<slot />
 </article>

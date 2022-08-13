@@ -1,16 +1,55 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
+import BlogPostPreview from '../components/BlogPostPreview.astro';
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink = Astro.url, alt } = content;
+
+const allPosts = await Astro.glob('../pages/blog/*.md');
+const filteredPosts = allPosts.filter((data) => data.frontmatter.title != title);
+const sortedPosts = filteredPosts.sort(
+	(a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+);
 ---
 
 <Layout {title} {description} {permalink} {heroImage}>
 	<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
-		<slot />
+		<div class="wrapper">
+			<slot />
+		</div>
 	</BlogPost>
-	<p style="margin-top: 3rem; text-align: center;">
-		<a href="/blog/">Read more posts</a>
-	</p>
+	<section class="recent-posts">
+		<h2 class="h3">Other Recent Posts</h2>
+		<hr />
+		<ul class="recent-posts-grid">
+			{
+				sortedPosts.slice(0, 9).map((post) => (
+					<li class="recent-posts-grid-item">
+						<a href="{post.frontmatter.url}">{post.frontmatter.title}</a>
+					</li>
+				))
+			}
+		</ul>
+	</section>
 </Layout>
+
+<style lang="scss">
+	.recent-posts {
+		width: 90%;
+		margin: auto;
+		h2 {
+			margin: 5rem 0 0rem;
+			flex: 1 1 100%;
+		}
+		&-grid {
+			@media (min-width: 900px) {
+				column-count: 2;
+				column-gap: 3rem;
+			}
+			&-item {
+				break-inside: avoid;
+			}
+		}
+	}
+</style>

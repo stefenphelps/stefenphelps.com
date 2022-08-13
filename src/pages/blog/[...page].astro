@@ -20,19 +20,21 @@ const { page } = Astro.props;
 ---
 
 <Layout {title} {description} {permalink}>
-	<h1 class="blog-title">{title}</h1>
-	<p class="blog-description">
-		My thoughts on web development and sometimes other things. You could also check out the
-		<a href="https://www.kelp.agency/blog">Kelp Current</a> for some of my other writings.
-	</p>
-	{page.data.map((post) => <BlogPostPreview post={post} />)}
-	<Pagination
-		prevUrl={page.url.prev}
-		nextUrl={page.url.next}
-		totalPosts={page.total}
-		pageStart={page.start + 1}
-		pageEnd={page.end + 1}
-	/>
+	<div class="wrapper wrapper--wide">
+		<h1 class="blog-title">{title}</h1>
+		<p class="blog-description">
+			My thoughts on web development and sometimes other things. You could also check out the
+			<a href="https://www.kelp.agency/blog">Kelp Current</a> for some of my other writings.
+		</p>
+		{page.data.map((post) => <BlogPostPreview post={post} />)}
+		<Pagination
+			prevUrl={page.url.prev}
+			nextUrl={page.url.next}
+			totalPosts={page.total}
+			pageStart={page.start + 1}
+			pageEnd={page.end + 1}
+		/>
+	</div>
 </Layout>
 
 <style is:global>
