@@ -1,17 +1,17 @@
 ---
-// import TimeAgo from 'javascript-time-ago';
-// import en from 'javascript-time-ago/locale/en' assert { type: 'json' };
+import TimeAgo from 'javascript-time-ago';
+import en from 'javascript-time-ago/locale/en' assert { type: 'json' };
 import { Picture } from 'astro-imagetools/components';
 
 const { post, author } = Astro.props;
 const { frontmatter } = post;
 
 let date = new Date(frontmatter.publishDate);
-// let dateLabel = date.toLocaleDateString('en-US');
-//
-// TimeAgo.addDefaultLocale(en);
-// const timeAgo = new TimeAgo('en-US');
-// const timeAgoLabel = timeAgo.format(date);
+let dateLabel = date.toLocaleDateString('en-US');
+
+TimeAgo.addDefaultLocale(en);
+const timeAgo = new TimeAgo('en-US');
+const timeAgoLabel = timeAgo.format(date);
 ---
 
 <article class="post-preview">
@@ -26,7 +26,7 @@ let date = new Date(frontmatter.publishDate);
 		<h2 class="h5">
 			<a href={post.url}>{frontmatter.title}</a>
 		</h2>
-		<!-- <time>{timeAgoLabel}</time> -->
+		<time>{timeAgoLabel}</time>
 		<p>{frontmatter.description} …</p>
 	</div>
 </article>
