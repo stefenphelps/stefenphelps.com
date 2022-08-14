@@ -53,13 +53,13 @@ export default defineConfig({
 	integrations: [
 		sitemap(),
 		critters(),
-		astroImageTools,
-		compress({
-			css: true,
-			html: true,
-			js: true,
-			img: true,
-			svg: false
-		})
+		astroImageTools
+		// compress({
+		// 	css: true,
+		// 	html: true,
+		// 	js: true,
+		// 	img: true,
+		// 	svg: false
+		// })
 	]
 });

@@ -1,6 +1,7 @@
 import { registerSW } from 'virtual:pwa-register';
 import Snackbar from 'node-snackbar';
 
+// pwa stuff
 const updateSW = registerSW({
 	onNeedRefresh() {
 		Snackbar.show({
@@ -20,6 +21,8 @@ const updateSW = registerSW({
 	}
 });
 
+// active menu link
+// todo: handle this server side
 const mainNav = document.querySelector('.header-nav-menu');
 const setActiveMenuItem = (_) => {
 	const menuItems = [...mainNav.querySelectorAll('a')];
@@ -30,5 +33,28 @@ const setActiveMenuItem = (_) => {
 		}
 	});
 };
-
 setActiveMenuItem();
+
+// toggle light or dark mode
+const html = document.documentElement;
+const toggleButton = document.querySelector('.toggle-mode');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+const setColorScheme = (value) => {
+	html.dataset.colorScheme = value;
+	localStorage.setItem('color-scheme', value);
+};
+
+if (localStorage.getItem('color-scheme')) {
+	console.log('here');
+	setColorScheme(localStorage.getItem('color-scheme'));
+}
+
+toggleButton.addEventListener('click', () => {
+	if (!html.dataset.colorScheme && prefersDark.matches) {
+		setColorScheme('light');
+		return;
+	}
+	const scheme = html.dataset.colorScheme === 'dark' ? 'light' : 'dark';
+	setColorScheme(scheme);
+});
