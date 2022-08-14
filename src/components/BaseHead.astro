@@ -6,7 +6,7 @@ const {
 	title = 'Stefen Phelps',
 	description = 'Lead developer at Kelp, Brooksville Native, Dad.',
 	permalink = Astro.request.url,
-	heroImage = './social.png'
+	heroImage = '/social.jpg'
 } = Astro.props;
 ---
 
@@ -37,12 +37,12 @@ const {
 <meta property="og:url" content={permalink} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={heroImage} />
+<meta property="og:image" content={`https://stefenphelps.com${heroImage}`} />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={permalink} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={heroImage} />
+<meta property="twitter:image" content={`https://stefenphelps.com${heroImage}`} />
 <meta name="twitter:site" content="@stefen" />
 <meta name="twitter:creator" content="@stefen" />
 
