@@ -132,3 +132,11 @@ pre code {
 	border: none;
 	padding: 0;
 }
+
+.fa-primary {
+	fill: var(--accent);
+}
+.fa-secondary {
+	fill: var(--accent);
+	opacity: 0.7;
+}
