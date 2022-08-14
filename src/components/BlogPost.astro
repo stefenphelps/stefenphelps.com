@@ -12,7 +12,7 @@ let dateLabel = date.toLocaleDateString('en-US');
 	</div>
 	<div class="wrapper">
 		<h1>{title}</h1>
-		<time datetime={date}
+		<time
 			><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="0.875em" height="1em"
 				><path
 					class="fa-primary"
@@ -34,6 +34,7 @@ let dateLabel = date.toLocaleDateString('en-US');
 	time {
 		display: flex;
 		align-items: center;
+		gap: 0.5rem;
 		font-size: var(--size-0);
 	}
 </style>
