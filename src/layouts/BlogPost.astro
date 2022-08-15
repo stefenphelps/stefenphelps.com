@@ -33,8 +33,8 @@ const sortedPosts = filteredPosts.sort(
 				</svg> Published on {dateLabel}
 			</time>
 			<hr />
+			<slot />
 		</div>
-		<slot />
 	</article>
 	<section class="recent-posts">
 		<h2 class="h3">Other Recent Posts</h2>
