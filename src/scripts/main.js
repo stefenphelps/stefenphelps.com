@@ -46,7 +46,6 @@ const setColorScheme = (value) => {
 };
 
 if (localStorage.getItem('color-scheme')) {
-	console.log('here');
 	setColorScheme(localStorage.getItem('color-scheme'));
 }
 

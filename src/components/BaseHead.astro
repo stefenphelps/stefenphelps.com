@@ -27,6 +27,18 @@ const {
 	href="https://stefenphelps.com/rss.xml"
 />
 
+<script is:inline>
+	// purposefully make render blocking to help prevent flash of wrong theme
+	const setColorScheme = (value) => {
+		document.documentElement.dataset.colorScheme = value;
+		localStorage.setItem('color-scheme', value);
+	};
+
+	if (localStorage.getItem('color-scheme')) {
+		setColorScheme(localStorage.getItem('color-scheme'));
+	}
+</script>
+
 <!-- Primary Metadata -->
 <title>{title}</title>
 <meta name="title" content={title} />
