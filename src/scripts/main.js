@@ -7,7 +7,7 @@ const updateSW = registerSW({
 		Snackbar.show({
 			text: 'Update available.',
 			actionText: 'Update',
-			actionTextColor: 'var(--accent)',
+			actionTextColor: '#fff',
 			onActionClick: function () {
 				updateSW();
 			}

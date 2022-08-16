@@ -2,8 +2,8 @@
 let year = new Date().getFullYear();
 ---
 
-<footer>
-	<ul class="social">
+<footer class="footer">
+	<ul class="footer-social">
 		<li>
 			<a href="https://www.linkedin.com/in/stefenphelps/" rel="me">
 				<svg
@@ -85,11 +85,11 @@ let year = new Date().getFullYear();
 			</a>
 		</li>
 	</ul>
-	<p><small>© {year} Stefen Phelps — <a href="/rss.xml">RSS feed</a></small></p>
+	<p class="footer-copyright"><small>© {year} Stefen Phelps — <a href="/rss.xml">RSS feed</a></small></p>
 </footer>
 
-<style>
-	footer {
+<style lang="scss">
+	.footer {
 		margin-top: 4rem;
 		padding: 2rem 1rem 1.5rem 1rem;
 		color: var(--text-light);
@@ -99,15 +99,17 @@ let year = new Date().getFullYear();
 		a:hover {
 			color: var(--accent-darker);
 		}
-	}
-	.social {
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
-		align-items: center;
-		margin: 0;
-		padding: 0;
-		justify-content: center;
+		&-social {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+			justify-content: center;
+		}
 	}
 </style>
+
+<script src="/src/scripts/main.js"></script>
