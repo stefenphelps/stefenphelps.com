@@ -37,7 +37,7 @@ setActiveMenuItem();
 
 // toggle light or dark mode
 const html = document.documentElement;
-const toggleButton = document.querySelector('.toggle-mode');
+const toggleButton = document.querySelector('.footer-toggle');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
 const setColorScheme = (value) => {
