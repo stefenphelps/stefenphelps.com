@@ -1,9 +1,9 @@
-import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
-import critters from 'astro-critters';
+import { VitePWA } from 'vite-plugin-pwa';
 import { astroImageTools } from 'astro-imagetools';
+import sitemap from '@astrojs/sitemap';
 import compress from 'astro-compress';
+import critters from 'astro-critters';
 
 // https://astro.build/config
 export default defineConfig({
@@ -50,16 +50,5 @@ export default defineConfig({
 	markdown: {
 		syntaxHighlight: 'prism'
 	},
-	integrations: [
-		sitemap(),
-		astroImageTools,
-		compress({
-			css: true,
-			html: true,
-			js: true,
-			img: true,
-			svg: false
-		}),
-		critters()
-	]
+	integrations: [sitemap(), astroImageTools, compress(), critters()]
 });

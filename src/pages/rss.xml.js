@@ -15,5 +15,6 @@ export const get = () =>
 			description: item.frontmatter.description,
 			link: item.url,
 			pubDate: item.frontmatter.publishDate
-		}))
+		})),
+		stylesheet: '/rss/styles.xsl'
 	});
