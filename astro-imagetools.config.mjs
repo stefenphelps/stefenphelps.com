@@ -2,6 +2,6 @@ import { defineConfig } from 'astro-imagetools/config';
 
 export default defineConfig({
 	placeholder: 'blurred',
-	format: ['webp', 'jpg'],
+	format: ['avif', 'webp'],
 	fallbackFormat: 'png'
 });
