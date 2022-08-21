@@ -5,18 +5,18 @@ publishDate: '2016-11-01'
 categories:
   - 'design'
   - 'hubspot'
-heroImage: '/blog/progressive-loading-hubspot-image.webp'
+heroImage: '/images/blur-up-image-loading.gif'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
 
 I am a big fan of the way Instagram's mobile app and [Medium](https://jmperezperez.com/medium-image-progressive-loading-placeholder/)'s website load images. If you don't know what I'm talking about, it's when an extremely small image is scaled up, blurred out and is loaded before the full image... eventually fading into the full image once it has loaded. Like so:
 
-![Progressive Loading Image on Medium](/blog/3oz8xQJy64awXLEqyc.webp 'Progressive Loading Image on Medium')
+![Progressive Loading Image on Medium](/images/medium-image-loading.gif 'Progressive Loading Image on Medium')
 
 Providing visual feedback to end users — **especially users with slower connections** — that something is happening is a great way to improve UX. Thanks to HubSpot's [automatic image resizing](https://knowledge.hubspot.com/articles/kcs_article/cos-general/what-is-automatic-image-resizing) and a nifty little script by David Desandro (the man behind [metafizzy](http://metafizzy.co/)) it's pretty easy to achieve the same effect on your HubSpot website:
 
-![Progressive Loading Background Image on HubSpot](/blog/3oz8xPBjyHeOct6jNS.webp 'Progressive Loading Background Image on HubSpot')
+![Progressive Loading Background Image on HubSpot](/images/blur-up-image-loading.gif 'Progressive Loading Background Image on HubSpot')
 
 ---
 

@@ -5,7 +5,7 @@ publishDate: '2017-11-21'
 categories:
   - 'design'
   - 'how-to'
-heroImage: '/blog/adobe-xd.webp'
+heroImage: '/images/adobe-xd.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -16,7 +16,7 @@ Designers creating new website mockups will generally use Photoshop then save th
 
 For simple page animations and adding context to how each page fits together, Adobe XD is the perfect tool—not to mention, it's also an extremely quick way to design page layouts.
 
-![adobe-xd](/blog/adobe-xd.webp)
+![adobe-xd](/images/adobe-xd.webp)
 
 ### Adding page transitions in Adobe XD
 
@@ -24,7 +24,7 @@ First off, you'll need at least 2 artboards. Each artboard represents a page (or
 
 Once you have multiple artboards setup, click on the prototype tab. Then, you're going to want to select the element in your design that should be linked to the other artboard, such as a standard link for example. Once selected, click and drag the blue tab to the corresponding artboard, and then choose your animation type and speed.
 
-![adobe-xd-prototype](/blog/adobe-xd-prototype.webp)
+![adobe-xd-prototype](/images/adobe-xd-prototype.webp)
 
 Once linked, you can click the play button in the top right corner to view the animation, share the preview online, or even create a video walk-through of the pages.
 

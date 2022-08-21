@@ -4,7 +4,7 @@ description: 'Typically, when you start a traditional website re-design, the de
 publishDate: '2016-04-20'
 categories:
   - 'hubspot'
-heroImage: '/blog/bluleadz-launchpad-website.webp'
+heroImage: '/images/bluleadz-launchpad-website.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -15,7 +15,7 @@ Typically, when you start a traditional website re-design, the designer will cr
 
 This seems simple enough, except for the fact that it can take several months from start to finish to get all necessary approvals and assets together. What you end up with is stale content, a design that's already falling behind the tide and a bad user experience.
 
-![launchpad website](/blog/bluleadz-launchpad-website.webp)
+![launchpad website](/images/bluleadz-launchpad-website.webp)
 
 ## Discover Your [**Minimum Viable Product**](https://en.wikipedia.org/wiki/Minimum_viable_product)
 

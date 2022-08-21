@@ -4,7 +4,7 @@ description: "Have you ever wished your HubSpot blog had a search feature that d
 publishDate: '2017-05-16'
 categories:
   - 'hubspot'
-heroImage: '/blog/search-hubspot-blog.webp'
+heroImage: '/images/search-hubspot-blog.gif'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -62,7 +62,7 @@ Okay... Sure you are...
 
 Did the form take you to the search results page? Did you see the query parameter added to the URL like so "**/blog/search?query=my+search+example**" but you don't see any search results?
 
-![search-results-page](/blog/search-results-page.webp)
+![search-results-page](/images/search-results-page.webp)
 
 **Perfect!** Now let's create those search results.
 
@@ -85,7 +85,7 @@ Go ahead and edit the search results page's template (or clone it if you want to
 
 Now, if you go back to your search input, you should see your matching search results:
 
-![hubspot-blog-search.webp](/blog/hubspot-blog-search.webp)
+![hubspot blog search](/images/hubspot-blog-search.gif)
 
 **Awesome!** You just built yourself your first search engine!
 

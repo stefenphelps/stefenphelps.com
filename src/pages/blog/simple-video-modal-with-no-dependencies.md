@@ -2,7 +2,7 @@
 title: 'Simple Video Modal with No Dependencies'
 description: 'Code a video modal using native HTML elements, HTML APIs, and a touch of javascript.'
 publishDate: '2022-07-16'
-heroImage: '/blog/video-modal.png'
+heroImage: '/images/video-modal.png'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---

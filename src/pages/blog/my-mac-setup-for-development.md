@@ -1,7 +1,7 @@
 ---
 title: 'My Mac Setup for Web Development'
 description: 'A list of my favorite apps, packages, and various tools I use for web development on MacOS.'
-heroImage: '/blog/nova-ide.png'
+heroImage: '/images/nova-ide.png'
 publishDate: '2022-08-13'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'

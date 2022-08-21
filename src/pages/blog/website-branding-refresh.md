@@ -4,7 +4,7 @@ description: 'One of the hardest parts of designing for the web is the lack of l
 publishDate: '2017-11-06'
 categories:
   - 'project'
-heroImage: '/blog/Citrus-Medical-Weight-Loss-V3.webp'
+heroImage: '/images/Citrus-Medical-Weight-Loss-V3.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -17,11 +17,11 @@ Clear branding guidelines provide constraints which makes designing a website qu
 
 Dr. Redrick offers three primary services, each with their own visual identity. However, they  also share specific qualities to show that they are part of the same family.
 
-![Citrus Gynecology Updated Logo](/blog/Citrus-Gynecology-V2.webp)
+![Citrus Gynecology Updated Logo](/images/Citrus-Gynecology-V2.webp)
 
-![Citrus Medical Marijuana Clinic Updated Logo](/blog/Citrus-Medical-Marijuana-Clinic-V3.webp)
+![Citrus Medical Marijuana Clinic Updated Logo](/images/Citrus-Medical-Marijuana-Clinic-V3.webp)
 
-![Citrus Medical Weight Loss Updated Logo](/blog/Citrus-Medical-Weight-Loss-V3.webp)
+![Citrus Medical Weight Loss Updated Logo](/images/Citrus-Medical-Weight-Loss-V3.webp)
 
 ## Logo Animation
 

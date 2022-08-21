@@ -4,7 +4,7 @@ description: "In part 2 (this post!), I'll be discussing the technical aspects o
 publishDate: '2016-10-18'
 categories:
   - 'how-to'
-heroImage: '/blog/behind-the-team-member-photos.webp'
+heroImage: '/images/behind-the-team-member-photos.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---

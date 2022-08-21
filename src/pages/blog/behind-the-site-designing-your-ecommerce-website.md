@@ -4,7 +4,7 @@ description: 'Behind every good eCommerce website is a good strategy. Who is 
 publishDate: '2016-07-11'
 categories:
   - 'design'
-heroImage: '/blog/issc-website-redesign-desktop-phone.webp'
+heroImage: '/images/issc-website-redesign-desktop-phone.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
@@ -27,7 +27,7 @@ _**Your website needs to be like water!**_
 
 **To get more technical:** we design responsive sites using a [12 column grid system](http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp) which makes coding the design a much easier task. This is one of the primary reasons why it's so hard to take an existing design and "make it responsive". It really needs to be thought through in the design phase and not be a tacked-on (buggy) feature after the fact.
 
-![issc website redesign](/blog/issc-website-redesign-desktop-phone.webp)
+![issc website redesign](/images/issc-website-redesign-desktop-phone.webp)
 
 _An example of responsive design (desktop and phone)._
 

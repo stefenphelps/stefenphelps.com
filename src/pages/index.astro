@@ -20,11 +20,11 @@ let permalink = 'https://stefenphelps.com/';
 				</p>
 			</div>
 			<div class="home-image">
-				<img class="home-image-stache" src="/mustaches/1.svg" alt="Generated mustache" width="700" height="700" />
+				<img class="home-image-stache" src="/images/mustaches/1.svg" alt="Generated mustache" width="700" height="700" />
 				<picture class="home-image-picture">
-					<source type="image/svg+xml" srcset="/mustache-face.svg" width="700" height="700" />
-					<source type="image/webp" srcset="/mustache-face.webp" width="700" height="700" />
-					<img width="700" height="700" src="/mustache-face.png" alt="Stefen's Mustache Face" />
+					<source type="image/svg+xml" srcset="/images/mustache-face.svg" width="700" height="700" />
+					<source type="image/webp" srcset="/images/mustache-face.webp" width="700" height="700" />
+					<img width="700" height="700" src="/images/mustache-face.png" alt="Stefen's Mustache Face" />
 				</picture>
 				<button class="button mustache-button">Generate Mustache</button>
 			</div>
@@ -37,7 +37,7 @@ let permalink = 'https://stefenphelps.com/';
 		button.addEventListener('click', function () {
 			var randomStache = mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
 			mustacheImg.style.display = 'block';
-			mustacheImg.src = '/mustaches/' + randomStache + '.svg';
+			mustacheImg.src = '/images/mustaches/' + randomStache + '.svg';
 		});
 	</script>
 </Layout>

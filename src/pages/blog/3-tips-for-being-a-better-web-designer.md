@@ -4,7 +4,7 @@ description: "I've been making websites for close to 10 years now. I've made my 
 publishDate: '2018-02-28'
 categories:
   - 'design'
-heroImage: '/blog/gle-careers-scout-466403-edited.webp'
+heroImage: '/images/gle-careers-scout-466403-edited.webp'
 author: 'Stefen Phelps'
 layout: '../../layouts/BlogPost.astro'
 ---
