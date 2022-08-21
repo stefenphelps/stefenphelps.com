@@ -28,6 +28,7 @@
 		"astro-critters": "^1.0.1",
 		"astro-imagetools": "^0.6.10",
 		"astro-netlify-cms": "^0.1.0",
-		"javascript-time-ago": "^2.5.7"
+		"javascript-time-ago": "^2.5.7",
+		"netlify-plugin-cache": "^1.0.3"
 	}
 }

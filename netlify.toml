@@ -2,6 +2,12 @@
 	base = "./"
 	publish = "dist"
 	command = "npm run build"
+
+[[plugins]]
+	package = "netlify-plugin-cache"
+	
+	[plugins.inputs]
+		paths = ["./dist"]
 		
 [[headers]]
 	for = "/*"
