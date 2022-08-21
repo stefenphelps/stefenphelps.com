@@ -153,9 +153,12 @@ let year = new Date().getFullYear();
 			}
 			@media (max-width: 600px) {
 				position: fixed;
-				padding: .625rem;
+				padding: 0.625rem;
 				bottom: 0;
 				right: 0;
+				border-top: 1px solid var(--border);
+				border-left: 1px solid var(--border);
+				border-top-left-radius: 1rem;
 			}
 			&-moon {
 				display: none;
