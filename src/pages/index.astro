@@ -33,11 +33,10 @@ let permalink = 'https://stefenphelps.com/';
 	<script>
 		var button = document.querySelector('.mustache-button');
 		var mustacheImg = document.querySelector('.home-image-stache');
-		var mustaches = Array.from(Array(60).keys());
 		button.addEventListener('click', function () {
-			var randomStache = mustaches[Math.floor(Math.random() * mustaches.length)] + 1;
-			mustacheImg.style.display = 'block';
+			var randomStache = Math.floor(Math.random() * 60 + 1).toString();
 			mustacheImg.src = '/images/mustaches/' + randomStache + '.svg';
+			mustacheImg.style.display = 'block';
 		});
 	</script>
 </Layout>
