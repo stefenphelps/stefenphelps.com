@@ -20,7 +20,8 @@ export default defineConfig({
 				manifest: {
 					name: 'Stefen Phelps',
 					short_name: 'Stefen',
-					description: "Stefen's Personal website where he writes about web development and sometimes other things.",
+					description:
+						"Stefen's Personal website where he writes about web development and sometimes other things.",
 					start_url: 'https://stefenphelps.com',
 					theme_color: '#473b2c',
 					background_color: '#473b2c',
@@ -57,3 +58,6 @@ export default defineConfig({
 		critters()
 	]
 });
+
+astroImageTools.hooks['astro:build:done'] = async () =>
+	(await import('./node_modules/astro-imagetools/plugin/hooks/closeBundle.js')).default();
