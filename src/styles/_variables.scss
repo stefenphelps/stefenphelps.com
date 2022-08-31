@@ -1,3 +1,26 @@
+@mixin lightColorTheme() {
+	--bg: #ffebce;
+	--accent-bg: #fff0da;
+	--transparent-bg: rgba(255, 240, 219, 0.65);
+	--text: #212121;
+	--text-light: #585858;
+	--border: #ebd7b8;
+	--accent: #0d47a1;
+	--accent-darker: #00368a;
+	--marked: #ffdd33;
+}
+
+@mixin darkColorTheme() {
+	--bg: #473b2c;
+	--accent-bg: #504535;
+	--transparent-bg: rgba(80, 69, 53, 0.85);
+	--text: #f5f5f5;
+	--text-light: #cdcdcd;
+	--border: #6a5b48;
+	--accent: #eda500;
+	--accent-darker: #d59913;
+}
+
 :root {
 	/* Set sans-serif & mono fonts */
 	--sans-font: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Nimbus Sans L', Roboto, Noto, 'Segoe UI',
@@ -14,57 +37,23 @@
 	--size-5: clamp(2.33rem, 2.03rem + 1.52vw, 3.11rem); // h2
 	--size-6: clamp(2.8rem, 2.44rem + 1.82vw, 3.73rem); // h1
 
-	/* Default (light) theme */
-	--bg: #fef7ed;
-	--accent-bg: #fef7ed;
-	--transparent-bg: rgba(254, 247, 237, 0.85);
-	--text: #212121;
-	--text-light: #585858;
-	--border: #c8b495;
-	--accent: #0d47a1;
-	--accent-darker: #00368a;
-	--marked: #ffdd33;
-
 	/* styles inputs */
 	accent-color: var(--accent);
 
 	/* site supports light and dark schemes */
 	color-scheme: dark light;
-}
-
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg: #473b2c;
-		--accent-bg: #504535;
-		--transparent-bg: rgba(80, 69, 53, 0.85);
-		--text: #f5f5f5;
-		--text-light: #cdcdcd;
-		--border: #6a5b48;
-		--accent: #eda500;
-		--accent-darker: #d59913;
+	@include lightColorTheme();
+	@media (prefers-color-scheme: dark) {
+		@include darkColorTheme();
 	}
 }
 
-// user override
-html[data-color-scheme='light'] {
-	--bg: #fef7ed;
-	--accent-bg: #fef7ed;
-	--transparent-bg: rgba(254, 247, 237, 0.85);
-	--text: #212121;
-	--text-light: #585858;
-	--border: #c8b495;
-	--accent: #0d47a1;
-	--accent-darker: #00368a;
-	--marked: #ffdd33;
-}
-html[data-color-scheme='dark'] {
-	--bg: #473b2c;
-	--accent-bg: #504535;
-	--transparent-bg: rgba(80, 69, 53, 0.85);
-	--text: #f5f5f5;
-	--text-light: #cdcdcd;
-	--border: #6a5b48;
-	--accent: #eda500;
-	--accent-darker: #d59913;
+// user override OS preference
+html {
+	&[data-color-scheme='light'] {
+		@include lightColorTheme();
+	}
+	&[data-color-scheme='dark'] {
+		@include darkColorTheme();
+	}
 }

@@ -20,7 +20,13 @@ let permalink = 'https://stefenphelps.com/';
 				</p>
 			</div>
 			<div class="home-image">
-				<img class="home-image-stache" src="/images/mustaches/1.svg" alt="Generated mustache" width="700" height="700" />
+				<img
+					class="home-image-stache"
+					src="/images/mustaches/1.svg"
+					alt="Generated mustache"
+					width="700"
+					height="700"
+				/>
 				<picture class="home-image-picture">
 					<source type="image/svg+xml" srcset="/images/mustache-face.svg" width="700" height="700" />
 					<source type="image/webp" srcset="/images/mustache-face.webp" width="700" height="700" />
@@ -50,7 +56,9 @@ let permalink = 'https://stefenphelps.com/';
 		flex-wrap: wrap;
 		gap: 2rem;
 		align-items: center;
-		margin-top: 4rem;
+		@media (min-width: 960px) {
+			margin-top: 4rem;
+		}
 		&-image {
 			flex: 1 1 230px;
 			position: relative;
@@ -75,6 +83,11 @@ let permalink = 'https://stefenphelps.com/';
 		}
 		&-text {
 			flex: 1 1 400px;
+			@media (max-width: 767px) {
+				h1 {
+					margin-top: 0;
+				}
+			}
 		}
 	}
 </style>
