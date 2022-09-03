@@ -24,7 +24,7 @@ const timeAgoLabel = timeAgo.format(date);
 	}
 	<div class="post-preview-text">
 		<h2 class="h5">
-			<a href={post.url}>{frontmatter.title}</a>
+			<a rel="prefetch" href={post.url}>{frontmatter.title}</a>
 		</h2>
 		<time
 			><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="0.875em" height="1em"
