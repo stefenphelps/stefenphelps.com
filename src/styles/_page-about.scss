@@ -1,0 +1,101 @@
+.about-page {
+	@media (max-width: 767px) {
+		main article {
+			margin-top: 0;
+		}
+	}
+	.grid {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		&-item {
+			flex: 1 1 200px;
+		}
+	}
+	label {
+		display: block;
+	}
+	ol {
+		list-style: none;
+		margin: 0 0 0 2.1em;
+		padding: 0 0 0 2.1em;
+		li {
+			text-indent: -2.1em;
+			line-height: 1.2;
+			margin-bottom: 1rem;
+		}
+		time {
+			font-size: var(--size-3);
+			font-family: var(--mono-font);
+			display: inline-block;
+			margin-right: 0.5rem;
+			font-weight: 200;
+		}
+	}
+	progress {
+		width: 100%;
+		border-radius: 2rem;
+		height: 0.75rem;
+		margin-bottom: 1rem;
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.25);
+		&::-webkit-progress-value {
+			background-color: var(--accent);
+		}
+		&.ready::-webkit-progress-value {
+			transition: width 1s;
+		}
+		@for $i from 1 through 100 {
+			&:nth-child(#{$i})::-webkit-progress-value {
+				transition-delay: random(200) + ms;
+			}
+		}
+	}
+	::-webkit-progress-bar {
+		background-color: rgba(255, 255, 255, 0.25);
+		transition: width 1s;
+	}
+	form {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1rem;
+		background: var(--accent);
+		padding: 0.5rem 1rem;
+		border-radius: 0.5rem;
+		color: var(--bg);
+		h2 {
+			font-size: var(--size-1);
+			margin: 0;
+			white-space: nowrap;
+		}
+		div {
+			display: flex;
+			align-items: center;
+			gap: 0.25rem;
+		}
+		label {
+			font-size: var(--size-0);
+		}
+		input {
+			margin: 0;
+		}
+	}
+	.professional-content,
+	.personal-content {
+		display: none;
+		flex: 1 1 100%;
+	}
+	.professional-content.active,
+	.personal-content.active {
+		display: block;
+	}
+	article {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1.5rem;
+		margin-top: 3rem;
+	}
+}

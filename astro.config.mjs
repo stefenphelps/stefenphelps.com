@@ -5,8 +5,6 @@ import sitemap from '@astrojs/sitemap';
 import compress from 'astro-compress';
 import critters from 'astro-critters';
 
-import prefetch from '@astrojs/prefetch';
-
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://stefenphelps.com/',
@@ -62,7 +60,6 @@ export default defineConfig({
 			img: false,
 			svg: false
 		}),
-		critters(),
-		prefetch()
+		critters()
 	]
 });

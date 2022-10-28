@@ -20,25 +20,3 @@ const totalPages = Math.ceil(totalPosts / 10);
 		<a class="pagination-next" href={nextUrl || '#'} aria-label="Next Page">Next</a>
 	</nav>
 </div>
-
-<style lang="scss">
-	.pagination {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 1rem;
-		padding-top: 4rem;
-		&-prev,
-		&-next {
-			flex: 0 0 90px;
-			text-align: center;
-			margin: 0;
-			font-family: var(--heading-font);
-			&[href='#'] {
-				cursor: not-allowed;
-				opacity: 0.4;
-				color: #777;
-			}
-		}
-	}
-</style>

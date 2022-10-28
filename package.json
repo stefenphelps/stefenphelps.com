@@ -11,21 +11,22 @@
 		"deploy": "netlify deploy --prod"
 	},
 	"devDependencies": {
-		"@astrojs/prefetch": "^0.0.8",
+		"@astrojs/prefetch": "^0.1.0",
 		"@astrojs/sitemap": "^1.0.0",
-		"astro": "1.5.0",
-		"astro-compress": "^1.0.12",
-		"autoprefixer": "^10.4.12",
+		"astro": "1.6.0",
+		"astro-compress": "^1.1.1",
+		"autoprefixer": "^10.4.13",
 		"node-snackbar": "^0.1.16",
 		"prettier": "2.7.1",
-		"prettier-plugin-astro": "^0.5.5",
+		"prettier-plugin-astro": "^0.6.0",
 		"sass": "^1.55.0",
 		"vite-plugin-pwa": "0.13.1"
 	},
 	"dependencies": {
-		"@astrojs/rss": "^1.0.2",
+		"@astrojs/rss": "^1.0.3",
 		"@astrojs/turbolinks": "^0.1.4",
-		"astro-critters": "^1.0.5",
+		"@waaark/luge": "^0.6.11-beta",
+		"astro-critters": "^1.1.0",
 		"astro-imagetools": "^0.6.11",
 		"javascript-time-ago": "^2.5.7",
 		"netlify-plugin-cache": "^1.0.3"

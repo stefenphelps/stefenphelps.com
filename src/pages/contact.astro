@@ -7,7 +7,7 @@ let permalink = 'https://stefenphelps.com/contact';
 ---
 
 <Layout {title} {description} {permalink}>
-	<article class="wrapper">
+	<article class="wrapper contact-page">
 		<h1>{title}</h1>
 		<p>
 			You can connect with me on <a href="https://twitter.com/stefen">Twitter</a> or <a
@@ -31,29 +31,3 @@ let permalink = 'https://stefenphelps.com/contact';
 		</form>
 	</article>
 </Layout>
-
-<style lang="scss">
-	@media (max-width: 767px) {
-		.wrapper h1 {
-			margin-top: 0;
-		}
-	}
-	form {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
-		> * {
-			flex: 1 1 300px;
-		}
-		input,
-		textarea {
-			display: block;
-			width: 100%;
-			margin-bottom: 0;
-		}
-		> button {
-			margin-top: 1rem;
-			flex-basis: 100%;
-		}
-	}
-</style>
