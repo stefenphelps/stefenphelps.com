@@ -13,21 +13,21 @@
 	"devDependencies": {
 		"@astrojs/prefetch": "^0.1.1",
 		"@astrojs/sitemap": "^1.0.0",
-		"astro": "1.8.0",
-		"astro-compress": "^1.1.24",
+		"astro": "1.9.2",
+		"astro-compress": "^1.1.27",
 		"autoprefixer": "^10.4.13",
 		"node-snackbar": "^0.1.16",
-		"prettier": "2.8.1",
-		"prettier-plugin-astro": "^0.7.0",
+		"prettier": "2.8.3",
+		"prettier-plugin-astro": "^0.7.2",
 		"sass": "^1.57.1",
-		"vite-plugin-pwa": "0.14.0"
+		"vite-plugin-pwa": "0.14.1"
 	},
 	"dependencies": {
 		"@astrojs/rss": "^2.0.0",
 		"@astrojs/turbolinks": "^0.1.4",
-		"@waaark/luge": "^0.6.11-beta",
-		"astro-critters": "^1.1.24",
-		"astro-imagetools": "^0.6.17",
+		"@waaark/luge": "^0.6.15-beta",
+		"astro-critters": "^1.1.26",
+		"astro-imagetools": "^0.7.4",
 		"javascript-time-ago": "^2.5.9",
 		"netlify-plugin-cache": "^1.0.3"
 	}
