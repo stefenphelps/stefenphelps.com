@@ -13,8 +13,8 @@
 	"devDependencies": {
 		"@astrojs/prefetch": "^0.1.1",
 		"@astrojs/sitemap": "^1.0.0",
-		"astro": "1.9.2",
-		"astro-compress": "^1.1.27",
+		"astro": "^2.0.0",
+		"astro-compress": "^1.1.28",
 		"autoprefixer": "^10.4.13",
 		"node-snackbar": "^0.1.16",
 		"prettier": "2.8.3",
@@ -23,11 +23,11 @@
 		"vite-plugin-pwa": "0.14.1"
 	},
 	"dependencies": {
-		"@astrojs/rss": "^2.0.0",
+		"@astrojs/rss": "^2.1.0",
 		"@astrojs/turbolinks": "^0.1.4",
-		"@waaark/luge": "^0.6.15-beta",
+		"@waaark/luge": "^0.6.16-beta",
 		"astro-critters": "^1.1.26",
-		"astro-imagetools": "^0.7.4",
+		"astro-imagetools": "^0.7.6",
 		"javascript-time-ago": "^2.5.9",
 		"netlify-plugin-cache": "^1.0.3"
 	}
