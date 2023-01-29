@@ -1,17 +1,8 @@
-@use '../../node_modules/node-snackbar/dist/snackbar';
-@use '../../node_modules/@waaark/luge/dist/css/luge.css';
-@use './prism-theme';
+@use 'node-snackbar/dist/snackbar';
+
 @use './variables';
 @use './typography';
 @use './forms';
-@use './pagination';
-@use './post-preview';
-
 @use './layout';
 @use './header';
 @use './footer';
-
-@use './page-about';
-@use './page-blog';
-@use './page-home';
-@use './page-contact';

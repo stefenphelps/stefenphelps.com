@@ -50,3 +50,33 @@ const sortedPosts = filteredPosts.sort(
 		</ul>
 	</section>
 </Layout>
+<style lang="scss">
+	.article {
+		h1 {
+			margin: 2rem 0 1rem;
+		}
+		time {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			font-size: var(--size-0);
+		}
+	}
+	.recent-posts {
+		width: 90%;
+		margin: auto;
+		h2 {
+			margin: 5rem 0 0rem;
+			flex: 1 1 100%;
+		}
+		&-grid {
+			@media (min-width: 900px) {
+				column-count: 2;
+				column-gap: 3rem;
+			}
+			&-item {
+				break-inside: avoid;
+			}
+		}
+	}
+</style>

@@ -4,6 +4,7 @@ import { astroImageTools } from 'astro-imagetools';
 import sitemap from '@astrojs/sitemap';
 import compress from 'astro-compress';
 import critters from 'astro-critters';
+import prefetch from '@astrojs/prefetch';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,9 +15,10 @@ export default defineConfig({
 			VitePWA({
 				strategies: 'generateSW',
 				workbox: {
-					globPatterns: ['**/*.{js,css}'],
+					globPatterns: ['**/*.{js,css,html,svg,avif}'],
 					navigateFallback: null
 				},
+				includeAssets: ['/favicon.ico', '/apple-touch-icon.png', 'pwa-512x512.png'],
 				manifest: {
 					name: 'Stefen Phelps',
 					short_name: 'Stefen',
@@ -48,7 +50,9 @@ export default defineConfig({
 		]
 	},
 	markdown: {
-		syntaxHighlight: 'prism'
+		shikiConfig: {
+			theme: 'material-darker'
+		}
 	},
 	integrations: [
 		sitemap(),
@@ -60,6 +64,7 @@ export default defineConfig({
 			img: false,
 			svg: false
 		}),
-		critters()
+		critters(),
+		prefetch()
 	]
 });

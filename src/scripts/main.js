@@ -1,6 +1,5 @@
 import { registerSW } from 'virtual:pwa-register';
 import Snackbar from 'node-snackbar';
-import luge from '@waaark/luge';
 
 // pwa stuff
 const updateSW = registerSW({
@@ -21,6 +20,7 @@ const updateSW = registerSW({
 		});
 	}
 });
+updateSW;
 
 // toggle light or dark mode
 const html = document.documentElement;
@@ -45,62 +45,60 @@ toggleButton.addEventListener('click', () => {
 	setColorScheme(scheme);
 });
 
-luge.lifecycle.add('pageIn', function (done) {
-	// active menu link
-	const mainNav = document.querySelector('.header-nav-menu');
-	const setActiveMenuItem = (_) => {
-		const menuItems = [...mainNav.querySelectorAll('a')];
-		menuItems.forEach((menuItem) => {
-			if (window.location.pathname.includes(menuItem.pathname) && menuItem.pathname != '/') {
-				menuItem.classList.add('active');
-				menuItem.setAttribute('aria-current', 'page');
-			} else {
-				menuItem.classList.remove('active');
-				menuItem.setAttribute('aria-current', '');
-			}
-		});
-	};
-	setActiveMenuItem();
-
-	// home page script
-	var button = document.querySelector('.mustache-button');
-	var mustacheImg = document.querySelector('.home-image-stache');
-	button?.addEventListener('click', function () {
-		var randomStache = Math.floor(Math.random() * 60 + 1).toString();
-		mustacheImg.src = '/images/mustaches/' + randomStache + '.svg';
-		mustacheImg.style.display = 'block';
+// active menu link
+const mainNav = document.querySelector('.header-nav-menu');
+const setActiveMenuItem = (_) => {
+	const menuItems = [...mainNav.querySelectorAll('a')];
+	menuItems.forEach((menuItem) => {
+		if (window.location.pathname.includes(menuItem.pathname) && menuItem.pathname != '/') {
+			menuItem.classList.add('active');
+			menuItem.setAttribute('aria-current', 'page');
+		} else {
+			menuItem.classList.remove('active');
+			menuItem.setAttribute('aria-current', '');
+		}
 	});
+};
+setActiveMenuItem();
 
-	// about page script
-	const progresssBars = document.querySelectorAll('progress');
-	const radioButtons = document.getElementsByName('type-of-about');
-	const professionalContent = document.querySelector('.professional-content');
-	const personalContent = document.querySelector('.personal-content');
+// home page script
+var button = document.querySelector('.mustache-button');
+var mustacheImg = document.querySelector('.home-image-stache');
+button?.addEventListener('click', function () {
+	var randomStache = Math.floor(Math.random() * 60 + 1).toString();
+	mustacheImg.src = '/images/mustaches/' + randomStache + '.svg';
+	mustacheImg.style.display = 'block';
+});
 
-	function animate() {
-		progresssBars?.forEach(function (item) {
-			const theFinalNumber = item.value;
-			item.classList.remove('ready');
-			item.setAttribute('value', 0);
-			item.classList.add('ready');
-			setTimeout(function () {
-				item.setAttribute('value', theFinalNumber);
-			}, 100);
-		});
-	}
-	animate();
+// about page script
+const progresssBars = document.querySelectorAll('progress');
+const radioButtons = document.getElementsByName('type-of-about');
+const professionalContent = document.querySelector('.professional-content');
+const personalContent = document.querySelector('.personal-content');
 
-	radioButtons?.forEach(function (item) {
-		item.addEventListener('click', function () {
-			if (this.value == 'professional') {
-				professionalContent.classList.add('active');
-				personalContent.classList.remove('active');
-				animate();
-			} else {
-				professionalContent.classList.remove('active');
-				personalContent.classList.add('active');
-				animate();
-			}
-		});
+function animate() {
+	progresssBars?.forEach(function (item) {
+		const theFinalNumber = item.value;
+		item.classList.remove('ready');
+		item.setAttribute('value', 0);
+		item.classList.add('ready');
+		setTimeout(function () {
+			item.setAttribute('value', theFinalNumber);
+		}, 100);
+	});
+}
+animate();
+
+radioButtons?.forEach(function (item) {
+	item.addEventListener('click', function () {
+		if (this.value == 'professional') {
+			professionalContent.classList.add('active');
+			personalContent.classList.remove('active');
+			animate();
+		} else {
+			professionalContent.classList.remove('active');
+			personalContent.classList.add('active');
+			animate();
+		}
 	});
 });
