@@ -15,7 +15,7 @@ const updateSW = registerSW({
 	},
 	onOfflineReady() {
 		Snackbar.show({
-			actionTextColor: 'var(--accent)',
+			actionTextColor: '#fff',
 			text: 'Offline ready.'
 		});
 	}

@@ -41,6 +41,23 @@ const {
 <meta name="twitter:site" content="@stefen" />
 <meta name="twitter:creator" content="@stefen" />
 
+<link
+	rel="preload"
+	href="/fonts/stix-two-text-v10-latin-600.woff2"
+	as="font"
+	type="font/woff2"
+	crossorigin="crossorigin"
+/>
+<style is:inline>
+	@font-face {
+		font-display: swap;
+		font-family: 'STIX Two Text';
+		font-style: normal;
+		font-weight: 600;
+		src: url('/fonts/stix-two-text-v10-latin-600.woff2') format('woff2'),
+			url('/fonts/stix-two-text-v10-latin-600.woff') format('woff');
+	}
+</style>
 <script is:inline>
 	// purposefully make render blocking to prevent flash of wrong theme
 	const setColorScheme = (value) => {
@@ -52,13 +69,3 @@ const {
 		setColorScheme(localStorage.getItem('color-scheme'));
 	}
 </script>
-
-<!-- Global Styles -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-	rel="stylesheet"
-	href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@600&display=swap"
-	media="print"
-	onload="this.media='all'"
-/>
