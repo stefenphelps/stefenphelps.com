@@ -20,7 +20,6 @@ const updateSW = registerSW({
 		});
 	}
 });
-updateSW;
 
 // toggle light or dark mode
 const html = document.documentElement;
