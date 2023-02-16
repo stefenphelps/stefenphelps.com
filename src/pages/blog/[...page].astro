@@ -27,13 +27,7 @@ const { page } = Astro.props;
 			<a href="https://www.kelp.agency/blog">Kelp Current</a> for some of my other writings.
 		</p>
 		{page.data.map((post) => <Tease post={post} />)}
-		<Pagination
-			prevUrl={page.url.prev}
-			nextUrl={page.url.next}
-			totalPosts={page.total}
-			pageStart={page.start + 1}
-			pageEnd={page.end + 1}
-		/>
+		<Pagination prevUrl={page.url.prev} nextUrl={page.url.next} totalPosts={page.total} pageEnd={page.end + 1} />
 	</div>
 </Layout>
 

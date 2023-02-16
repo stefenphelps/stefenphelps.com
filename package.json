@@ -3,24 +3,24 @@
 	"version": "0.0.4",
 	"private": true,
 	"scripts": {
-		"dev": "astro dev --experimental-integrations",
-		"start": "astro dev --experimental-integrations",
+		"dev": "astro dev",
+		"start": "astro dev",
 		"clean": "rm -r ./dist",
-		"build": "astro build --experimental-integrations",
-		"preview": "astro preview --experimental-integrations",
+		"build": "astro build",
+		"preview": "astro preview",
 		"deploy": "netlify deploy --prod"
 	},
 	"devDependencies": {
 		"@astrojs/prefetch": "^0.1.2",
 		"@astrojs/sitemap": "^1.0.1",
-		"astro": "^2.0.10",
-		"astro-compress": "^1.1.32",
+		"astro": "^2.0.12",
+		"astro-compress": "^1.1.33",
 		"autoprefixer": "^10.4.13",
 		"node-snackbar": "^0.1.16",
 		"prettier": "2.8.4",
 		"prettier-plugin-astro": "^0.8.0",
-		"sass": "^1.58.0",
-		"vite-plugin-pwa": "0.14.3"
+		"sass": "^1.58.1",
+		"vite-plugin-pwa": "0.14.4"
 	},
 	"dependencies": {
 		"@astrojs/rss": "^2.1.0",
