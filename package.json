@@ -13,17 +13,17 @@
 	"devDependencies": {
 		"@astrojs/prefetch": "^0.1.2",
 		"@astrojs/sitemap": "^1.0.1",
-		"astro": "^2.0.12",
+		"astro": "^2.0.14",
 		"astro-compress": "^1.1.33",
 		"autoprefixer": "^10.4.13",
 		"node-snackbar": "^0.1.16",
 		"prettier": "2.8.4",
 		"prettier-plugin-astro": "^0.8.0",
-		"sass": "^1.58.1",
+		"sass": "^1.58.3",
 		"vite-plugin-pwa": "0.14.4"
 	},
 	"dependencies": {
-		"@astrojs/rss": "^2.1.0",
+		"@astrojs/rss": "^2.1.1",
 		"@astrojs/turbolinks": "^0.1.5",
 		"astro-critters": "^1.1.29",
 		"astro-imagetools": "^0.8.1",
