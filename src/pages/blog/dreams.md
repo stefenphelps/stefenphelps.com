@@ -13,7 +13,7 @@ And then I woke up.
 
 A few days later I had another dream...
 
-My friends and family were strapping me up in a straitjacket, against my will, and taking to the mental institute. I fought as hard as I could, repeatedly screaming at everybody "I'M NOT CRAZY!" but nothing was stopping them — It was terrifying.
+My friends and family were strapping me up in a straitjacket, against my will, and taking me to the mental institute. I fought as hard as I could, repeatedly screaming at everybody "I'M NOT CRAZY!" but nothing was stopping them — It was terrifying.
 
 I suppose my brain just wanted to slap me in the face and remind me that I missed my dad and to have more empathy for someone close to me. Okay... got it, thanks brain.
 

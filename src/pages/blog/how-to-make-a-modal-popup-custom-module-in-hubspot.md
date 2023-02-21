@@ -1,5 +1,5 @@
 ---
-title: 'How To Make a Modal Popup Custom Module in Hubspot'
+title: 'How To Make a Modal Popup Custom Module in HubSpot'
 description: "If you're familiar with Wistia, you've seen their cool modal window video embeds where the video plays in an overlay on top of the web page (also known as a lightbox popover). Modal windows are great for adding extra content on a page that would normally take up a large amount of space."
 publishDate: '2015-04-09'
 categories:
@@ -14,7 +14,7 @@ If you're familiar with Wistia, you've seen their cool modal window video embeds
 
 They also reduce it down to a simple link which can be virtually any size you want. The best ways to use these modals are video embeds, forms for bug reporting or getting feedback on a new layout, disclaimer/disclosures, and a whole lot more.
 
-Now that you know what a modal window is and the best time to use them, I'm going to walk you through how to make one on Hubspot's COS platform using their new custom modules feature in three simple steps.
+Now that you know what a modal window is and the best time to use them, I'm going to walk you through how to make one on HubSpot's COS platform using their new custom modules feature in three simple steps.
 
 The first thing you're going to need to do is download a modal window plugin. There are a bunch of plugins out there that do similar things, but Magnific Popup is my personal favorite due to its simplicity and usability. Smashing Magazine has a [great article](http://www.smashingmagazine.com/2013/05/02/truly-responsive-lightbox/) about the process of making it and all of it's various features.
 
