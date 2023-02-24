@@ -1,83 +1,81 @@
 ---
-import TimeAgo from "javascript-time-ago";
-import en from "javascript-time-ago/locale/en" assert { type: "json" };
-import { Picture } from "astro-imagetools/components";
+import TimeAgo from 'javascript-time-ago';
+import en from 'javascript-time-ago/locale/en' assert { type: 'json' };
+import { Picture } from 'astro-imagetools/components';
 
 const { post, author } = Astro.props;
 const { frontmatter } = post;
 
 TimeAgo.addDefaultLocale(en);
 
-const timeAgo = new TimeAgo("en-US");
+const timeAgo = new TimeAgo('en-US');
 const date = new Date(frontmatter.publishDate);
-const dateLabel = date.toLocaleDateString("en-US");
+const dateLabel = date.toLocaleDateString('en-US');
 const timeAgoLabel = timeAgo.format(date);
 ---
 
-<article class="post-preview">
-  {
-    frontmatter.heroImage && (
-      <div class="post-preview-image">
-        <Picture src={frontmatter.heroImage} alt={frontmatter.title} />
-      </div>
-    )
-  }
-  <div class="post-preview-text">
-    <h2 class="h5">
-      <a rel="prefetch" href={post.url}>{frontmatter.title}</a>
-    </h2>
-    <time
-      ><svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 448 512"
-        width="0.875em"
-        height="1em"
-        ><path
-          class="fa-primary"
-          d="M160 64H288V32C288 14.33 302.3 0 320 0C337.7 0 352 14.33 352 32V64H400C426.5 64 448 85.49 448 112V192H0V112C0 85.49 21.49 64 48 64H96V32C96 14.33 110.3 0 128 0C145.7 0 160 14.33 160 32V64z"
-        ></path><path
-          class="fa-secondary"
-          d="M0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192z"
-        ></path>
-      </svg>
-      {timeAgoLabel}
-    </time>
-    <p>{frontmatter.description}</p>
-  </div>
+<article class='post-preview'>
+	{
+		frontmatter.heroImage && (
+			<div class='post-preview-image'>
+				<Picture src={frontmatter.heroImage} alt={frontmatter.title} />
+			</div>
+		)
+	}
+	<div class='post-preview-text'>
+		<h2 class='h5'>
+			<a rel='prefetch' href={post.url}>{frontmatter.title}</a>
+		</h2>
+		<time
+			><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='0.875em' height='1em'
+				><path
+					class='fa-primary'
+					d='M160 64H288V32C288 14.33 302.3 0 320 0C337.7 0 352 14.33 352 32V64H400C426.5 64 448 85.49 448 112V192H0V112C0 85.49 21.49 64 48 64H96V32C96 14.33 110.3 0 128 0C145.7 0 160 14.33 160 32V64z'
+				></path><path
+					class='fa-secondary'
+					d='M0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192z'></path>
+			</svg>
+			{timeAgoLabel}
+		</time>
+		<p>{frontmatter.description}</p>
+	</div>
 </article>
 
-<style lang="scss">
-  .post-preview {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 3rem;
-    padding-top: 3rem;
-    border-top: 1px solid var(--border);
-    &-image {
-      flex: 1 1 200px;
-      picture {
-        position: sticky !important;
-        top: 6rem;
-      }
-    }
-    &-text {
-      flex: 1 1 300px;
-      align-self: center;
-    }
-    h2 {
-      margin: 0;
-    }
-    time {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
-      font-size: var(--size-0);
-      opacity: 0.7;
-    }
-    p {
-      margin: 0;
-    }
-  }
+<style lang='scss' is:global>
+	.post-preview {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0 2rem;
+		background: var(--accent-bg);
+		border: 1px solid var(--border);
+		border-radius: 1rem;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		margin-top: 3rem;
+		box-shadow: 0 1rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+		&-image {
+			flex: 1 1 200px;
+			background: white;
+		}
+		&-text {
+			flex: 1 1 300px;
+			align-self: center;
+			padding: 2rem 2rem;
+		}
+		h2 {
+			margin: 0;
+		}
+		time {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			margin: 0.5rem 0;
+			font-size: var(--size-0);
+			opacity: 0.7;
+		}
+		p {
+			margin: 0;
+		}
+	}
 </style>
