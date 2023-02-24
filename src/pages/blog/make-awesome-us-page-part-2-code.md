@@ -1,12 +1,12 @@
 ---
-title: 'How To Make an Awesome About Us Page | Part 2: The Code'
+title: "How To Make an Awesome About Us Page | Part 2: The Code"
 description: "In part 2 (this post!), I'll be discussing the technical aspects of making the team member photos/videos come alive on the web, some issues we faced and how we solved them"
-publishDate: '2016-10-18'
+publishDate: "2016-10-18"
 categories:
-  - 'how-to'
-heroImage: '/images/behind-the-team-member-photos.webp'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "how-to"
+heroImage: "/images/behind-the-team-member-photos.webp"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 Lief discussed the planning and production stages of our about page overhaul in part 1. In part 2 (this post!), I'll be discussing the technical aspects of making the team member photos/videos come alive on the web, some issues we faced and how we solved them. If you haven't seen it yet, be sure to **[check out our awesome about page](https://www.growwithsms.com/about) before you do anything else!**
@@ -17,7 +17,7 @@ The key to creating photos that come to life — the Harry Potter effect if you 
 
 ```html
 <video id="video" poster="/videos/Matt-Johnson.webp">
-	<source src="/videos/Matt.mp4" type="video/mp4" />
+  <source src="/videos/Matt.mp4" type="video/mp4" />
 </video>
 ```
 
@@ -26,24 +26,24 @@ NOTE: the controls attribute is completely omitted from the video element purpo
 At this point we have what is essentially just a still photo. Now we need an *event* to trigger the video to play. We'll use javascript to manipulate the [HTMLMediaElement API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement) to play the video on hover. We chose to use the *on hover event* so users could unknowingly trigger it as they browse the page*.* Th*e* javascript looks like this:
 
 ```javascript
-var teamMember = $('#video').hover(hoverVideo);
+var teamMember = $("#video").hover(hoverVideo);
 function hoverVideo(e) {
-	e.preventDefault();
-	$(this).get(0).play();
+  e.preventDefault();
+  $(this).get(0).play();
 }
 ```
 
 The default behavior after a web video ends is to pause on the last frame. This resulted in a funky looking Team Photos page after the videos were all played. So we needed to adjust our script to show the poster/thumbnail image once the video ended. Thankfully, the HTMLMediaElement API has a "currentTime" property and an "ended" property so we were able to change the play position back to the beginning after the video has finished loading (this worked for us because our thumbnail image was actually just the first frame). Now the script looks like this:
 
 ```javascript
-var teamMember = $('#video').hover(hoverVideo);
+var teamMember = $("#video").hover(hoverVideo);
 function hoverVideo(e) {
-	e.preventDefault();
-	$(this).get(0).play();
-	$(this).on('ended', function () {
-		this.currentTime = 0;
-		this.pause();
-	});
+  e.preventDefault();
+  $(this).get(0).play();
+  $(this).on("ended", function () {
+    this.currentTime = 0;
+    this.pause();
+  });
 }
 ```
 

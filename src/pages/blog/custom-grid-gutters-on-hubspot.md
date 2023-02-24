@@ -1,10 +1,10 @@
 ---
 title: "Change the gutter size on HubSpot's drag-n-drop grid"
 description: "The default gap between columns on HubSpot's drag-n-drop pages can be difficult to change. Not anymore..."
-publishDate: '2022-01-24'
-heroImage: '/images/edit-drag-and-drop-areas-in-page-editor.webp'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+publishDate: "2022-01-24"
+heroImage: "/images/edit-drag-and-drop-areas-in-page-editor.webp"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 The default [12-column grid system provided by HubSpot](https://github.com/HubSpot/cms-theme-boilerplate/blob/main/src/css/objects/_layout.css) for the drag-and-drop page editor is based off outdated CSS rules that are a huge pain to change without breaking things.
@@ -17,52 +17,52 @@ There are two ways you could write the new grid system: either using Flexbox or 
 
 ```css
 .row-fluid {
-	display: flex;
-	gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
-.row-fluid [class*='span'] {
-	flex: 1;
+.row-fluid [class*="span"] {
+  flex: 1;
 }
 .row-fluid .span12 {
-	flex-basis: 100%;
+  flex-basis: 100%;
 }
 .row-fluid .span11 {
-	flex-basis: 91.66%;
+  flex-basis: 91.66%;
 }
 .row-fluid .span10 {
-	flex-basis: 83.33%;
+  flex-basis: 83.33%;
 }
 .row-fluid .span9 {
-	flex-basis: 75%;
+  flex-basis: 75%;
 }
 .row-fluid .span8 {
-	flex-basis: 66.66%;
+  flex-basis: 66.66%;
 }
 .row-fluid .span7 {
-	flex-basis: 58.33%;
+  flex-basis: 58.33%;
 }
 .row-fluid .span6 {
-	flex-basis: 50%;
+  flex-basis: 50%;
 }
 .row-fluid .span5 {
-	flex-basis: 41.66%;
+  flex-basis: 41.66%;
 }
 .row-fluid .span4 {
-	flex-basis: 33.33%;
+  flex-basis: 33.33%;
 }
 .row-fluid .span3 {
-	flex-basis: 25%;
+  flex-basis: 25%;
 }
 .row-fluid .span2 {
-	flex-basis: 16.66%;
+  flex-basis: 16.66%;
 }
 .row-fluid .span1 {
-	flex-basis: 8.33%;
+  flex-basis: 8.33%;
 }
 @media (max-width: 767px) {
-	.row-fluid {
-		display: block;
-	}
+  .row-fluid {
+    display: block;
+  }
 }
 ```
 
@@ -74,50 +74,50 @@ If you prefer the newer CSS Grid syntax (or just don't need support for IE) here
 
 ```css
 .row-fluid {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	gap: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.5rem;
 }
 .row-fluid .span12 {
-	grid-column: span 12;
+  grid-column: span 12;
 }
 .row-fluid .span11 {
-	grid-column: span 11;
+  grid-column: span 11;
 }
 .row-fluid .span10 {
-	grid-column: span 10;
+  grid-column: span 10;
 }
 .row-fluid .span9 {
-	grid-column: span 9;
+  grid-column: span 9;
 }
 .row-fluid .span8 {
-	grid-column: span 8;
+  grid-column: span 8;
 }
 .row-fluid .span7 {
-	grid-column: span 7;
+  grid-column: span 7;
 }
 .row-fluid .span6 {
-	grid-column: span 6;
+  grid-column: span 6;
 }
 .row-fluid .span5 {
-	grid-column: span 5;
+  grid-column: span 5;
 }
 .row-fluid .span4 {
-	grid-column: span 4;
+  grid-column: span 4;
 }
 .row-fluid .span3 {
-	grid-column: span 3;
+  grid-column: span 3;
 }
 .row-fluid .span2 {
-	grid-column: span 2;
+  grid-column: span 2;
 }
 .row-fluid .span1 {
-	grid-column: span 1;
+  grid-column: span 1;
 }
 @media (max-width: 767px) {
-	.row-fluid {
-		display: block;
-	}
+  .row-fluid {
+    display: block;
+  }
 }
 ```
 

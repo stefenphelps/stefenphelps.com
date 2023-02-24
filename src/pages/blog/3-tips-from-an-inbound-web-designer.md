@@ -1,12 +1,12 @@
 ---
-title: '3 Tips from an Inbound Web Designer'
-description: 'Website performance and website growth are two seperate things that are closely knit, which have a big influence over each other. A slow website will greatly impact user experience, your page rank and can also have a negative impact on your overall brand'
-publishDate: '2016-02-15'
+title: "3 Tips from an Inbound Web Designer"
+description: "Website performance and website growth are two seperate things that are closely knit, which have a big influence over each other. A slow website will greatly impact user experience, your page rank and can also have a negative impact on your overall brand"
+publishDate: "2016-02-15"
 categories:
-  - 'hubspot'
-heroImage: '/images/macbook-and-glasses.webp'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "hubspot"
+heroImage: "/images/macbook-and-glasses.webp"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 Website performance and website growth are two seperate things that are closely knit, which have a big influence over each other. A slow website will greatly impact user experience, your page rank and can also have a negative impact on your overall brand.

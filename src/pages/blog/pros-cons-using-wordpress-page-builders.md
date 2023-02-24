@@ -1,12 +1,12 @@
 ---
-title: 'The Pros and Cons of Using WordPress Page Builders'
+title: "The Pros and Cons of Using WordPress Page Builders"
 description: "A common issue people run into when using WordPress is it's extremely basic page editor. The lack of ability to make complex pages, basically anything more than the typical 'title' and 'body' format, is restrictive."
-publishDate: '2017-10-31'
+publishDate: "2017-10-31"
 categories:
-  - 'wordpress'
-heroImage: '/images/basic-vs-complex-layout.webp'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "wordpress"
+heroImage: "/images/basic-vs-complex-layout.webp"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 A common issue people run into when using WordPress is it's extremely basic page editor. The lack of ability to make complex pages, basically anything more than the typical "title" and "body" format, is restrictive. This format is great for simple blog posts, but *not-so-great* when you need a multi-column layout or multiple full-width sections or pretty much any other complex design.

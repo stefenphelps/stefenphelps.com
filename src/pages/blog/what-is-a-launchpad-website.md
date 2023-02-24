@@ -1,12 +1,12 @@
 ---
-title: 'What is a Launchpad Website?'
-description: 'Typically, when you start a traditional website re-design, the designer will create a wireframe of every key page on the website during what we call the wireframe phase. Once the overall design is approved'
-publishDate: '2016-04-20'
+title: "What is a Launchpad Website?"
+description: "Typically, when you start a traditional website re-design, the designer will create a wireframe of every key page on the website during what we call the wireframe phase. Once the overall design is approved"
+publishDate: "2016-04-20"
 categories:
-  - 'hubspot'
-heroImage: '/images/bluleadz-launchpad-website.webp'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "hubspot"
+heroImage: "/images/bluleadz-launchpad-website.webp"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 ## What a Launchpad Website Isn't...

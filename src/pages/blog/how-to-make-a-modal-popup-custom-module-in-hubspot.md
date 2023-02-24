@@ -1,13 +1,13 @@
 ---
-title: 'How To Make a Modal Popup Custom Module in HubSpot'
+title: "How To Make a Modal Popup Custom Module in HubSpot"
 description: "If you're familiar with Wistia, you've seen their cool modal window video embeds where the video plays in an overlay on top of the web page (also known as a lightbox popover). Modal windows are great for adding extra content on a page that would normally take up a large amount of space."
-publishDate: '2015-04-09'
+publishDate: "2015-04-09"
 categories:
-  - 'how-to'
-  - 'hubspot'
-heroImage: '/images/modal-popup-module-2.webp'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "how-to"
+  - "hubspot"
+heroImage: "/images/modal-popup-module-2.webp"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 If you're familiar with Wistia, you've seen their cool modal window video embeds where the video plays in an overlay on top of the web page (also known as a lightbox popover). Modal windows are great for adding extra content on a page that would normally take up a large amount of space.

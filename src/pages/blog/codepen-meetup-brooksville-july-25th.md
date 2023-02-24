@@ -1,12 +1,12 @@
 ---
-title: 'CodePen Meetup coming to Brooksville July 25th!'
+title: "CodePen Meetup coming to Brooksville July 25th!"
 description: "Over the years of doing freelance work for local businesses and organizations, I've met quite a few people that are interested in 'coding'. Whether that means a specific programming language, responsive design, or just web design in general. They all had the same question... where do I start?"
-publishDate: '2017-07-08'
+publishDate: "2017-07-08"
 categories:
-  - 'codepen-meetup'
-heroImage: '/images/Black-Large.png'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "codepen-meetup"
+heroImage: "/images/Black-Large.png"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 Over the years of doing freelance work for local businesses and organizations, I've met quite a few people that are interested in "coding". Whether that means a specific programming language, responsive design, or just web design in general. They all had the same question... "where do I start?"

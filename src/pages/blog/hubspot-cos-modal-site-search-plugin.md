@@ -1,12 +1,12 @@
 ---
-title: 'HubSpot COS Modal Site Search [plugin]'
-description: 'A quick and easy way to provide a nice search experience on your HubSpot website'
-publishDate: '2016-12-08'
+title: "HubSpot COS Modal Site Search [plugin]"
+description: "A quick and easy way to provide a nice search experience on your HubSpot website"
+publishDate: "2016-12-08"
 categories:
-  - 'hubspot'
-heroImage: '/images/cos-modal-site-search.gif'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "hubspot"
+heroImage: "/images/cos-modal-site-search.gif"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 **2019 Update — [HubSpot now offers a site search API](https://developers.hubspot.com/docs/methods/content/search-for-content). I highly recommend using the search API going forward. This guide was written before the API existed but I'll leave it up as a reference.**

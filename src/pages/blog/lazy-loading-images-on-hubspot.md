@@ -1,13 +1,13 @@
 ---
-title: 'Lazy Loading Images on HubSpot'
-description: 'Images are almost always the #1 reason for a slow website. Even if all of your images are optimized and sized correctly, they can still cause performance issues'
-publishDate: '2018-02-07'
+title: "Lazy Loading Images on HubSpot"
+description: "Images are almost always the #1 reason for a slow website. Even if all of your images are optimized and sized correctly, they can still cause performance issues"
+publishDate: "2018-02-07"
 categories:
-  - 'how-to'
-  - 'hubspot'
-heroImage: '/images/lazy-loading-images-hubspot-blog-2.webp'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "how-to"
+  - "hubspot"
+heroImage: "/images/lazy-loading-images-hubspot-blog-2.webp"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 **\*UPDATE: HubSpot now supports the native `loading` attribute in images making this blog post obsolete.**

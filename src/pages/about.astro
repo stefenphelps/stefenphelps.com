@@ -1,275 +1,301 @@
 ---
-import Layout from '../layouts/BaseLayout.astro';
+import Layout from "../layouts/BaseLayout.astro";
 
-const title = 'About Me';
-const description = 'About Stefen Phelps and his skills, interests, etc.';
-const permalink = 'https://stefenphelps.com/about';
+const title = "About Me";
+const description = "About Stefen Phelps and his skills, interests, etc.";
+const permalink = "https://stefenphelps.com/about";
 ---
 
 <Layout {title} {description} {permalink}>
-	<div class="wrapper about-page">
-		<article>
-			<h1 style="margin: 0;">{title}</h1>
-			<form>
-				<h2>Type of info:</h2>
-				<div>
-					<input type="radio" name="type-of-about" id="professional" value="professional" checked />
-					<label for="professional">Professional</label>
-				</div>
-				<div>
-					<input type="radio" name="type-of-about" id="personal" value="personal" />
-					<label for="personal">Personal</label>
-				</div>
-			</form>
-			<div class="professional-content active">
-				<p>
-					Here is a summary of my web development skill&thinsp;/&thinsp;experience and my professional work history.
-				</p>
-				<h2 class="h3" style="margin-bottom: 0;">Skillset</h2>
-				<div class="grid">
-					<div class="grid-item">
-						<h3 class="h5">Base</h3>
-						<label for="html">HTML / HTTP</label>
-						<progress id="html" value="99" max="100"></progress>
-						<label for="css">CSS / Sass</label>
-						<progress id="css" value="95" max="100"></progress>
-						<label for="js">JS / TS</label>
-						<progress id="js" value="90" max="100"></progress>
-						<label for="php">PHP</label>
-						<progress id="php" value="84" max="100"></progress>
-						<label for="hubl">HubL / Twig</label>
-						<progress id="hubl" value="95" max="100"></progress>
-					</div>
-					<div class="grid-item">
-						<h3 class="h5">Tools</h3>
-						<label for="adobe">NPM / Composer</label>
-						<progress id="adobe" value="95" max="100"></progress>
-						<label for="hubspot">HubSpot</label>
-						<progress id="hubspot" value="99" max="100"></progress>
-						<label for="firebase">Firebase</label>
-						<progress id="firebase" value="73" max="100"></progress>
-						<label for="wordpress">WordPress</label>
-						<progress id="wordpress" value="97" max="100"></progress>
-						<label for="netlify">Netlify</label>
-						<progress id="netlify" value="77" max="100"></progress>
-					</div>
-					<div class="grid-item">
-						<h3 class="h5">Libraries</h3>
-						<label for="react">(p)React / Next.js</label>
-						<progress id="react" value="65" max="100"></progress>
-						<label for="vue">Vue / Nuxt.js</label>
-						<progress id="vue" value="72" max="100"></progress>
-						<label for="angular">Angular</label>
-						<progress id="angular" value="55" max="100"></progress>
-						<label for="jquery">jQuery</label>
-						<progress id="jquery" value="88" max="100"></progress>
-						<label for="timber">Timber</label>
-						<progress id="timber" value="98" max="100"></progress>
-					</div>
-				</div>
-				<h2 class="h3">Career History</h2>
-				<ol>
-					<li><time>2022</time> Launch of Kelp rebrand and new headless website.</li>
-					<li><time>2021</time> 40% growth at Kelp!</li>
-					<li>
-						<time>2020</time> Started <a href="https://twitter.com/stefen/status/1300455802147409920">StonkLights</a>.
-					</li>
-					<li><time>2019</time> Helped grow Kelp to 5 people.</li>
-					<li>
-						<time>2018</time> Started creative agency Kelp and working for myself full time.
-					</li>
-					<li>
-						<time>2017</time> Created and launched Spinstak's custom eCommerce platform first responsive designs.
-					</li>
-					<li>
-						<time>2016</time> Started working for Marketing Agency SMS in Brooksville, FL.
-					</li>
-					<li>
-						<time>2015</time> Help grow Bluleadz from 7 employees to 17+ employees.
-					</li>
-					<li>
-						<time>2014</time> Started working for Inbound Marketing Agency Bluleadz in Tampa, FL.
-					</li>
-					<li><time>2013</time> Promoted to Web Designer Team Lead</li>
-					<li>
-						<time>2012</time> First full-time position as a Junior Web Designer in Tampa, FL.
-					</li>
-					<li>
-						<time>2011</time> Started Stefen Phelps Web Design and doing freelance work on a frequent basis.
-					</li>
-					<li><time>2009</time> First (paid) website gig.</li>
-				</ol>
-			</div>
-			<div class="personal-content">
-				<p>Here's some random things, foods, and places I enjoy along with some major events in my life.</p>
-				<h2 class="h3" style="margin-bottom: 0;">Random things</h2>
-				<div class="grid">
-					<div class="grid-item">
-						<h3 class="h5">Activities</h3>
-						<label for="golf">🥏 Disc Golf</label>
-						<progress id="golf" value="90" max="100"></progress>
-						<label for="racquetball">🏸 Racquetball</label>
-						<progress id="racquetball" value="85" max="100"></progress>
-						<label for="movies">🏂 Snowboarding</label>
-						<progress id="movies" value="91" max="100"></progress>
-						<label for="fish">🐟 Fishing</label>
-						<progress id="fish" value="65" max="100"></progress>
-					</div>
-					<div class="grid-item">
-						<h3 class="h5">Foods I like</h3>
-						<label for="tacos">🌮 Tacos</label>
-						<progress id="tacos" value="97" max="100"></progress>
-						<label for="sushi">🍣 Sushi</label>
-						<progress id="sushi" value="74" max="100"></progress>
-						<label for="cucs">🥒 Cucumbers</label>
-						<progress id="cucs" value="16" max="100"></progress>
-						<label for="gyros">🥙 Gyros</label>
-						<progress id="gyros" value="85" max="100"></progress>
-					</div>
-					<div class="grid-item">
-						<h3 class="h5">Places&thinsp;/&thinsp;Times</h3>
-						<label for="beaches">🏖 Beaches</label>
-						<progress id="beaches" value="45" max="100"></progress>
-						<label for="mountains">🏔 Mountains</label>
-						<progress id="mountains" value="92" max="100"></progress>
-						<label for="fall">🍁 Fall</label>
-						<progress id="fall" value="85" max="100"></progress>
-						<label for="spring">🌼 Spring</label>
-						<progress id="spring" value="70" max="100"></progress>
-					</div>
-				</div>
-				<h2 class="h3">Personal Milestones</h2>
-				<ol>
-					<li><time>2022</time> Ran first 25k and 22k races.</li>
-					<li>
-						<time>2021</time> Minivan owner achievement unlocked.
-					</li>
-					<li>
-						<time>2020</time> 10 years married!
-					</li>
-					<li>
-						<time>2019</time> Made another baby and moved into new home.
-					</li>
-					<li>
-						<time>2018</time> Sold our house and start building process.
-					</li>
-					<li><time>2017</time> Made another baby.</li>
-					<li><time>2015</time> Made another baby.</li>
-					<li><time>2013</time> Made a baby.</li>
-					<li><time>2011</time> Bought a house.</li>
-					<li><time>2010</time> Moved to Florida and got married.</li>
-					<li><time>2008</time> Associates degree.</li>
-					<li><time>2006</time> Graduated high school.</li>
-				</ol>
-			</div>
-			<p style="margin-top: 3rem;">
-				If you'd like to learn more about what I'm into go check out some of
-				<a href="/blog/">my writing</a>.
-			</p>
-		</article>
-	</div>
+  <div class="wrapper about-page">
+    <article>
+      <h1 style="margin: 0;">{title}</h1>
+      <form>
+        <h2>Type of info:</h2>
+        <div>
+          <input
+            type="radio"
+            name="type-of-about"
+            id="professional"
+            value="professional"
+            checked
+          />
+          <label for="professional">Professional</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="type-of-about"
+            id="personal"
+            value="personal"
+          />
+          <label for="personal">Personal</label>
+        </div>
+      </form>
+      <div class="professional-content active">
+        <p>
+          Here is a summary of my web development
+          skill&thinsp;/&thinsp;experience and my professional work history.
+        </p>
+        <h2 class="h3" style="margin-bottom: 0;">Skillset</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <h3 class="h5">Base</h3>
+            <label for="html">HTML / HTTP</label>
+            <progress id="html" value="99" max="100"></progress>
+            <label for="css">CSS / Sass</label>
+            <progress id="css" value="95" max="100"></progress>
+            <label for="js">JS / TS</label>
+            <progress id="js" value="90" max="100"></progress>
+            <label for="php">PHP</label>
+            <progress id="php" value="84" max="100"></progress>
+            <label for="hubl">HubL / Twig</label>
+            <progress id="hubl" value="95" max="100"></progress>
+          </div>
+          <div class="grid-item">
+            <h3 class="h5">Tools</h3>
+            <label for="adobe">NPM / Composer</label>
+            <progress id="adobe" value="95" max="100"></progress>
+            <label for="hubspot">HubSpot</label>
+            <progress id="hubspot" value="99" max="100"></progress>
+            <label for="firebase">Firebase</label>
+            <progress id="firebase" value="73" max="100"></progress>
+            <label for="wordpress">WordPress</label>
+            <progress id="wordpress" value="97" max="100"></progress>
+            <label for="netlify">Netlify</label>
+            <progress id="netlify" value="77" max="100"></progress>
+          </div>
+          <div class="grid-item">
+            <h3 class="h5">Libraries</h3>
+            <label for="react">(p)React / Next.js</label>
+            <progress id="react" value="65" max="100"></progress>
+            <label for="vue">Vue / Nuxt.js</label>
+            <progress id="vue" value="72" max="100"></progress>
+            <label for="angular">Angular</label>
+            <progress id="angular" value="55" max="100"></progress>
+            <label for="jquery">jQuery</label>
+            <progress id="jquery" value="88" max="100"></progress>
+            <label for="timber">Timber</label>
+            <progress id="timber" value="98" max="100"></progress>
+          </div>
+        </div>
+        <h2 class="h3">Career History</h2>
+        <ol>
+          <li>
+            <time>2022</time> Launch of Kelp rebrand and new headless website.
+          </li>
+          <li><time>2021</time> 40% growth at Kelp!</li>
+          <li>
+            <time>2020</time> Started <a
+              href="https://twitter.com/stefen/status/1300455802147409920"
+              >StonkLights</a
+            >.
+          </li>
+          <li><time>2019</time> Helped grow Kelp to 5 people.</li>
+          <li>
+            <time>2018</time> Started creative agency Kelp and working for myself
+            full time.
+          </li>
+          <li>
+            <time>2017</time> Created and launched Spinstak's custom eCommerce platform
+            first responsive designs.
+          </li>
+          <li>
+            <time>2016</time> Started working for Marketing Agency SMS in Brooksville,
+            FL.
+          </li>
+          <li>
+            <time>2015</time> Help grow Bluleadz from 7 employees to 17+ employees.
+          </li>
+          <li>
+            <time>2014</time> Started working for Inbound Marketing Agency Bluleadz
+            in Tampa, FL.
+          </li>
+          <li><time>2013</time> Promoted to Web Designer Team Lead</li>
+          <li>
+            <time>2012</time> First full-time position as a Junior Web Designer in
+            Tampa, FL.
+          </li>
+          <li>
+            <time>2011</time> Started Stefen Phelps Web Design and doing freelance
+            work on a frequent basis.
+          </li>
+          <li><time>2009</time> First (paid) website gig.</li>
+        </ol>
+      </div>
+      <div class="personal-content">
+        <p>
+          Here's some random things, foods, and places I enjoy along with some
+          major events in my life.
+        </p>
+        <h2 class="h3" style="margin-bottom: 0;">Random things</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <h3 class="h5">Activities</h3>
+            <label for="golf">🥏 Disc Golf</label>
+            <progress id="golf" value="90" max="100"></progress>
+            <label for="racquetball">🏸 Racquetball</label>
+            <progress id="racquetball" value="85" max="100"></progress>
+            <label for="movies">🏂 Snowboarding</label>
+            <progress id="movies" value="91" max="100"></progress>
+            <label for="fish">🐟 Fishing</label>
+            <progress id="fish" value="65" max="100"></progress>
+          </div>
+          <div class="grid-item">
+            <h3 class="h5">Foods I like</h3>
+            <label for="tacos">🌮 Tacos</label>
+            <progress id="tacos" value="97" max="100"></progress>
+            <label for="sushi">🍣 Sushi</label>
+            <progress id="sushi" value="74" max="100"></progress>
+            <label for="cucs">🥒 Cucumbers</label>
+            <progress id="cucs" value="16" max="100"></progress>
+            <label for="gyros">🥙 Gyros</label>
+            <progress id="gyros" value="85" max="100"></progress>
+          </div>
+          <div class="grid-item">
+            <h3 class="h5">Places&thinsp;/&thinsp;Times</h3>
+            <label for="beaches">🏖 Beaches</label>
+            <progress id="beaches" value="45" max="100"></progress>
+            <label for="mountains">🏔 Mountains</label>
+            <progress id="mountains" value="92" max="100"></progress>
+            <label for="fall">🍁 Fall</label>
+            <progress id="fall" value="85" max="100"></progress>
+            <label for="spring">🌼 Spring</label>
+            <progress id="spring" value="70" max="100"></progress>
+          </div>
+        </div>
+        <h2 class="h3">Personal Milestones</h2>
+        <ol>
+          <li><time>2022</time> Ran first 25k and 22k races.</li>
+          <li>
+            <time>2021</time> Minivan owner achievement unlocked.
+          </li>
+          <li>
+            <time>2020</time> 10 years married!
+          </li>
+          <li>
+            <time>2019</time> Made another baby and moved into new home.
+          </li>
+          <li>
+            <time>2018</time> Sold our house and start building process.
+          </li>
+          <li><time>2017</time> Made another baby.</li>
+          <li><time>2015</time> Made another baby.</li>
+          <li><time>2013</time> Made a baby.</li>
+          <li><time>2011</time> Bought a house.</li>
+          <li><time>2010</time> Moved to Florida and got married.</li>
+          <li><time>2008</time> Associates degree.</li>
+          <li><time>2006</time> Graduated high school.</li>
+        </ol>
+      </div>
+      <p style="margin-top: 3rem;">
+        If you'd like to learn more about what I'm into go check out some of
+        <a href="/blog/">my writing</a>.
+      </p>
+    </article>
+  </div>
 </Layout>
 
 <style lang="scss">
-	.about-page {
-		@media (max-width: 767px) {
-			main article {
-				margin-top: 0;
-			}
-		}
-		.grid {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 2rem;
-			&-item {
-				flex: 1 1 200px;
-			}
-		}
-		label {
-			display: block;
-		}
-		ol {
-			list-style: none;
-			margin: 0 0 0 2.1em;
-			padding: 0 0 0 2.1em;
-			li {
-				text-indent: -2.1em;
-				line-height: 1.2;
-				margin-bottom: 1rem;
-			}
-			time {
-				font-size: var(--size-3);
-				font-family: var(--mono-font);
-				display: inline-block;
-				margin-right: 0.5rem;
-				font-weight: 200;
-			}
-		}
-		progress {
-			width: 100%;
-			border-radius: 2rem;
-			height: 0.75rem;
-			margin-bottom: 1rem;
-			overflow: hidden;
-			border: 1px solid rgba(255, 255, 255, 0.25);
-			&::-webkit-progress-value {
-				background-color: var(--accent);
-			}
-			&.ready::-webkit-progress-value {
-				transition: width 1s;
-			}
-			@for $i from 1 through 100 {
-				&:nth-child(#{$i})::-webkit-progress-value {
-					transition-delay: random(200) + ms;
-				}
-			}
-		}
-		::-webkit-progress-bar {
-			background-color: rgba(255, 255, 255, 0.25);
-			transition: width 1s;
-		}
-		form {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			gap: 1rem;
-			background: var(--accent);
-			padding: 0.5rem 1rem;
-			border-radius: 0.5rem;
-			color: var(--bg);
-			h2 {
-				font-size: var(--size-1);
-				margin: 0;
-				white-space: nowrap;
-			}
-			div {
-				display: flex;
-				align-items: center;
-				gap: 0.25rem;
-			}
-			label {
-				font-size: var(--size-0);
-			}
-			input {
-				margin: 0;
-			}
-		}
-		.professional-content,
-		.personal-content {
-			display: none;
-			flex: 1 1 100%;
-		}
-		.professional-content.active,
-		.personal-content.active {
-			display: block;
-		}
-		article {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
-			gap: 1.5rem;
-			margin-top: 3rem;
-		}
-	}
+  .about-page {
+    @media (max-width: 767px) {
+      main article {
+        margin-top: 0;
+      }
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      &-item {
+        flex: 1 1 200px;
+      }
+    }
+    label {
+      display: block;
+    }
+    ol {
+      list-style: none;
+      margin: 0 0 0 2.1em;
+      padding: 0 0 0 2.1em;
+      li {
+        text-indent: -2.1em;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+      time {
+        font-size: var(--size-3);
+        font-family: var(--mono-font);
+        display: inline-block;
+        margin-right: 0.5rem;
+        font-weight: 200;
+      }
+    }
+    progress {
+      width: 100%;
+      border-radius: 2rem;
+      height: 0.75rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      &::-webkit-progress-value {
+        background-color: var(--accent);
+      }
+      &.ready::-webkit-progress-value {
+        transition: width 1s;
+      }
+      @for $i from 1 through 100 {
+        &:nth-child(#{$i})::-webkit-progress-value {
+          transition-delay: random(200) + ms;
+        }
+      }
+    }
+    ::-webkit-progress-bar {
+      background-color: rgba(255, 255, 255, 0.25);
+      transition: width 1s;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      background: var(--accent);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      color: var(--bg);
+      h2 {
+        font-size: var(--size-1);
+        margin: 0;
+        white-space: nowrap;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+      label {
+        font-size: var(--size-0);
+      }
+      input {
+        margin: 0;
+      }
+    }
+    .professional-content,
+    .personal-content {
+      display: none;
+      flex: 1 1 100%;
+    }
+    .professional-content.active,
+    .personal-content.active {
+      display: block;
+    }
+    article {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+  }
 </style>

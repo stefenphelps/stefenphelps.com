@@ -1,12 +1,12 @@
 ---
 title: "How To Use Excel's VLOOKUP to Quickly Update Product Data"
 description: "It happens all the time. You get a CSV file full of products with new pricing and you're tasked with updating the products on the website with this new data. I think we can all agree that updating product data can be a huge pain in the butt and a major"
-publishDate: '2016-08-08'
+publishDate: "2016-08-08"
 categories:
-  - 'how-to'
-heroImage: '/images/step-3-1.gif'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "how-to"
+heroImage: "/images/step-3-1.gif"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 It happens all the time. You get a CSV file full of products with new pricing and you're tasked with updating the products on the website with this new data. I think we can all agree that updating product data can be a huge pain in the butt and a major time suck—especially if you're doing it one-by-one. Well, I'm here to let you in on a little Excel secret called a VLOOKUP that's going to make your life a whole lot easier. It sounds complicated but don't worry, I'll walk you through **step-by-step how to perform a VLOOKUP in Excel**. **You'll thank me later**.

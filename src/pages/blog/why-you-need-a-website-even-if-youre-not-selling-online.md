@@ -1,11 +1,11 @@
 ---
-title: 'Why YOU Need a Website'
+title: "Why YOU Need a Website"
 description: "A majority of people these days look online to research a product or service before they buy it.  If you don't have a presence online, they won't find you.  Not having a website is like not being listed in the phonebook back in the 90's.  However, just having a website won't cut it."
-publishDate: '2015-03-26'
+publishDate: "2015-03-26"
 categories:
-  - 'seo'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "seo"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 **Q**: I have a very small business and I don't want to sell my product online.  Do I really need a website?

@@ -1,12 +1,12 @@
 ---
-title: '3 Tips for Being a Better Web Designer'
+title: "3 Tips for Being a Better Web Designer"
 description: "I've been making websites for close to 10 years now. I've made my fair share of 💩 websites—in addition to some amazing websites. What I have realized in reflecting on my website project experiences is that there is a simple formula"
-publishDate: '2018-02-28'
+publishDate: "2018-02-28"
 categories:
-  - 'design'
-heroImage: '/images/gle-careers-scout-466403-edited.webp'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "design"
+heroImage: "/images/gle-careers-scout-466403-edited.webp"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 I've been making websites for close to 10 years now. I've made my fair share of 💩 websites—in addition to some amazing websites. What I have realized in reflecting on my website project experiences is that there is a simple formula that all of those amazing websites share.

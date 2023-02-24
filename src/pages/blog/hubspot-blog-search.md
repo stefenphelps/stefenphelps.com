@@ -1,12 +1,12 @@
 ---
-title: 'How to Build a HubSpot Blog Search'
+title: "How to Build a HubSpot Blog Search"
 description: "Have you ever wished your HubSpot blog had a search feature that didn't take you off your website — _looking at you, google search module_ ? — and that it would search only for blog posts? Here is how I recently accomplished this task"
-publishDate: '2017-05-16'
+publishDate: "2017-05-16"
 categories:
-  - 'hubspot'
-heroImage: '/images/search-hubspot-blog.gif'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "hubspot"
+heroImage: "/images/search-hubspot-blog.gif"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 **2019 Update — [HubSpot now offers a site search API](https://developers.hubspot.com/docs/methods/content/search-for-content). I highly recommend using the search API going forward. This guide was written before the API existed but I'll leave it up as a reference.**
@@ -27,8 +27,8 @@ The first step to creating your blog search is to add an HTML module to your blo
 
 ```html
 <form action="/blog/search">
-	<input name="query" type="text" placeholder="Search the blog..." />
-	<button type="submit">Search</button>
+  <input name="query" type="text" placeholder="Search the blog..." />
+  <button type="submit">Search</button>
 </form>
 ```
 

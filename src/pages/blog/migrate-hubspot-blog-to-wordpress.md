@@ -1,14 +1,14 @@
 ---
-title: 'How To Migrate Your HubSpot Blog to WordPress'
+title: "How To Migrate Your HubSpot Blog to WordPress"
 description: "HubSpot makes it extremely difficult to export your blog posts in a usable form. It's built-in export tool only exports the page title and URLs. The website export tool exports all the static HTML files. Neither of these are useful when you need to import your data into a WordPress Database."
-publishDate: '2018-01-12'
+publishDate: "2018-01-12"
 categories:
-  - 'how-to'
-  - 'hubspot'
-  - 'wordpress'
-heroImage: '/images/hubspot-to-wordpress.png'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "how-to"
+  - "hubspot"
+  - "wordpress"
+heroImage: "/images/hubspot-to-wordpress.png"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 **\*HubSpot supports a blog export tool making this blog post obsolete 💨**

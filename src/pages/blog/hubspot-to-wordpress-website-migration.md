@@ -1,10 +1,10 @@
 ---
-title: 'HubSpot to WordPress Website Migration'
+title: "HubSpot to WordPress Website Migration"
 description: "HubSpot is a powerful all-in-one marketing platform. However, if your company isn't taking advantage of all of the marketing tools it's platform offers and just want to cover your basics, you can save a whole lot of money by migrating to WordPress. Migrating a HubSpot COS hosted website to a self-hosted WordPress site consists of 4 basic steps."
-publishDate: '2017-06-05'
-heroImage: '/images/burkmoreland.com_.webp'
-layout: '../../layouts/BlogPost.astro'
-author: 'Stefen Phelps'
+publishDate: "2017-06-05"
+heroImage: "/images/burkmoreland.com_.webp"
+layout: "../../layouts/BlogPost.astro"
+author: "Stefen Phelps"
 ---
 
 HubSpot is a powerful all-in-one marketing platform. However, if your company isn't taking advantage of all of the marketing tools it's platform offers and just want to cover your basics, you can save a whole lot of money by migrating to WordPress. Migrating a HubSpot COS hosted website to a self-hosted WordPress site consists of 4 basic steps.

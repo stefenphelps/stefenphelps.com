@@ -1,22 +1,22 @@
 ---
-title: 'Progressively Load Background Images on HubSpot'
+title: "Progressively Load Background Images on HubSpot"
 description: "I am a big fan of the way Instagram's mobile app and Medium's website load images. If you don't know what I'm talking about, it's when an extremely small image is scaled up, blurred out and is loaded before the full image... eventually fading into the full image once it has loaded."
-publishDate: '2016-11-01'
+publishDate: "2016-11-01"
 categories:
-  - 'design'
-  - 'hubspot'
-heroImage: '/images/blur-up-image-loading.gif'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "design"
+  - "hubspot"
+heroImage: "/images/blur-up-image-loading.gif"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 I am a big fan of the way Instagram's mobile app and [Medium](https://jmperezperez.com/medium-image-progressive-loading-placeholder/)'s website load images. If you don't know what I'm talking about, it's when an extremely small image is scaled up, blurred out and is loaded before the full image... eventually fading into the full image once it has loaded. Like so:
 
-![Progressive Loading Image on Medium](/images/medium-image-loading.gif 'Progressive Loading Image on Medium')
+![Progressive Loading Image on Medium](/images/medium-image-loading.gif "Progressive Loading Image on Medium")
 
 Providing visual feedback to end users — **especially users with slower connections** — that something is happening is a great way to improve UX. Thanks to HubSpot's [automatic image resizing](https://knowledge.hubspot.com/articles/kcs_article/cos-general/what-is-automatic-image-resizing) and a nifty little script by David Desandro (the man behind [metafizzy](http://metafizzy.co/)) it's pretty easy to achieve the same effect on your HubSpot website:
 
-![Progressive Loading Background Image on HubSpot](/images/blur-up-image-loading.gif 'Progressive Loading Background Image on HubSpot')
+![Progressive Loading Background Image on HubSpot](/images/blur-up-image-loading.gif "Progressive Loading Background Image on HubSpot")
 
 ---
 
@@ -65,25 +65,25 @@ Now just add a little CSS and you'll have your background image and the small/bl
 
 ```css
 .bg-section-header {
-	background-color: #222;
-	background-position: center;
-	background-size: cover;
-	color: #fff;
-	position: relative;
+  background-color: #222;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
 }
 .bg-section-header_placeholder {
-	background-color: #222;
-	background-position: center;
-	background-size: cover;
-	opacity: 1;
-	transition: opacity 400ms ease;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
+  background-color: #222;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  transition: opacity 400ms ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 ```
 
@@ -92,8 +92,8 @@ Now just add a little CSS and you'll have your background image and the small/bl
 Now the final step is to fade out the placeholder image once the full size image loads. With the [imagesLoaded](http://imagesloaded.desandro.com/) script, we can detect when the background image loads and create a function to change the opacity of the placeholder to 0 with this callback:
 
 ```javascript
-$('.bg-section-header').imagesLoaded({ background: true }, function () {
-	$('.bg-section-header_placeholder').css('opacity', '0');
+$(".bg-section-header").imagesLoaded({ background: true }, function () {
+  $(".bg-section-header_placeholder").css("opacity", "0");
 });
 ```
 

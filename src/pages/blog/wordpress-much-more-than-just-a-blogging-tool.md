@@ -1,12 +1,12 @@
 ---
-title: 'WordPress - Much More Than Just a Blogging Tool'
-description: 'How and why WordPress should be used for more than just a blog'
-publishDate: '2012-04-04'
+title: "WordPress - Much More Than Just a Blogging Tool"
+description: "How and why WordPress should be used for more than just a blog"
+publishDate: "2012-04-04"
 categories:
-  - 'cms'
-  - 'wordpress'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "cms"
+  - "wordpress"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 I get a lot of "normal" people, as I like to call the non-tech geeks, who've heard of WordPress but think it's just a platform for blogging. This assumption is completely wrong and if you don't want to take my word for it and / or would like to get a better idea of what WordPress really is, read on.

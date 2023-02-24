@@ -1,12 +1,12 @@
 ---
-title: 'Behind The Site: Designing Your eCommerce Website'
-description: 'Behind every good eCommerce website is a good strategy. Who is this site being made for? How does that person prefer to shop online? Do they prefer to have a phone number to call or a form to fill out?'
-publishDate: '2016-07-11'
+title: "Behind The Site: Designing Your eCommerce Website"
+description: "Behind every good eCommerce website is a good strategy. Who is this site being made for? How does that person prefer to shop online? Do they prefer to have a phone number to call or a form to fill out?"
+publishDate: "2016-07-11"
 categories:
-  - 'design'
-heroImage: '/images/issc-website-redesign-desktop-phone.webp'
-author: 'Stefen Phelps'
-layout: '../../layouts/BlogPost.astro'
+  - "design"
+heroImage: "/images/issc-website-redesign-desktop-phone.webp"
+author: "Stefen Phelps"
+layout: "../../layouts/BlogPost.astro"
 ---
 
 Behind every **good eCommerce website** is a **good strategy**. Who is this site being made for? How does that person prefer to shop online? Do they prefer to have a phone number to call or a form to fill out? What devices will he/she be using to browse the site? These are some of the critical questions that need to be answered before the site gets even close to being mocked up in Photoshop. Answering these questions will give us a clear picture of who to design for and what devices it should be optimized for.

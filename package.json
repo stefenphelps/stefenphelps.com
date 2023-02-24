@@ -12,8 +12,8 @@
 	},
 	"devDependencies": {
 		"@astrojs/prefetch": "^0.1.2",
-		"@astrojs/sitemap": "^1.0.1",
-		"astro": "^2.0.14",
+		"@astrojs/sitemap": "^1.1.0",
+		"astro": "^2.0.15",
 		"astro-compress": "^1.1.33",
 		"autoprefixer": "^10.4.13",
 		"node-snackbar": "^0.1.16",

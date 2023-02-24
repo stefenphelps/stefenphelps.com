@@ -1,9 +1,9 @@
 ---
 export interface Props {
-	prevUrl: string;
-	nextUrl: string;
-	pageEnd: number;
-	totalPosts: number;
+  prevUrl: string;
+  nextUrl: string;
+  pageEnd: number;
+  totalPosts: number;
 }
 
 const { prevUrl, nextUrl, pageEnd, totalPosts } = Astro.props;
@@ -13,31 +13,35 @@ const totalPages = Math.ceil(totalPosts / 10);
 ---
 
 <div class="wrapper">
-	<nav class="pagination">
-		<a class="pagination-prev" href={prevUrl || '#'} aria-label="Previous Page">Previous</a>
-		<small>Page {currentPage} of {totalPages}</small>
-		<a class="pagination-next" href={nextUrl || '#'} aria-label="Next Page">Next</a>
-	</nav>
+  <nav class="pagination">
+    <a class="pagination-prev" href={prevUrl || "#"} aria-label="Previous Page"
+      >Previous</a
+    >
+    <small>Page {currentPage} of {totalPages}</small>
+    <a class="pagination-next" href={nextUrl || "#"} aria-label="Next Page"
+      >Next</a
+    >
+  </nav>
 </div>
 
 <style lang="scss">
-	.pagination {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 1rem;
-		padding-top: 4rem;
-		&-prev,
-		&-next {
-			flex: 0 0 90px;
-			text-align: center;
-			margin: 0;
-			font-family: var(--heading-font);
-			&[href='#'] {
-				cursor: not-allowed;
-				opacity: 0.4;
-				color: #777;
-			}
-		}
-	}
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 4rem;
+    &-prev,
+    &-next {
+      flex: 0 0 90px;
+      text-align: center;
+      margin: 0;
+      font-family: var(--heading-font);
+      &[href="#"] {
+        cursor: not-allowed;
+        opacity: 0.4;
+        color: #777;
+      }
+    }
+  }
 </style>
