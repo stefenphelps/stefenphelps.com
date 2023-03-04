@@ -1,0 +1,81 @@
+---
+const {
+	title = 'Stefen Phelps',
+	description = 'Lead developer at Kelp, Brooksville Native, and Dad.',
+	permalink = Astro.request.url,
+	heroImage = 'https://stefenphelps.com/social.jpg',
+	bodyClass = ''
+} = Astro.props;
+
+import './styles/global.scss';
+---
+
+<!DOCTYPE html>
+<html lang='en-US'>
+	<head>
+		<!-- Global Metadata / Icons -->
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width' />
+		<meta name='msapplication-TileColor' content='#a27f52' />
+		<meta name='theme-color' content='#a27f52' />
+		<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+		<link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+		<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+		<link rel='manifest' href='/manifest.webmanifest' />
+		<link rel='mask-icon' href='/safari-pinned-tab.svg' color='#a27f52' />
+		<link rel='alternate' type='application/rss+xml' title='RSS Feed for stefenphelps.com' href='/rss.xml' />
+
+		<!-- Primary Metadata -->
+		<title>{title}</title>
+		<meta name='title' content={title} />
+		<meta name='description' content={description} />
+		<link rel='alternate' type='application/rss+xml' href='https://stefenphelps.com/rss.xml' />
+
+		<!-- Open Graph / Social -->
+		<meta property='og:type' content='website' />
+		<meta property='og:url' content={Astro.url} />
+		<meta property='og:title' content={title} />
+		<meta property='og:description' content={description} />
+		<meta property='og:image' content={new URL(heroImage, Astro.url)} />
+		<meta property='twitter:card' content='summary_large_image' />
+		<meta property='twitter:url' content={Astro.url} />
+		<meta property='twitter:title' content={title} />
+		<meta property='twitter:description' content={description} />
+		<meta property='twitter:image' content={new URL(heroImage, Astro.url)} />
+		<meta name='twitter:site' content='@stefen' />
+		<meta name='twitter:creator' content='@stefen' />
+
+		<link
+			rel='preload'
+			href='/fonts/stix-two-text-v10-latin-600.woff2'
+			as='font'
+			type='font/woff2'
+			crossorigin='crossorigin'
+		/>
+		<style is:inline>
+			@font-face {
+				font-display: swap;
+				font-family: 'STIX Two Text';
+				font-style: normal;
+				font-weight: 600;
+				src: url('/fonts/stix-two-text-v10-latin-600.woff2') format('woff2'),
+					url('/fonts/stix-two-text-v10-latin-600.woff') format('woff');
+			}
+		</style>
+		<script is:inline>
+			// purposefully make render blocking to prevent flash of wrong theme
+			const setColorScheme = (value) => {
+				document.documentElement.dataset.colorScheme = value;
+				localStorage.setItem('color-scheme', value);
+			};
+
+			if (localStorage.getItem('color-scheme')) {
+				setColorScheme(localStorage.getItem('color-scheme'));
+			}
+		</script>
+	</head>
+	<body class={bodyClass}>
+		<slot />
+		<script src='/src/scripts/main.js'></script>
+	</body>
+</html>

@@ -1,20 +1,24 @@
-<header class="header">
-  <nav class="header-nav">
-    <ul class="header-nav-menu">
-      <li class="logo">
-        <a rel="prefetch" href="/">
-          Stefen <span>Phelps</span>
-        </a>
-      </li>
-      <li>
-        <a rel="prefetch" href="/about/">About</a>
-      </li>
-      <li>
-        <a rel="prefetch" href="/blog/">Blog</a>
-      </li>
-      <li>
-        <a rel="prefetch" href="/contact/">Contact</a>
-      </li>
-    </ul>
-  </nav>
+---
+const { activeNav } = Astro.props;
+---
+
+<header class='header'>
+	<nav class='header-nav'>
+		<ul class='header-nav-menu'>
+			<li class='logo'>
+				<a rel='prefetch' href='/' class={activeNav === 'home' ? 'active' : ''}>
+					Stefen <span>Phelps</span>
+				</a>
+			</li>
+			<li>
+				<a rel='prefetch' href='/about/' class={activeNav === 'about' ? 'active' : ''}>About</a>
+			</li>
+			<li>
+				<a rel='prefetch' href='/blog/' class={activeNav === 'blog' ? 'active' : ''}>Blog</a>
+			</li>
+			<li>
+				<a rel='prefetch' href='/contact/' class={activeNav === 'contact' ? 'active' : ''}>Contact</a>
+			</li>
+		</ul>
+	</nav>
 </header>

@@ -1,61 +1,66 @@
 ---
-import Layout from "../layouts/BaseLayout.astro";
-
-let title = "Contact";
-let description = "Get in touch with Stefen";
-let permalink = "https://stefenphelps.com/contact";
+import Layout from '../Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const title = 'Contact';
+const description = 'Get in touch with Stefen';
+const permalink = 'https://stefenphelps.com/contact';
 ---
 
 <Layout {title} {description} {permalink}>
-  <article class="wrapper contact-page">
-    <h1>{title}</h1>
-    <p>
-      You can connect with me on <a href="https://twitter.com/stefen">Twitter</a
-      > or <a href="https://www.linkedin.com/in/stefenphelps/">LinkedIn</a>.
-      Otherwise, use the form below.
-    </p>
-    <form name="contact" action="/success" method="POST" data-netlify="true">
-      <label>
-        Name
-        <input type="text" name="name" required />
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" required />
-      </label>
-      <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit">Send Message</button>
-    </form>
-  </article>
+	<Header activeNav='contact' />
+	<main>
+		<article class='wrapper contact-page'>
+			<h1>{title}</h1>
+			<p>
+				You can connect with me on <a href='https://twitter.com/stefen'>Twitter</a> or <a
+					href='https://www.linkedin.com/in/stefenphelps/'>LinkedIn</a
+				>. Otherwise, use the form below.
+			</p>
+			<form name='contact' action='/success' method='POST' data-netlify='true'>
+				<label>
+					Name
+					<input type='text' name='name' required />
+				</label>
+				<label>
+					Email
+					<input type='email' name='email' required />
+				</label>
+				<div>
+					<label for='message'>Message</label>
+					<textarea id='message' name='message' required></textarea>
+				</div>
+				<button type='submit'>Send Message</button>
+			</form>
+		</article>
+	</main>
+	<Footer />
 </Layout>
 
-<style lang="scss">
-  .contact-page {
-    @media (max-width: 767px) {
-      h1 {
-        margin-top: 0;
-      }
-    }
-    form {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      > * {
-        flex: 1 1 300px;
-      }
-      input,
-      textarea {
-        display: block;
-        width: 100%;
-        margin-bottom: 0;
-      }
-      > button {
-        margin-top: 1rem;
-        flex-basis: 100%;
-      }
-    }
-  }
+<style lang='scss'>
+	.contact-page {
+		@media (max-width: 767px) {
+			h1 {
+				margin-top: 0;
+			}
+		}
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			> * {
+				flex: 1 1 300px;
+			}
+			input,
+			textarea {
+				display: block;
+				width: 100%;
+				margin-bottom: 0;
+			}
+			> button {
+				margin-top: 1rem;
+				flex-basis: 100%;
+			}
+		}
+	}
 </style>

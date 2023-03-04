@@ -1,14 +1,20 @@
 ---
-import Layout from "../layouts/BaseLayout.astro";
+import Layout from '../Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-let title = "Thanks!";
-let description = "Thanks for contacting me, I'll be in touch shortly.";
-let permalink = "https://stefenphelps.com/success";
+const title = 'Thanks!';
+const description = "Thanks for contacting me, I'll be in touch shortly.";
+const permalink = 'https://stefenphelps.com/success';
 ---
 
 <Layout {title} {description} {permalink}>
-  <article class="wrapper">
-    <h1>{title}</h1>
-    <p>{description}</p>
-  </article>
+	<Header activeNav='contact' />
+	<main>
+		<article class='wrapper'>
+			<h1>{title}</h1>
+			<p>{description}</p>
+		</article>
+	</main>
+	<Footer />
 </Layout>

@@ -13,8 +13,8 @@
 	"devDependencies": {
 		"@astrojs/prefetch": "^0.1.2",
 		"@astrojs/sitemap": "^1.1.0",
-		"astro": "^2.0.15",
-		"astro-compress": "^1.1.33",
+		"astro": "^2.0.17",
+		"astro-compress": "^1.1.35",
 		"autoprefixer": "^10.4.13",
 		"node-snackbar": "^0.1.16",
 		"prettier": "2.8.4",
@@ -25,7 +25,7 @@
 	"dependencies": {
 		"@astrojs/rss": "^2.1.1",
 		"@astrojs/turbolinks": "^0.1.5",
-		"astro-critters": "^1.1.29",
+		"astro-critters": "^1.1.31",
 		"astro-imagetools": "^0.8.1",
 		"javascript-time-ago": "^2.5.9",
 		"netlify-plugin-cache": "^1.0.3"
