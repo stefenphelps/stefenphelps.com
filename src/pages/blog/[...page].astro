@@ -5,7 +5,7 @@ import Footer from '../../components/Footer.astro';
 import Tease from '../../components/Tease.astro';
 import Pagination from '../../components/Pagination.astro';
 
-export async function getStaticPaths({ paginate, rss }) {
+export async function getStaticPaths({ paginate }) {
 	const allPosts = await Astro.glob('../blog/*.md');
 	const sortedPosts = allPosts.sort(
 		(a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
@@ -21,7 +21,7 @@ let permalink = 'https://stefenphelps.com/blog/';
 const { page } = Astro.props;
 ---
 
-<Layout {title} {description} {permalink}>
+<Layout title={title} description={description} permalink={permalink}>
 	<Header activeNav='blog' />
 	<main class='wrapper wrapper--wide'>
 		<h1 class='blog-title'>{title}</h1>

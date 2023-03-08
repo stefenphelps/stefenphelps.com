@@ -10,7 +10,6 @@ TimeAgo.addDefaultLocale(en);
 
 const timeAgo = new TimeAgo('en-US');
 const date = new Date(frontmatter.publishDate);
-const dateLabel = date.toLocaleDateString('en-US');
 const timeAgoLabel = timeAgo.format(date);
 ---
 

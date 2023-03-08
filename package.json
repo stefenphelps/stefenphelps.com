@@ -5,15 +5,16 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
+		"check": "astro check --watch",
 		"clean": "rm -r ./dist",
 		"build": "astro build",
 		"preview": "astro preview",
 		"deploy": "netlify deploy --prod"
 	},
 	"devDependencies": {
-		"@astrojs/prefetch": "^0.1.2",
-		"@astrojs/sitemap": "^1.1.0",
-		"astro": "^2.0.17",
+		"@astrojs/prefetch": "^0.2.0",
+		"@astrojs/sitemap": "^1.2.0",
+		"astro": "^2.1.1",
 		"astro-compress": "^1.1.35",
 		"autoprefixer": "^10.4.13",
 		"node-snackbar": "^0.1.16",
@@ -23,8 +24,7 @@
 		"vite-plugin-pwa": "0.14.4"
 	},
 	"dependencies": {
-		"@astrojs/rss": "^2.1.1",
-		"@astrojs/turbolinks": "^0.1.5",
+		"@astrojs/rss": "^2.2.0",
 		"astro-critters": "^1.1.31",
 		"astro-imagetools": "^0.8.1",
 		"javascript-time-ago": "^2.5.9",
