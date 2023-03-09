@@ -2,24 +2,26 @@ import { registerSW } from 'virtual:pwa-register';
 import Snackbar from 'node-snackbar';
 
 // pwa stuff
-const updateSW = registerSW({
-	onNeedRefresh() {
-		Snackbar.show({
-			text: 'Update available.',
-			actionText: 'Update',
-			actionTextColor: '#fff',
-			onActionClick: function () {
-				updateSW();
-			}
-		});
-	},
-	onOfflineReady() {
-		Snackbar.show({
-			actionTextColor: '#fff',
-			text: 'Offline ready.'
-		});
-	}
-});
+if ('serviceWorker' in navigator) {
+	const updateSW = registerSW({
+		onNeedRefresh() {
+			Snackbar.show({
+				text: 'Update available.',
+				actionText: 'Update',
+				actionTextColor: '#fff',
+				onActionClick: function () {
+					updateSW(true);
+				}
+			});
+		},
+		onOfflineReady() {
+			Snackbar.show({
+				actionTextColor: '#fff',
+				text: 'Offline ready.'
+			});
+		}
+	});
+}
 
 // toggle light or dark mode
 const html = document.documentElement;

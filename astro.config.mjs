@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import { VitePWA } from 'vite-plugin-pwa';
+import AstroPWA from '@vite-pwa/astro';
 import { astroImageTools } from 'astro-imagetools';
 import sitemap from '@astrojs/sitemap';
 import compress from 'astro-compress';
@@ -10,45 +10,6 @@ import prefetch from '@astrojs/prefetch';
 export default defineConfig({
 	site: 'https://stefenphelps.com/',
 	trailingSlash: 'always',
-	vite: {
-		plugins: [
-			VitePWA({
-				strategies: 'generateSW',
-				workbox: {
-					globPatterns: ['**/*.{js,css,html,svg,avif}'],
-					navigateFallback: null
-				},
-				includeAssets: ['/favicon.ico', '/apple-touch-icon.png', 'pwa-512x512.png'],
-				manifest: {
-					name: 'Stefen Phelps',
-					short_name: 'Stefen',
-					description: "Stefen's Personal website where he writes about web development and sometimes other things.",
-					start_url: 'https://stefenphelps.com',
-					theme_color: '#473b2c',
-					background_color: '#473b2c',
-					display: 'standalone',
-					icons: [
-						{
-							src: '/pwa-192x192.png',
-							sizes: '192x192',
-							type: 'image/png'
-						},
-						{
-							src: '/pwa-512x512.png',
-							sizes: '512x512',
-							type: 'image/png'
-						},
-						{
-							src: '/pwa-512x512.png',
-							sizes: '512x512',
-							type: 'image/png',
-							purpose: 'any maskable'
-						}
-					]
-				}
-			})
-		]
-	},
 	markdown: {
 		shikiConfig: {
 			theme: 'material-darker'
@@ -65,6 +26,47 @@ export default defineConfig({
 			svg: false
 		}),
 		critters(),
-		prefetch()
+		prefetch(),
+		AstroPWA({
+			base: '/',
+			scope: '/',
+			includeAssets: ['fonts/*.woff2', '*.{png,ico,svg,jpg,xml}'],
+			manifest: {
+				name: 'Stefen Phelps',
+				short_name: 'Stefen',
+				description:
+					"Stefen's Personal website where he writes about web development and sometimes other things.",
+				start_url: 'https://stefenphelps.com',
+				theme_color: '#473b2c',
+				background_color: '#473b2c',
+				display: 'standalone',
+				icons: [
+					{
+						src: '/pwa-192x192.png',
+						sizes: '192x192',
+						type: 'image/png'
+					},
+					{
+						src: '/pwa-512x512.png',
+						sizes: '512x512',
+						type: 'image/png'
+					},
+					{
+						src: '/pwa-512x512.png',
+						sizes: '512x512',
+						type: 'image/png',
+						purpose: 'any maskable'
+					}
+				]
+			},
+			workbox: {
+				navigateFallback: '/404',
+				globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,avif,jpeg}']
+			},
+			devOptions: {
+				enabled: true,
+				navigateFallbackAllowlist: [/^\/404$/]
+			}
+		})
 	]
 });
