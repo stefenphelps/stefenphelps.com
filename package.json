@@ -16,7 +16,7 @@
 		"@astrojs/prefetch": "^0.2.0",
 		"@astrojs/sitemap": "^1.2.0",
 		"@vite-pwa/astro": "^0.0.5",
-		"astro": "^2.1.1",
+		"astro": "^2.1.2",
 		"astro-compress": "^1.1.35",
 		"autoprefixer": "^10.4.13",
 		"node-snackbar": "^0.1.16",

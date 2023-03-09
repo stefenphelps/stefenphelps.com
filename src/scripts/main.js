@@ -9,9 +9,7 @@ if ('serviceWorker' in navigator) {
 				text: 'Update available.',
 				actionText: 'Update',
 				actionTextColor: '#fff',
-				onActionClick: function () {
-					updateSW(true);
-				}
+				onActionClick: updateSW(true)
 			});
 		},
 		onOfflineReady() {
@@ -20,6 +18,20 @@ if ('serviceWorker' in navigator) {
 				text: 'Offline ready.'
 			});
 		}
+	});
+
+	window.addEventListener('offline', () => {
+		Snackbar.show({
+			actionTextColor: '#fff',
+			text: 'You are offline—some things may not work.'
+		});
+	});
+
+	window.addEventListener('online', () => {
+		Snackbar.show({
+			actionTextColor: '#fff',
+			text: "You're back online, proceed as usual 😀"
+		});
 	});
 }
 
