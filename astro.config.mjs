@@ -59,10 +59,6 @@ export default defineConfig({
 					}
 				]
 			},
-			workbox: {
-				navigateFallback: null,
-				globPatterns: ['**/*.{css,js,html,svg,ico,txt,avif}']
-			},
 			devOptions: {
 				enabled: true
 			}
