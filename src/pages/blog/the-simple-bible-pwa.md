@@ -13,10 +13,10 @@ I wasn't super impressed by the state of Bible apps: each one bombards you with 
 
 ## How it's made
 
-Using my favorite all-in-one web framework — [Astro](https://astro.build/) — and with the help of of [Thiago Bodruk's Bible XML and JSON project](https://github.com/thiagobodruk/bible) I was able to put together a really nice Bible app with support for dark mode, offline support, and even an AI powered pastor for to get answers to your Bible questions (all the cool kids use AI these days so I've heard).
+Using my favorite all-in-one web framework — [Astro](https://astro.build/) — and with the help of [Thiago Bodruk's Bible XML and JSON project](https://github.com/thiagobodruk/bible) I was able to put together a really nice Bible app with support for dark mode, offline support, and even an AI powered pastor for you to get answers to your Bible questions (all the cool kids use AI these days so I've heard).
 
 ## The future
 
-I've added the web app to the [Google Play Store](https://play.google.com/store/apps/details?id=app.netlify.astro_bible.twa) but have yet to cough up the $100 for the Apple App Store... I also inquired about licensing the ESV translation which would be another ~$250.
+I've added the web app to the [Google Play Store](https://play.google.com/store/apps/details?id=app.netlify.astro_bible.twa) but have yet to cough up the $100 for the Apple App Store... I also enquired about licensing the ESV translation which would be another ~$250.
 
 So, this project is somewhat on hold for now. I'll be using it as my daily Bible app for the foreseeable future.
