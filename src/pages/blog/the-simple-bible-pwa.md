@@ -35,13 +35,13 @@ The [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_A
 
 <video width="784" autoplay loop muted playsinline src="/videos/offline-support.mp4"></video>
 
-This is basic but necessary. Too many apps and websites that should include offline support just don't. This one does. And it automatically downloads in the background without any interaction from the user required.
+This is basic but necessary. Too many apps and websites that should include offline support just don't. This one does. And it automatically downloads in the background without any interaction from the user required. Since Astro uses Vite under the hood it was fairly simple to implement the [Vite PWA plugin](https://vite-pwa-org.netlify.app) which handles all the workbox/service worker logic for you.
 
 ### AI Pastor
 
 <video width="784" autoplay loop muted playsinline src="/videos/ai-pastor.mp4"></video>
 
-I was hesitant to add this because this is supposed to be a simple Bible app... but I think I was able to implement this without getting in the way of the user and I find it to be a lot more useful than I originally thought it would be. So far I've been really impressed with it's answers.
+I was hesitant to add this because this is supposed to be a simple Bible app... but I think I was able to implement this without getting in the way of the user and I find it to be a lot more useful than I originally thought it would be. So far I've been really impressed with it's answers. Now if OpenAI can get their API to respond in under 10 seconds that would be even better but who am I to complain.
 
 ## The future
 
