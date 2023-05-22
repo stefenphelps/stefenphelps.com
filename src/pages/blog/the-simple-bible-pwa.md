@@ -9,11 +9,11 @@ layout: '../../layouts/BlogPost.astro'
 
 ## Why another Bible app?
 
-I wasn't super impressed by the state of Bible apps each one seemingly full of marketing popups and having to create accounts and sometimes ads or just downright slow. I just wanted to a simple Bible app got out of the way and wasn't annoying to use. So... here we are... I made [yet another Bible app](https://astro-bible.netlify.app).
+I wasn't super impressed by the state of Bible apps: each one bombards you with marketing popups, requires account creation, or are just plain slow. I just wanted a simple Bible app that got out of the way, wasn't annoying to use, and put the focus on the reading experience. So... here we are... I made [yet another Bible app](https://astro-bible.netlify.app) that aims to provide a hassle-free and enjoyable way to engage with the Scriptures.
 
 ## How it's made
 
-Using my favorite all-in-one web framework — [Astro](https://astro.build/) — and with the help of of [Thiago Bodruk's Bible XML and JSON project](https://github.com/thiagobodruk/bible) I was able to put together a really nice (imo) Bible app with support for dark mode, offline support, and even an AI powered pastor for questions (all the cool kids use AI these days so I heard).
+Using my favorite all-in-one web framework — [Astro](https://astro.build/) — and with the help of of [Thiago Bodruk's Bible XML and JSON project](https://github.com/thiagobodruk/bible) I was able to put together a really nice Bible app with support for dark mode, offline support, and even an AI powered pastor for to get answers to your Bible questions (all the cool kids use AI these days so I've heard).
 
 ## The future
 
