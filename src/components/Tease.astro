@@ -56,6 +56,13 @@ const timeAgoLabel = timeAgo.format(date);
 		&-image {
 			flex: 1 1 200px;
 			background: white;
+			picture {
+				height: 100% !important;
+				img {
+					height: 100% !important;
+					object-fit: cover;
+				}
+			}
 		}
 		&-text {
 			flex: 1 1 300px;
