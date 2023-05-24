@@ -18,7 +18,10 @@ const permalink = 'https://stefenphelps.com/contact';
 					href='https://www.linkedin.com/in/stefenphelps/'>LinkedIn</a
 				>. Otherwise, use the form below.
 			</p>
-			<form name='contact' action='/success' method='POST' data-netlify='true'>
+			<form name='contact' action='/success' method='POST' data-netlify='true' netlify-honeypot='website'>
+				<label hidden>
+					Website <input name='website' />
+				</label>
 				<label>
 					Name
 					<input type='text' name='name' required />
