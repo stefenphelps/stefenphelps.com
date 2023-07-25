@@ -41,11 +41,11 @@ const sortedPosts = filteredPosts.sort(
   <Header activeNav="blog" />
   <main>
     <article class="article">
-      <div class="wrapper wrapper--wide" style="text-align: center;">
+      <div class="wrapper wrapper--wide" style="text-align: center;" transition:name="heroimage">
         {heroImage && <Picture src={heroImage} alt={title} loading="eager" />}
       </div>
       <div class="wrapper">
-        <h1>{title}</h1>
+        <h1 transition:name="heading">{title}</h1>
         <time>
           <svg
             xmlns="http://www.w3.org/2000/svg"

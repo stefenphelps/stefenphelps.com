@@ -139,3 +139,26 @@ const year = new Date().getFullYear();
 		</svg>
 	</button>
 </footer>
+<script>
+	const html = document.documentElement;
+	const toggleButton = document.querySelector('.footer-toggle');
+	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+	
+	const setColorScheme = (value) => {
+		html.dataset.colorScheme = value;
+		localStorage.setItem('color-scheme', value);
+	};
+	
+	if (localStorage.getItem('color-scheme')) {
+		setColorScheme(localStorage.getItem('color-scheme'));
+	}
+	
+	toggleButton.addEventListener('click', () => {
+		if (!html.dataset.colorScheme && prefersDark.matches) {
+			setColorScheme('light');
+			return;
+		}
+		const scheme = html.dataset.colorScheme === 'dark' ? 'light' : 'dark';
+		setColorScheme(scheme);
+	});
+</script>

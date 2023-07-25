@@ -15,6 +15,9 @@ export default defineConfig({
 			theme: 'material-darker'
 		}
 	},
+	experimental: {
+		viewTransitions: true
+	},
 	integrations: [
 		sitemap(),
 		astroImageTools,
@@ -53,7 +56,7 @@ export default defineConfig({
 				]
 			},
 			devOptions: {
-				enabled: true
+				enabled: false
 			}
 		})
 	]
