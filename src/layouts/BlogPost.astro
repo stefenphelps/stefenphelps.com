@@ -3,6 +3,7 @@ import Layout from '../Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Picture } from 'astro-imagetools/components';
+import { format } from 'timeago.js';
 
 const { content } = Astro.props;
 
@@ -16,8 +17,7 @@ const {
   alt,
 } = content;
 
-const date = new Date(publishDate);
-const dateLabel = date.toLocaleDateString('en-US');
+const dateLabel = format(publishDate, "en-US");
 
 // for recent posts at bottom
 const allPosts = await Astro.glob('../pages/blog/*.md');
@@ -46,7 +46,7 @@ const sortedPosts = filteredPosts.sort(
       </div>
       <div class="wrapper">
         <h1 transition:name="heading">{title}</h1>
-        <time>
+        <time datetime={publishDate}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
@@ -61,7 +61,7 @@ const sortedPosts = filteredPosts.sort(
               class="fa-secondary"
               d="M0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192z"
             ></path>
-          </svg> Published on {dateLabel}
+          </svg> Published {dateLabel}
         </time>
         <hr />
         <slot />
