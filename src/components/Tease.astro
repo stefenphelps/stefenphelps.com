@@ -20,7 +20,7 @@ const timeAgoLabel = format(frontmatter.publishDate);
 		<h2 class='h5' >
 			<a transition:name="heading" rel='prefetch' href={post.url}>{frontmatter.title}</a>
 		</h2>
-		<time>
+		<time datetime={frontmatter.publishDate}>
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='0.875em' height='1em'>
 				<path
 					class='fa-primary'
