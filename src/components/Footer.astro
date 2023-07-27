@@ -140,6 +140,7 @@ const year = new Date().getFullYear();
 	</button>
 </footer>
 <script>
+document.addEventListener('astro:load', () => {
 	const html = document.documentElement;
 	const toggleButton = document.querySelector('.footer-toggle');
 	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
@@ -161,4 +162,5 @@ const year = new Date().getFullYear();
 		const scheme = html.dataset.colorScheme === 'dark' ? 'light' : 'dark';
 		setColorScheme(scheme);
 	});
+});
 </script>
