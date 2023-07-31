@@ -30,6 +30,7 @@
 		"astro-critters": "^1.1.40",
 		"astro-imagetools": "^0.8.1",
 		"netlify-plugin-cache": "^1.0.3",
+		"slugify": "^1.6.6",
 		"timeago.js": "^4.0.2"
 	}
 }

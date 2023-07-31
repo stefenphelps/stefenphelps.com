@@ -75,17 +75,6 @@ import './styles/global.scss';
 					url('/fonts/stix-two-text-v10-latin-600.woff') format('woff');
 			}
 		</style>
-		<script is:inline>
-			// purposefully make render blocking to prevent flash of wrong theme
-			const setColorScheme = (value) => {
-				document.documentElement.dataset.colorScheme = value;
-				localStorage.setItem('color-scheme', value);
-			};
-
-			if (localStorage.getItem('color-scheme')) {
-				setColorScheme(localStorage.getItem('color-scheme'));
-			}
-		</script>
 	</head>
 	<body class={bodyClass}>
 		<slot />

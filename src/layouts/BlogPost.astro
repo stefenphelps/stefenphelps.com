@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Picture } from 'astro-imagetools/components';
 import { format } from 'timeago.js';
+import slugify from 'slugify';
 
 const { content } = Astro.props;
 
@@ -14,10 +15,11 @@ const {
   author,
   heroImage,
   permalink = Astro.url,
-  alt,
+  alt
 } = content;
 
 const dateLabel = format(publishDate, "en-US");
+const slug = slugify(title);
 
 // for recent posts at bottom
 const allPosts = await Astro.glob('../pages/blog/*.md');
@@ -41,12 +43,12 @@ const sortedPosts = filteredPosts.sort(
   <Header activeNav="blog" />
   <main>
     <article class="article">
-      <div class="wrapper wrapper--wide" style="text-align: center;" transition:name="heroimage">
+      <div class="wrapper wrapper--wide" style="text-align: center;" transition:name=`heroimage-${slug}`>
         {heroImage && <Picture src={heroImage} alt={title} loading="eager" />}
       </div>
       <div class="wrapper">
-        <h1 transition:name="heading">{title}</h1>
-        <time datetime={publishDate}>
+        <h1 transition:name=`heading-${slug}`>{title}</h1>
+        <time datetime={publishDate} transition:name=`date-${slug}`>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"

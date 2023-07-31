@@ -78,7 +78,7 @@ const permalink = 'https://stefenphelps.com/';
 	document.addEventListener('astro:load', () => {
 		const button = document.querySelector('.mustache-button');
 		const mustacheImg = document.querySelector('.home-image-stache');
-		button.addEventListener('click', function () {
+		button?.addEventListener('click', function () {
 			const randomStache = Math.floor(Math.random() * 60 + 1).toString();
 			mustacheImg.src = '/images/mustaches/' + randomStache + '.svg';
 			mustacheImg.style.display = 'block';
