@@ -26,16 +26,13 @@ const permalink = 'https://stefenphelps.com/';
 				<div class='home-image'>
 					<img
 						class='home-image-stache'
-						src='/images/mustaches/1.svg'
+						src='/mustaches/1.svg'
 						alt='Generated mustache'
 						width='700'
 						height='700'
+						loading='eager'
 					/>
-					<picture class='home-image-picture'>
-						<source type='image/svg+xml' srcset='/images/mustache-face.svg' width='700' height='700' />
-						<source type='image/webp' srcset='/images/mustache-face.webp' width='700' height='700' />
-						<img width='700' height='700' src='/images/mustache-face.png' alt="Stefen's Mustache Face" />
-					</picture>
+					<img class='home-image-picture' src="/mustache-face.svg" width='700' height='700' loading='eager' />
 					<button class='button mustache-button'>Generate Mustache</button>
 				</div>
 			</section>
@@ -80,7 +77,7 @@ const permalink = 'https://stefenphelps.com/';
 		const mustacheImg = document.querySelector('.home-image-stache');
 		button?.addEventListener('click', function () {
 			const randomStache = Math.floor(Math.random() * 60 + 1).toString();
-			mustacheImg.src = '/images/mustaches/' + randomStache + '.svg';
+			mustacheImg.src = '/mustaches/' + randomStache + '.svg';
 			mustacheImg.style.display = 'block';
 		});
 	});

@@ -1,28 +1,24 @@
 ---
-import { Picture } from 'astro-imagetools/components';
+import { Image } from "astro:assets";
 import { format } from 'timeago.js';
-import slugify from 'slugify';
 
-const { post, author } = Astro.props;
-const { frontmatter } = post;
-
-const slug = slugify(frontmatter.title);
-const timeAgoLabel = format(frontmatter.publishDate);
+const { post } = Astro.props;
+const timeAgoLabel = format(post.data.publishDate);
 ---
 
 <article class='post-preview'>
 	{
-		frontmatter.heroImage && (
-			<div class='post-preview-image' transition:name=`heroimage-${slug}`>
-				<Picture src={frontmatter.heroImage} alt={frontmatter.title} />
+		post.data.heroImage && (
+			<div class='post-preview-image' transition:name=`heroimage-${post.slug}`>
+				{post.data.heroImage && <Image src={post.data.heroImage} alt={post.data.title} /> }
 			</div>
 		)
 	}
 	<div class='post-preview-text'>
 		<h2 class='h5' >
-			<a transition:name=`heading-${slug}` rel='prefetch' href={post.url}>{frontmatter.title}</a>
+			<a transition:name=`heading-${post.slug}` rel='prefetch' href=`/blog/${post.slug}/`>{post.data.title}</a>
 		</h2>
-		<time datetime={frontmatter.publishDate} transition:name=`date-${slug}`>
+		<time datetime={post.data.publishDate} transition:name=`date-${post.slug}`>
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='0.875em' height='1em'>
 				<path
 					class='fa-primary'
@@ -33,7 +29,7 @@ const timeAgoLabel = format(frontmatter.publishDate);
 			</svg>
 			{timeAgoLabel}
 		</time>
-		<p>{frontmatter.description}</p>
+		<p>{post.data.description}</p>
 	</div>
 </article>
 
@@ -53,12 +49,9 @@ const timeAgoLabel = format(frontmatter.publishDate);
 		&-image {
 			flex: 1 1 200px;
 			background: white;
-			picture {
+			img {
 				height: 100% !important;
-				img {
-					height: 100% !important;
-					object-fit: cover;
-				}
+				object-fit: cover;
 			}
 		}
 		&-text {

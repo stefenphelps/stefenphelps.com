@@ -1,6 +1,8 @@
 {
-	"extends": "astro/tsconfigs/strict",
-	"compilerOptions": {
-		"types": ["vite-plugin-pwa/info"]
-	}
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "types": ["vite-plugin-pwa/info"],
+    "strictNullChecks": true,
+    "allowJs": true
+  }
 }

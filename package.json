@@ -1,36 +1,36 @@
 {
-	"name": "stefenphelps.com",
-	"type": "module",
-	"version": "1.0.0",
-	"private": true,
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"check": "astro check --watch",
-		"clean": "rm -r ./dist",
-		"build": "astro build",
-		"preview": "astro preview",
-		"deploy": "netlify deploy --prod"
-	},
-	"devDependencies": {
-		"@astrojs/prefetch": "^0.3.0",
-		"@astrojs/sitemap": "^2.0.1",
-		"@vite-pwa/astro": "^0.1.1",
-		"astro": "^2.9.6",
-		"autoprefixer": "^10.4.14",
-		"node-snackbar": "^0.1.16",
-		"prettier": "3.0.0",
-		"prettier-plugin-astro": "^0.11.0",
-		"sass": "^1.64.1",
-		"vite-plugin-pwa": "0.16.4",
-		"workbox-window": "^7.0.0"
-	},
-	"dependencies": {
-		"@astrojs/rss": "^2.4.3",
-		"astro-critters": "^1.1.40",
-		"astro-imagetools": "^0.8.1",
-		"netlify-plugin-cache": "^1.0.3",
-		"slugify": "^1.6.6",
-		"timeago.js": "^4.0.2"
-	}
+  "name": "stefenphelps.com",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "check": "astro check --watch",
+    "clean": "rm -r ./dist",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "netlify deploy --prod"
+  },
+  "devDependencies": {
+    "@astrojs/prefetch": "^0.3.0",
+    "@astrojs/sitemap": "^2.0.1",
+    "@vite-pwa/astro": "^0.1.1",
+    "astro": "^2.10.1",
+    "autoprefixer": "^10.4.14",
+    "node-snackbar": "^0.1.16",
+    "prettier": "3.0.1",
+    "prettier-plugin-astro": "^0.11.0",
+    "sass": "^1.64.2",
+    "vite-plugin-pwa": "0.16.4",
+    "workbox-window": "^7.0.0"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^2.4.3",
+    "astro-critters": "^1.1.40",
+    "netlify-plugin-cache": "^1.0.3",
+    "sharp": "^0.32.4",
+    "slugify": "^1.6.6",
+    "timeago.js": "^4.0.2"
+  }
 }
