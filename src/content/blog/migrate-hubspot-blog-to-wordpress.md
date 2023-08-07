@@ -8,7 +8,6 @@ categories:
   - "wordpress"
 heroImage: "../../assets/images/hubspot-to-wordpress.png"
 author: "Stefen Phelps"
-
 ---
 
 **\*HubSpot supports a blog export tool making this blog post obsolete 💨**

@@ -5,9 +5,8 @@ publishDate: "2017-11-21"
 categories:
   - "design"
   - "how-to"
-heroImage: "../../assets/images/adobe-xd.webp"
+heroImage: "../../assets/images/adobe-xd.png"
 author: "Stefen Phelps"
-
 ---
 
 Designers creating new website mockups will generally use Photoshop then save those mockups as a JPG or PNG for the client to review. The problem with static images is they don't tell the whole story of what the website could be. Hover state, the way the page loads, or even the way the page transitions to a new view—these are all elements that are usually not given any thought and are left up to the developer to make assumptions, or worse, not implement anything at all. What you're left with is a website that feels janky.
@@ -16,7 +15,7 @@ Designers creating new website mockups will generally use Photoshop then save th
 
 For simple page animations and adding context to how each page fits together, Adobe XD is the perfect tool—not to mention, it's also an extremely quick way to design page layouts.
 
-![adobe-xd](../../assets/images/adobe-xd.webp)
+![adobe-xd](../../assets/images/adobe-xd.png)
 
 ### Adding page transitions in Adobe XD
 
@@ -24,7 +23,7 @@ First off, you'll need at least 2 artboards. Each artboard represents a page (or
 
 Once you have multiple artboards setup, click on the prototype tab. Then, you're going to want to select the element in your design that should be linked to the other artboard, such as a standard link for example. Once selected, click and drag the blue tab to the corresponding artboard, and then choose your animation type and speed.
 
-![adobe-xd-prototype](../../assets/images/adobe-xd-prototype.webp)
+![adobe-xd-prototype](../../assets/images/adobe-xd-prototype.png)
 
 Once linked, you can click the play button in the top right corner to view the animation, share the preview online, or even create a video walk-through of the pages.
 

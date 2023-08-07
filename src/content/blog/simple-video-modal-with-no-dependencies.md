@@ -4,7 +4,6 @@ description: "Code a video modal using native HTML elements, HTML APIs, and a to
 publishDate: "2022-07-16"
 heroImage: "../../assets/images/video-modal.png"
 author: "Stefen Phelps"
-
 ---
 
 There are no shortages of great [video](https://getbootstrap.com/docs/4.0/components/modal/) [modal](https://micromodal.vercel.app) [plugins](https://appleple.github.io/modal-video/) [out there](https://dimsemenov.com/plugins/magnific-popup/) [these days](https://sorgalla.com/lity/). But, how about we try something other than searching NPM and adding yet another dependency to your web project. Instead, we are going to take advantage of the amazing built-in APIs that browsers already give us.

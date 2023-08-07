@@ -2,7 +2,7 @@
 title: "HubSpot to WordPress Website Migration"
 description: "HubSpot is a powerful all-in-one marketing platform. However, if your company isn't taking advantage of all of the marketing tools it's platform offers and just want to cover your basics, you can save a whole lot of money by migrating to WordPress. Migrating a HubSpot COS hosted website to a self-hosted WordPress site consists of 4 basic steps."
 publishDate: "2017-06-05"
-heroImage: "../../assets/images/burkmoreland.com_.webp"
+heroImage: "../../assets/images/burkmoreland.com_.png"
 
 author: "Stefen Phelps"
 ---
@@ -31,10 +31,10 @@ In addition to these 4 steps you'll probably want to import all your URL Mapping
 
 Here are some performance metrics of a HubSpot COS website (before) and the WordPress site (after) to give you an idea of what's possible and how it compares. For some context, the WordPress site is using [Cloudflare's free CDN](https://www.cloudflare.com/) and a standard hosting plan from [Dreamhost](https://www.dreamhost.com/r.cgi?1029607) (~$100/yr).
 
-![before](../../assets/images/webpagetest-burkmoreland-before.webp)
+![before](../../assets/images/webpagetest-burkmoreland-before.png)
 Before
 
-![after](../../assets/images/webpagetest-burkmoreland-after.webp)
+![after](../../assets/images/webpagetest-burkmoreland-after.png)
 After
 
 ---

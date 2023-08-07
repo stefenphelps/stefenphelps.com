@@ -6,7 +6,6 @@ categories:
   - "hubspot"
 heroImage: "../../assets/images/cos-modal-site-search.gif"
 author: "Stefen Phelps"
-
 ---
 
 **2019 Update — [HubSpot now offers a site search API](https://developers.hubspot.com/docs/methods/content/search-for-content). I highly recommend using the search API going forward. This guide was written before the API existed but I'll leave it up as a reference.**

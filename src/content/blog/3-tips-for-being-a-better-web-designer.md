@@ -4,9 +4,8 @@ description: "I've been making websites for close to 10 years now. I've made my 
 publishDate: "2018-02-28"
 categories:
   - "design"
-heroImage: "../../assets/images/gle-careers-scout-466403-edited.webp"
+heroImage: "../../assets/images/gle-careers-scout-466403-edited.jpg"
 author: "Stefen Phelps"
-
 ---
 
 I've been making websites for close to 10 years now. I've made my fair share of 💩 websites—in addition to some amazing websites. What I have realized in reflecting on my website project experiences is that there is a simple formula that all of those amazing websites share.

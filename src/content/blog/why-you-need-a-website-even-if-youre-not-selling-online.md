@@ -5,7 +5,6 @@ publishDate: "2015-03-26"
 categories:
   - "seo"
 author: "Stefen Phelps"
-
 ---
 
 **Q**: I have a very small business and I don't want to sell my product online.  Do I really need a website?

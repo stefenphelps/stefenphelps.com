@@ -6,7 +6,6 @@ categories:
   - "cms"
   - "wordpress"
 author: "Stefen Phelps"
-
 ---
 
 I get a lot of "normal" people, as I like to call the non-tech geeks, who've heard of WordPress but think it's just a platform for blogging. This assumption is completely wrong and if you don't want to take my word for it and / or would like to get a better idea of what WordPress really is, read on.

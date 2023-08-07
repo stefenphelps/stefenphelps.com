@@ -4,9 +4,8 @@ description: "Website performance and website growth are two seperate things tha
 publishDate: "2016-02-15"
 categories:
   - "hubspot"
-heroImage: "../../assets/images/macbook-and-glasses.webp"
+heroImage: "../../assets/images/macbook-and-glasses.jpg"
 author: "Stefen Phelps"
-
 ---
 
 Website performance and website growth are two seperate things that are closely knit, which have a big influence over each other. A slow website will greatly impact user experience, your page rank and can also have a negative impact on your overall brand.
@@ -30,7 +29,7 @@ If you have to have transparency in your image, you'll want to use a PNG. Trans
 
 ## **2.** Design a Compelling CTA (getting more leads)
 
-![macbook](../../assets/images/macbook-and-glasses.webp)
+![macbook](../../assets/images/macbook-and-glasses.jpg)
 
 The first step for a successful call-to-action is a great offer. If the offer itself is sucky, it's going to be pretty hard to get any clicks. Once you have a compelling offer, then you just need to make sure you're communicating that offer in your banner ad as best as possible. Here are some general tips to keep in mind when designing a CTA:
 

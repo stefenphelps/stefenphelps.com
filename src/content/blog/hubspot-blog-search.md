@@ -6,7 +6,6 @@ categories:
   - "hubspot"
 heroImage: "../../assets/images/search-hubspot-blog.gif"
 author: "Stefen Phelps"
-
 ---
 
 **2019 Update — [HubSpot now offers a site search API](https://developers.hubspot.com/docs/methods/content/search-for-content). I highly recommend using the search API going forward. This guide was written before the API existed but I'll leave it up as a reference.**
@@ -62,7 +61,7 @@ Okay... Sure you are...
 
 Did the form take you to the search results page? Did you see the query parameter added to the URL like so "**/blog/search?query=my+search+example**" but you don't see any search results?
 
-![search-results-page](../../assets/images/search-results-page.webp)
+![search-results-page](../../assets/images/search-results-page.png)
 
 **Perfect!** Now let's create those search results.
 

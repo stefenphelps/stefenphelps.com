@@ -4,9 +4,8 @@ description: "Behind every good eCommerce website is a good strategy. Who is 
 publishDate: "2016-07-11"
 categories:
   - "design"
-heroImage: "../../assets/images/issc-website-redesign-desktop-phone.webp"
+heroImage: "../../assets/images/issc-website-redesign-desktop-phone.jpg"
 author: "Stefen Phelps"
-
 ---
 
 Behind every **good eCommerce website** is a **good strategy**. Who is this site being made for? How does that person prefer to shop online? Do they prefer to have a phone number to call or a form to fill out? What devices will he/she be using to browse the site? These are some of the critical questions that need to be answered before the site gets even close to being mocked up in Photoshop. Answering these questions will give us a clear picture of who to design for and what devices it should be optimized for.
@@ -27,7 +26,7 @@ _**Your website needs to be like water!**_
 
 **To get more technical:** we design responsive sites using a [12 column grid system](http://www.w3schools.com/bootstrap/bootstrap_grid_system.asp) which makes coding the design a much easier task. This is one of the primary reasons why it's so hard to take an existing design and "make it responsive". It really needs to be thought through in the design phase and not be a tacked-on (buggy) feature after the fact.
 
-![issc website redesign](../../assets/images/issc-website-redesign-desktop-phone.webp)
+![issc website redesign](../../assets/images/issc-website-redesign-desktop-phone.jpg)
 
 _An example of responsive design (desktop and phone)._
 

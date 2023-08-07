@@ -1,10 +1,9 @@
 ---
-title: 'Building a Bible PWA in 2023'
-description: 'How and why I built a Bible app from scratch using modern web technologies'
-heroImage: '../../assets/images/simple-bible-pwa.png'
-publishDate: '2023-05-22'
-author: 'Stefen Phelps'
-
+title: "Building a Bible PWA in 2023"
+description: "How and why I built a Bible app from scratch using modern web technologies"
+heroImage: "../../assets/images/simple-bible-pwa.png"
+publishDate: "2023-05-22"
+author: "Stefen Phelps"
 ---
 
 ## Why another Bible app?

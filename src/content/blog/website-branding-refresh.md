@@ -4,9 +4,8 @@ description: "One of the hardest parts of designing for the web is the lack of l
 publishDate: "2017-11-06"
 categories:
   - "project"
-heroImage: "../../assets/images/Citrus-Medical-Weight-Loss-V3.webp"
+heroImage: "../../assets/images/Citrus-Medical-Weight-Loss-V3.jpg"
 author: "Stefen Phelps"
-
 ---
 
 One of the hardest parts of designing for the web is the lack of limitation. There is no artificial limit to the amount of space you have to work with, no limit to how something could be animated or function, no limit to how deep an integration can go, etc., etc... However, we can create artificial limits to specific things to keep some level of consistency. I'm talking about branding guidelines.
@@ -17,11 +16,11 @@ Clear branding guidelines provide constraints which makes designing a website qu
 
 Dr. Redrick offers three primary services, each with their own visual identity. However, they  also share specific qualities to show that they are part of the same family.
 
-![Citrus Gynecology Updated Logo](../../assets/images/Citrus-Gynecology-V2.webp)
+![Citrus Gynecology Updated Logo](../../assets/images/Citrus-Gynecology-V2.jpg)
 
-![Citrus Medical Marijuana Clinic Updated Logo](../../assets/images/Citrus-Medical-Marijuana-Clinic-V3.webp)
+![Citrus Medical Marijuana Clinic Updated Logo](../../assets/images/Citrus-Medical-Marijuana-Clinic-V3.jpg)
 
-![Citrus Medical Weight Loss Updated Logo](../../assets/images/Citrus-Medical-Weight-Loss-V3.webp)
+![Citrus Medical Weight Loss Updated Logo](../../assets/images/Citrus-Medical-Weight-Loss-V3.jpg)
 
 ## Logo Animation
 

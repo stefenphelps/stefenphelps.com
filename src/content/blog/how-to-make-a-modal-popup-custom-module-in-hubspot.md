@@ -5,9 +5,8 @@ publishDate: "2015-04-09"
 categories:
   - "how-to"
   - "hubspot"
-heroImage: "../../assets/images/modal-popup-module-2.webp"
+heroImage: "../../assets/images/modal-popup-module-2.png"
 author: "Stefen Phelps"
-
 ---
 
 If you're familiar with Wistia, you've seen their cool modal window video embeds where the video plays in an overlay on top of the web page (also known as a lightbox popover). Modal windows are great for adding extra content on a page that would normally take up a large amount of space.
@@ -28,7 +27,7 @@ There are two core parts to Magnific Popup, the javascript (JS) file and the sty
 
 Go into your design manager and click on "Create New Custom Module". Call this module "Modal Popup".  If there are placeholder fields already in place, you will need to delete them on the left and delete all the code on the right.  Once that's done it should look like this:
 
-![modal popup module step 1](../../assets/images/modal-popup-module-1.webp)
+![modal popup module step 1](../../assets/images/modal-popup-module-1.png)
 
 Now, you'll need to create a _rich text field_ called "**Modal Popup**" and a _text field_ called "**Modal Button**".  Once that is done, copy the following snippet of code and paste it into the text area.
 
@@ -68,7 +67,7 @@ Now, you'll need to create a _rich text field_ called "**Modal Popup**" and a _t
 
 Now your custom module should look like this:
 
-![modal popup module step 2](../../assets/images/modal-popup-module-2.webp)
+![modal popup module step 2](../../assets/images/modal-popup-module-2.png)
 
 Last thing you'll need to do is upload the two files you downloaded in step one into your portal's file manager, copy each URL, and replace the placeholder text "CSS_File_URL_Goes_Here" with your Magnific-Popup.css URL and "JS_File_URL_Goes_Here" with your Magnific-Popup.js URL. Alternatively, if you're going to use more than one on a single page, you should place the CSS in your site's header and the JS scripts in your site's footer.
 

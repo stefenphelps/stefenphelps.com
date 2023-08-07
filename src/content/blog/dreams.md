@@ -4,7 +4,6 @@ description: "Dreams have a strange way of dealing with trauma. I guess it's a g
 heroImage: "../../assets/images/stefen_a_man_talking_on_the_phone_in_a_void_waving_9668b6e2-90e3-4939-8a50-08cae5f5c7df.png"
 publishDate: "2023-02-20"
 author: "Stefen Phelps"
-
 ---
 
 January 1st, 2023 -- new years morning -- I woke up and was overcome with the feeling of sadness. I had a dream that I was standing next to a random guy on the phone. He gestured at me and whispered "I'm talking to your dad!" I got super excited in this moment; I hadn't talked to him in such a long time! I had so many things I wanted to tell him!

@@ -5,7 +5,6 @@ publishDate: "2013-06-04"
 categories:
   - "seo"
 author: "Stefen Phelps"
-
 ---
 
 Ever since the early 2000's, the early days of search engines, Google (among others) gave pagerank to a website based on the amount of links from other sites that were linking to it.  This simple premise led to companies paying groups of people to create links, called "linkbuilders", on other sites such as forums.  This is one of the most well-known "black hat" SEO techniques that has been used by many businesses even to this day.

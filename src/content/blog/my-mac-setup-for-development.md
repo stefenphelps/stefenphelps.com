@@ -4,7 +4,6 @@ description: "A list of my favorite apps, packages, and various tools I use for 
 heroImage: "../../assets/images/nova-ide.png"
 publishDate: "2022-08-13"
 author: "Stefen Phelps"
-
 ---
 
 ## The Best Apps for Web Development on MacOS

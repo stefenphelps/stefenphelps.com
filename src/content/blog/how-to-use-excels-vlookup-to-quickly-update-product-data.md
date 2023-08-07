@@ -1,12 +1,11 @@
 ---
 title: "How To Use Excel's VLOOKUP to Quickly Update Product Data"
 description: "It happens all the time. You get a CSV file full of products with new pricing and you're tasked with updating the products on the website with this new data. I think we can all agree that updating product data can be a huge pain in the butt and a major"
-publishDate: '2016-08-08'
+publishDate: "2016-08-08"
 categories:
-  - 'how-to'
-heroImage: '../../assets/images/step-3-1.gif'
-author: 'Stefen Phelps'
-
+  - "how-to"
+heroImage: "../../assets/images/step-3-1.gif"
+author: "Stefen Phelps"
 ---
 
 It happens all the time. You get a CSV file full of products with new pricing and you're tasked with updating the products on the website with this new data. I think we can all agree that updating product data can be a huge pain in the butt and a major time suck—especially if you're doing it one-by-one. Well, I'm here to let you in on a little Excel secret called a VLOOKUP that's going to make your life a whole lot easier. It sounds complicated but don't worry, I'll walk you through **step-by-step how to perform a VLOOKUP in Excel**. **You'll thank me later**.
@@ -23,7 +22,7 @@ Before we get started, you're going to need a CSV product export from your webs
 
 In your product database export or the "outdated.csv" in our sample files, create a new column. We're going to be updating the cost in our example so we'll name this column "Updated Cost".
 
-![step 1](../../assets/images/step-1-column.webp)
+![step 1](../../assets/images/step-1-column.png)
 
 ## Step 2: **Perform The VLOOKUP**
 
@@ -45,7 +44,7 @@ The last field "**Range_lookup**" is there to specify whether you want the close
 
 If you followed the instructions in the sample files, your function arguments should now look like this:
 
-![step 2](../../assets/images/step-2.webp)
+![step 2](../../assets/images/step-2.png)
 
 ## Step 3: **Check The Data**
 

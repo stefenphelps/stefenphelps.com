@@ -2,9 +2,8 @@
 title: "Change the gutter size on HubSpot's drag-n-drop grid"
 description: "The default gap between columns on HubSpot's drag-n-drop pages can be difficult to change. Not anymore..."
 publishDate: "2022-01-24"
-heroImage: "../../assets/images/edit-drag-and-drop-areas-in-page-editor.webp"
+heroImage: "../../assets/images/edit-drag-and-drop-areas-in-page-editor.png"
 author: "Stefen Phelps"
-
 ---
 
 The default [12-column grid system provided by HubSpot](https://github.com/HubSpot/cms-theme-boilerplate/blob/main/src/css/objects/_layout.css) for the drag-and-drop page editor is based off outdated CSS rules that are a huge pain to change without breaking things.

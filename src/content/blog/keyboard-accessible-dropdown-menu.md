@@ -1,10 +1,9 @@
 ---
-title: 'Keyboard Accessible Dropdown Menu'
+title: "Keyboard Accessible Dropdown Menu"
 description: "Thanks to the new CSS psuedo class ':focus-within', keyboard accessible dropdown menus are much simpler to create than they used to be."
-heroImage: '../../assets/images/keyboard-accessible-dropdown-menu.png'
-publishDate: '2023-05-24'
-author: 'Stefen Phelps'
-
+heroImage: "../../assets/images/keyboard-accessible-dropdown-menu.png"
+publishDate: "2023-05-24"
+author: "Stefen Phelps"
 ---
 
 When browsing the web via a keyboard, tabbing through page links is the primary way to navigate around a page quickly. However, this creates a problem with traditional dropdown navigation menus. When tabbing through, you can't access the dropdown items since they typically require a mouse hover.
@@ -19,17 +18,17 @@ If you've been coding HTML navigation menus for a while now, you'll know the bas
 
 ```html
 <nav>
-	<ul>
-		<li>
-			<a href="/page">Page link</a>
-			<ul>
-				<li><a href="/page/subpage">I'm a dropdown item</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="/page">Another link</a>
-		</li>
-	</ul>
+  <ul>
+    <li>
+      <a href="/page">Page link</a>
+      <ul>
+        <li><a href="/page/subpage">I'm a dropdown item</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="/page">Another link</a>
+    </li>
+  </ul>
 </nav>
 ```
 
@@ -39,23 +38,23 @@ And then use some basic styles to make it look like a menu and show the dropdown
 
 ```css
 nav ul {
-	display: flex;
-	gap: 1rem;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 nav ul li {
-	position: relative;
+  position: relative;
 }
 nav ul li ul {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
 }
 nav ul li:hover ul {
-	visibility: visible;
+  visibility: visible;
 }
 ```
 

@@ -7,7 +7,6 @@ categories:
   - "hubspot"
 heroImage: "../../assets/images/blur-up-image-loading.gif"
 author: "Stefen Phelps"
-
 ---
 
 I am a big fan of the way Instagram's mobile app and [Medium](https://jmperezperez.com/medium-image-progressive-loading-placeholder/)'s website load images. If you don't know what I'm talking about, it's when an extremely small image is scaled up, blurred out and is loaded before the full image... eventually fading into the full image once it has loaded. Like so:
@@ -38,8 +37,8 @@ As usual, we use an inline style for the image so it can be unique on each page
 
 One thing to note, HubSpot uses two different URLs for loading images. One for images that are compressed/resized and one for images that are not compressed/resized:
 
-- Doesn't resize: **example.com/**hubfs**/image.webp**
-- Does resize: _example.com/**hs-fs/hubfs**/image.webp_
+- Doesn't resize: **example.com/**hubfs**/image.png**
+- Does resize: _example.com/**hs-fs/hubfs**/image.png_
 
 By default, the custom module will use the URL that doesn't resize the image. To get around this you can use the "replace" HubL filter to replace the default URL like so:
 

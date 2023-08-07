@@ -4,9 +4,8 @@ description: "Your website has been designed and coded, the products loaded, a p
 publishDate: "2016-08-16"
 categories:
   - "seo"
-heroImage: "../../assets/images/meta-title-description-seo.webp"
+heroImage: "../../assets/images/meta-title-description-seo.jpg"
 author: "Stefen Phelps"
-
 ---
 
 Your website has been designed and coded, the products loaded, a payment gateway linked and you're ready to start taking orders. If you build it, they will come... right? Unfortunately, it's not always that easy. By implementing our tips and best practices, however, you'll have a much better shot at getting your products in front of your audience.

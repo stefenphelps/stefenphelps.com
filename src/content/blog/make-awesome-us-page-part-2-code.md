@@ -4,9 +4,8 @@ description: "In part 2 (this post!), I'll be discussing the technical aspects o
 publishDate: "2016-10-18"
 categories:
   - "how-to"
-heroImage: "../../assets/images/behind-the-team-member-photos.webp"
+heroImage: "../../assets/images/behind-the-team-member-photos.jpg"
 author: "Stefen Phelps"
-
 ---
 
 Lief discussed the planning and production stages of our about page overhaul in part 1. In part 2 (this post!), I'll be discussing the technical aspects of making the team member photos/videos come alive on the web, some issues we faced and how we solved them. If you haven't seen it yet, be sure to **[check out our awesome about page](https://www.growwithsms.com/about) before you do anything else!**
@@ -16,7 +15,7 @@ Lief discussed the planning and production stages of our about page overhaul in 
 The key to creating photos that come to life — the Harry Potter effect if you will — was to use native HTML5 video elements, hiding the video controls and using the first frame of the video as the video thumbnail (aka the "poster"). For example, the basic HTML for Matt's video looks like this:
 
 ```html
-<video id="video" poster="/videos/Matt-Johnson.webp">
+<video id="video" poster="/videos/Matt-Johnson.png">
   <source src="/videos/Matt.mp4" type="video/mp4" />
 </video>
 ```

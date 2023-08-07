@@ -1,12 +1,11 @@
 ---
-title: 'CodePen Meetup coming to Brooksville July 25th!'
+title: "CodePen Meetup coming to Brooksville July 25th!"
 description: "Over the years of doing freelance work for local businesses and organizations, I've met quite a few people that are interested in 'coding'. Whether that means a specific programming language, responsive design, or just web design in general. They all had the same question... where do I start?"
-publishDate: '2017-07-08'
+publishDate: "2017-07-08"
 categories:
-  - 'codepen-meetup'
-heroImage: '../../assets/images/Black-Large.png'
-author: 'Stefen Phelps'
-
+  - "codepen-meetup"
+heroImage: "../../assets/images/Black-Large.png"
+author: "Stefen Phelps"
 ---
 
 Over the years of doing freelance work for local businesses and organizations, I've met quite a few people that are interested in "coding". Whether that means a specific programming language, responsive design, or just web design in general. They all had the same question... "where do I start?"
@@ -15,7 +14,7 @@ I usually just tell them to follow one of the beginner tutorials on [Codeacademy
 
 So when I learned about [CodePen Meetups](https://blog.codepen.io/meetups/) I was super excited! It was the perfect happenstance of wanting to do something for people who want to learn, while also giving me an opportunity to grow from other developers in the Hernando and Greater Tampa Bay area. Believe it or not, there are quite a few of them!
 
-![codepen logo](../../assets/images/Button-Black-Large.webp)
+![codepen logo](../../assets/images/Button-Black-Large.png)
 
 ### So what are you waiting for?!
 
