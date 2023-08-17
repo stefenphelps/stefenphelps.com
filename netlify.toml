@@ -14,7 +14,6 @@
 		X-Frame-Options = "DENY"
 		X-Content-Type-Options = "nosniff"
 		X-XSS-Protection = "1; mode=block"
-		X-Robots-Tag = "index"
 		Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.codepen.io codepen.io *.twitter.com; font-src 'self' 'unsafe-inline' gstatic.com *.gstatic.com; style-src 'self' 'unsafe-inline' googleapis.com *.googleapis.com; media-src 'self' https://www.bluleadz.com; img-src 'self' *.twitter.com data:; frame-src 'self' *.codepen.io *.twitter.com codepen.io; connect-src 'self' *.googleapis.com data:;"
 
 [[headers]]

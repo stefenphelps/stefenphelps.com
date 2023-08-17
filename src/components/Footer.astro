@@ -140,27 +140,28 @@ const year = new Date().getFullYear();
 	</button>
 </footer>
 <script>
-document.addEventListener('astro:load', () => {
-	const html = document.documentElement;
-	const toggleButton = document.querySelector('.footer-toggle');
-	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-	
 	const setColorScheme = (value) => {
-		html.dataset.colorScheme = value;
+		document.documentElement.dataset.colorScheme = value;
 		localStorage.setItem('color-scheme', value);
 	};
-	
-	if (localStorage.getItem('color-scheme')) {
-		setColorScheme(localStorage.getItem('color-scheme'));
-	}
-	
-	toggleButton.addEventListener('click', () => {
-		if (!html.dataset.colorScheme && prefersDark.matches) {
-			setColorScheme('light');
-			return;
-		}
-		const scheme = html.dataset.colorScheme === 'dark' ? 'light' : 'dark';
-		setColorScheme(scheme);
+	document.addEventListener('astro:load', () => {
+		const html = document.documentElement;
+		const toggleButton = document.querySelector('.footer-toggle');
+		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+		toggleButton.addEventListener('click', () => {
+			if (!html.dataset.colorScheme && prefersDark.matches) {
+				setColorScheme('light');
+				return;
+			}
+			const scheme = html.dataset.colorScheme === 'dark' ? 'light' : 'dark';
+			setColorScheme(scheme);
+		});
 	});
-});
+	// Runs on view transitions navigation
+	document.addEventListener('astro:beforeload', function() {
+		if (localStorage.getItem('color-scheme')) {
+			setColorScheme(localStorage.getItem('color-scheme'));
+		}
+	});
 </script>
