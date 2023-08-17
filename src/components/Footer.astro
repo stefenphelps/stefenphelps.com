@@ -158,6 +158,9 @@ const year = new Date().getFullYear();
 			setColorScheme(scheme);
 		});
 	});
+	if (localStorage.getItem('color-scheme')) {
+		setColorScheme(localStorage.getItem('color-scheme'));
+	}
 	// Runs on view transitions navigation
 	document.addEventListener('astro:beforeload', function() {
 		if (localStorage.getItem('color-scheme')) {
