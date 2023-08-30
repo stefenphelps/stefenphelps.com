@@ -13,23 +13,24 @@
     "deploy": "netlify deploy --prod"
   },
   "devDependencies": {
-    "@astrojs/prefetch": "^0.3.0",
-    "@astrojs/sitemap": "^2.0.2",
+    "@astrojs/prefetch": "^0.4.0",
+    "@astrojs/sitemap": "^3.0.0",
     "@vite-pwa/astro": "^0.1.1",
-    "astro": "^2.10.14",
+    "astro": "^3.0.0",
     "autoprefixer": "^10.4.15",
     "node-snackbar": "^0.1.16",
-    "prettier": "3.0.2",
+    "prettier": "3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "sass": "^1.66.1",
     "vite-plugin-pwa": "0.16.4",
     "workbox-window": "^7.0.0"
   },
   "dependencies": {
-    "@astrojs/rss": "^2.4.4",
+    "@astrojs/rss": "^3.0.0",
     "astro-critters": "^2.0.11",
     "netlify-plugin-cache": "^1.0.3",
     "sharp": "^0.32.5",
+    "shiki": "^0.14.3",
     "slugify": "^1.6.6",
     "timeago.js": "^4.0.2"
   }

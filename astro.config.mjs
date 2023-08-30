@@ -11,12 +11,8 @@ export default defineConfig({
   compressHTML: false,
   markdown: {
     shikiConfig: {
-      theme: 'material-darker',
+      theme: 'material-theme-darker',
     },
-  },
-  experimental: {
-    viewTransitions: true,
-    assets: true,
   },
   image: {
     service: sharpImageService(),
