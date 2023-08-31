@@ -72,7 +72,7 @@ const permalink = 'https://stefenphelps.com/';
 </Layout>
 
 <script>
-	document.addEventListener('astro:load', () => {
+	document.addEventListener('astro:page-load', () => {
 		const button = document.querySelector('.mustache-button');
 		const mustacheImg = document.querySelector('.home-image-stache');
 		button?.addEventListener('click', function () {
