@@ -1,5 +1,5 @@
 ---
-import { pwaInfo } from 'virtual:pwa-info';
+// import { pwaInfo } from 'virtual:pwa-info';
 import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
@@ -32,7 +32,7 @@ import './styles/global.scss';
 		<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
 		<link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
 		<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
-		{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
+		<!-- {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />} -->
 		<link rel='mask-icon' href='/safari-pinned-tab.svg' color='#0f2a4f' />
 		<link rel='alternate' type='application/rss+xml' title='RSS Feed for stefenphelps.com' href='/rss.xml' />
 
@@ -78,6 +78,43 @@ import './styles/global.scss';
 	</head>
 	<body class={bodyClass}>
 		<slot />
-		<script src='/src/scripts/main.js'></script>
+		<script>
+		// import { registerSW } from 'virtual:pwa-register';
+		// import Snackbar from 'node-snackbar';
+		// 
+		// // pwa stuff
+		// if ('serviceWorker' in navigator) {
+		//   const updateSW = registerSW({
+		// 	onNeedRefresh() {
+		// 	  Snackbar.show({
+		// 		text: 'Update available.',
+		// 		actionText: 'Update',
+		// 		actionTextColor: '#fff',
+		// 		onActionClick: updateSW(true),
+		// 	  });
+		// 	},
+		// 	onOfflineReady() {
+		// 	  Snackbar.show({
+		// 		actionTextColor: '#fff',
+		// 		text: 'Offline ready.',
+		// 	  });
+		// 	},
+		//   });
+		// 
+		//   window.addEventListener('offline', () => {
+		// 	Snackbar.show({
+		// 	  actionTextColor: '#fff',
+		// 	  text: 'You are offline—some things may not work.',
+		// 	});
+		//   });
+		// 
+		//   window.addEventListener('online', () => {
+		// 	Snackbar.show({
+		// 	  actionTextColor: '#fff',
+		// 	  text: "You're back online, proceed as usual 😀",
+		// 	});
+		//   });
+		// }
+		</script>
 	</body>
 </html>
