@@ -144,7 +144,7 @@ const year = new Date().getFullYear();
 		document.documentElement.dataset.colorScheme = value;
 		localStorage.setItem('color-scheme', value);
 	};
-	document.addEventListener('astro:load', () => {
+	document.addEventListener('astro:page-load', () => {
 		const html = document.documentElement;
 		const toggleButton = document.querySelector('.footer-toggle');
 		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
@@ -162,7 +162,7 @@ const year = new Date().getFullYear();
 		setColorScheme(localStorage.getItem('color-scheme'));
 	}
 	// Runs on view transitions navigation
-	document.addEventListener('astro:beforeload', function() {
+	document.addEventListener('astro:after-swap', function() {
 		if (localStorage.getItem('color-scheme')) {
 			setColorScheme(localStorage.getItem('color-scheme'));
 		}
