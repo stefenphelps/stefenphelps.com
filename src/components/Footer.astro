@@ -157,10 +157,10 @@ const year = new Date().getFullYear();
 			const scheme = html.dataset.colorScheme === 'dark' ? 'light' : 'dark';
 			setColorScheme(scheme);
 		});
+		if (localStorage.getItem('color-scheme')) {
+			setColorScheme(localStorage.getItem('color-scheme'));
+		}
 	});
-	if (localStorage.getItem('color-scheme')) {
-		setColorScheme(localStorage.getItem('color-scheme'));
-	}
 	// Runs on view transitions navigation
 	document.addEventListener('astro:after-swap', function() {
 		if (localStorage.getItem('color-scheme')) {
