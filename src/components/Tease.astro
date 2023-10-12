@@ -10,7 +10,7 @@ const timeAgoLabel = format(post.data.publishDate);
 	{
 		post.data.heroImage && (
 			<div class='post-preview-image' transition:name=`heroimage-${post.slug}`>
-				{post.data.heroImage && <Image src={post.data.heroImage} alt={post.data.title} /> }
+				{post.data.heroImage && <Image src={post.data.heroImage} alt={post.data.title} densities={[1, 1.5, 2]}/> }
 			</div>
 		)
 	}
