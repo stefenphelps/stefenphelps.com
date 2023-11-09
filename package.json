@@ -14,8 +14,8 @@
 	},
 	"devDependencies": {
 		"@astrojs/prefetch": "^0.4.1",
-		"@astrojs/sitemap": "^3.0.2",
-		"astro": "^3.4.0",
+		"@astrojs/sitemap": "^3.0.3",
+		"astro": "^3.4.4",
 		"autoprefixer": "^10.4.16",
 		"prettier": "3.0.3",
 		"prettier-plugin-astro": "^0.12.1",
