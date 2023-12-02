@@ -1,109 +1,110 @@
 .header {
-	background: var(--transparent-bg);
-	border-bottom: 1px solid var(--border);
-	backdrop-filter: blur(25px);
-	box-shadow: 0 1rem 1.5rem 0 rgba(0, 0, 0, 0.05);
-	text-align: center;
-	position: sticky;
-	top: 0;
-	padding: 1rem;
-	grid-column: 1 / -1;
-	z-index: 1000;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
-	&-logo {
-		line-height: 1;
-		padding: 0;
-		border: 0 none;
-		font-family: 'STIX Two Text', serif;
-		color: var(--text) !important;
-		text-decoration: none;
-		font-weight: 600;
-		font-size: 2rem;
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-			text-decoration-style: solid;
-			text-decoration-thickness: 3px;
-			text-decoration-color: var(--accent);
-		}
-		span {
-			@media (max-width: 600px) {
-				display: none;
-			}
-		}
-	}
-	&-nav {
-		flex: 1;
-		display: block;
-		padding: 0;
-		font-size: 1rem;
-		line-height: 2;
-		&-menu {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: center;
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			gap: 1rem;
-			a {
-				margin: 0;
-				border: 1px solid var(--border);
-				border-radius: 5px;
-				color: var(--text) !important;
-				display: inline-block;
-				padding: 0.1rem 1rem;
-				text-decoration: none;
-				&:hover,
-				&.active {
-					color: var(--accent) !important;
-					border-color: var(--accent);
-				}
-			}
-		}
-	}
-	&-toggle {
-		padding: 0.325rem;
-		margin: 0;
-		background: var(--accent-bg);
-		z-index: 2;
-		&:hover,
-		&:focus {
-			background: var(--bg);
-		}
-		&-moon {
-			display: none;
-			@media (prefers-color-scheme: dark) {
-				display: block;
-			}
-			html[data-color-scheme='light'] & {
-				display: none;
-			}
-		}
-		&-sun {
-			display: block;
-			@media (prefers-color-scheme: dark) {
-				display: none;
-			}
-			html[data-color-scheme='light'] & {
-				display: block;
-			}
-		}
-	}
+  background: var(--transparent-bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 1rem 1.5rem 0 rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  grid-column: 1 / -1;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  &-logo {
+    line-height: 1;
+    padding: 0;
+    border: 0 none;
+    font-family: 'STIX Two Text', serif;
+    color: var(--text) !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2rem;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-style: solid;
+      text-decoration-thickness: 3px;
+      text-decoration-color: var(--accent);
+    }
+    span {
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+  }
+  &-nav {
+    flex: 1;
+    display: block;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 2;
+    &-menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 1rem;
+      a {
+        margin: 0;
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        color: var(--text) !important;
+        display: inline-block;
+        padding: 0.1rem 1rem;
+        text-decoration: none;
+        &:hover,
+        &.active {
+          color: var(--accent) !important;
+          border-color: var(--accent);
+        }
+      }
+    }
+  }
+  &-toggle {
+    padding: 0.325rem;
+    margin: 0;
+    background: var(--accent-bg);
+    z-index: 2;
+    &:hover,
+    &:focus {
+      background: var(--bg);
+    }
+    &-moon {
+      display: none;
+      @media (prefers-color-scheme: dark) {
+        display: block;
+      }
+      html[data-color-scheme='light'] & {
+        display: none;
+      }
+    }
+    &-sun {
+      display: block;
+      @media (prefers-color-scheme: dark) {
+        display: none;
+      }
+      html[data-color-scheme='light'] & {
+        display: block;
+      }
+    }
+  }
 }
 @media (max-width: 600px) {
-	.header-nav-menu {
-		gap: 0.5rem;
-		a {
-			font-size: 14px;
-			padding: 0.125rem 0.5rem;
-			span {
-				display: none;
-			}
-		}
-	}
+  .header-nav-menu {
+    gap: 0.5rem;
+    a {
+      font-size: 14px;
+      padding: 0.125rem 0.5rem;
+      span {
+        display: none;
+      }
+    }
+  }
 }

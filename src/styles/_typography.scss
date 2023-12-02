@@ -22,6 +22,7 @@ h6 {
   font-weight: 600;
   a {
     text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
   }
 }
 h1,
@@ -60,6 +61,7 @@ a,
 a:visited {
   color: var(--accent);
   text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
 }
 
 a:hover {
