@@ -1,6 +1,5 @@
 import { defineConfig, sharpImageService } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import prefetch from '@astrojs/prefetch';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,5 +11,6 @@ export default defineConfig({
 			theme: 'material-theme-darker'
 		}
 	},
-	integrations: [sitemap(), prefetch()]
+	integrations: [sitemap()],
+	prefetch: true
 });
