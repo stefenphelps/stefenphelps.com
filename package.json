@@ -14,15 +14,15 @@
 	},
 	"devDependencies": {
 		"@astrojs/sitemap": "^3.1.6",
-		"astro": "^4.12.2",
-		"autoprefixer": "^10.4.19",
+		"astro": "^4.15.1",
+		"autoprefixer": "^10.4.20",
 		"prettier": "3.3.3",
 		"prettier-plugin-astro": "^0.14.1",
 		"sass": "^1.77.8"
 	},
 	"dependencies": {
 		"@astrojs/rss": "^4.0.7",
-		"shiki": "^1.10.3",
+		"shiki": "^1.15.0",
 		"slugify": "^1.6.6",
 		"timeago.js": "^4.0.2"
 	}

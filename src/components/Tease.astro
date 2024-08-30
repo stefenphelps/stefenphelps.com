@@ -16,7 +16,7 @@ const timeAgoLabel = format(post.data.publishDate);
 	}
 	<div class='post-preview-text'>
 		<h2 class='h5' transition:name=`heading-${post.slug}`>
-			<a rel='prefetch' href=`/blog/${post.slug}/`>{post.data.title}</a>
+			<a data-astro-prefetch href=`/blog/${post.slug}/`>{post.data.title}</a>
 		</h2>
 		<time datetime={post.data.publishDate} transition:name=`date-${post.slug}`>
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='0.875em' height='1em'>

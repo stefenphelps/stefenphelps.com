@@ -3,19 +3,19 @@ const { activeNav } = Astro.props;
 ---
 
 <header class='header'>
-	<a class="header-logo" rel='prefetch' href='/' class={activeNav === 'home' ? 'active' : ''}>
+	<a class="header-logo" data-astro-prefetch href='/' class={activeNav === 'home' ? 'active' : ''}>
 		Stefen <span>Phelps</span>
 	</a>
 	<nav class='header-nav'>
 		<ul class='header-nav-menu'>
 			<li>
-				<a rel='prefetch' href='/about/' class={activeNav === 'about' ? 'active' : ''}>About</a>
+				<a data-astro-prefetch href='/about/' class={activeNav === 'about' ? 'active' : ''}>About</a>
 			</li>
 			<li>
-				<a rel='prefetch' href='/blog/' class={activeNav === 'blog' ? 'active' : ''}>Blog</a>
+				<a data-astro-prefetch href='/blog/' class={activeNav === 'blog' ? 'active' : ''}>Blog</a>
 			</li>
 			<li>
-				<a rel='prefetch' href='/contact/' class={activeNav === 'contact' ? 'active' : ''}>Contact</a>
+				<a data-astro-prefetch href='/contact/' class={activeNav === 'contact' ? 'active' : ''}>Contact</a>
 			</li>
 		</ul>
 	</nav>
