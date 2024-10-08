@@ -4,7 +4,7 @@
 	command = "npm run build"
 		
 [[headers]]
-	for = "/*"
+	for = "/"
 	[headers.values]
 		X-Frame-Options = "DENY"
 		X-Content-Type-Options = "nosniff"
