@@ -29,7 +29,7 @@ const sortedPosts = filteredPosts.sort((a, b) =>
   <main>
     <article class="article">
       <div class="wrapper wrapper--wide" style="text-align: center;" transition:name=`heroimage-${post.slug}`>
-        {post.data.heroImage && <Image src={post.data.heroImage} alt={post.data.title} /> }
+        {post.data.heroImage && <Image src={post.data.heroImage} alt={post.data.title} loading="eager" width="1040" densities={[1, 2]} /> }
       </div>
       <div class="wrapper">
         <h1 transition:name=`heading-${post.slug}`>{post.data.title}</h1>

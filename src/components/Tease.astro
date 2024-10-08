@@ -49,10 +49,15 @@ const timeAgoLabel = format(post.data.publishDate);
 		&-image {
 			flex: 1 1 200px;
 			background: white;
+			overflow: hidden;
 			img {
 				height: 100% !important;
 				object-fit: cover;
+				transition: 900ms ease;
 			}
+		}
+		&:hover img {
+			transform: scale(1.1);
 		}
 		&-text {
 			flex: 1 1 300px;
@@ -61,6 +66,12 @@ const timeAgoLabel = format(post.data.publishDate);
 		}
 		h2 {
 			margin: 0;
+			a::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				z-index: 100;
+			}
 		}
 		time {
 			display: flex;
