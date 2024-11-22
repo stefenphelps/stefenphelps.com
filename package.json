@@ -13,16 +13,16 @@
 		"deploy": "netlify deploy --prod"
 	},
 	"devDependencies": {
-		"@astrojs/sitemap": "^3.2.0",
-		"astro": "^4.15.12",
+		"@astrojs/sitemap": "^3.2.1",
+		"astro": "^4.16.14",
 		"autoprefixer": "^10.4.20",
 		"prettier": "3.3.3",
 		"prettier-plugin-astro": "^0.14.1",
-		"sass": "^1.79.4"
+		"sass": "^1.81.0"
 	},
 	"dependencies": {
-		"@astrojs/rss": "^4.0.7",
-		"shiki": "^1.21.0",
+		"@astrojs/rss": "^4.0.9",
+		"shiki": "^1.23.1",
 		"slugify": "^1.6.6",
 		"timeago.js": "^4.0.2"
 	}
