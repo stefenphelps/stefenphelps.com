@@ -71,18 +71,16 @@ const permalink = 'https://stefenphelps.com/';
 	<Footer />
 </Layout>
 
-<script>
-	document.addEventListener('astro:page-load', () => {
-		const button = document.querySelector('.mustache-button');
-		const mustacheImg = document.querySelector('.home-image-stache');
-		const portrait = document.querySelector('.home-image-picture');
-		button?.addEventListener('click', function () {
-			const randomStache = Math.floor(Math.random() * 60 + 1).toString();
-			mustacheImg.src = '/mustaches/' + randomStache + '.svg';
-			mustacheImg.style.display = 'block';
-			mustacheImg.classList.toggle('glitch-me');
-			portrait.classList.toggle('glitch-me');
-		});
+<script is:inline data-astro-rerun>
+	const button = document.querySelector('.mustache-button');
+	const mustacheImg = document.querySelector('.home-image-stache');
+	const portrait = document.querySelector('.home-image-picture');
+	button?.addEventListener('click', function () {
+		const randomStache = Math.floor(Math.random() * 60 + 1).toString();
+		mustacheImg.src = '/mustaches/' + randomStache + '.svg';
+		mustacheImg.style.display = 'block';
+		mustacheImg.classList.toggle('glitch-me');
+		portrait.classList.toggle('glitch-me');
 	});
 </script>
 
