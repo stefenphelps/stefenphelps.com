@@ -72,11 +72,11 @@ const permalink = 'https://stefenphelps.com/';
 </Layout>
 
 <script is:inline data-astro-rerun>
-	const button = document.querySelector('.mustache-button');
-	const mustacheImg = document.querySelector('.home-image-stache');
-	const portrait = document.querySelector('.home-image-picture');
+	var button = document.querySelector('.mustache-button');
+	var mustacheImg = document.querySelector('.home-image-stache');
+	var portrait = document.querySelector('.home-image-picture');
 	button?.addEventListener('click', function () {
-		const randomStache = Math.floor(Math.random() * 60 + 1).toString();
+		var randomStache = Math.floor(Math.random() * 60 + 1).toString();
 		mustacheImg.src = '/mustaches/' + randomStache + '.svg';
 		mustacheImg.style.display = 'block';
 		mustacheImg.classList.toggle('glitch-me');

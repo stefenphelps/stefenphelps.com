@@ -183,14 +183,14 @@ const permalink = 'https://stefenphelps.com/about';
 </Layout>
 
 <script is:inline data-astro-rerun>
-	const progresssBars = document.querySelectorAll('progress');
-	const radioButtons = document.getElementsByName('type-of-about');
-	const professionalContent = document.querySelector('.professional-content');
-	const personalContent = document.querySelector('.personal-content');
+	var progresssBars = document.querySelectorAll('progress');
+	var radioButtons = document.getElementsByName('type-of-about');
+	var professionalContent = document.querySelector('.professional-content');
+	var personalContent = document.querySelector('.personal-content');
 	
 	function animate() {
 		progresssBars.forEach(function (item) {
-			const theFinalNumber = item.value;
+			var theFinalNumber = item.value;
 			item.classList.remove('ready');
 			item.setAttribute('value', 0);
 			item.classList.add('ready');
