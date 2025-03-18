@@ -73,6 +73,7 @@ const permalink = 'https://stefenphelps.com/about';
 				</div>
 				<h2 class='h3'>Career History</h2>
 				<ol>
+					<li><time>2024</time> almost doubled Kelp's revenue from 4 years ago and still 5 people.</li>
 					<li>
 						<time>2023</time> Won our first national award as the top "Innovative" agency in the Americas from <a href="https://woocommerce.com/posts/the-wooexpert-awards-americas-2023/">Automattic / Woo</a>.
 					</li>
@@ -151,6 +152,8 @@ const permalink = 'https://stefenphelps.com/about';
 				</div>
 				<h2 class='h3'>Personal Milestones</h2>
 				<ol>
+					<li><time>2024</time> Became a Cybertruck owner (twice! lol)</li>
+					<li><time>2023</time> Made a baby (again).</li>
 					<li><time>2022</time> Ran first 25k and 22k races.</li>
 					<li>
 						<time>2021</time> Minivan owner achievement unlocked.
@@ -218,6 +221,7 @@ const permalink = 'https://stefenphelps.com/about';
 </script>
 
 <style lang='scss' is:global>
+	@use 'sass:math';
 	.about-page {
 		@media (max-width: 767px) {
 			main article {
@@ -267,7 +271,7 @@ const permalink = 'https://stefenphelps.com/about';
 			}
 			@for $i from 1 through 100 {
 				&:nth-child(#{$i})::-webkit-progress-value {
-					transition-delay: random(200) + ms;
+					transition-delay: math.random(200) + ms;
 				}
 			}
 		}
