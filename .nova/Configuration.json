@@ -1,6 +1,5 @@
 {
-  "prettier.default-config.singleQuote" : "Enable",
-  "prettier.default-config.trailingComma" : "Global Default",
+  "prettier.default-config.singleQuote" : true,
   "tommasonegri.vue.serverRunning" : true,
   "workspace.preview_type" : "custom",
   "workspace.preview_url" : "http:\/\/localhost:3000"
