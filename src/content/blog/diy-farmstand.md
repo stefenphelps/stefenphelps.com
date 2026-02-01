@@ -27,7 +27,7 @@ All-in-all this cost under $200. If I did it again, I’d get a fourth 4x4 inste
 
 ## Step 1: Make the cuts
 
-### 4x4 posts (from ~~three~~ three 8 ft boards)
+### 4x4 posts (from ~~three~~ four 8 ft boards)
 
 - Front legs: 2 x 72"
 - Rear legs: 2 x 66" (shorter for roof slope)
