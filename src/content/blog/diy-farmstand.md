@@ -1,7 +1,7 @@
 ---
 title: 'DIY Farmstand: 3 Hour Build'
 description: 'How I put together a simple, sturdy farmstand using basic tools, some wood, and a metal roofing panel for under $200 despite the AI trying to sabotage me ;-)'
-heroImage: '../../assets/images/diy-farmstand-finished-front.jpeg'
+heroImage: '../../assets/images/diy-farmstand-finished-side.jpeg'
 publishDate: '2026-02-01'
 author: 'Stefen Phelps'
 categories: ['DIY', 'Woodworking']
