@@ -1,9 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import { format } from 'timeago.js';
+import timeagoScript from "../scripts/timeago.ts?url";
 
 const { post } = Astro.props;
-const timeAgoLabel = format(post.data.publishDate);
+const timeAgoLabel = new Date(post.data.publishDate).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+});
 ---
 
 <article class='post-preview'>
@@ -27,11 +31,15 @@ const timeAgoLabel = format(post.data.publishDate);
 					class='fa-secondary'
 					d='M0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192z'></path>
 			</svg>
-			{timeAgoLabel}
+			<span data-timeago data-timeago-datetime={post.data.publishDate}>
+				{timeAgoLabel}
+			</span>
 		</time>
 		<p>{post.data.description}</p>
 	</div>
 </article>
+
+<script type="module" src={timeagoScript}></script>
 
 <style lang='scss' is:global>
 	.post-preview {
