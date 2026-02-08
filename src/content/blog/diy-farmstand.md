@@ -1,7 +1,7 @@
 ---
 title: 'DIY Farmstand: 3 Hour Build'
 description: 'How I put together a simple, sturdy farmstand using basic tools, some wood, and a metal roofing panel for under $200 despite the AI trying to sabotage me ;-)'
-heroImage: '../../assets/images/diy-farmstand-finished-side.jpeg'
+heroImage: '../../assets/images/diy-farmstand-painted-siding.jpeg'
 publishDate: '2026-02-01'
 author: 'Stefen Phelps'
 categories: ['DIY', 'Woodworking']
@@ -87,3 +87,21 @@ Overall I’m happy with how it came out. It might have looked better if I wrapp
 ![finished front view](../../assets/images/diy-farmstand-finished-front.jpeg)
 
 ![finished side view](../../assets/images/diy-farmstand-finished-side.jpeg)
+
+## 2/7/2026 UPDATE: Paint and Siding
+
+Decided we needed a little more polish before we put it out by the road and painted the whole thing white with some extra primer we had sitting in the garage. We also had some leftover wood stain which we used on the shelving which I think turned out great.
+
+![painted and stained farmstand](../../assets/images/diy-farmstand-painted.jpeg)
+
+The next day I went back to lowes and got 5 more 1x6x10 treated boards to add siding to both sides and the lower rear. We wanted to keep the top open so our kids could use it as a booth of sorts for when they want to be out there selling lemonade or what have you.
+
+![adding trim and siding to the farmstand](../../assets/images/diy-farmstand-trim-siding.jpeg)
+
+Which means we now have more painting to be done... We had some leftover blue paint in the garage so we decided to use that for the inside walls to give it a little color.
+
+![adding trim and siding to the farmstand](../../assets/images/diy-farmstand-painted-rear.jpeg)
+
+![adding trim and siding to the farmstand](../../assets/images/diy-farmstand-painted-front.jpeg)
+
+Because we were able to re-use some of the existing paint and stain we were still able to keep this under $250 and spent about 6 or 7 total hours of work. Now we just need to move this hundred plus pound beast next to the road...
