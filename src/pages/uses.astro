@@ -1,0 +1,123 @@
+---
+import Layout from '../Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Uses';
+const description = 'The hardware, software, and desk setup Stefen uses for work.';
+const permalink = 'https://stefenphelps.com/uses';
+---
+
+<Layout title={title} description={description} permalink={permalink}>
+	<Header activeNav='uses' />
+	<main class='wrapper uses-page'>
+		<article>
+			<h1>{title}</h1>
+			<p>
+				A living list of the gear and tools I use for work. Most software and terminal setup is the same as my
+				older post:
+				<a href='/blog/my-mac-setup-for-development/'>My Mac Setup for Web Development</a>.
+			</p>
+
+			<section>
+				<h2 class='h3'>Editor + Terminal</h2>
+				<ul>
+					<li><strong>Editor:</strong> Nova by Panic</li>
+					<li><strong>Terminal:</strong> default macOS Terminal</li>
+					<li><strong>Shell:</strong> Oh My Zsh</li>
+				</ul>
+				<h3 class='h5'>Nova Extensions</h3>
+				<ul>
+					<li>Astro</li>
+					<li>CodeKit</li>
+					<li>ENV</li>
+					<li>ESLint</li>
+					<li>Liquid</li>
+					<li>PHPLint</li>
+					<li>Prettier*</li>
+					<li>SQL</li>
+					<li>TOML</li>
+					<li>Twig</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class='h3'>Software I Use a Lot</h2>
+				<ul>
+					<li>Homebrew</li>
+					<li>Node.js + npm</li>
+					<li>Composer</li>
+					<li>HubSpot CLI</li>
+					<li>Shopify CLI</li>
+					<li>GitHub Desktop</li>
+					<li>Transmit</li>
+					<li>CodeKit</li>
+					<li>Optimage</li>
+					<li>Local</li>
+					<li>Sequel Ace</li>
+					<li>Postman</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class='h3'>Hardware</h2>
+				<ul>
+					<li>MacBook Pro 14-inch (base M5 model)</li>
+					<li>Mac mini (M4 Pro) for desktop setup</li>
+					<li>Dual Apple Studio Displays</li>
+					<li>Apple Magic Keyboard</li>
+					<li>Lenovo Yoga mouse</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class='h3'>Audio</h2>
+				<ul>
+					<li>Audio-Technica microphone</li>
+					<li>Focusrite Scarlett Solo (3rd Gen)</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class='h3'>Desk</h2>
+				<ul>
+					<li>IKEA setup with a wooden countertop and ALEX drawer</li>
+					<li>Matching white riser for the monitors</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+	<Footer />
+</Layout>
+
+<style lang='scss'>
+	.uses-page {
+		article {
+			margin-top: 3rem;
+		}
+		section {
+			padding: 1rem 1.25rem;
+			margin-top: 1.5rem;
+			border-radius: 0.75rem;
+			border: 1px solid var(--border);
+			background: var(--accent-bg);
+		}
+		h2 {
+			margin-top: 0;
+		}
+		ul {
+			margin: 0;
+		}
+		li + li {
+			margin-top: 0.35rem;
+		}
+		@media (max-width: 767px) {
+			article {
+				margin-top: 0;
+			}
+			section {
+				padding: 1rem;
+			}
+		}
+	}
+</style>
