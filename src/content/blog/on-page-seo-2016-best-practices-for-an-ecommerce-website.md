@@ -1,11 +1,11 @@
 ---
-title: "On-Page SEO: 2016 Best Practices for an eCommerce Website"
+title: 'On-Page SEO: 2016 Best Practices for an eCommerce Website'
 description: "Your website has been designed and coded, the products loaded, a payment gateway linked and you're ready to start taking orders. If you build it, they will come... right? Unfortunately, it's not always that easy"
-publishDate: "2016-08-16"
+publishDate: '2016-08-16'
 categories:
-  - "seo"
-heroImage: "../../assets/images/meta-title-description-seo.jpg"
-author: "Stefen Phelps"
+  - 'seo'
+heroImage: '../../assets/images/meta-title-description-seo.jpg'
+author: 'Stefen Phelps'
 ---
 
 Your website has been designed and coded, the products loaded, a payment gateway linked and you're ready to start taking orders. If you build it, they will come... right? Unfortunately, it's not always that easy. By implementing our tips and best practices, however, you'll have a much better shot at getting your products in front of your audience.
@@ -19,7 +19,7 @@ There are 4 basics of on-page SEO that you should know if you have an eCommerce 
 - **[URL](#url)**
 - **[Meta Description](#meta-description)**
 
-![Monkey at a keyboard](../../assets/images/banging-keyboard-monkey.gif "Monkey at a keyboard")
+![Monkey at a keyboard](../../assets/images/banging-keyboard-monkey.gif 'Monkey at a keyboard')
 
 Let's dive into these 4 principles so you can spend less time feeling like a monkey at a keyboard and start developing an SEO strategy for your website.
 
@@ -58,7 +58,7 @@ It may sound obvious but an optimized page title should reflect what the page is
 
 ### URL
 
-The page URL should be easy to read as well as structural in regards to it's [categorical relation to the rest of the website](../../assets/images/website-structure-best-practices). Here is an example of an optimized URL:
+The page URL should be easy to read as well as structural in regards to it's [categorical relation to the rest of the website](/blog/website-structure-best-practices). Here is an example of an optimized URL:
 
 ```html
 https://example.com/ppe/hard-hats
