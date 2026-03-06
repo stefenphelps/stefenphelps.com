@@ -1,13 +1,12 @@
-import { format } from "timeago.js";
+<script>
+  import { format } from "timeago.js";
 
-const w = window as Window & { __timeagoInitialized?: boolean };
-if (!w.__timeagoInitialized) {
-  w.__timeagoInitialized = true;
+  const w = window as Window & { __timeagoInitialized?: boolean };
+  if (!w.__timeagoInitialized) {
+    w.__timeagoInitialized = true;
 
-  const targets = Array.from(document.querySelectorAll("[data-timeago]"));
-  if (targets.length) {
     const updateTimeago = () => {
-      for (const el of targets) {
+      for (const el of document.querySelectorAll("[data-timeago]")) {
         const datetime = el.getAttribute("data-timeago-datetime");
         if (!datetime) continue;
         el.textContent = format(datetime, "en_US");
@@ -20,4 +19,4 @@ if (!w.__timeagoInitialized) {
       if (!document.hidden) updateTimeago();
     });
   }
-}
+</script>

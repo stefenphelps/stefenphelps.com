@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import Layout from './Base.astro';
 import Header from './components/Header.astro';
 import Footer from './components/Footer.astro';
-import timeagoScript from "./scripts/timeago.ts?url";
+import TimeagoScript from "./components/TimeagoScript.astro";
 
 const { post } = Astro.props;
 
@@ -76,7 +76,7 @@ const sortedPosts = filteredPosts.sort((a, b) =>
     </section>
   </main>
   <Footer />
-  <script type="module" src={timeagoScript}></script>
+  <TimeagoScript />
 </Layout>
 
 <style lang="scss">

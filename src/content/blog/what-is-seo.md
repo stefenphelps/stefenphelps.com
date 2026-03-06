@@ -2,6 +2,7 @@
 title: "What is SEO and how can I use it?"
 description: "SEO stands for Search Engine Optimization, which means getting your website near the top of Google's search results page for any given search.  There isn't one magic thing you can do to make your website appear"
 publishDate: "2012-03-22"
+heroImage: "../../assets/images/what-is-seo-analytics-dashboard.jpg"
 categories:
   - "seo"
 author: "Stefen Phelps"

@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import timeagoScript from "../scripts/timeago.ts?url";
 
 const { post } = Astro.props;
 const timeAgoLabel = new Date(post.data.publishDate).toLocaleDateString("en-US", {
@@ -38,8 +37,6 @@ const timeAgoLabel = new Date(post.data.publishDate).toLocaleDateString("en-US",
 		<p>{post.data.description}</p>
 	</div>
 </article>
-
-<script type="module" src={timeagoScript}></script>
 
 <style lang='scss' is:global>
 	.post-preview {

@@ -2,6 +2,7 @@
 title: "WordPress - Much More Than Just a Blogging Tool"
 description: "How and why WordPress should be used for more than just a blog"
 publishDate: "2012-04-04"
+heroImage: "../../assets/images/wordpress-posts-dashboard.jpg"
 categories:
   - "cms"
   - "wordpress"

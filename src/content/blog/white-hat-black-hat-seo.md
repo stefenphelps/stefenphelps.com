@@ -2,6 +2,7 @@
 title: 'Proper SEO and "Black Hat" SEO'
 description: "Ever since the early 2000's, the early days of search engines, Google (among others) gave pagerank to a website based on the amount of links from other sites that were linking to it.  This simple premise"
 publishDate: "2013-06-04"
+heroImage: "../../assets/images/white-hat-black-hat-seo-mask.jpg"
 categories:
   - "seo"
 author: "Stefen Phelps"
