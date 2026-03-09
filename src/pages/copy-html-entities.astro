@@ -1,0 +1,527 @@
+---
+import Layout from '../Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'HTML Entity Copier';
+const description =
+	'Paste HTML entities or lightweight markup, preview the rendered result, and copy it with hidden characters intact.';
+const permalink = 'https://stefenphelps.com/copy-html-entities';
+const sampleValue = `&shy;`;
+---
+
+<Layout title={title} description={description} permalink={permalink}>
+	<Header />
+	<main class='wrapper entity-page'>
+		<article class='entity-tool'>
+			<header class='entity-tool-hero'>
+				<p class='entity-tool-kicker'>Utility page</p>
+				<h1>{title}</h1>
+				<p>
+					Paste HTML entities or simple HTML, then copy the rendered result as rich text or plain text. Hidden
+					characters like <code>&amp;shy;</code> are preserved in the clipboard output.
+				</p>
+			</header>
+
+			<section class='entity-tool-grid'>
+				<div class='entity-card entity-card-input'>
+					<label class='entity-label' for='entity-source'>Source HTML or entities</label>
+					<textarea id='entity-source' spellcheck='false' rows='10'>{sampleValue}</textarea>
+					<div class='entity-actions'>
+						<button type='button' id='copy-formatted'>Copy formatted text</button>
+						<button type='button' id='copy-plain' class='entity-button-secondary'>Copy plain text</button>
+						<button type='button' id='load-shy' class='entity-button-secondary'>Load &amp;shy; example</button>
+					</div>
+					<p id='entity-status' class='entity-status' aria-live='polite'>
+						Rendered output updates as you type.
+					</p>
+				</div>
+
+				<div class='entity-card'>
+					<h2 class='h4'>Rendered preview</h2>
+					<div id='entity-preview' class='entity-preview'></div>
+				</div>
+
+				<div class='entity-card'>
+					<h2 class='h4'>Hidden character helper</h2>
+					<pre class='entity-code'><code id='entity-helper'></code></pre>
+				</div>
+
+				<div class='entity-card'>
+					<h2 class='h4'>Code points</h2>
+					<pre class='entity-code'><code id='entity-codepoints'></code></pre>
+				</div>
+
+				<div class='entity-card entity-card-wide'>
+					<h2 class='h4'>Sanitized HTML used for copying</h2>
+					<pre class='entity-code'><code id='entity-sanitized'></code></pre>
+				</div>
+			</section>
+		</article>
+	</main>
+	<Footer />
+</Layout>
+
+<script is:inline data-astro-rerun>
+	(function () {
+		var BLOCK_TAGS = new Set([
+			'address',
+			'article',
+			'aside',
+			'blockquote',
+			'div',
+			'dl',
+			'fieldset',
+			'figcaption',
+			'figure',
+			'footer',
+			'form',
+			'h1',
+			'h2',
+			'h3',
+			'h4',
+			'h5',
+			'h6',
+			'header',
+			'hr',
+			'li',
+			'main',
+			'nav',
+			'ol',
+			'p',
+			'pre',
+			'section',
+			'table',
+			'td',
+			'th',
+			'tr',
+			'ul'
+		]);
+		var FORBIDDEN_TAGS = new Set([
+			'audio',
+			'base',
+			'button',
+			'canvas',
+			'embed',
+			'form',
+			'iframe',
+			'img',
+			'input',
+			'link',
+			'math',
+			'meta',
+			'object',
+			'option',
+			'script',
+			'select',
+			'style',
+			'svg',
+			'textarea',
+			'track',
+			'video'
+		]);
+		var HIDDEN_CHARACTERS = {
+			'\u00ad': { label: 'SOFT HYPHEN', marker: '[SHY]' },
+			'\u00a0': { label: 'NO-BREAK SPACE', marker: '[NBSP]' },
+			'\u2002': { label: 'EN SPACE', marker: '[EN SPACE]' },
+			'\u2003': { label: 'EM SPACE', marker: '[EM SPACE]' },
+			'\u2009': { label: 'THIN SPACE', marker: '[THIN SPACE]' },
+			'\u200a': { label: 'HAIR SPACE', marker: '[HAIR SPACE]' },
+			'\u200b': { label: 'ZERO WIDTH SPACE', marker: '[ZWSP]' },
+			'\u200c': { label: 'ZERO WIDTH NON-JOINER', marker: '[ZWNJ]' },
+			'\u200d': { label: 'ZERO WIDTH JOINER', marker: '[ZWJ]' },
+			'\u2060': { label: 'WORD JOINER', marker: '[WJ]' },
+			'\ufeff': { label: 'ZERO WIDTH NO-BREAK SPACE', marker: '[ZWNBSP]' }
+		};
+
+		var source = document.querySelector('#entity-source');
+		var preview = document.querySelector('#entity-preview');
+		var helper = document.querySelector('#entity-helper');
+		var codepoints = document.querySelector('#entity-codepoints');
+		var sanitizedOutput = document.querySelector('#entity-sanitized');
+		var status = document.querySelector('#entity-status');
+		var copyFormattedButton = document.querySelector('#copy-formatted');
+		var copyPlainButton = document.querySelector('#copy-plain');
+		var loadShyButton = document.querySelector('#load-shy');
+
+		if (
+			!source ||
+			!preview ||
+			!helper ||
+			!codepoints ||
+			!sanitizedOutput ||
+			!status ||
+			!copyFormattedButton ||
+			!copyPlainButton ||
+			!loadShyButton
+		) {
+			return;
+		}
+
+		function sanitizeHtml(value) {
+			var parser = new DOMParser();
+			var doc = parser.parseFromString(value, 'text/html');
+
+			doc.body.querySelectorAll('*').forEach(function (element) {
+				var tag = element.tagName.toLowerCase();
+
+				if (FORBIDDEN_TAGS.has(tag)) {
+					element.remove();
+					return;
+				}
+
+				Array.from(element.attributes).forEach(function (attribute) {
+					var name = attribute.name.toLowerCase();
+					var attributeValue = attribute.value.trim();
+
+					if (name.startsWith('on')) {
+						element.removeAttribute(attribute.name);
+						return;
+					}
+
+					if (tag === 'a' && (name === 'href' || name === 'title')) {
+						if (
+							name === 'href' &&
+							attributeValue &&
+							!/^(https?:|mailto:|tel:|#|\/)/i.test(attributeValue)
+						) {
+							element.removeAttribute(attribute.name);
+						}
+						return;
+					}
+
+					element.removeAttribute(attribute.name);
+				});
+			});
+
+			return doc.body.innerHTML;
+		}
+
+		function elementToPlainText(node) {
+			if (node.nodeType === Node.TEXT_NODE) {
+				return node.textContent || '';
+			}
+
+			if (node.nodeType !== Node.ELEMENT_NODE) {
+				return '';
+			}
+
+			var element = node;
+			var tag = element.tagName.toLowerCase();
+
+			if (tag === 'br') {
+				return '\n';
+			}
+
+			var output = '';
+
+			if (tag === 'li') {
+				output += '• ';
+			}
+
+			Array.from(element.childNodes).forEach(function (child) {
+				output += elementToPlainText(child);
+			});
+
+			if (BLOCK_TAGS.has(tag) && output && !output.endsWith('\n')) {
+				output += '\n';
+			}
+
+			return output;
+		}
+
+		function getPlainText() {
+			return elementToPlainText(preview)
+				.replace(/\n{3,}/g, '\n\n')
+				.replace(/^\n+/, '')
+				.replace(/\n+$/, '');
+		}
+
+		function revealCharacters(value) {
+			if (!value) {
+				return '[empty]';
+			}
+
+			return Array.from(value)
+				.map(function (character) {
+					if (character === '\n') {
+						return '[LF]\n';
+					}
+
+					if (character === '\t') {
+						return '[TAB]';
+					}
+
+					if (HIDDEN_CHARACTERS[character]) {
+						return HIDDEN_CHARACTERS[character].marker;
+					}
+
+					return character;
+				})
+				.join('');
+		}
+
+		function describeCodepoints(value) {
+			if (!value) {
+				return '[empty]';
+			}
+
+			return Array.from(value)
+				.map(function (character) {
+					var codePoint = character.codePointAt(0).toString(16).toUpperCase().padStart(4, '0');
+					var hidden = HIDDEN_CHARACTERS[character];
+					return hidden ? 'U+' + codePoint + ' ' + hidden.label : 'U+' + codePoint;
+				})
+				.join('\n');
+		}
+
+		function hiddenCharacterCount(value) {
+			return Array.from(value).filter(function (character) {
+				return Boolean(HIDDEN_CHARACTERS[character]);
+			}).length;
+		}
+
+		function render() {
+			var sanitizedHtml = sanitizeHtml(source.value);
+			preview.innerHTML = sanitizedHtml;
+			preview.dataset.empty = sanitizedHtml ? 'false' : 'true';
+
+			var plainText = getPlainText();
+			var characterCount = Array.from(plainText).length;
+
+			helper.textContent = revealCharacters(plainText);
+			codepoints.textContent = describeCodepoints(plainText);
+			sanitizedOutput.textContent = sanitizedHtml || '[empty]';
+
+			if (!sanitizedHtml) {
+				status.textContent = 'Nothing rendered yet. Paste entities or HTML to begin.';
+				return;
+			}
+
+			status.textContent =
+				'Rendered ' +
+				characterCount +
+				' character' +
+				(characterCount === 1 ? '' : 's') +
+				(hiddenCharacterCount(plainText) ? ' including hidden characters.' : '.');
+		}
+
+		function copyUsingSelection() {
+			var selection = window.getSelection();
+			var range = document.createRange();
+
+			range.selectNodeContents(preview);
+			selection.removeAllRanges();
+			selection.addRange(range);
+
+			var success = document.execCommand('copy');
+			selection.removeAllRanges();
+
+			if (!success) {
+				throw new Error('Selection copy failed.');
+			}
+		}
+
+		async function copyFormatted() {
+			var plainText = getPlainText();
+			var html = preview.innerHTML;
+
+			if (!plainText && !html) {
+				status.textContent = 'Nothing to copy.';
+				return;
+			}
+
+			try {
+				if (navigator.clipboard && window.ClipboardItem && navigator.clipboard.write) {
+					await navigator.clipboard.write([
+						new ClipboardItem({
+							'text/plain': new Blob([plainText], { type: 'text/plain' }),
+							'text/html': new Blob([html], { type: 'text/html' })
+						})
+					]);
+				} else {
+					copyUsingSelection();
+				}
+
+				status.textContent =
+					'Copied formatted text with ' +
+					Array.from(plainText).length +
+					' character' +
+					(Array.from(plainText).length === 1 ? '' : 's') +
+					'.';
+			} catch (error) {
+				try {
+					copyUsingSelection();
+					status.textContent = 'Copied formatted text with the browser selection fallback.';
+				} catch (fallbackError) {
+					status.textContent = 'Copy failed in this browser. Try the plain text button instead.';
+				}
+			}
+		}
+
+		async function copyPlainText() {
+			var plainText = getPlainText();
+
+			if (!plainText) {
+				status.textContent = 'Nothing to copy.';
+				return;
+			}
+
+			try {
+				if (navigator.clipboard && navigator.clipboard.writeText) {
+					await navigator.clipboard.writeText(plainText);
+				} else {
+					throw new Error('Clipboard API unavailable.');
+				}
+
+				status.textContent =
+					'Copied plain text with ' +
+					Array.from(plainText).length +
+					' character' +
+					(Array.from(plainText).length === 1 ? '' : 's') +
+					'.';
+			} catch (error) {
+				var fallback = document.createElement('textarea');
+				fallback.value = plainText;
+				fallback.setAttribute('readonly', 'true');
+				fallback.style.position = 'absolute';
+				fallback.style.left = '-9999px';
+				document.body.appendChild(fallback);
+				fallback.select();
+				document.execCommand('copy');
+				document.body.removeChild(fallback);
+				status.textContent = 'Copied plain text with the browser fallback.';
+			}
+		}
+
+		source.addEventListener('input', render);
+		copyFormattedButton.addEventListener('click', copyFormatted);
+		copyPlainButton.addEventListener('click', copyPlainText);
+		loadShyButton.addEventListener('click', function () {
+			source.value = '&shy;';
+			render();
+		});
+
+		render();
+	})();
+</script>
+
+<style lang='scss'>
+	.entity-page {
+		padding-bottom: 2rem;
+	}
+
+	.entity-tool {
+		padding-block: 1rem 2rem;
+	}
+
+	.entity-tool-hero {
+		max-width: 44rem;
+		margin-bottom: 2rem;
+	}
+
+	.entity-tool-kicker {
+		text-transform: uppercase;
+		letter-spacing: 0.14em;
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: var(--accent);
+		margin-bottom: 0.25rem;
+	}
+
+	.entity-tool-grid {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	}
+
+	.entity-card {
+		padding: 1.25rem;
+		border: 1px solid var(--border);
+		border-radius: 1rem;
+		background:
+			linear-gradient(180deg, var(--accent-bg), transparent 140%),
+			var(--bg);
+	}
+
+	.entity-card-input,
+	.entity-card-wide {
+		grid-column: 1 / -1;
+	}
+
+	.entity-label {
+		display: block;
+		margin-bottom: 0.5rem;
+		font-weight: 700;
+	}
+
+	#entity-source {
+		width: 100%;
+		min-height: 14rem;
+		font-family: var(--mono-font);
+	}
+
+	.entity-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 0.5rem;
+	}
+
+	.entity-button-secondary {
+		background: transparent;
+		color: var(--accent);
+		border: 1px solid var(--accent);
+		box-shadow: none;
+	}
+
+	.entity-button-secondary:hover,
+	.entity-button-secondary:focus {
+		background: var(--accent);
+		color: var(--bg);
+		box-shadow: none;
+	}
+
+	.entity-status {
+		margin: 0.75rem 0 0;
+		color: var(--text-light);
+	}
+
+	.entity-preview {
+		min-height: 8rem;
+		padding: 1rem;
+		border-radius: 0.75rem;
+		background: var(--bg);
+		border: 1px dashed var(--border);
+		overflow-wrap: anywhere;
+	}
+
+	.entity-preview[data-empty='true']::before {
+		content: 'Nothing to preview yet.';
+		color: var(--text-light);
+	}
+
+	.entity-code {
+		margin: 0;
+		padding: 1rem;
+		border-radius: 0.75rem;
+		background: color-mix(in srgb, var(--accent-bg) 55%, var(--bg));
+		border: 1px solid var(--border);
+		white-space: pre-wrap;
+		word-break: break-word;
+	}
+
+	@media (max-width: 700px) {
+		.entity-card {
+			padding: 1rem;
+		}
+
+		.entity-actions {
+			flex-direction: column;
+		}
+
+		.entity-actions button {
+			width: 100%;
+		}
+	}
+</style>
