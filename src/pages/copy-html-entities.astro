@@ -40,6 +40,10 @@ const sampleValue = `&shy;`;
 				<div class='entity-card'>
 					<h2 class='h4'>Rendered preview</h2>
 					<div id='entity-preview' class='entity-preview'></div>
+					<p id='entity-preview-note' class='entity-note'>
+						A single hidden character can render as a blank preview. Use the helper or paste test below to
+						verify it.
+					</p>
 				</div>
 
 				<div class='entity-card'>
@@ -50,6 +54,22 @@ const sampleValue = `&shy;`;
 				<div class='entity-card'>
 					<h2 class='h4'>Code points</h2>
 					<pre class='entity-code'><code id='entity-codepoints'></code></pre>
+				</div>
+
+				<div class='entity-card entity-card-wide'>
+					<h2 class='h4'>Paste test</h2>
+					<label class='entity-label' for='entity-paste-test'>Paste here after copying</label>
+					<textarea
+						id='entity-paste-test'
+						class='entity-paste-test'
+						rows='4'
+						spellcheck='false'
+						placeholder='Paste copied output here to verify hidden characters.'
+					></textarea>
+					<div class='entity-actions'>
+						<button type='button' id='clear-paste-test' class='entity-button-secondary'>Clear paste test</button>
+					</div>
+					<pre class='entity-code'><code id='entity-paste-helper'>[empty]</code></pre>
 				</div>
 
 				<div class='entity-card entity-card-wide'>
@@ -138,8 +158,12 @@ const sampleValue = `&shy;`;
 		var preview = document.querySelector('#entity-preview');
 		var helper = document.querySelector('#entity-helper');
 		var codepoints = document.querySelector('#entity-codepoints');
+		var previewNote = document.querySelector('#entity-preview-note');
 		var sanitizedOutput = document.querySelector('#entity-sanitized');
 		var status = document.querySelector('#entity-status');
+		var pasteTest = document.querySelector('#entity-paste-test');
+		var pasteHelper = document.querySelector('#entity-paste-helper');
+		var clearPasteTestButton = document.querySelector('#clear-paste-test');
 		var copyFormattedButton = document.querySelector('#copy-formatted');
 		var copyPlainButton = document.querySelector('#copy-plain');
 		var loadShyButton = document.querySelector('#load-shy');
@@ -149,8 +173,12 @@ const sampleValue = `&shy;`;
 			!preview ||
 			!helper ||
 			!codepoints ||
+			!previewNote ||
 			!sanitizedOutput ||
 			!status ||
+			!pasteTest ||
+			!pasteHelper ||
+			!clearPasteTestButton ||
 			!copyFormattedButton ||
 			!copyPlainButton ||
 			!loadShyButton
@@ -281,6 +309,16 @@ const sampleValue = `&shy;`;
 			}).length;
 		}
 
+		function visibleCharacterCount(value) {
+			return Array.from(value).filter(function (character) {
+				return !HIDDEN_CHARACTERS[character] && !/\s/.test(character);
+			}).length;
+		}
+
+		function updatePasteHelper() {
+			pasteHelper.textContent = revealCharacters(pasteTest.value);
+		}
+
 		function render() {
 			var sanitizedHtml = sanitizeHtml(source.value);
 			preview.innerHTML = sanitizedHtml;
@@ -288,14 +326,24 @@ const sampleValue = `&shy;`;
 
 			var plainText = getPlainText();
 			var characterCount = Array.from(plainText).length;
+			var hiddenCount = hiddenCharacterCount(plainText);
+			var visibleCount = visibleCharacterCount(plainText);
 
 			helper.textContent = revealCharacters(plainText);
 			codepoints.textContent = describeCodepoints(plainText);
 			sanitizedOutput.textContent = sanitizedHtml || '[empty]';
 
 			if (!sanitizedHtml) {
+				previewNote.textContent = 'Paste entities or HTML to generate output.';
 				status.textContent = 'Nothing rendered yet. Paste entities or HTML to begin.';
 				return;
+			}
+
+			if (characterCount && hiddenCount === characterCount && visibleCount === 0) {
+				previewNote.textContent =
+					'This output is entirely hidden characters, so the preview can look blank even when copy succeeds.';
+			} else {
+				previewNote.textContent = 'Visible and hidden characters are both included in the copy output.';
 			}
 
 			status.textContent =
@@ -303,7 +351,7 @@ const sampleValue = `&shy;`;
 				characterCount +
 				' character' +
 				(characterCount === 1 ? '' : 's') +
-				(hiddenCharacterCount(plainText) ? ' including hidden characters.' : '.');
+				(hiddenCount ? ' including ' + hiddenCount + ' hidden character' + (hiddenCount === 1 ? '' : 's') + '.' : '.');
 		}
 
 		function copyUsingSelection() {
@@ -348,11 +396,18 @@ const sampleValue = `&shy;`;
 					Array.from(plainText).length +
 					' character' +
 					(Array.from(plainText).length === 1 ? '' : 's') +
-					'.';
+					(hiddenCharacterCount(plainText)
+						? ', including ' +
+							hiddenCharacterCount(plainText) +
+							' hidden character' +
+							(hiddenCharacterCount(plainText) === 1 ? '' : 's') +
+							'. Paste into the test box below to verify.'
+						: '.');
 			} catch (error) {
 				try {
 					copyUsingSelection();
-					status.textContent = 'Copied formatted text with the browser selection fallback.';
+					status.textContent =
+						'Copied formatted text with the browser selection fallback. Paste into the test box below to verify.';
 				} catch (fallbackError) {
 					status.textContent = 'Copy failed in this browser. Try the plain text button instead.';
 				}
@@ -379,7 +434,13 @@ const sampleValue = `&shy;`;
 					Array.from(plainText).length +
 					' character' +
 					(Array.from(plainText).length === 1 ? '' : 's') +
-					'.';
+					(hiddenCharacterCount(plainText)
+						? ', including ' +
+							hiddenCharacterCount(plainText) +
+							' hidden character' +
+							(hiddenCharacterCount(plainText) === 1 ? '' : 's') +
+							'. Paste into the test box below to verify.'
+						: '.');
 			} catch (error) {
 				var fallback = document.createElement('textarea');
 				fallback.value = plainText;
@@ -390,19 +451,26 @@ const sampleValue = `&shy;`;
 				fallback.select();
 				document.execCommand('copy');
 				document.body.removeChild(fallback);
-				status.textContent = 'Copied plain text with the browser fallback.';
+				status.textContent =
+					'Copied plain text with the browser fallback. Paste into the test box below to verify.';
 			}
 		}
 
 		source.addEventListener('input', render);
+		pasteTest.addEventListener('input', updatePasteHelper);
 		copyFormattedButton.addEventListener('click', copyFormatted);
 		copyPlainButton.addEventListener('click', copyPlainText);
+		clearPasteTestButton.addEventListener('click', function () {
+			pasteTest.value = '';
+			updatePasteHelper();
+		});
 		loadShyButton.addEventListener('click', function () {
 			source.value = '&shy;';
 			render();
 		});
 
 		render();
+		updatePasteHelper();
 	})();
 </script>
 
@@ -487,6 +555,12 @@ const sampleValue = `&shy;`;
 		color: var(--text-light);
 	}
 
+	.entity-note {
+		margin: 0.75rem 0 0;
+		color: var(--text-light);
+		font-size: 0.95em;
+	}
+
 	.entity-preview {
 		min-height: 8rem;
 		padding: 1rem;
@@ -499,6 +573,12 @@ const sampleValue = `&shy;`;
 	.entity-preview[data-empty='true']::before {
 		content: 'Nothing to preview yet.';
 		color: var(--text-light);
+	}
+
+	.entity-paste-test {
+		width: 100%;
+		min-height: 6rem;
+		font-family: var(--mono-font);
 	}
 
 	.entity-code {
