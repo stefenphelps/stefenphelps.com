@@ -1,7 +1,7 @@
 ---
 export interface Props {
-  prevUrl: string;
-  nextUrl: string;
+  prevUrl?: string;
+  nextUrl?: string;
   pageEnd: number;
   totalPosts: number;
 }
@@ -14,13 +14,21 @@ const totalPages = Math.ceil(totalPosts / 10);
 
 <div class="wrapper">
   <nav class="pagination">
-    <a class="pagination-prev" href={prevUrl || "#"} aria-label="Previous Page"
-      >Previous</a
-    >
+    {
+      prevUrl ? (
+        <a class="pagination-prev" href={prevUrl} aria-label="Previous Page">Previous</a>
+      ) : (
+        <span class="pagination-prev" aria-disabled="true">Previous</span>
+      )
+    }
     <small>Page {currentPage} of {totalPages}</small>
-    <a class="pagination-next" href={nextUrl || "#"} aria-label="Next Page"
-      >Next</a
-    >
+    {
+      nextUrl ? (
+        <a class="pagination-next" href={nextUrl} aria-label="Next Page">Next</a>
+      ) : (
+        <span class="pagination-next" aria-disabled="true">Next</span>
+      )
+    }
   </nav>
 </div>
 
@@ -37,7 +45,7 @@ const totalPages = Math.ceil(totalPosts / 10);
       text-align: center;
       margin: 0;
       font-family: var(--heading-font);
-      &[href="#"] {
+      &[aria-disabled="true"] {
         cursor: not-allowed;
         opacity: 0.4;
         color: #777;

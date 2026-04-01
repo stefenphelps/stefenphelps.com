@@ -1,4 +1,5 @@
 ---
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 import { getCollection } from 'astro:content';
 import Layout from '../../Base.astro';
 import Header from '../../components/Header.astro';
@@ -7,7 +8,7 @@ import Tease from '../../components/Tease.astro';
 import Pagination from '../../components/Pagination.astro';
 import TimeagoScript from '../../components/TimeagoScript.astro';
 
-export async function getStaticPaths({ paginate }) {
+export const getStaticPaths = (async ({ paginate }) => {
 	const allPosts = await getCollection("blog");
 	const sortedPosts = allPosts.sort(
 		(a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf()
@@ -15,12 +16,13 @@ export async function getStaticPaths({ paginate }) {
 
 	// Return a paginated collection of paths for all posts
 	return paginate(sortedPosts, { pageSize: 10 });
-}
+}) satisfies GetStaticPaths;
 
 let title = '🧑‍💻 Blog';
 let description = 'My thoughts on web development and sometimes other things.';
 let permalink = 'https://stefenphelps.com/blog/';
-const { page } = Astro.props;
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { page } = Astro.props as Props;
 ---
 
 <Layout title={title} description={description} permalink={permalink}>

@@ -12,16 +12,16 @@ const timeAgoLabel = new Date(post.data.publishDate).toLocaleDateString("en-US",
 <article class='post-preview'>
 	{
 		post.data.heroImage && (
-			<div class='post-preview-image' transition:name=`heroimage-${post.slug}`>
+			<div class='post-preview-image' transition:name={`heroimage-${post.id}`}>
 				{post.data.heroImage && <Image src={post.data.heroImage} alt={post.data.title} densities={[1, 1.5, 2]}/> }
 			</div>
 		)
 	}
 	<div class='post-preview-text'>
-		<h2 class='h5' transition:name=`heading-${post.slug}`>
-			<a data-astro-prefetch href=`/blog/${post.slug}/`>{post.data.title}</a>
+		<h2 class='h5' transition:name={`heading-${post.id}`}>
+			<a data-astro-prefetch href={`/blog/${post.id}/`}>{post.data.title}</a>
 		</h2>
-		<time datetime={post.data.publishDate} transition:name=`date-${post.slug}`>
+		<time datetime={post.data.publishDate.toISOString()} transition:name={`date-${post.id}`}>
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='0.875em' height='1em'>
 				<path
 					class='fa-primary'
@@ -30,7 +30,7 @@ const timeAgoLabel = new Date(post.data.publishDate).toLocaleDateString("en-US",
 					class='fa-secondary'
 					d='M0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192z'></path>
 			</svg>
-			<span data-timeago data-timeago-datetime={post.data.publishDate}>
+			<span data-timeago data-timeago-datetime={post.data.publishDate.toISOString()}>
 				{timeAgoLabel}
 			</span>
 		</time>

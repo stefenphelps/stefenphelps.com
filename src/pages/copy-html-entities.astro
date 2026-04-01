@@ -354,22 +354,6 @@ const sampleValue = `&shy;`;
 				(hiddenCount ? ' including ' + hiddenCount + ' hidden character' + (hiddenCount === 1 ? '' : 's') + '.' : '.');
 		}
 
-		function copyUsingSelection() {
-			var selection = window.getSelection();
-			var range = document.createRange();
-
-			range.selectNodeContents(preview);
-			selection.removeAllRanges();
-			selection.addRange(range);
-
-			var success = document.execCommand('copy');
-			selection.removeAllRanges();
-
-			if (!success) {
-				throw new Error('Selection copy failed.');
-			}
-		}
-
 		async function copyFormatted() {
 			var plainText = getPlainText();
 			var html = preview.innerHTML;
@@ -387,8 +371,10 @@ const sampleValue = `&shy;`;
 							'text/html': new Blob([html], { type: 'text/html' })
 						})
 					]);
+				} else if (navigator.clipboard && navigator.clipboard.writeText) {
+					await navigator.clipboard.writeText(plainText);
 				} else {
-					copyUsingSelection();
+					throw new Error('Clipboard API unavailable.');
 				}
 
 				status.textContent =
@@ -404,13 +390,7 @@ const sampleValue = `&shy;`;
 							'. Paste into the test box below to verify.'
 						: '.');
 			} catch (error) {
-				try {
-					copyUsingSelection();
-					status.textContent =
-						'Copied formatted text with the browser selection fallback. Paste into the test box below to verify.';
-				} catch (fallbackError) {
-					status.textContent = 'Copy failed in this browser. Try the plain text button instead.';
-				}
+				status.textContent = 'Copy failed in this browser. Try the plain text button instead.';
 			}
 		}
 
@@ -442,17 +422,7 @@ const sampleValue = `&shy;`;
 							'. Paste into the test box below to verify.'
 						: '.');
 			} catch (error) {
-				var fallback = document.createElement('textarea');
-				fallback.value = plainText;
-				fallback.setAttribute('readonly', 'true');
-				fallback.style.position = 'absolute';
-				fallback.style.left = '-9999px';
-				document.body.appendChild(fallback);
-				fallback.select();
-				document.execCommand('copy');
-				document.body.removeChild(fallback);
-				status.textContent =
-					'Copied plain text with the browser fallback. Paste into the test box below to verify.';
+				status.textContent = 'Copy failed in this browser. Your browser does not expose the Clipboard API here.';
 			}
 		}
 
