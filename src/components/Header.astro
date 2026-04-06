@@ -4,18 +4,36 @@ const { activeNav } = Astro.props;
 
 <header class='header'>
 	<a class:list={['header-logo', { active: activeNav === 'home' }]} data-astro-prefetch href='/'>
-		Stefen <span>Phelps</span>
+		Stefen <span>Phelps</span>{activeNav === 'home' && <span class='header-logo-dot' aria-hidden='true'></span>}
 	</a>
 	<nav class='header-nav'>
 		<ul class='header-nav-menu'>
 			<li>
-				<a data-astro-prefetch href='/about/' class={activeNav === 'about' ? 'active' : ''}>About</a>
+				<a
+					data-astro-prefetch
+					href='/about/'
+					aria-current={activeNav === 'about' ? 'page' : undefined}
+				>
+					About
+				</a>
 			</li>
 			<li>
-				<a data-astro-prefetch href='/blog/' class={activeNav === 'blog' ? 'active' : ''}>Blog</a>
+				<a
+					data-astro-prefetch
+					href='/blog/'
+					aria-current={activeNav === 'blog' ? 'page' : undefined}
+				>
+					Blog
+				</a>
 			</li>
 			<li>
-				<a data-astro-prefetch href='/contact/' class={activeNav === 'contact' ? 'active' : ''}>Contact</a>
+				<a
+					data-astro-prefetch
+					href='/contact/'
+					aria-current={activeNav === 'contact' ? 'page' : undefined}
+				>
+					Contact
+				</a>
 			</li>
 		</ul>
 	</nav>

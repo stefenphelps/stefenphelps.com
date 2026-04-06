@@ -13,6 +13,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  &::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
   &-logo {
     line-height: 1;
     padding: 0;
@@ -22,6 +28,7 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 2rem;
+    position: relative;
     &:hover,
     &:focus {
       text-decoration: underline;
@@ -30,10 +37,24 @@
       text-decoration-thickness: 3px;
       text-decoration-color: var(--accent);
     }
-    span {
+    > span:not(.header-logo-dot) {
       @media (max-width: 600px) {
         display: none;
       }
+    }
+    &.active {
+      .header-logo-dot {
+        anchor-name: --header-nav-active;
+      }
+    }
+    &-dot {
+      display: inline-block;
+      width: 0.18em;
+      height: 0.18em;
+      margin-left: 0.04em;
+      border-radius: 999px;
+      background: var(--accent);
+      transform: translate(2px, 3px);
     }
   }
   &-nav {
@@ -51,6 +72,8 @@
       margin: 0;
       padding: 0;
       gap: 1rem;
+      position: relative;
+      view-transition-name: header-nav-links;
       a {
         margin: 0;
         border: 1px solid var(--border);
@@ -59,10 +82,16 @@
         display: inline-block;
         padding: 0.1rem 1rem;
         text-decoration: none;
+        position: relative;
+        z-index: 1;
         &:hover,
-        &.active {
+        &[aria-current='page'] {
           color: var(--accent) !important;
           border-color: var(--accent);
+        }
+        &[aria-current='page'] {
+          anchor-name: --header-nav-active;
+          cursor: default;
         }
       }
     }
@@ -94,6 +123,42 @@
         display: block;
       }
     }
+  }
+}
+
+@supports (anchor-name: --header-nav-active) and (left: anchor(--header-nav-active left)) {
+  .header::after {
+    left: anchor(--header-nav-active left);
+    top: anchor(--header-nav-active top);
+    width: anchor-size(--header-nav-active width);
+    height: anchor-size(--header-nav-active height);
+    opacity: 1;
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    view-transition-name: header-nav-highlight;
+  }
+
+  .header-logo.active .header-logo-dot {
+    background: transparent;
+  }
+
+  .header-logo.active + .header-nav + .header-toggle,
+  .header-logo.active + .header-nav {
+    position: relative;
+    z-index: 1;
+  }
+
+  .header:has(.header-logo.active) {
+    &::after {
+      background: var(--accent);
+      border: 0;
+      border-radius: 999px;
+    }
+  }
+
+  .header-nav-menu a[aria-current='page'] {
+    border-color: transparent;
   }
 }
 @media (max-width: 600px) {
