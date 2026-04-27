@@ -1,32 +1,31 @@
 {
-	"name": "stefenphelps.com",
-	"type": "module",
-	"version": "1.0.0",
-	"private": true,
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"check": "astro check",
-		"check:watch": "astro check --watch",
-		"clean": "rm -r ./dist",
-		"build": "astro build",
-		"preview": "astro preview",
-		"deploy": "netlify deploy --prod"
-	},
-	"devDependencies": {
-		"@astrojs/check": "^0.9.8",
-		"@astrojs/sitemap": "^3.7.2",
-		"astro": "^6.1.9",
-		"autoprefixer": "^10.5.0",
-		"prettier": "3.8.3",
-		"prettier-plugin-astro": "^0.14.1",
-		"sass": "^1.99.0",
-		"typescript": "^6.0.3"
-	},
-	"dependencies": {
-		"@astrojs/rss": "^4.0.18",
-		"shiki": "^4.0.2",
-		"slugify": "^1.6.9",
-		"timeago.js": "^4.0.2"
-	}
+  "name": "stefenphelps.com",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "check": "astro check",
+    "check:watch": "astro check --watch",
+    "clean": "rm -r ./dist",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "netlify deploy --prod"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.1.9",
+    "autoprefixer": "^10.5.0",
+    "prettier": "3.8.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "sass": "^1.99.0"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.18",
+    "shiki": "^4.0.2",
+    "slugify": "^1.6.9",
+    "timeago.js": "^4.0.2"
+  }
 }
