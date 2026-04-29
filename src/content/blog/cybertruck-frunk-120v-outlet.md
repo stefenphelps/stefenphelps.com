@@ -33,7 +33,7 @@ The goal was to keep everything clean and factory-looking from the outside. I di
 
 ![Mounting the inverter behind the frunk trim](../../assets/images/cybertruck-frunk-2.5-mount-inverter.JPG)
 
-I used some 3M double-sided adhesive to mount the inverter to the top of the radiator cover because I didn't want to drill into that plastic. I'm not too worried about it getting dislodged because even if I hit a large pothole, there really isn't much space for it to move. At least in theory.
+I used some [3M double-sided adhesive](https://www.amazon.com/Super-Strength-Molding-Tape-03614/dp/B002JOVUO0?&linkCode=ll2&tag=stefphel-20&linkId=89e36f77d5c65a073d30a2ffede9e5be&language=en_US&ref_=as_li_ss_tl) to mount the inverter to the top of the radiator cover because I didn't want to drill into that plastic. I'm not too worried about it getting dislodged because even if I hit a large pothole, there really isn't much space for it to move. At least in theory.
 
 ## Step 3. Cutting the Trim
 
