@@ -17,7 +17,7 @@ The second option is to use the 48V power feed already available in the frunk an
 
 ![Cybertruck frunk trim removed to access the 48V power feed](../../assets/images/cybertruck-frunk-1-trim-removed.jpeg)
 
-If you go with the second option like I did, you will need a [sine wave inverter](https://www.amazon.com/dp/B0DHNBZWP7?th=1&linkCode=ll2&tag=stefphel-20&linkId=353e80be0ddd9ccc09af358679005c0e&language=en_US&ref_=as_li_ss_tl) and a [recessed outlet](https://www.amazon.com/dp/B0F8QDSRBZ?th=1&linkCode=ll2&tag=stefphel-20&linkId=f7189389c7ef984ceb1524b7663df20d&language=en_US&ref_=as_li_ss_tl).
+If you go with the second option like I did, you will need a [sine wave inverter](https://www.amazon.com/WZRELB-Power-Inverter-Adapter-Display/dp/B0D8Y5B6N7?th=1&linkCode=ll2&tag=stefphel-20&linkId=861da4dfc5b80c3269b64018194ceeaa&language=en_US&ref_=as_li_ss_tl) and a [recessed outlet](https://www.amazon.com/dp/B0F8QDSRBZ?th=1&linkCode=ll2&tag=stefphel-20&linkId=f7189389c7ef984ceb1524b7663df20d&language=en_US&ref_=as_li_ss_tl).
 
 ## Step 1. Frunk Trim Removal
 
