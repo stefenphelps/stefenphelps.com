@@ -32,7 +32,10 @@ const {
 } = Astro.props;
 
 // Keep canonical metadata and JSON-LD on the production origin, including in previews.
-const canonicalURL = new URL(providedPermalink ? new URL(providedPermalink, Astro.site).pathname : Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(
+	providedPermalink ? new URL(providedPermalink, Astro.site).pathname : Astro.url.pathname,
+	Astro.site
+);
 if (!canonicalURL.pathname.endsWith('/') && !canonicalURL.pathname.split('/').pop()?.includes('.')) {
 	canonicalURL.pathname += '/';
 }
@@ -61,7 +64,18 @@ import './styles/global.scss';
 		<meta name='title' content={title} />
 		<meta name='description' content={description} />
 		<link rel='canonical' href={permalink} />
-		{structuredData && <StructuredData title={title} description={description} permalink={permalink} pageType={pageType} post={post} posts={posts} listStart={listStart} application={application} />}
+		{structuredData && (
+			<StructuredData
+				title={title}
+				description={description}
+				permalink={permalink}
+				pageType={pageType}
+				post={post}
+				posts={posts}
+				listStart={listStart}
+				application={application}
+			/>
+		)}
 		<link rel='alternate' type='application/rss+xml' href='https://stefenphelps.com/rss.xml' />
 		
 		<ClientRouter fallback='swap' />
