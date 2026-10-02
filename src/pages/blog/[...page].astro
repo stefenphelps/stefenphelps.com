@@ -20,12 +20,13 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 let title = '🧑‍💻 Blog';
 let description = 'My thoughts on web development and sometimes other things.';
-let permalink = 'https://stefenphelps.com/blog/';
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props as Props;
+const permalink = new URL(page.url.current, Astro.site).href;
+if (page.currentPage > 1) title += ` — Page ${page.currentPage}`;
 ---
 
-<Layout title={title} description={description} permalink={permalink}>
+<Layout title={title} description={description} permalink={permalink} pageType='CollectionPage' posts={page.data} listStart={page.start}>
 	<Header activeNav='blog' />
 	<main class='wrapper wrapper--wide'>
 		<h1 class='blog-title'>{title}</h1>

@@ -1,0 +1,153 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	title: string;
+	description: string;
+	permalink: string;
+	pageType: 'WebPage' | 'ProfilePage' | 'ContactPage' | 'CollectionPage';
+	post?: CollectionEntry<'blog'>;
+	posts?: CollectionEntry<'blog'>[];
+	listStart?: number;
+	application?: boolean;
+}
+
+const { title, description, permalink, pageType, post, posts, listStart = 0, application } = Astro.props;
+const siteURL = Astro.site!;
+const url = (path: string) => new URL(path, siteURL).href;
+const personID = url('/#person');
+const websiteID = url('/#website');
+const blogID = url('/blog/#blog');
+const pageID = `${permalink}#webpage`;
+const breadcrumbID = `${permalink}#breadcrumb`;
+const personRef = { '@id': personID };
+const language = 'en-US';
+const isHome = new URL(permalink).pathname === '/';
+const isBlog = !!post || !!posts;
+const mainEntity = post ? { '@id': `${permalink}#article` }
+	: posts ? { '@id': `${permalink}#posts` }
+	: application ? { '@id': `${permalink}#application` }
+	: pageType === 'ProfilePage' || pageType === 'ContactPage' ? personRef : undefined;
+
+const graph: Record<string, unknown>[] = [
+	{
+		'@type': 'Person',
+		'@id': personID,
+		name: 'Stefen Phelps',
+		url: url('/'),
+		mainEntityOfPage: { '@id': url('/about/#webpage') },
+		jobTitle: 'Co-founder / Lead Engineer',
+		worksFor: { '@type': 'Organization', name: 'Kelp', url: 'https://www.kelp.agency/' },
+		sameAs: [
+			'https://www.linkedin.com/in/stefenphelps/',
+			'https://twitter.com/stefen',
+			'https://codepen.io/stefen/',
+			'https://github.com/stefenphelps'
+		]
+	},
+	{
+		'@type': 'WebSite',
+		'@id': websiteID,
+		url: url('/'),
+		name: 'Stefen Phelps',
+		inLanguage: language,
+		publisher: personRef
+	},
+	{
+		'@type': pageType,
+		'@id': pageID,
+		url: permalink,
+		name: title,
+		description,
+		inLanguage: language,
+		isPartOf: { '@id': websiteID },
+		author: personRef,
+		mainEntity,
+		...(isHome || pageType === 'ProfilePage' || pageType === 'ContactPage' || new URL(permalink).pathname === '/uses/'
+			? { about: personRef } : {}),
+		...(!isHome ? { breadcrumb: { '@id': breadcrumbID } } : {})
+	}
+];
+
+if (!isHome) {
+	const crumbs = [{ name: 'Home', item: url('/') }];
+	if (isBlog && permalink !== url('/blog/')) crumbs.push({ name: 'Blog', item: url('/blog/') });
+	crumbs.push({ name: title, item: permalink });
+	graph.push({
+		'@type': 'BreadcrumbList',
+		'@id': breadcrumbID,
+		itemListElement: crumbs.map((crumb, index) => ({ '@type': 'ListItem', position: index + 1, ...crumb }))
+	});
+}
+
+if (isBlog) {
+	graph.push({
+		'@type': 'Blog',
+		'@id': blogID,
+		url: url('/blog/'),
+		name: "Stefen Phelps' Blog",
+		description: 'My thoughts on web development and sometimes other things.',
+		inLanguage: language,
+		isPartOf: { '@id': websiteID },
+		publisher: personRef
+	});
+}
+
+if (post) {
+	const image = post.data.heroImage;
+	graph.push({
+		'@type': 'BlogPosting',
+		'@id': `${permalink}#article`,
+		url: permalink,
+		headline: post.data.title,
+		description: post.data.description,
+		datePublished: post.data.publishDate.toISOString(),
+		author: post.data.author === 'Stefen Phelps' ? personRef : { '@type': 'Person', name: post.data.author },
+		publisher: personRef,
+		inLanguage: language,
+		mainEntityOfPage: { '@id': pageID },
+		isPartOf: { '@id': blogID },
+		...(post.data.categories?.length ? { articleSection: post.data.categories, keywords: post.data.categories } : {}),
+		...(image ? {
+			image: { '@type': 'ImageObject', url: url(image.src), width: image.width, height: image.height }
+		} : {})
+	});
+}
+
+if (posts) {
+	graph.push({
+		'@type': 'ItemList',
+		'@id': `${permalink}#posts`,
+		name: title,
+		numberOfItems: posts.length,
+		itemListOrder: 'https://schema.org/ItemListOrderDescending',
+		itemListElement: posts.map((entry, index) => ({
+			'@type': 'ListItem',
+			position: listStart + index + 1,
+			url: url(`/blog/${entry.id}/`),
+			name: entry.data.title
+		}))
+	});
+}
+
+if (application) {
+	graph.push({
+		'@type': 'WebApplication',
+		'@id': `${permalink}#application`,
+		url: permalink,
+		name: title,
+		description,
+		applicationCategory: 'DeveloperApplication',
+		operatingSystem: 'Any',
+		inLanguage: language,
+		author: personRef,
+		mainEntityOfPage: { '@id': pageID },
+		featureList: ['Preview HTML entities and lightweight markup', 'Copy formatted or plain text', 'Inspect hidden characters and code points']
+	});
+}
+
+// Escape HTML delimiters so content can never close the script element.
+const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
+---
+
+<script is:inline type='application/ld+json' set:html={json} />

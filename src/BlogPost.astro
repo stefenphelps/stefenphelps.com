@@ -28,6 +28,7 @@ const sortedPosts = filteredPosts.sort((a, b) =>
   title={post.data.title}
   description={post.data.description}
   heroImage={post.data.heroImage ? post.data.heroImage.src : '' }
+  post={post}
 >
   <Header activeNav="blog" />
   <main>

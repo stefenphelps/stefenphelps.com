@@ -1,5 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import type { CollectionEntry } from 'astro:content';
+import StructuredData from './components/StructuredData.astro';
 
 interface Props {
 	title?: string | undefined;
@@ -7,15 +9,34 @@ interface Props {
 	permalink?: string | undefined;
 	heroImage?: string | undefined;
 	bodyClass?: string | undefined;
+	pageType?: 'WebPage' | 'ProfilePage' | 'ContactPage' | 'CollectionPage';
+	post?: CollectionEntry<'blog'>;
+	posts?: CollectionEntry<'blog'>[];
+	listStart?: number;
+	application?: boolean;
+	structuredData?: boolean;
 }
 
 const {
 	title = 'Stefen Phelps',
 	description = 'Lead developer at Kelp, Brooksville Native, and Dad.',
-	permalink = Astro.request.url,
+	permalink: providedPermalink,
 	heroImage = 'https://stefenphelps.com/social.jpg',
-	bodyClass = ''
+	bodyClass = '',
+	pageType = 'WebPage',
+	post,
+	posts,
+	listStart,
+	application,
+	structuredData = true
 } = Astro.props;
+
+// Keep canonical metadata and JSON-LD on the production origin, including in previews.
+const canonicalURL = new URL(providedPermalink ? new URL(providedPermalink, Astro.site).pathname : Astro.url.pathname, Astro.site);
+if (!canonicalURL.pathname.endsWith('/') && !canonicalURL.pathname.split('/').pop()?.includes('.')) {
+	canonicalURL.pathname += '/';
+}
+const permalink = canonicalURL.href;
 
 import './styles/global.scss';
 ---
@@ -40,6 +61,7 @@ import './styles/global.scss';
 		<meta name='title' content={title} />
 		<meta name='description' content={description} />
 		<link rel='canonical' href={permalink} />
+		{structuredData && <StructuredData title={title} description={description} permalink={permalink} pageType={pageType} post={post} posts={posts} listStart={listStart} application={application} />}
 		<link rel='alternate' type='application/rss+xml' href='https://stefenphelps.com/rss.xml' />
 		
 		<ClientRouter fallback='swap' />
